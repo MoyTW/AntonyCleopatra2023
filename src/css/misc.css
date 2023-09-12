@@ -1,0 +1,98 @@
+body {
+  color: #ebd5b3;
+  background-color: #13011f;
+}
+
+.div-container {
+  position: relative;
+  width: 100%;
+}
+
+.div-container button {
+  width: 100%;
+}
+
+.brother-icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.sister-icon {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.remnant-selected {
+  color: purple;
+}
+
+.irp-rec-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.irp-rec-div button {
+  width: 100%;
+}
+
+.pilot-response {
+  color: lightskyblue;
+}
+
+.scholar-response {
+  color: goldenrod;
+}
+
+/* ########## ID Chit ########## */
+.id-chit {
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+  border: 1px;
+  border-color: black;
+  background-color: rgb(114, 31, 31);
+}
+
+.id-chit input {
+  min-width: 5em;
+  width: 5em;
+}
+
+/* ########## Footer ########## */
+.room-footer {
+  width: 100%;
+  max-width: 54em;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0px;
+}
+
+.navigation-rose {
+  display: inline-flex;
+  text-align: center;
+}
+
+.navigation-rose button {
+  width: 140px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.navigation-rose-filler {
+  width: 40px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border-style: dotted;
+  border-color: white;
+  border-radius: 50%;
+}
+
+.locationheader {
+  font-size: 2em;
+  text-align: center;
+}

@@ -1,0 +1,201 @@
+:: StoryTitle
+Multiplayer Hello, World!
+
+
+:: StoryData
+{
+	"ifid": "5ACA6246-00ED-42FB-B57D-A0E6A4B6686B",
+	"format": "SugarCube",
+	"format-version": "2.36.1",
+	"start": "Start",
+	"zoom": 1
+}
+
+
+:: Start
+<<nobr>>
+  /* Websocket tracking */
+  <<set $shouldBeConnected to false>>
+  <<set $websocketProcessedUpToMs to 0>>
+  <<set $clientId to setup.Websocket.getClientId()>>
+  <<set $hostClientId to undefined>>
+  <<set $partnerClientId to undefined>>
+  <<run setup.Websocket.assignRoleToClient('ALL', State.variables.clientId)>>
+<</nobr>>\
+<h1 class="game-title">Mutiplayer Hello, World!</h1>\
+<h2 class="passage-h2">Main Menu</h2>\
+<<button [[Host a game|HostGame]]>>
+  <<set $sessionId to setup.Websocket.uuidv4()>>
+  <<set $hostClientId to setup.Websocket.getClientId()>>
+  <<connect $sessionId>>
+<</button>>
+<<button [[Join a game|JoinGame]]>><</button>>
+<<button [[Credits|MainMenu_Credits]]>><</button>>
+<<button [[About|MainMenu_About]]>><</button>>
+
+
+:: HostGame
+<<run setup.Websocket.assignRoleToClient('HOST', State.variables.clientId)>>\
+<h1>Hosting a new game...</h1>\
+Your session ID is:
+<strong>$sessionId</strong>
+Send this ID to your partner.
+
+The game will automatically start once your partner has joined.
+<<nobr>>
+  <<receive 'JOIN_GAME_CLIENT_CONNECTED' 'HOST'>>
+    <<if $clientId === $hostClientId>>
+      <<send 'HOST_GAME_GAME_STARTED' { hostClientId: $hostClientId }>><</send>>
+    <</if>>
+  <</receive>>
+  <<receive 'HOST_GAME_GAME_STARTED' 'HOST'>>
+    <<set $partnerClientId to _receiveData.partnerClientId>>
+    <<run Engine.play('SelectCharacter');>>
+  <</receive>>
+<</nobr>>
+
+
+:: JoinGame
+<<run setup.Websocket.assignRoleToClient('CLIENT', State.variables.clientId)>>\
+<<set _input>>\
+Please enter the session identifier you'd like to join.
+@@#jg-session-input;<<textbox '_input' '' autofocus>>@@
+@@#jg-join-button;<<disable>><<button 'Session identifier is invalid.'>>
+  <<run $('#jg-join-button').text('Joining game...')>>
+  <<run $('#jg-join-button').prop('disabled', true)>>
+  <<set $sessionId to $('#jg-session-input input')[0].value>>
+  <<connect $sessionId>>
+  <<set $partnerClientId to $clientId>>
+  <<send 'JOIN_GAME_CLIENT_CONNECTED' { partnerClientId: $clientId }>><</send>>
+<</button>><</disable>>@@\
+<<button [[Main Menu|Start]]>><</button>>
+<<done>><<script>>
+  const button = $('#jg-join-button button')
+  $('#jg-session-input input').on('input', function(ev) {
+    if (setup.Websocket.isUuid(ev.target.value)) {
+      button.html('Join game.')
+      button.prop('disabled', false)
+    } else {
+      button.html('Session identifier is invalid.')
+      button.prop('disabled', true)
+    }
+  })
+<</script>><</done>>\
+<<receive 'HOST_GAME_GAME_STARTED' 'CLIENT'>>
+  <<if $clientId !== $hostClientId>>
+    <<set $hostClientId to _receiveData.hostClientId>>
+    <<run Engine.play('SelectCharacter');>>
+  <</if>>
+<</receive>>\
+
+
+:: MainMenu_Credits
+TODO: Credits!
+
+<<button [[Main Menu|Start]]>><</button>>
+
+
+:: MainMenu_About
+TODO: About!
+
+<<button [[Main Menu|Start]]>><</button>>
+
+
+:: SelectCharacter
+/* TODO: Rewrite the select character screen to be not ugly and also let you unready! */
+<h1 class="passage-h1">Pick Your Character</h1>\
+@@#sc-character-buttons;<div class='row'>\
+  <div class='column'>\
+    <h2 class="passage-h2">The Messenger</h2>\
+    TODO: Description
+    <<button "The Messenger">>
+      <<script>>
+        if (State.variables.clientId === State.variables.hostClientId) {
+          $("#sc-host-selection").text(`Host has selected The Messenger.`)
+        } else {
+          $("#sc-partner-selection").text(`Joiner has selected The Messenger.`)
+        }
+      <</script>>
+      <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "PILOT", characterName: "The Messenger" }>><</send>>
+    <</button>>\
+  </div>\
+  <div class='column'>\
+    <h2 class="passage-h2">The Scholar</h2>\
+    TODO: Description of The Scholar
+
+    <<button "The Scholar">>
+      <<script>>
+        if (State.variables.clientId === State.variables.hostClientId) {
+          $("#sc-host-selection").text(`Host has selected The Scholar.`)
+        } else {
+          $("#sc-partner-selection").text(`Joiner has selected The Scholar.`)
+        }
+      <</script>>
+      <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "SCHOLAR", characterName: "The Scholar" }>><</send>>\
+    <</button>>\
+  </div>\
+</div>@@\
+<<nobr>><<receive 'SELECT_CHARACTER_SELECTED' 'ALL'>><<script>>
+  const data = State.temporary.receiveData
+  if (data.clientId === State.variables.hostClientId) {
+    State.variables.hostCharacterRole = data.characterRole
+    State.variables.hostCharacterName = data.characterName
+    $("#sc-host-selection").text(`Host has selected ${State.variables.hostCharacterName}.`)
+  } else {
+    State.variables.partnerCharacterRole = data.characterRole
+    State.variables.partnerCharacterName = data.characterName
+    $("#sc-partner-selection").text(`Joiner has selected ${State.variables.partnerCharacterName}.`)
+  }
+  if (State.variables.hostCharacterRole && State.variables.partnerCharacterRole && State.variables.hostCharacterRole != State.variables.partnerCharacterRole) {
+    $('#sc-confirm button').prop('disabled', false)
+  } else {
+    $('#sc-confirm button').prop('disabled', true)
+  }
+<</script>><</receive>><</nobr>>\
+
+@@#sc-host-selection;<<if $hostCharacterRole is undefined>>\
+  Host has not yet selected a character.\
+<<else>>\
+  Host has selected $hostCharacterName.\
+<</if>>@@
+@@#sc-partner-selection;<<if $partnerCharacterRole is undefined>>\
+  Joiner has not yet selected a character.\
+<<else>>\
+  Joiner has selected $partnerCharacterName.\
+<</if>>@@
+
+@@#sc-confirm;<<disable>><<button "Confirm choices">>
+  <<script>>
+    const button = $('#sc-confirm button')
+    button.html('Waiting for partner to confirm...')
+    button.prop('disabled', true)
+    $('#sc-character-buttons button').prop('disabled', true)
+  <</script>>
+  <<send 'SELECT_CHARACTER_CONFIRMED' {}>><</send>>
+<</button>><</disable>>@@
+<<nobr>><<receive 'SELECT_CHARACTER_CONFIRMED' 'ALL'>><<script>>
+  const data = State.temporary.receiveData
+  // selectCharacterHostConfirmed
+  if (data.clientId === State.variables.clientId) {
+    const button = $('#sc-confirm button')
+    button.html('Waiting for partner to confirm...')
+    button.prop('disabled', true)
+    $('#sc-character-buttons button').prop('disabled', true)
+  }
+  if (data.clientId === State.variables.hostClientId) {
+    State.variables.selectCharacterHostConfirmed = true
+  } else {
+    State.variables.selectCharacterPartnerConfirmed = true
+  }
+  if (State.variables.selectCharacterHostConfirmed && State.variables.selectCharacterPartnerConfirmed) {
+    setup.Websocket.assignRoleToClient(State.variables.hostCharacterRole, State.variables.hostClientId)
+    setup.Websocket.assignRoleToClient(State.variables.partnerCharacterRole, State.variables.partnerClientId)
+    if (setup.Roles.isPilot()) {
+      Engine.play("Intro_Start_PILOT")
+      // Engine.play("Mystery_Start_PILOT")
+    } else {
+      Engine.play("Intro_Start_SCHOLAR")
+      // Engine.play("Mystery_Start_SCHOLAR")
+    }
+  }
+<</script>><</receive>><</nobr>>\

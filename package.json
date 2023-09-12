@@ -1,0 +1,15 @@
+{
+  "name": "moytw-house",
+  "version": "0.0.1",
+  "description": "",
+  "main": "",
+  "devDependencies": {
+    "@types/twine-sugarcube": "^2.36.2",
+    "typescript": "^4.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Travis Moy",
+  "license": "MIT"
+}

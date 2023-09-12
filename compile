@@ -1,0 +1,9 @@
+#!/bin/bash
+
+rm -rf src/build
+npx tsc
+mkdir -p html
+tweego src -f sugarcube-2.36.1-tmoy -o ./html/index.html
+rm -rf html/images
+mkdir html/images
+cp -r images ./html

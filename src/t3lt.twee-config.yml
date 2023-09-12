@@ -1,0 +1,13 @@
+sugarcube-2:
+  macros:
+    connect:
+      name: connect
+    receive:
+      name: receive
+      container: true
+    send:
+      name: send
+      container: true
+    disable:
+      name: disable
+      container: true

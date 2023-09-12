@@ -1,0 +1,55 @@
+sugarcube-2:
+  macros:
+    disable:
+      name: disable
+      container: true
+    send:
+      name: send
+      container: true
+    receive:
+      name: receive
+      container: true
+    connect:
+      name: connect
+    endmultiplayergame:
+      name: endmultiplayergame
+    leavemultiplayersession:
+      name: leavemultiplayersession
+    checklistitems:
+      name: checklistitems
+    remnantlink:
+      name: remnantlink
+    bottomsection:
+      name: bottomsection
+    linkdisable:
+      name: linkdisable
+      container: true
+    patiencebar:
+      name: patiencebar
+    eodfinaldecisiondisplay:
+      name: eodfinaldecisiondisplay
+    eodchecklistdisplay:
+      name: eodchecklistdisplay
+    addtochecklist:
+      name: addtochecklist
+    idspan:
+      name: idspan
+      container: true
+    senddecision:
+      name: senddecision
+    discussionwaiting:
+      name: discussionwaiting
+    discussionend:
+      name: discussionend
+    locationheader:
+      name: locationheader
+    NavigationRose:
+      name: NavigationRose
+    NavButton:
+      name: NavButton
+    BottomSection:
+      name: BottomSection
+    InfoLink:
+      name: InfoLink
+    NavLink:
+      name: NavLink
