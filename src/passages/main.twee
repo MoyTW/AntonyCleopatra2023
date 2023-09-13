@@ -4,7 +4,7 @@ Multiplayer Hello, World!
 
 :: StoryData
 {
-	"ifid": "5ACA6246-00ED-42FB-B57D-A0E6A4B6686B",
+  "ifid": "8E8DBD2A-FEFA-4600-A93B-AC499CA5C8B6",
 	"format": "SugarCube",
 	"format-version": "2.36.1",
 	"start": "Start",
