@@ -65,52 +65,6 @@ You have $turnsRemaining turns remaining.
   <</script>><</send>>
 <</button>><</disable>>@@
 <<nobr>>
-  <<receive 'NEXT_CLUE_POINT_SELECTED'>><<script>>
-    const data = State.temporary.receiveData;
-    if (data.clientId === State.variables.clientId) {
-      State.variables.nextCluePointPlayerSelection = data.cluePointKey;
-      $('#next-clue-point-player-selection').text('You have selected ' + State.getVar('$cluePoints').get(data.cluePointKey).name + '.');
-    } else {
-      State.variables.nextCluePointPartnerSelection = data.cluePointKey;
-      $('#next-clue-point-partner-selection').text('Your partner has selected ' + State.getVar('$cluePoints').get(data.cluePointKey).name + '.');
-    }
-    // TODO: Synchronize the states
-    const playerSelection = State.variables.nextCluePointPlayerSelection;
-    const partnerSelection = State.variables.nextCluePointPartnerSelection;
-    if (playerSelection !== '' && partnerSelection !== '' && playerSelection != partnerSelection) {
-      if (!State.variables.nextCluePointPlayerConfirmed) {
-        $('#next-clue-point-confirm button').prop('disabled', false);
-      }
-    } else {
-      $('#next-clue-point-confirm button').prop('disabled', true);
-    }
-  <</script>><</receive>>
-  <<receive 'NEXT_CLUE_POINT_CONFIRMED'>><<script>>
-    const data = State.temporary.receiveData;
-    if (data.clientId === State.variables.clientId) {
-      State.variables.nextCluePointPlayerConfirmed = true;
-      const button = $('#next-clue-point-confirm button');
-      button.html('Waiting for partner to confirm...');
-      button.prop('disabled', true);
-      $('#next-clue-point-clue-point-buttons button').prop('disabled', true);
-    } else {
-      State.variables.nextCluePointPartnerConfirmed = true;
-    }
-    if (State.variables.nextCluePointPlayerConfirmed && State.variables.nextCluePointPartnerConfirmed) {
-      State.variables.turnsRemaining -= 1;
-      setup.markCluePointVisited(State.variables.nextCluePointPlayerSelection, State.variables.playerCharacterName);
-      setup.markCluePointVisited(State.variables.nextCluePointPartnerSelection, State.variables.partnerCharacterName)
-      State.variables.cluePointPassage = setup.getCluePointPassage(State.variables.nextCluePointPlayerSelection);
-
-      // Wipe here, so that we can maintain if one player goes faster than the next
-      State.variables.nextCluePointPlayerSelection = '';
-      State.variables.nextCluePointPartnerSelection = '';
-      State.variables.nextCluePointPlayerConfirmed = false;
-      State.variables.nextCluePointPartnerConfirmed = false;
-      
-      Engine.play('Ch2_DisplayCluePoint');
-    }
-  <</script>><</receive>>
 <</nobr>>
 
 

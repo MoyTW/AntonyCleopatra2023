@@ -11,6 +11,7 @@ ClientId: $clientId
 HostClientId: $hostClientId
 PartnerClientId: $partnerClientId
 SessionId: $sessionId
+Passage: <<print passage()>>
 
 Day: $currentDay
 <<button "Calc Word Count">><<script>>

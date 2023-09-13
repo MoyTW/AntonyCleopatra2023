@@ -24,17 +24,6 @@ You reconvene with <<IfAntony 'Cleopatra' 'Antony'>> at the FBI headquarters. Ho
   <</if>>
 <</button>>@@
 <<nobr>>
-  <<receive 'VIEW_THE_ANSWERS_CONFIRMED'>><<script>>
-    const data = State.temporary.receiveData;
-    if (data.clientId === State.variables.clientId) {
-      State.variables.viewTheAnswersPlayerConfirmed = true;
-    } else {
-      State.variables.viewTheAnswersPartnerConfirmed = true;
-    }
-    if (State.variables.viewTheAnswersPlayerConfirmed && State.variables.viewTheAnswersPartnerConfirmed) {
-      Engine.play('Ch3_Answers');
-    }
-  <</script>><</receive>>
 <</nobr>>
 
 

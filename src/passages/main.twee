@@ -22,7 +22,7 @@ Multiplayer Hello, World!
   <<set $partnerClientId to undefined>>
   <<run setup.Websocket.assignRoleToClient('ALL', State.variables.clientId)>>
 <</nobr>>\
-<h1 class="game-title">Mutiplayer Hello, World!</h1>\
+<h1 class="game-title">Mutiplayer Hello, World! TODO</h1>\
 <h2 class="passage-h2">Main Menu</h2>\
 <<button [[Host a game|HostGame]]>>
   <<set $sessionId to setup.Websocket.uuidv4()>>
@@ -106,32 +106,32 @@ TODO: About!
 <h1 class="passage-h1">Pick Your Character</h1>\
 @@#sc-character-buttons;<div class='row'>\
   <div class='column'>\
-    <h2 class="passage-h2">The Messenger</h2>\
+    <h2 class="passage-h2">Marcus Antonius</h2>\
     TODO: Description
-    <<button "The Messenger">>
+    <<button "Antony">>
       <<script>>
         if (State.variables.clientId === State.variables.hostClientId) {
-          $("#sc-host-selection").text(`Host has selected The Messenger.`)
+          $("#sc-host-selection").text(`TODO`)
         } else {
-          $("#sc-partner-selection").text(`Joiner has selected The Messenger.`)
+          $("#sc-partner-selection").text(`TODO`)
         }
       <</script>>
-      <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "PILOT", characterName: "The Messenger" }>><</send>>
+      <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "ANTONY", characterName: "Antony" }>><</send>>
     <</button>>\
   </div>\
   <div class='column'>\
-    <h2 class="passage-h2">The Scholar</h2>\
-    TODO: Description of The Scholar
+    <h2 class="passage-h2">Cleopatra VII Thea Philopater</h2>\
+    TODO: Description
 
-    <<button "The Scholar">>
+    <<button "Cleopatra">>
       <<script>>
         if (State.variables.clientId === State.variables.hostClientId) {
-          $("#sc-host-selection").text(`Host has selected The Scholar.`)
+          $("#sc-host-selection").text(`TODO`)
         } else {
-          $("#sc-partner-selection").text(`Joiner has selected The Scholar.`)
+          $("#sc-partner-selection").text(`TODO`)
         }
       <</script>>
-      <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "SCHOLAR", characterName: "The Scholar" }>><</send>>\
+      <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "CLEOPATRA", characterName: "Cleopatra" }>><</send>>\
     <</button>>\
   </div>\
 </div>@@\
@@ -190,12 +190,10 @@ TODO: About!
   if (State.variables.selectCharacterHostConfirmed && State.variables.selectCharacterPartnerConfirmed) {
     setup.Websocket.assignRoleToClient(State.variables.hostCharacterRole, State.variables.hostClientId)
     setup.Websocket.assignRoleToClient(State.variables.partnerCharacterRole, State.variables.partnerClientId)
-    if (setup.Roles.isPilot()) {
-      Engine.play("Intro_Start_PILOT")
-      // Engine.play("Mystery_Start_PILOT")
+    if (setup.Roles.isAntony()) {
+      Engine.play("Ch1_CaseIntro_1_ANTONY")
     } else {
-      Engine.play("Intro_Start_SCHOLAR")
-      // Engine.play("Mystery_Start_SCHOLAR")
+      Engine.play("Ch1_CaseIntro_1_CLEOPATRA")
     }
   }
 <</script>><</receive>><</nobr>>\

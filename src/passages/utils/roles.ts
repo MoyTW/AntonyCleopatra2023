@@ -1,20 +1,9 @@
-enum RoleEnum {
-  BROTHER = 'BROTHER',
-  SISTER = 'SISTER',
-  PILOT = 'PILOT',
-  SCHOLAR = 'SCHOLAR'
-}
-
 interface Roles {
-  PILOT: string
-  SCHOLAR: string
-  isPilot: () => boolean
-  isScholar: () => boolean
+  ANTONY: string
+  CLEOPATRA: string
 
-  BROTHER: string
-  SISTER: string
-  isBrother: () => boolean
-  isSister: () => boolean
+  isAntony: () => boolean
+  isCleopatra: () => boolean
 
   getRole: () => string | undefined
   getRoleIcon: (role: string) => JQuery<HTMLElement>
@@ -22,12 +11,11 @@ interface Roles {
 
 (function () {
   class RolesImpl implements Roles {
-    BROTHER = "BROTHER"
-    SISTER = "SISTER"
-    PILOT = "PILOT"
-    isPilot = () => { return this.hasRole(this.PILOT) }
-    SCHOLAR = "SCHOLAR"
-    isScholar = () => { return this.hasRole(this.SCHOLAR) }
+    ANTONY = 'ANTONY'
+    CLEOPATRA = 'CLEOPATRA'
+
+    isAntony = () => { return this.hasRole(this.ANTONY) }
+    isCleopatra = () => { return this.hasRole(this.CLEOPATRA) }
 
     hasRole = (role: string): boolean => {
       const roles: { [key: string]: string[] | undefined } = State.getVar('$websocketRoles')
@@ -41,25 +29,12 @@ interface Roles {
       }
     }
 
-    isBrother = (): boolean => {
-      return this.hasRole(this.BROTHER)
-    }
-
-    isSister = (): boolean => {
-      return this.hasRole(this.SISTER)
-    }
-
     getRole = (): string | undefined => {
-      if (this.isBrother()) {
-        return this.BROTHER
-      } else if (this.isSister()) {
-        return this.SISTER
-      } else if (this.isPilot()) {
-        return this.PILOT
-      } else if (this.isScholar()) {
-        return this.SCHOLAR
+      if (this.isAntony()) {
+        return this.ANTONY
+      } else if (this.isCleopatra()) {
+        return this.CLEOPATRA
       } else {
-        console.error(`getRole was called but no such role was assigned!`)
         return undefined
       }
     }
@@ -72,8 +47,8 @@ interface Roles {
         return onPage
       } else {
         // TODO: Convert from brother
-        const iconPath = role === this.BROTHER ? 'images/vicon.png' : 'images/jicon.png'
-        const iconClass = role === this.BROTHER ? 'brother-icon' : 'sister-icon'
+        const iconPath = role === this.ANTONY ? 'images/vicon.png' : 'images/jicon.png'
+        const iconClass = role === this.CLEOPATRA ? 'brother-icon' : 'sister-icon'
         return jQuery(document.createElement('img'))
           .attr('id', `role-${role}-icon`)
           .attr('src', iconPath)
