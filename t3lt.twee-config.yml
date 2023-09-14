@@ -55,3 +55,11 @@ sugarcube-2:
       name: NavLink
     AppendPassage:
       name: AppendPassage
+    CalendarSquare:
+      name: CalendarSquare
+    CalendarBlankSquare:
+      name: CalendarBlankSquare
+    AntonySeal:
+      name: AntonySeal
+    CleopatraSeal:
+      name: CleopatraSeal

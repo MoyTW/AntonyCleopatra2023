@@ -32,47 +32,4 @@ Word Count: <span id="wc-span">?</span>
 
 
 :: HowToPlay
-<h1>What am I supposed to be doing?</h1>\
-TODO
-You're supposed to be documenting and cleaning out the house. This involves visiting each of the rooms and deciding what, if anything, you'd like to keep, what you'd like to try and sell or donate, and what you'd like to trash.
-
-These are the actions you can take on a room:
-* Order -> orders the items in the room and uncovers hidden items; this takes energy
-* Mark Done -> marks it as done in the checkoff sheet
-* Move -> go to another room
-
-Each room has various objects in it. The objects can range from single items (a television) to groups of items (boxes of Juliann's High School schoolwork).
-
-These are the actions you can take on an object:
-* Mark for discussion
-* Mark for keep
-* Mark for sell/donate
-* Mark for trash
-
-At the end of each day, you and your sibling can discuss the actions you'd like to take. Then, after your decide, the next day begins.
-
-<h1>Moving Around The House</h1>\
-TODO
-The House is represented as a series of rooms, laid out in cardinal directions. To move to another room, use the buttons in the navigation rose to move. You can also use N, E, S, and W.
-
-<h1>Patience</h1>\
-<strong>Patience</strong> represents how energy you have to continue sorting out the house. At the beginning of each day you're alotted 6 patience. All actions take patience.
-
-The costs are as follows:
-+ Ordering a room takes 1 patience.
-+ Inventorying an item takes 1 patience.
-+ Discussing an item takes 1 patience.
-+ Any other action is free.
-
-At the end of the day, your final decisions are executed, and modifiers are applied to the next day's patience.
-
-You also roll over half your remaining patience (rounded up)
-
-These modifiers are as follows:
-+ Discussing a remnant can give a modifier from +3 to -3, depending on the outcome of the conversation.
-+ Keeping an item can give an increase/decrease of +3 to -3, depending on the item.
-+ Selling an item gives a -2 patience modifier.
-+ Donating an item gives a +1 to -1 patience modifier, depending on the item.
-+ Trashing an item has no modifier.
-+ Clearing your whole checklist will give you +1 patience.
-+ Following every recommendation you've made will give you +1 patience.
+TODO WRITE THIS

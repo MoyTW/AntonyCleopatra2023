@@ -1,0 +1,22 @@
+.planning-calendar {
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.planning-calendar th {
+  color: white;
+  background: purple;
+}
+
+.planning-calendar td {
+  border-color: white;
+  border-width: thin;
+  border-style: dotted;
+  vertical-align: top;
+}
+
+/* TODO: Style like the general buttons */
+.planning-calendar button {
+  width: 100%;
+}

@@ -105,3 +105,28 @@ body {
   font-size: 2em;
   text-align: center;
 }
+
+/* ########## Seals ########## */
+.antony-seal {
+  width: 24px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  border-style: solid;
+  color: red;
+  border-color: red;
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.cleopatra-seal {
+  width: 24px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  border-style: solid;
+  color: purple;
+  border-color: purple;
+  background-color: gold;
+  border-radius: 50%;
+}

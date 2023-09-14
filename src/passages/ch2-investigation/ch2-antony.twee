@@ -1,0 +1,91 @@
+:: Ch2_Start_ANTONY
+TODO CH2 START
+
+[[Planning|Ch2_Planning_ANTONY]]
+
+
+:: CalendarBlankSquareWidget [widget]
+<<widget "CalendarBlankSquare">><<nobr>>
+  <div style="text-align:right; top:0px;">_args[0]</div>
+  <<if _args[1]>>
+    _args[1]
+  <</if>>
+<</nobr>><</widget>>
+
+
+:: CalendarSquareWidget [widget]
+<<widget "CalendarSquare">><<nobr>>
+  <div style="text-align:right;">_args[0]</div>
+  <div style="display:inline-flex; width:100%;">
+    <div style="margin:auto;">
+      <<AntonySeal>>
+    </div>
+    <div style="width:100%;">
+      <<button "T. Brnd.">><</button>>
+      <br/>
+      <<button "Rth. Off.">><</button>>
+    </div>
+  </div>
+  <div style="display:inline-flex; width:100%;">
+    <div style="margin:auto;">
+      <<CleopatraSeal>>
+    </div>
+    <div style="width:100%;">
+      <<button "J. Dn.">><</button>>
+      <br/>
+      <<button "G. Lbns.">><</button>>
+    </div>
+  </div>
+<</nobr>><</widget>>
+
+
+:: Ch2_Planning_ANTONY
+<<nobr>>
+  <table class="planning-calendar">
+    <caption align="top">
+      March 2021
+    </caption>
+
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><<CalendarBlankSquare "14">></td>
+        <td><<CalendarBlankSquare "15" "M. Brnd. killed">></td>
+        <td><<CalendarBlankSquare "16" "FBI invs">></td>
+        <td><<CalendarBlankSquare "17" "FBI invs">></td>
+        <td><<CalendarBlankSquare "18" "FBI invs">></td>
+        <td><<CalendarBlankSquare "19" "FBI invs">></td>
+        <td><<CalendarBlankSquare "20" "FBI invs">></td>
+      </tr>
+      <tr>
+        <td><<CalendarBlankSquare "21" "FBI invs">></td>
+        <td><<CalendarBlankSquare "22" "FBI invs">></td>
+        <td><<CalendarBlankSquare "23" "FBI invs">></td>
+        <td><<CalendarBlankSquare "24" "FBI invs">></td>
+        <td><<CalendarBlankSquare "25" "FBI invs">></td>
+        <td><<CalendarBlankSquare "26" "doc rvw & plan">></td>
+        <td><<CalendarSquare "27">></td>
+      </tr>
+      <tr>
+        <td><<CalendarSquare "28">></td>
+        <td><<CalendarSquare "29">></td>
+        <td><<CalendarSquare "30">></td>
+        <td><<CalendarSquare "31">></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+<</nobr>>

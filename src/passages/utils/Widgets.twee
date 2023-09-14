@@ -1,0 +1,29 @@
+:: LocationHeader [widget]
+<<widget "locationheader">>\
+  <div class="locationheader">_args[0]</div>\
+<</widget>>
+
+
+:: InfoLink [widget]
+<<widget InfoLink>><<nobr>>
+  <<set _infoLinkDisplay to _args[0] + ' ⓘ'>>
+  <<capture _infoLinkDisplay>>
+    <<link _infoLinkDisplay>><<script>>
+      Dialog.setup(State.getVar('_infoLinkDisplay'), 'INFO_DIALOG_CLASS');
+      Dialog.wiki(Story.get(State.getVar('_args[1]')).processText());
+      Dialog.open();
+    <</script>><</link>>
+  <</capture>>
+<</nobr>><</widget>>
+
+
+:: AntonySealWidget [widget]
+<<widget "AntonySeal">><<nobr>>
+  <div class='antony-seal'><strong>A</strong></div>
+<</nobr>><</widget>>
+
+
+:: CleopatraSealWidget [widget]
+<<widget "CleopatraSeal">><<nobr>>
+  <div class='cleopatra-seal'><strong>C</strong></div>
+<</nobr>><</widget>>
