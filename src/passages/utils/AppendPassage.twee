@@ -1,0 +1,40 @@
+:: AppendPassageReceivers
+<<receive 'APPEND_PASSAGE' 'ALL'>>
+  <<if _receiveData.role is setup.Roles.getRole()>>
+    <<run console.log(_receiveData)>>
+    <<run $('#options').remove()>>
+    <<set _choice to _receiveData.choice>>
+    <<set _passage to _receiveData.passage>>
+    <<set _lastPassage to passage()>>
+    <<run $('.passage').wiki(Story.get(_passage).processText())>>
+  <</if>>
+<</receive>>
+
+
+:: AppendPassageWidget [widget]
+<<widget 'AppendPassage'>>\
+  <<set _data to { passage: State.getVar('_args[0]'), role: setup.Roles.getRole(), choice: State.getVar('_args[1]') }>>
+  <<send 'APPEND_PASSAGE' _data>><</send>>
+  <<run $('#options').remove()>>
+  <<run $('passage').wiki('<<SendingToServer>>')>>
+<</widget>>
+
+
+:: SendingToServer [widget]
+<<widget 'SendingToServer'>>\
+  <div id='options'>
+    <<disable>><<button 'Sending to server...'>><</button>><</disable>>
+  </span>
+<</widget>>
+
+
+:: WaitingForPartnerWidget [widget]
+<<widget 'WaitingForPartner'>>\
+  <<nobr>>
+    <div id='options'>
+      <em>
+        <<disable>><<button 'Waiting for partner...'>><</button>><</disable>>
+      </em>
+    </div>\
+  <</nobr>>\
+<</widget>>\

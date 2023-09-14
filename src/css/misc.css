@@ -3,6 +3,15 @@ body {
   background-color: #13011f;
 }
 
+#options {
+  position: relative;
+  width: 100%;
+}
+
+#options button {
+  width: 100%;
+}
+
 .div-container {
   position: relative;
   width: 100%;
