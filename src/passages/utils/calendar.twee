@@ -1,0 +1,172 @@
+:: CalendarReceivers
+<<receive "CALENDAR_SCHEDULE" "ALL">>
+  /* TODO THIS */
+  <<set _data to _receiveData>>
+  <<set _date to _data.date>>
+  <<set _slot to _data.slot>>
+  <<set _role to _data.role>>
+
+  <<run setup.Calendar.scheduleVisit(_date, _slot, _role, _data.id)>>
+
+  <<capture _date, _slot, _role>>
+    /* TODO: don't use replace, use javascript to allow for failures */
+    <<set _selector to `#${setup.Calendar.makeSpanId(_date, _slot, _role)}`>>
+    <<replace _selector>><<nobr>>
+      /* TODO: save am/pm */
+      <<set _buttonText to setup.Calendar.getScheduled(_date, _slot, _role) || "a.m.">>
+        <<button _buttonText>>
+          <<script>>
+            Dialog.setup(State.getVar('_date'), 'SELECT_CLUE_POINT_MODAL_CLASS');
+            Dialog.wiki(Story.get("SelectCluePointModal").processText());
+            Dialog.open();
+          <</script>>
+        <</button>>
+    <</nobr>><</replace>>
+  <</capture>>
+<</receive>>
+
+
+:: CalendarBlankSquareWidget [widget]
+<<widget "CalendarBlankSquare">><<nobr>>
+  <div style="text-align:right; top:0px;">_args[0]</div>
+  <<if _args[1]>>
+    _args[1]
+  <</if>>
+<</nobr>><</widget>>
+
+
+:: SelectCluePointModal
+Date: _date Slot: _slot Role: _role
+Clue points available:
+<<for _i, _id range setup.CluePoints.getKnownCluePointIds()>>\
+  <<capture _id>>\
+    <<button _id>>
+      /* TODO: Smoothify this */
+      <<run Dialog.close()>>
+      <<send "CALENDAR_SCHEDULE" { date: _date, slot: _slot, role: _role, id: _id }>><</send>>
+    <</button>>
+  <</capture>>
+<</for>>\
+
+
+
+:: CalendarSquareWidget [widget]
+<<widget "CalendarSquare">><<nobr>>
+  <<set _date to _args[0]>>
+  <<capture _date>>
+    <div style="text-align:right;">_date</div>
+    <div style="display:inline-flex; width:100%;">
+      <div style="margin:auto;">
+        <<AntonySeal>>
+      </div>
+      <div style="width:100%;" class="antony-writing">
+        <<set _slot to setup.Calendar.AM>>
+        <<set _role to setup.Roles.ANTONY>>
+        <<set _spanId to setup.Calendar.makeSpanId(_date, _slot, _role)>>
+        <<capture _spanId, _slot, _role>>
+          <<idspan _spanId>>
+            <<set _buttonText to setup.Calendar.getScheduled(_date, _slot, _role) || "a.m.">>
+            <<button _buttonText>>
+              <<script>>
+                Dialog.setup(State.getVar('_date'), 'SELECT_CLUE_POINT_MODAL_CLASS');
+                Dialog.wiki(Story.get("SelectCluePointModal").processText());
+                Dialog.open();
+              <</script>>
+            <</button>>
+          <</idspan>>
+        <</capture>>
+        <br/>
+        <<set _slot to setup.Calendar.PM>>
+        <<set _role to setup.Roles.ANTONY>>
+        <<set _spanId to setup.Calendar.makeSpanId(_date, _slot, _role)>>
+        <<capture _spanId, _slot, _role>>
+          <<idspan _spanId>>
+            <<set _buttonText to setup.Calendar.getScheduled(_date, _slot, _role) || "p.m.">>
+            <<button _buttonText>>
+              <<script>>
+                Dialog.setup(State.getVar('_date'), 'SELECT_CLUE_POINT_MODAL_CLASS');
+                Dialog.wiki(Story.get("SelectCluePointModal").processText());
+                Dialog.open();
+              <</script>>
+            <</button>>
+          <</idspan>>
+        <</capture>>
+      </div>
+    </div>
+    <div style="display:inline-flex; width:100%;" class="cleopatra-writing">
+      <div style="margin:auto;">
+        <<CleopatraSeal>>
+      </div>
+      <div style="width:100%;">
+        <<button "a.m.">>
+          /* TODO */
+        <</button>>
+        <br/>
+        <<button "p.m.">>
+          /* TODO */
+        <</button>>
+      </div>
+    </div>
+  <</capture>>
+<</nobr>><</widget>>
+
+
+:: InvestigationCalendarWidget [widget]
+<<widget "InvestigationCalendar">><<nobr>>
+  <table class="planning-calendar">
+    <caption align="top">
+      Investigation Calendar
+    </caption>
+
+    <thead>
+      <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><<CalendarBlankSquare "March 14">></td>
+        <td><<CalendarBlankSquare "March 15" "M. Brnd. killed">></td>
+        <td><<CalendarBlankSquare "March 16" "FBI invs">></td>
+        <td><<CalendarBlankSquare "March 17" "FBI invs">></td>
+        <td><<CalendarBlankSquare "March 18" "FBI invs">></td>
+        <td><<CalendarBlankSquare "March 19" "FBI invs">></td>
+        <td><<CalendarBlankSquare "March 20" "FBI invs">></td>
+      </tr>
+      <tr>
+        <td><<CalendarBlankSquare "March 21" "FBI invs">></td>
+        <td><<CalendarBlankSquare "March 22" "FBI invs">></td>
+        <td><<CalendarBlankSquare "March 23" "FBI invs">></td>
+        <td><<CalendarBlankSquare "March 24" "FBI invs">></td>
+        <td><<CalendarBlankSquare "March 25" "FBI invs">></td>
+        <td><<CalendarBlankSquare "March 26" "doc rvw & plan">></td>
+        <td><<CalendarSquare "March 27">></td>
+      </tr>
+      <tr>
+        <td><<CalendarSquare "March 28">></td>
+        <td><<CalendarSquare "March 29">></td>
+        <td><<CalendarSquare "March 30">></td>
+        <td><<CalendarSquare "March 31">></td>
+        <td><<CalendarSquare "April 1">></td>
+        <td><<CalendarBlankSquare "April 2" "doc rvw & plan">></td>
+        <td><<CalendarSquare "April 3">></td>
+      </tr>
+      <tr>
+        <td><<CalendarSquare "April 4">></td>
+        <td><<CalendarSquare "April 5">></td>
+        <td><<CalendarSquare "April 6">></td>
+        <td><<CalendarSquare "April 7">></td>
+        <td><<CalendarBlankSquare "April 8" "write report">></td>
+        <td><<CalendarBlankSquare "April 9" "present report">></td>
+        <td><<CalendarBlankSquare "April 10">></td>
+      </tr>
+    </tbody>
+  </table>
+<</nobr>><</widget>>
