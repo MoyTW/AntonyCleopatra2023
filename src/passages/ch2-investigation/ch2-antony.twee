@@ -20,13 +20,13 @@ TODO CH2 START
     <div style="margin:auto;">
       <<AntonySeal>>
     </div>
-    <div style="width:100%;">
+    <div style="width:100%;" class="antony-writing">
       <<button "T. Brnd.">><</button>>
       <br/>
       <<button "Rth. Off.">><</button>>
     </div>
   </div>
-  <div style="display:inline-flex; width:100%;">
+  <div style="display:inline-flex; width:100%;" class="cleopatra-writing">
     <div style="margin:auto;">
       <<CleopatraSeal>>
     </div>

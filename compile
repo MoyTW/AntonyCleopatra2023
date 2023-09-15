@@ -7,3 +7,6 @@ tweego src -f sugarcube-2.36.1-tmoy -o ./html/index.html
 rm -rf html/images
 mkdir html/images
 cp -r images ./html
+rm -rf html/fonts
+mkdir html/fonts
+cp -r fonts ./html

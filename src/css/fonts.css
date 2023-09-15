@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "WindSong";
+  src:
+    local("WindSong"),
+    url("fonts/WindSong/WindSong-Regular.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "Kalam";
+  src:
+    local("Kalam"),
+    url("fonts/Kalam/Kalam-Regular.ttf") format("TrueType");
+}
+
+.antony-writing {
+  font-family: WindSong;
+}
+
+.cleopatra-writing {
+  font-family: Kalam;
+}
