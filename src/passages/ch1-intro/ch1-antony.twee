@@ -5,8 +5,7 @@ TODO: Proper Initialization!
     year: 2021,
     month: 2,
     day: 26,
-    fullDay: true,
-    morning: undefined
+    slot: setup.Calendar.ALL_DAY
   })
 <</script>>
 <h1>CASE ONE</h1>\

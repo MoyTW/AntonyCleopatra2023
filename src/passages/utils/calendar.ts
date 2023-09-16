@@ -8,22 +8,23 @@ interface Calendar {
 
   advanceTime: () => void
 
-  makeSpanId: (date: string, slot: string, role: string) => string
+  makeSpanId: (month: number, day: number, slot: string, role: string) => string
 
-  getScheduled: (date: string, slot: string, role: string) => string | undefined
-  scheduleVisit: (date: string, slot: string, role: string, cluePointId: string) => void
+  getScheduled: (month: number, day: number, slot: string, role: string) => Appointment[]
+  getScheduledForMeNow: () => Appointment | undefined
+  scheduleVisit: (month: number, day: number, slot: string, role: string, cluePointId: string) => void
 }
 
 interface Timeslot {
   year: number
-  month: number // Indexed by zero, as a Date object
+  month: number // Indexed by zero, same as Date objects
   day: number
-  fullDay: boolean
-  morning: boolean | undefined
+  slot: string
 }
 
-interface CalendarEntry {
-  date: string
+interface Appointment {
+  month: number
+  day: number
   slot: string
   role: string
   cluePointId: string
@@ -36,6 +37,7 @@ interface CalendarEntry {
   class CalendarImpl implements Calendar {
     AM = 'AM'
     PM = 'PM'
+    ALL_DAY ='ALL_DAY'
 
     ENTRIES_VAR = '$CalendarImpl_entries'
     TIMESLOT_VAR = '$CalendarImpl_currentTimeslot'
@@ -59,9 +61,9 @@ interface CalendarEntry {
       } else {
         const d = new Date(cts.year, cts.month, cts.day)
         const withoutTime = `${dayNames[d.getDay()]}, ${monthNames[(d.getMonth())]} ${cts.day}`
-        if (cts.fullDay) {
+        if (cts.slot === this.ALL_DAY) {
           return withoutTime
-        } else if (cts.morning) {
+        } else if (cts.slot === this.AM) {
           return `${withoutTime}, 9 a.m.`
         } else {
           return `${withoutTime}, 1 p.m.`
@@ -73,39 +75,48 @@ interface CalendarEntry {
       // TODO
       const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
       // TODO End game
-      if (cts.fullDay || !cts.morning) {
+      if (cts.slot === this.ALL_DAY || cts.slot === this.PM) {
         cts.day += 1
-        cts.morning = true
-        cts.fullDay = false
+        cts.slot = this.AM
       } else {
-        cts.morning = false
+        cts.slot = this.PM
       }
     }
 
-    makeSpanId = (date: string, slot: string, role: string) => {
-      return `${date}-${slot}-${role}`.replace(' ', '-')
+    makeSpanId = (month: number, day: number, slot: string, role: string) => {
+      return `${month}-${day}-${slot}-${role}`.replace(' ', '-')
     }
 
-    getScheduled = (date: string, slot: string, role: string) => {
-      console.log(`Getting: ${date}, ${slot}, ${role}, ${State.getVar(this.ENTRIES_VAR)}`)
-      const entries: CalendarEntry[] = State.getVar(this.ENTRIES_VAR)
-      if (entries) {
-        return entries.find((e) => {
-          return e.date === date && e.slot === slot && e.role === role
-        })?.cluePointId
+    getScheduled = (month: number, day: number, slot: string | undefined, role: string | undefined) => {
+      const entries: Appointment[] = State.getVar(this.ENTRIES_VAR) || []
+      return entries.filter((e) => {
+        return e.month === month &&
+               e.day === day &&
+               (!slot || e.slot === slot) &&
+               (!role || e.role === role)
+      })
+    }
+
+    getScheduledForMeNow = () => {
+      const cts: Timeslot = this.getCurrentTimeslot()
+      const myRole = ((setup as any).Roles as Roles).getRole()
+      const scheduled = this.getScheduled(cts.month, cts.day, cts.slot, myRole)
+      if (scheduled.length > 0) {
+        return scheduled[0]
       } else {
         return undefined
       }
     }
 
-    scheduleVisit = (date: string, slot: string, role: string, cluePointId: string) => {
-      console.log(`scheduling: ${date}, ${slot}, ${role}, ${cluePointId}`)
-      const entries: CalendarEntry[] = State.getVar(this.ENTRIES_VAR) || []
-      const matchingIdx = entries.findIndex((e) => e.date === date && e.slot === slot && e.role === role)
+    scheduleVisit = (month: number, day: number, slot: string, role: string, cluePointId: string) => {
+      const entries: Appointment[] = State.getVar(this.ENTRIES_VAR) || []
+      const matchingIdx = entries.findIndex((e) => {
+        return e.month ===  month && e.day === day && e.slot === slot && e.role === role
+      })
       if (matchingIdx > -1) {
         entries.deleteAt(matchingIdx)
       }
-      entries.push({ date: date, slot: slot, role: role, cluePointId: cluePointId})
+      entries.push({ month: month, day: day, slot: slot, role: role, cluePointId: cluePointId})
       console.log('setting', entries)
       State.setVar(this.ENTRIES_VAR, entries)
     }

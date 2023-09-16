@@ -1,38 +1,39 @@
 :: CalendarReceivers
 <<receive "CALENDAR_SCHEDULE" "ALL">>
   /* TODO THIS */
+  <<run console.log('?????', State.getVar('_receiveData'))>>
   <<set _data to _receiveData>>
-  <<set _date to _data.date>>
+  <<set _month to _data.month>>
+  <<set _day to _data.day>>
   <<set _slot to _data.slot>>
   <<set _role to _data.role>>
 
-  <<run setup.Calendar.scheduleVisit(_date, _slot, _role, _data.id)>>
+  <<run setup.Calendar.scheduleVisit(_month, _day, _slot, _role, _data.id)>>
 
-  <<capture _date, _slot, _role>>
-    <<set _selector to `#${setup.Calendar.makeSpanId(_date, _slot, _role)}`>>
-    <<run $(State.getVar('_selector')).html(Wikifier.wikifyEval("<<CalendarButton _date _slot _role>>"))>>
+  <<capture _month, _day, _slot, _role>>
+    <<set _selector to `#${setup.Calendar.makeSpanId(_month, _day, _slot, _role)}`>>
+    <<run $(State.getVar('_selector')).html(Wikifier.wikifyEval("<<CalendarButton _month _day _slot _role>>"))>>
   <</capture>>
 <</receive>>
 
 
 :: CalendarBlankSquareWidget [widget]
 <<widget "CalendarBlankSquare">><<nobr>>
-  <div style="text-align:right; top:0px;">_args[0]</div>
-  <<if _args[1]>>
-    _args[1]
+  <div style="text-align:right; top:0px;">_args[0] _args[1]</div>
+  <<if _args[2]>>
+    _args[2]
   <</if>>
 <</nobr>><</widget>>
 
 
 :: SelectCluePointModal
-Date: _date Slot: _slot Role: _role
 Clue points available:
 <<for _i, _id range setup.CluePoints.getKnownCluePointIds()>>\
   <<capture _id>>\
     <<button _id>>
       /* TODO: Smoothify this */
       <<run Dialog.close()>>
-      <<send "CALENDAR_SCHEDULE" { date: _date, slot: _slot, role: _role, id: _id }>><</send>>
+      <<send "CALENDAR_SCHEDULE" { month: _month, day: _day, slot: _slot, role: _role, id: _id }>><</send>>
     <</button>>
   <</capture>>
 <</for>>\
@@ -40,14 +41,20 @@ Clue points available:
 
 :: CalendarButtonWidget [widget]
 <<widget "CalendarButton">><<nobr>>
-  <<set _date to _args[0]>>
-  <<set _slot to _args[1]>>
-  <<set _role to _args[2]>>
-  <<capture _date, _slot, _role>>
-    <<set _buttonText to setup.Calendar.getScheduled(_date, _slot, _role) || ''>>
+  <<set _month to _args[0]>>
+  <<set _day to _args[1]>>
+  <<set _slot to _args[2]>>
+  <<set _role to _args[3]>>
+  <<capture _month, _day, _slot, _role>>
+    <<set _scheduled to setup.Calendar.getScheduled(_month, _day, _slot, _role)>>
+    <<if _scheduled.length > 0>>
+      <<set _buttonText to _scheduled[0].cluePointId>>
+    <<else>>
+      <<set _buttonText to ''>>
+    <</if>>
     <<button _buttonText>>
       <<script>>
-        Dialog.setup(State.getVar('_date'), 'SELECT_CLUE_POINT_MODAL_CLASS');
+        Dialog.setup('SCHEDULING TODO', 'SELECT_CLUE_POINT_MODAL_CLASS');
         Dialog.wiki(Story.get("SelectCluePointModal").processText());
         Dialog.open();
       <</script>>
@@ -58,27 +65,27 @@ Clue points available:
 
 :: CalendarSpanAndButtonWidget [widget]
 <<widget "CalendarSpanAndButton">><<nobr>>
-  /* Call as: <<CalendarSpanAndButton _date _slot _role>> */
-  <<set _spanId to setup.Calendar.makeSpanId(_args[0], _args[1], _args[2])>>
+  <<set _spanId to setup.Calendar.makeSpanId(_args[0], _args[1], _args[2], _args[3])>>
   <<idspan _spanId>>
-    <<CalendarButton _args[0] _args[1] _args[2]>>
+    <<CalendarButton _args[0] _args[1] _args[2] _args[3]>>
   <</idspan>>
 <</nobr>><</widget>>
 
 
 :: CalendarSquareWidget [widget]
 <<widget "CalendarSquare">><<nobr>>
-  <<set _date to _args[0]>>
-  <<capture _date>>
-    <div style="text-align:right;">_date</div>
+  <<set _month to _args[0]>>
+  <<set _day to _args[1]>>
+  <<capture _month, _day>>
+    <div style="text-align:right;">TODO: _month, _day</div>
     <div style="display:inline-flex; width:100%;">
       <div style="margin:auto;">
         <<AntonySeal>>
       </div>
       <div style="width:100%;" class="antony-writing">
-        <<CalendarSpanAndButton _date setup.Calendar.AM setup.Roles.ANTONY>>
+        <<CalendarSpanAndButton _month _day setup.Calendar.AM setup.Roles.ANTONY>>
         <br/>
-        <<CalendarSpanAndButton _date setup.Calendar.PM setup.Roles.ANTONY>>
+        <<CalendarSpanAndButton _month _day setup.Calendar.PM setup.Roles.ANTONY>>
       </div>
     </div>
     <div style="display:inline-flex; width:100%;" class="cleopatra-writing">
@@ -86,9 +93,9 @@ Clue points available:
         <<CleopatraSeal>>
       </div>
       <div style="width:100%;">
-        <<CalendarSpanAndButton _date setup.Calendar.AM setup.Roles.CLEOPATRA>>
+        <<CalendarSpanAndButton _month _day setup.Calendar.AM setup.Roles.CLEOPATRA>>
         <br/>
-        <<CalendarSpanAndButton _date setup.Calendar.PM setup.Roles.CLEOPATRA>>
+        <<CalendarSpanAndButton _month _day setup.Calendar.PM setup.Roles.CLEOPATRA>>
       </div>
     </div>
   <</capture>>
@@ -116,40 +123,40 @@ Clue points available:
 
     <tbody>
       <tr>
-        <td><<CalendarBlankSquare "March 14">></td>
-        <td><<CalendarBlankSquare "March 15" "M. Brnd. killed">></td>
-        <td><<CalendarBlankSquare "March 16" "FBI invs">></td>
-        <td><<CalendarBlankSquare "March 17" "FBI invs">></td>
-        <td><<CalendarBlankSquare "March 18" "FBI invs">></td>
-        <td><<CalendarBlankSquare "March 19" "FBI invs">></td>
-        <td><<CalendarBlankSquare "March 20" "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 14>></td>
+        <td><<CalendarBlankSquare 2 15 "M. Brnd. killed">></td>
+        <td><<CalendarBlankSquare 2 16 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 17 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 18 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 19 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 20 "FBI invs">></td>
       </tr>
       <tr>
-        <td><<CalendarBlankSquare "March 21" "FBI invs">></td>
-        <td><<CalendarBlankSquare "March 22" "FBI invs">></td>
-        <td><<CalendarBlankSquare "March 23" "FBI invs">></td>
-        <td><<CalendarBlankSquare "March 24" "FBI invs">></td>
-        <td><<CalendarBlankSquare "March 25" "FBI invs">></td>
-        <td><<CalendarBlankSquare "March 26" "doc rvw & plan">></td>
-        <td><<CalendarSquare "March 27">></td>
+        <td><<CalendarBlankSquare 2 21 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 22 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 23 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 24 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 25 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 26 "doc rvw & plan">></td>
+        <td><<CalendarSquare 2 27>></td>
       </tr>
       <tr>
-        <td><<CalendarSquare "March 28">></td>
-        <td><<CalendarSquare "March 29">></td>
-        <td><<CalendarSquare "March 30">></td>
-        <td><<CalendarSquare "March 31">></td>
-        <td><<CalendarSquare "April 1">></td>
-        <td><<CalendarSquare "April 2" "doc rvw & plan">></td>
-        <td><<CalendarSquare "April 3">></td>
+        <td><<CalendarSquare 2 28>></td>
+        <td><<CalendarSquare 2 29>></td>
+        <td><<CalendarSquare 2 30>></td>
+        <td><<CalendarSquare 2 31>></td>
+        <td><<CalendarSquare 3 1>></td>
+        <td><<CalendarSquare 3 2 "doc rvw & plan">></td>
+        <td><<CalendarSquare 3 3>></td>
       </tr>
       <tr>
-        <td><<CalendarSquare "April 4">></td>
-        <td><<CalendarSquare "April 5">></td>
-        <td><<CalendarSquare "April 6">></td>
-        <td><<CalendarSquare "April 7">></td>
-        <td><<CalendarBlankSquare "April 8" "write report">></td>
-        <td><<CalendarBlankSquare "April 9" "present report">></td>
-        <td><<CalendarBlankSquare "April 10">></td>
+        <td><<CalendarSquare 3 4>></td>
+        <td><<CalendarSquare 3 5>></td>
+        <td><<CalendarSquare 3 6>></td>
+        <td><<CalendarSquare 3 7>></td>
+        <td><<CalendarBlankSquare 3 8 "write report">></td>
+        <td><<CalendarBlankSquare 3 9 "present report">></td>
+        <td><<CalendarBlankSquare 3 10>></td>
       </tr>
     </tbody>
   </table>

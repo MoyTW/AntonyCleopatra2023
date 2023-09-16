@@ -20,9 +20,67 @@ You retire to your chambers.
 
 
 :: Ch2_Morning_ANTONY
-
 <<locationheader 'Waking Up'>>\
 TODO
 
 You wake up at 6:30, do your morning routine, and exercise for an hour before reconvening.
 
+You check the plan for today.
+
+<<set _cts to setup.Calendar.getCurrentTimeslot()>>\
+/* TODO: center this, probably, & disable all the buttons */\
+<<CalendarSquare _cts.month _cts.day>>
+
+<<set _scheduled to setup.Calendar.getScheduledForMeNow()>>\
+<<if _scheduled>>\
+  Next you will: _scheduled[0].cluePointId
+  <<set _id to _scheduled[0].cluePointId>>
+  <<set _name to setup.CluePoints.getName(_id)>>
+  <<button [[_name|Ch2_InterviewMorning_ANTONY]]>><</button>>
+<<else>>\
+  lol nothing scheduled hard lock sorry
+<</if>>\
+
+
+:: Ch2_InterviewMorning_ANTONY
+<<nobr>>
+  <<set _scheduled to setup.Calendar.getScheduledForMeNow()>>
+  <<set _id to _scheduled.cluePointId>>
+  <<set _name to setup.CluePoints.getName(_id)>>
+  <<set _passage to setup.CluePoints.getPassage(_id)>>
+  /* TODO: update knowns */
+<</nobr>>\
+<<locationheader _name>>\
+<<include _passage>>
+[[Take lunch.|Ch2_Lunch_ANTONY]]
+
+
+:: Ch2_Lunch_ANTONY
+<<nobr>>
+  <<run setup.Calendar.advanceTime()>>
+<</nobr>>\
+you eat lunch
+
+<<set _scheduled to setup.Calendar.getScheduledForMeNow()>>\
+<<if _scheduled>>\
+  Next you will: _scheduled.cluePointId
+  <<set _id to _scheduled.cluePointId>>
+  <<set _name to setup.CluePoints.getName(_id)>>
+  <<button [[_name|Ch2_InterviewEvening_ANTONY]]>><</button>>
+<<else>>\
+  lol nothing scheduled hard lock sorry
+<</if>>\
+
+
+:: Ch2_InterviewEvening_ANTONY
+<<nobr>>
+  /* TODO: text */
+  <<set _scheduled to setup.Calendar.getScheduledForMeNow()>>
+  <<set _id to _scheduled.cluePointId>>
+  <<set _name to setup.CluePoints.getName(_id)>>
+  <<set _passage to setup.CluePoints.getPassage(_id)>>
+  /* TODO: update knowns */
+<</nobr>>\
+<<locationheader _name>>\
+<<include _passage>>
+[[Go to bed.|Ch2_Bed_ANTONY]]

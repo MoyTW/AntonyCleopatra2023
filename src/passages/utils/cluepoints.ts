@@ -8,7 +8,9 @@ interface CluePointData {
 }
 
 interface CluePoints {
-  getKnownCluePointIds: (type: string) => string[]
+  getName: (cluePointId: string) => string | undefined
+  getPassage: (cluePointId: string) => string | undefined
+  getKnownCluePointIds: (type: string) => string[]  
 }
 
 (function () {
@@ -298,6 +300,14 @@ interface CluePoints {
           console.error(`Clue point in ordering ${k} not in data!`)
         }
       })
+    }
+
+    getName = (cluePointId: string) => {
+      return this.dataMap.get(cluePointId)?.name
+    }
+
+    getPassage = (cluePointId: string) => {
+      return this.dataMap.get(cluePointId)?.passage
     }
 
     getKnownCluePointIds = (type: string | undefined) => {
