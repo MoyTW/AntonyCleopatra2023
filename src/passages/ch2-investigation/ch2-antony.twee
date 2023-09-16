@@ -11,11 +11,13 @@ TODO CH2 START
 
 
 :: Ch2_Bed_ANTONY
+<<nobr>>
+  <<run setup.Calendar.advanceTime()>>
+<</nobr>>\
 TODO
 
 You retire to your chambers.
 
-<<run setup.Calendar.advanceTime()>>\
 <<button [[Sleep.|Ch2_Morning_ANTONY]]>><</button>>
 
 
