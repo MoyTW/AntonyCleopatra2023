@@ -1,4 +1,14 @@
 :: Ch1_CaseIntro_1_ANTONY
+TODO: Proper Initialization!
+<<script>>
+  setup.Calendar.setCurrentTimeslot({
+    year: 2021,
+    month: 2,
+    day: 26,
+    fullDay: true,
+    morning: undefined
+  })
+<</script>>
 <h1>CASE ONE</h1>\
 <h2>The Case of the Raytheon CEO.</h2>\
 <strong>March 26, 2021</strong>

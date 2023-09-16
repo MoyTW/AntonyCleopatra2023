@@ -63,3 +63,9 @@ sugarcube-2:
       name: AntonySeal
     CleopatraSeal:
       name: CleopatraSeal
+    CalendarButton:
+      name: CalendarButton
+    CalendarSpanAndButton:
+      name: CalendarSpanAndButton
+    InvestigationCalendar:
+      name: InvestigationCalendar

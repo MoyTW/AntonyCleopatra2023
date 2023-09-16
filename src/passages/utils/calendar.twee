@@ -9,19 +9,8 @@
   <<run setup.Calendar.scheduleVisit(_date, _slot, _role, _data.id)>>
 
   <<capture _date, _slot, _role>>
-    /* TODO: don't use replace, use javascript to allow for failures */
     <<set _selector to `#${setup.Calendar.makeSpanId(_date, _slot, _role)}`>>
-    <<replace _selector>><<nobr>>
-      /* TODO: save am/pm */
-      <<set _buttonText to setup.Calendar.getScheduled(_date, _slot, _role) || "a.m.">>
-        <<button _buttonText>>
-          <<script>>
-            Dialog.setup(State.getVar('_date'), 'SELECT_CLUE_POINT_MODAL_CLASS');
-            Dialog.wiki(Story.get("SelectCluePointModal").processText());
-            Dialog.open();
-          <</script>>
-        <</button>>
-    <</nobr>><</replace>>
+    <<run $(State.getVar('_selector')).html(Wikifier.wikifyEval("<<CalendarButton _date _slot _role>>"))>>
   <</capture>>
 <</receive>>
 
@@ -49,6 +38,33 @@ Clue points available:
 <</for>>\
 
 
+:: CalendarButtonWidget [widget]
+<<widget "CalendarButton">><<nobr>>
+  <<set _date to _args[0]>>
+  <<set _slot to _args[1]>>
+  <<set _role to _args[2]>>
+  <<capture _date, _slot, _role>>
+    <<set _buttonText to setup.Calendar.getScheduled(_date, _slot, _role) || ''>>
+    <<button _buttonText>>
+      <<script>>
+        Dialog.setup(State.getVar('_date'), 'SELECT_CLUE_POINT_MODAL_CLASS');
+        Dialog.wiki(Story.get("SelectCluePointModal").processText());
+        Dialog.open();
+      <</script>>
+    <</button>>
+  <</capture>>
+<</nobr>><</widget>>
+
+
+:: CalendarSpanAndButtonWidget [widget]
+<<widget "CalendarSpanAndButton">><<nobr>>
+  /* Call as: <<CalendarSpanAndButton _date _slot _role>> */
+  <<set _spanId to setup.Calendar.makeSpanId(_args[0], _args[1], _args[2])>>
+  <<idspan _spanId>>
+    <<CalendarButton _args[0] _args[1] _args[2]>>
+  <</idspan>>
+<</nobr>><</widget>>
+
 
 :: CalendarSquareWidget [widget]
 <<widget "CalendarSquare">><<nobr>>
@@ -60,37 +76,9 @@ Clue points available:
         <<AntonySeal>>
       </div>
       <div style="width:100%;" class="antony-writing">
-        <<set _slot to setup.Calendar.AM>>
-        <<set _role to setup.Roles.ANTONY>>
-        <<set _spanId to setup.Calendar.makeSpanId(_date, _slot, _role)>>
-        <<capture _spanId, _slot, _role>>
-          <<idspan _spanId>>
-            <<set _buttonText to setup.Calendar.getScheduled(_date, _slot, _role) || "a.m.">>
-            <<button _buttonText>>
-              <<script>>
-                Dialog.setup(State.getVar('_date'), 'SELECT_CLUE_POINT_MODAL_CLASS');
-                Dialog.wiki(Story.get("SelectCluePointModal").processText());
-                Dialog.open();
-              <</script>>
-            <</button>>
-          <</idspan>>
-        <</capture>>
+        <<CalendarSpanAndButton _date setup.Calendar.AM setup.Roles.ANTONY>>
         <br/>
-        <<set _slot to setup.Calendar.PM>>
-        <<set _role to setup.Roles.ANTONY>>
-        <<set _spanId to setup.Calendar.makeSpanId(_date, _slot, _role)>>
-        <<capture _spanId, _slot, _role>>
-          <<idspan _spanId>>
-            <<set _buttonText to setup.Calendar.getScheduled(_date, _slot, _role) || "p.m.">>
-            <<button _buttonText>>
-              <<script>>
-                Dialog.setup(State.getVar('_date'), 'SELECT_CLUE_POINT_MODAL_CLASS');
-                Dialog.wiki(Story.get("SelectCluePointModal").processText());
-                Dialog.open();
-              <</script>>
-            <</button>>
-          <</idspan>>
-        <</capture>>
+        <<CalendarSpanAndButton _date setup.Calendar.PM setup.Roles.ANTONY>>
       </div>
     </div>
     <div style="display:inline-flex; width:100%;" class="cleopatra-writing">
@@ -98,13 +86,9 @@ Clue points available:
         <<CleopatraSeal>>
       </div>
       <div style="width:100%;">
-        <<button "a.m.">>
-          /* TODO */
-        <</button>>
+        <<CalendarSpanAndButton _date setup.Calendar.AM setup.Roles.CLEOPATRA>>
         <br/>
-        <<button "p.m.">>
-          /* TODO */
-        <</button>>
+        <<CalendarSpanAndButton _date setup.Calendar.PM setup.Roles.CLEOPATRA>>
       </div>
     </div>
   <</capture>>
@@ -155,7 +139,7 @@ Clue points available:
         <td><<CalendarSquare "March 30">></td>
         <td><<CalendarSquare "March 31">></td>
         <td><<CalendarSquare "April 1">></td>
-        <td><<CalendarBlankSquare "April 2" "doc rvw & plan">></td>
+        <td><<CalendarSquare "April 2" "doc rvw & plan">></td>
         <td><<CalendarSquare "April 3">></td>
       </tr>
       <tr>

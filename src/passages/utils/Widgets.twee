@@ -1,7 +1,11 @@
 :: LocationHeader [widget]
-<<widget "locationheader">>\
-  <div class="locationheader">_args[0]</div>\
-<</widget>>
+<<widget "locationheader">><<nobr>>
+  <div class="locationheader">_args[0]</div>
+  <<set _text to setup.Calendar.getCurrentTimeslotText()>>
+  <<if _text>>
+    <div class="dateheader">_text</div>
+  <</if>>
+<</nobr>><</widget>>
 
 
 :: InfoLink [widget]

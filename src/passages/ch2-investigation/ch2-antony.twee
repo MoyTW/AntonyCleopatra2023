@@ -5,4 +5,24 @@ TODO CH2 START
 
 
 :: Ch2_Planning_ANTONY
+<<locationheader 'The Planning Room'>>\
 <<InvestigationCalendar>>
+<<button "Enough planning. Time to call it a night." "Ch2_Bed_ANTONY">><</button>>
+
+
+:: Ch2_Bed_ANTONY
+TODO
+
+You retire to your chambers.
+
+<<run setup.Calendar.advanceTime()>>\
+<<button [[Sleep.|Ch2_Morning_ANTONY]]>><</button>>
+
+
+:: Ch2_Morning_ANTONY
+
+<<locationheader 'Waking Up'>>\
+TODO
+
+You wake up at 6:30, do your morning routine, and exercise for an hour before reconvening.
+

@@ -5,4 +5,5 @@ TODO CH2 START
 
 
 :: Ch2_Planning_CLEOPATRA
-TODO CH2 PLANNING
+<<locationheader 'The Planning Room'>>\
+<<InvestigationCalendar>>
