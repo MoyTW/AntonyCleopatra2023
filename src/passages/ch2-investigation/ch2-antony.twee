@@ -33,7 +33,7 @@ You check the plan for today.
 /* TODO: center this, probably, & disable all the buttons */\
 <<CalendarSquare _cts.month _cts.day>>
 
-<<set _scheduled to setup.Calendar.getScheduledForMeNow()>>\
+<<set _scheduled to setup.Calendar.getScheduledNow()>>\
 <div id='options'>\
   <<nobr>>
       <<if _scheduled>>
@@ -49,7 +49,7 @@ You check the plan for today.
 
 :: Ch2_InterviewMorning_ANTONY
 <<nobr>>
-  <<set _scheduled to setup.Calendar.getScheduledForMeNow()>>
+  <<set _scheduled to setup.Calendar.getScheduledNow()>>
   <<set _id to _scheduled.cluePointId>>
   <<set _name to setup.CluePoints.getName(_id)>>
   <<set _passage to setup.CluePoints.getPassage(_id)>>
@@ -66,7 +66,7 @@ You check the plan for today.
 <</nobr>>\
 you eat lunch
 
-<<set _scheduled to setup.Calendar.getScheduledForMeNow()>>\
+<<set _scheduled to setup.Calendar.getScheduledNow()>>\
 <<if _scheduled>>\
   Next you will: _scheduled.cluePointId
   <<set _id to _scheduled.cluePointId>>
@@ -80,7 +80,7 @@ you eat lunch
 :: Ch2_InterviewEvening_ANTONY
 <<nobr>>
   /* TODO: text */
-  <<set _scheduled to setup.Calendar.getScheduledForMeNow()>>
+  <<set _scheduled to setup.Calendar.getScheduledNow()>>
   <<set _id to _scheduled.cluePointId>>
   <<set _name to setup.CluePoints.getName(_id)>>
   <<set _passage to setup.CluePoints.getPassage(_id)>>

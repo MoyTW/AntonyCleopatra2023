@@ -8,10 +8,10 @@ interface Calendar {
 
   advanceTime: () => void
 
-  makeSpanId: (month: number, day: number, slot: string, role: string) => string
+  makeSpanId: (month: number, day: number, slot: string) => string
 
-  getScheduled: (month: number, day: number, slot: string, role: string) => Appointment[]
-  getScheduledForMeNow: () => Appointment | undefined
+  getScheduled: (month: number, day: number, slot: string) => Appointment[]
+  getScheduledNow: () => Appointment | undefined
   scheduleVisit: (month: number, day: number, slot: string, role: string, cluePointId: string) => void
 }
 
@@ -83,24 +83,23 @@ interface Appointment {
       }
     }
 
-    makeSpanId = (month: number, day: number, slot: string, role: string) => {
-      return `${month}-${day}-${slot}-${role}`.replace(' ', '-')
+    makeSpanId = (month: number, day: number, slot: string) => {
+      return `${month}-${day}-${slot}`.replace(' ', '-')
     }
 
-    getScheduled = (month: number, day: number, slot: string | undefined, role: string | undefined) => {
+    getScheduled = (month: number, day: number, slot: string | undefined) => {
       const entries: Appointment[] = State.getVar(this.ENTRIES_VAR) || []
       return entries.filter((e) => {
         return e.month === month &&
                e.day === day &&
-               (!slot || e.slot === slot) &&
-               (!role || e.role === role)
+               (!slot || e.slot === slot)
       })
     }
 
-    getScheduledForMeNow = () => {
+    getScheduledNow = () => {
       const cts: Timeslot = this.getCurrentTimeslot()
       const myRole = ((setup as any).Roles as Roles).getRole()
-      const scheduled = this.getScheduled(cts.month, cts.day, cts.slot, myRole)
+      const scheduled = this.getScheduled(cts.month, cts.day, cts.slot)
       if (scheduled.length > 0) {
         return scheduled[0]
       } else {
@@ -111,7 +110,7 @@ interface Appointment {
     scheduleVisit = (month: number, day: number, slot: string, role: string, cluePointId: string) => {
       const entries: Appointment[] = State.getVar(this.ENTRIES_VAR) || []
       const matchingIdx = entries.findIndex((e) => {
-        return e.month ===  month && e.day === day && e.slot === slot && e.role === role
+        return e.month ===  month && e.day === day && e.slot === slot
       })
       if (matchingIdx > -1) {
         entries.deleteAt(matchingIdx)

@@ -9,7 +9,7 @@
   <<run setup.Calendar.scheduleVisit(_month, _day, _slot, _role, _data.id)>>
 
   <<capture _month, _day, _slot, _role>>
-    <<set _selector to `#${setup.Calendar.makeSpanId(_month, _day, _slot, _role)}`>>
+    <<set _selector to `#${setup.Calendar.makeSpanId(_month, _day, _slot)}`>>
     <<run $(State.getVar('_selector')).html(Wikifier.wikifyEval("<<CalendarButton _month _day _slot _role>>"))>>
   <</capture>>
 <</receive>>
@@ -31,6 +31,7 @@ Clue points available:
     <<button _id>>
       /* TODO: Smoothify this */
       <<run Dialog.close()>>
+      <<set _role to setup.Roles.getRole()>>
       <<send "CALENDAR_SCHEDULE" { month: _month, day: _day, slot: _slot, role: _role, id: _id }>><</send>>
     <</button>>
   <</capture>>
@@ -42,30 +43,33 @@ Clue points available:
   <<set _month to _args[0]>>
   <<set _day to _args[1]>>
   <<set _slot to _args[2]>>
-  <<set _role to _args[3]>>
-  <<capture _month, _day, _slot, _role>>
-    <<set _scheduled to setup.Calendar.getScheduled(_month, _day, _slot, _role)>>
+  <<capture _month, _day, _slot>>
+    <<set _scheduled to setup.Calendar.getScheduled(_month, _day, _slot)>>
     <<if _scheduled.length > 0>>
       <<set _buttonText to _scheduled[0].cluePointId>>
+      <<run console.log(_scheduled[0])>>
+      <<set _class to _scheduled[0].role === setup.Roles.ANTONY ? 'antony-writing' : 'cleopatra-writing'>>
     <<else>>
       <<set _buttonText to ''>>
     <</if>>
-    <<button _buttonText>>
-      <<script>>
-        Dialog.setup('SCHEDULING TODO', 'SELECT_CLUE_POINT_MODAL_CLASS');
-        Dialog.wiki(Story.get("SelectCluePointModal").processText());
-        Dialog.open();
-      <</script>>
-    <</button>>
+    <<classspan _class>>
+      <<button _buttonText>>
+        <<script>>
+          Dialog.setup('SCHEDULING TODO', 'SELECT_CLUE_POINT_MODAL_CLASS');
+          Dialog.wiki(Story.get("SelectCluePointModal").processText());
+          Dialog.open();
+        <</script>>
+      <</button>>
+    <</classspan>>
   <</capture>>
 <</nobr>><</widget>>
 
 
 :: CalendarSpanAndButtonWidget [widget]
 <<widget "CalendarSpanAndButton">><<nobr>>
-  <<set _spanId to setup.Calendar.makeSpanId(_args[0], _args[1], _args[2], _args[3])>>
+  <<set _spanId to setup.Calendar.makeSpanId(_args[0], _args[1], _args[2])>>
   <<idspan _spanId>>
-    <<CalendarButton _args[0] _args[1] _args[2] _args[3]>>
+    <<CalendarButton _args[0] _args[1] _args[2]>>
   <</idspan>>
 <</nobr>><</widget>>
 
@@ -76,25 +80,10 @@ Clue points available:
   <<set _day to _args[1]>>
   <<capture _month, _day>>
     <div style="text-align:right;">TODO: _month, _day</div>
-    <div style="display:inline-flex; width:100%;">
-      <div style="margin:auto;">
-        <<AntonySeal>>
-      </div>
-      <div style="width:100%;" class="antony-writing">
-        <<CalendarSpanAndButton _month _day setup.Calendar.AM setup.Roles.ANTONY>>
-        <br/>
-        <<CalendarSpanAndButton _month _day setup.Calendar.PM setup.Roles.ANTONY>>
-      </div>
-    </div>
-    <div style="display:inline-flex; width:100%;" class="cleopatra-writing">
-      <div style="margin:auto;">
-        <<CleopatraSeal>>
-      </div>
-      <div style="width:100%;">
-        <<CalendarSpanAndButton _month _day setup.Calendar.AM setup.Roles.CLEOPATRA>>
-        <br/>
-        <<CalendarSpanAndButton _month _day setup.Calendar.PM setup.Roles.CLEOPATRA>>
-      </div>
+    <div style="width:100%;">
+      <<CalendarSpanAndButton _month _day setup.Calendar.AM>>
+      <br/>
+      <<CalendarSpanAndButton _month _day setup.Calendar.PM>>
     </div>
   <</capture>>
 <</nobr>><</widget>>

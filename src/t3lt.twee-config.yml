@@ -11,3 +11,6 @@ sugarcube-2:
     disable:
       name: disable
       container: true
+    classspan:
+      name: classspan
+      container: true
