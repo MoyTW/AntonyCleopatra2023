@@ -1,7 +1,5 @@
 :: CalendarReceivers
 <<receive "CALENDAR_SCHEDULE" "ALL">>
-  /* TODO THIS */
-  <<run console.log('?????', State.getVar('_receiveData'))>>
   <<set _data to _receiveData>>
   <<set _month to _data.month>>
   <<set _day to _data.day>>
