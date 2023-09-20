@@ -34,20 +34,4 @@ You wake up at 6:30, do your morning routine, and exercise for an hour before re
 
 You check the plan for today.
 
-<<set _cts to setup.Calendar.getCurrentTimeslot()>>\
-/* TODO: center this, probably, & disable all the buttons */\
-<<CalendarSquare _cts.month _cts.day>>
-
-<<set _scheduled to setup.Calendar.getScheduledNow()>>\
-<div id='options'>\
-  <<nobr>>
-      <<if _scheduled>>
-        <<set _id to _scheduled.cluePointId>>
-        <<set _name to 'Visit ' + setup.CluePoints.getName(_id) + '.'>>
-        <<button [[_name|Ch2_InterviewMorning_CLEOPATRA]]>><</button>>
-      <<else>>
-        <<disable>><<button "Nothing was planned today.">><</button>><</disable>>
-      <</if>>
-  <</nobr>>
-  <<button 'Make an unannounced visit instead.'>><</button>>
-</div>
+<<include "Ch2_DecideVisitSnippet">>

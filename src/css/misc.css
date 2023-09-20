@@ -114,8 +114,7 @@ body {
   border-radius: 50%;
   position: absolute;
   right: 31.2px;
-  bottom: 0px;
-  margin: 2.4px;
+  margin: -30.8px 2.4px 2.4px 2.4px;
 }
 
 .cleopatra-seal {
@@ -130,6 +129,5 @@ body {
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  bottom: 0px;
-  margin: 2.4px;
+  margin: -30.8px 2.4px 2.4px 2.4px;
 }

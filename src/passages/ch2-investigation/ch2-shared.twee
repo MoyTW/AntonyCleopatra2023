@@ -2,14 +2,6 @@
 /* I want to do this in TS... */
 /* ...but I don't want an extra TS file that just adds unnecessary indirection. */
 /* I built this real awkwardly didn't I. */
-
-/*
-    $(`#${_data.container}`).append(icon)
-    $('#all-buttons button').prop('disabled', false)
-    finalDecisionTryDisableDiscuss()
-
-    if ($("#role-BROTHER-icon").parent()[0] === $("#role-SISTER-icon").parent()[0]) {
-       */
 <<receive 'CH2_END_PLANNING' 'ALL'>>
   <<run $('#options').append(setup.Roles.getSeal(_receiveData.role))>>
 
@@ -30,8 +22,92 @@
   <</if>>
 <</receive>>
 
+<<receive 'CH2_DECIDE_VISIT' 'ALL'>>
+  /* { scheduled: boolean, id: string, role: string } */
+  <<run console.log(_receiveData)>>
+  <<run $(`#${_receiveData.id}`).append(setup.Roles.getSeal(_receiveData.role))>>
+
+  <<if _receiveData.role === setup.Roles.ANTONY>>
+    <<set $Ch2_DecideVisitAntony to _receiveData.id>>
+    <<set $Ch2_DecideVisitWriter to setup.Roles.ANTONY>>
+  <<else>>
+    <<set $Ch2_DecideVisitCleopatra to _receiveData.id>>
+    <<set $Ch2_DecideVisitWriter to setup.Roles.CLEOPATRA>>
+  <</if>>
+
+  <<if $Ch2_DecideVisitAntony === $Ch2_DecideVisitCleopatra>>
+    <<set _cts to setup.Calendar.getCurrentTimeslot()>>\
+    <<set _month to _cts.month>>
+    <<set _day to _cts.day>>
+    <<set _slot to _cts.slot>>
+    <<set _role to $Ch2_DecideVisitWriter>>
+    <<set _id to $Ch2_DecideVisitAntony>>
+    <<set _passage to setup.CluePoints.getPassage(_id)>>
+    <<run setup.Calendar.scheduleVisit(_month, _day, _slot, _role, _id)>>
+
+    <<unset $Ch2_DecideVisitAntony>>
+    <<unset $Ch2_DecideVisitCleopatra>>
+    <<unset $Ch2_DecideVisitWriter>>
+
+    <<goto _passage>>
+  <</if>>
+<</receive>>
+
+
+
 :: Ch2_SendEndPlanningWidget [widget]
 <<widget 'Ch2_SendEndPlanning'>>
   <<run $('#options').append(setup.Roles.getSeal())>>
   <<send 'CH2_END_PLANNING' { role: setup.Roles.getRole() }>><</send>>
 <</widget>>
+
+
+:: Ch2_Interview
+<<nobr>>
+  <<set _scheduled to setup.Calendar.getScheduledNow()>>
+  <<set _id to _scheduled.cluePointId>>
+  <<set _name to setup.CluePoints.getName(_id)>>
+  <<set _passage to setup.CluePoints.getPassage(_id)>>
+  /* TODO: update knowns */
+<</nobr>>\
+<<locationheader _name>>\
+<<include _passage>>
+
+
+:: Ch2_DecideVisitSnippet
+<<set _cts to setup.Calendar.getCurrentTimeslot()>>\
+/* TODO: center this, probably, & disable all the buttons */\
+<<CalendarSquare _cts.month _cts.day>>
+<div id='options'><<nobr>>
+  <<set _scheduled to setup.Calendar.getScheduledNow()>>
+  <<if _scheduled>>
+    <<run console.log(_scheduled, _cts)>>
+    <<set _scheduledId to _scheduled.cluePointId>>
+    <<set _name to 'Visit ' + setup.CluePoints.getName(_scheduledId) + '.'>>
+    <<iddiv _scheduledId>>
+      <<button _name>>
+        <<send 'CH2_DECIDE_VISIT' { scheduled: true, id: _scheduledId, role: setup.Roles.getRole() }>><</send>>
+      <</button>>
+    <</iddiv>>
+    <strong>Or, make an unscheduled visit:</strong>
+  <<else>>
+    <<disable>><<button "Nothing was scheduled.">><</button>><</disable>>
+    <br>
+    <strong>Make an unscheduled visit:</strong>
+  <</if>>
+  <br>
+  <<for _i, _id range setup.CluePoints.getKnownCluePointIds()>>
+    <<if _id !== _scheduledId>>
+      <<capture _id>>
+        <<set _name to setup.CluePoints.getName(_id)>>
+        <<iddiv _id>>
+          <<button _name>>
+            <<send 'CH2_DECIDE_VISIT' { scheduled: false, id: _id, role: setup.Roles.getRole() }>><</send>>
+          <</button>>
+          <<if $Ch2_DecideVisitAntony === _id>><<AntonySeal>><</if>>
+          <<if $Ch2_DecideVisitCleopatra === _id>><<CleopatraSeal>><</if>>
+        <</iddiv>>
+      <</capture>>
+    <</if>>
+  <</for>>
+<</nobr>></div>

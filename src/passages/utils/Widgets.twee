@@ -29,5 +29,5 @@
 
 :: CleopatraSealWidget [widget]
 <<widget "CleopatraSeal">><<nobr>>
-  <div id='role-ANTONY-seal' class='cleopatra-seal'><strong>C</strong></div>
+  <div id='role-CLEOPATRA-seal' class='cleopatra-seal'><strong>C</strong></div>
 <</nobr>><</widget>>

@@ -16,9 +16,6 @@ TODO CH2 START
 
 
 :: Ch2_Bed_ANTONY
-<<nobr>>
-  <<run setup.Calendar.advanceTime()>>
-<</nobr>>\
 TODO
 
 You retire to your chambers.
@@ -27,6 +24,9 @@ You retire to your chambers.
 
 
 :: Ch2_Morning_ANTONY
+<<nobr>>
+  <<run setup.Calendar.advanceTime()>>
+<</nobr>>\
 <<locationheader 'Waking Up'>>\
 TODO
 
@@ -34,35 +34,7 @@ You wake up at 6:30, do your morning routine, and exercise for an hour before re
 
 You check the plan for today.
 
-<<set _cts to setup.Calendar.getCurrentTimeslot()>>\
-/* TODO: center this, probably, & disable all the buttons */\
-<<CalendarSquare _cts.month _cts.day>>
-
-<<set _scheduled to setup.Calendar.getScheduledNow()>>\
-<div id='options'>\
-  <<nobr>>
-      <<if _scheduled>>
-        <<set _id to _scheduled.cluePointId>>
-        <<set _name to 'Visit ' + setup.CluePoints.getName(_id) + '.'>>
-        <<button [[_name|Ch2_InterviewMorning_ANTONY]]>><</button>>
-      <<else>>
-        <<disable>><<button "Nothing was planned today.">><</button>><</disable>>
-      <</if>>
-  <</nobr>>
-  <<button 'Make an unannounced visit instead.'>><</button>>
-</div>
-
-:: Ch2_InterviewMorning_ANTONY
-<<nobr>>
-  <<set _scheduled to setup.Calendar.getScheduledNow()>>
-  <<set _id to _scheduled.cluePointId>>
-  <<set _name to setup.CluePoints.getName(_id)>>
-  <<set _passage to setup.CluePoints.getPassage(_id)>>
-  /* TODO: update knowns */
-<</nobr>>\
-<<locationheader _name>>\
-<<include _passage>>
-[[Take lunch.|Ch2_Lunch_ANTONY]]
+<<include "Ch2_DecideVisitSnippet">>
 
 
 :: Ch2_Lunch_ANTONY
@@ -71,26 +43,4 @@ You check the plan for today.
 <</nobr>>\
 you eat lunch
 
-<<set _scheduled to setup.Calendar.getScheduledNow()>>\
-<<if _scheduled>>\
-  Next you will: _scheduled.cluePointId
-  <<set _id to _scheduled.cluePointId>>
-  <<set _name to setup.CluePoints.getName(_id)>>
-  <<button [[_name|Ch2_InterviewEvening_ANTONY]]>><</button>>
-<<else>>\
-  lol nothing scheduled hard lock sorry
-<</if>>\
-
-
-:: Ch2_InterviewEvening_ANTONY
-<<nobr>>
-  /* TODO: text */
-  <<set _scheduled to setup.Calendar.getScheduledNow()>>
-  <<set _id to _scheduled.cluePointId>>
-  <<set _name to setup.CluePoints.getName(_id)>>
-  <<set _passage to setup.CluePoints.getPassage(_id)>>
-  /* TODO: update knowns */
-<</nobr>>\
-<<locationheader _name>>\
-<<include _passage>>
-[[Go to bed.|Ch2_Bed_ANTONY]]
+<<include "Ch2_DecideVisitSnippet">>
