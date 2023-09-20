@@ -98,7 +98,6 @@ interface Appointment {
 
     getScheduledNow = () => {
       const cts: Timeslot = this.getCurrentTimeslot()
-      const myRole = ((setup as any).Roles as Roles).getRole()
       const scheduled = this.getScheduled(cts.month, cts.day, cts.slot)
       if (scheduled.length > 0) {
         return scheduled[0]

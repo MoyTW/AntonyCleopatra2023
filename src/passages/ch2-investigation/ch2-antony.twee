@@ -37,14 +37,14 @@ You check the plan for today.
 <div id='options'>\
   <<nobr>>
       <<if _scheduled>>
-        <<set _id to _scheduled[0].cluePointId>>
+        <<set _id to _scheduled.cluePointId>>
         <<set _name to 'Visit ' + setup.CluePoints.getName(_id) + '.'>>
         <<button [[_name|Ch2_InterviewMorning_ANTONY]]>><</button>>
       <<else>>
         <<disable>><<button "Nothing was planned today.">><</button>><</disable>>
       <</if>>
   <</nobr>>
-  <<button 'Make an unannounced visit.'>><</button>>
+  <<button 'Make an unannounced visit instead.'>><</button>>
 </div>
 
 :: Ch2_InterviewMorning_ANTONY
