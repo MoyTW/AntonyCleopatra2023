@@ -69,3 +69,6 @@ sugarcube-2:
       name: CalendarSpanAndButton
     InvestigationCalendar:
       name: InvestigationCalendar
+    iddiv:
+      name: iddiv
+      container: true
