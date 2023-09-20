@@ -1,0 +1,37 @@
+:: Ch2_Receivers
+/* I want to do this in TS... */
+/* ...but I don't want an extra TS file that just adds unnecessary indirection. */
+/* I built this real awkwardly didn't I. */
+
+/*
+    $(`#${_data.container}`).append(icon)
+    $('#all-buttons button').prop('disabled', false)
+    finalDecisionTryDisableDiscuss()
+
+    if ($("#role-BROTHER-icon").parent()[0] === $("#role-SISTER-icon").parent()[0]) {
+       */
+<<receive 'CH2_END_PLANNING' 'ALL'>>
+  <<run $('#options').append(setup.Roles.getSeal(_receiveData.role))>>
+
+  <<if _receiveData.role === setup.Roles.ANTONY>>
+    <<set $Ch2_EndPlanningAntony to true>>
+  <<else>>
+    <<set $Ch2_EndPlanningCleopatra to true>>
+  <</if>>
+
+  <<if $Ch2_EndPlanningAntony and $Ch2_EndPlanningCleopatra>>
+    <<unset $Ch2_EndPlanningAntony>>
+    <<unset $Ch2_EndPlanningCleopatra>>
+    <<if setup.Roles.isAntony()>>
+      <<goto 'Ch2_Bed_ANTONY'>>
+    <<else>>
+      <<goto 'Ch2_Bed_CLEOPATRA'>>
+    <</if>>
+  <</if>>
+<</receive>>
+
+:: Ch2_SendEndPlanningWidget [widget]
+<<widget 'Ch2_SendEndPlanning'>>
+  <<run $('#options').append(setup.Roles.getSeal())>>
+  <<send 'CH2_END_PLANNING' { role: setup.Roles.getRole() }>><</send>>
+<</widget>>

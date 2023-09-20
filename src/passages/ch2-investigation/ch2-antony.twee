@@ -7,7 +7,12 @@ TODO CH2 START
 :: Ch2_Planning_ANTONY
 <<locationheader 'The Planning Room'>>\
 <<InvestigationCalendar>>
-<<button "Enough planning. Time to call it a night." "Ch2_Bed_ANTONY">><</button>>
+<div id='options'>\
+  <<button "Enough planning. Time to call it a night.">>
+    <<Ch2_SendEndPlanning>>
+  <</button>>\
+  <<if $Ch2_EndPlanningCleopatra>><<CleopatraSeal>><</if>>\
+</div>
 
 
 :: Ch2_Bed_ANTONY

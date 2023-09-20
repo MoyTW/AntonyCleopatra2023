@@ -6,7 +6,7 @@ interface Roles {
   isCleopatra: () => boolean
 
   getRole: () => string | undefined
-  getRoleIcon: (role: string) => JQuery<HTMLElement>
+  getSeal: (role: string | undefined) => JQuery<HTMLElement>
 }
 
 (function () {
@@ -39,20 +39,22 @@ interface Roles {
       }
     }
 
-    getRoleIcon = (role: string): JQuery<HTMLElement> => {
-      if (!role) { console.error(`Role ${role} is undefined! Returning brother icon.`) }
+    // TODO: Unify this with the widgets (probably by calling wikify)
+    getSeal = (role: string | undefined): JQuery<HTMLElement> => {
+      if (role === undefined) {
+        role = this.getRole()
+      }
 
-      const onPage = $(`#role-${role}-icon`)
+      const onPage = $(`#role-${role}-seal`)
       if (onPage.length > 0) {
         return onPage
       } else {
-        // TODO: Convert from brother
-        const iconPath = role === this.ANTONY ? 'images/vicon.png' : 'images/jicon.png'
-        const iconClass = role === this.CLEOPATRA ? 'brother-icon' : 'sister-icon'
-        return jQuery(document.createElement('img'))
-          .attr('id', `role-${role}-icon`)
-          .attr('src', iconPath)
-          .addClass(iconClass)
+        const sealClass = role === this.ANTONY ? 'antony-seal' : 'cleopatra-seal'
+        const html = role === this.ANTONY ? '<strong>A</strong>' : '<strong>C</strong>'
+        return jQuery(document.createElement('div'))
+          .attr('id', `role-${role}-seal`)
+          .addClass(sealClass)
+          .html(html)
       }
     }
   }

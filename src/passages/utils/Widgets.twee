@@ -23,11 +23,11 @@
 
 :: AntonySealWidget [widget]
 <<widget "AntonySeal">><<nobr>>
-  <div class='antony-seal'><strong>A</strong></div>
+  <div id='role-ANTONY-seal' class='antony-seal'><strong>A</strong></div>
 <</nobr>><</widget>>
 
 
 :: CleopatraSealWidget [widget]
 <<widget "CleopatraSeal">><<nobr>>
-  <div class='cleopatra-seal'><strong>C</strong></div>
+  <div id='role-ANTONY-seal' class='cleopatra-seal'><strong>C</strong></div>
 <</nobr>><</widget>>

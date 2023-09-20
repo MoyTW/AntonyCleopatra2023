@@ -7,3 +7,47 @@ TODO CH2 START
 :: Ch2_Planning_CLEOPATRA
 <<locationheader 'The Planning Room'>>\
 <<InvestigationCalendar>>
+<div id='options'>\
+  <<button "Enough planning. Time to call it a night.">>
+    <<Ch2_SendEndPlanning>>
+  <</button>>\
+  <<if $Ch2_EndPlanningAntony>><<AntonySeal>><</if>>\
+</div>
+
+
+:: Ch2_Bed_CLEOPATRA
+<<nobr>>
+  <<run setup.Calendar.advanceTime()>>
+<</nobr>>\
+TODO
+
+You retire to your chambers.
+
+<<button [[Sleep.|Ch2_Morning_CLEOPATRA]]>><</button>>
+
+
+:: Ch2_Morning_CLEOPATRA
+<<locationheader 'Waking Up'>>\
+TODO
+
+You wake up at 6:30, do your morning routine, and exercise for an hour before reconvening.
+
+You check the plan for today.
+
+<<set _cts to setup.Calendar.getCurrentTimeslot()>>\
+/* TODO: center this, probably, & disable all the buttons */\
+<<CalendarSquare _cts.month _cts.day>>
+
+<<set _scheduled to setup.Calendar.getScheduledNow()>>\
+<div id='options'>\
+  <<nobr>>
+      <<if _scheduled>>
+        <<set _id to _scheduled.cluePointId>>
+        <<set _name to 'Visit ' + setup.CluePoints.getName(_id) + '.'>>
+        <<button [[_name|Ch2_InterviewMorning_CLEOPATRA]]>><</button>>
+      <<else>>
+        <<disable>><<button "Nothing was planned today.">><</button>><</disable>>
+      <</if>>
+  <</nobr>>
+  <<button 'Make an unannounced visit instead.'>><</button>>
+</div>
