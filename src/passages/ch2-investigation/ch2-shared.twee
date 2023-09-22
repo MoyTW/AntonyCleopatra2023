@@ -53,6 +53,21 @@
   <</if>>
 <</receive>>
 
+<<receive 'CH2_QUESTION' 'ALL'>>
+  <<if State.getVar(`_${_receiveData.idempotencyKey}`)>>
+    <<run console.log(`Ignoring APPEND_PASSAGE for key ${_receiveData.idempotencyKey}!`)>>
+  <<else>>
+    <<run State.setVar(`_${_receiveData.idempotencyKey}`, true)>>
+    <<run $('#options').remove()>>
+    <<set _choice to _receiveData.choice>>
+    <<set _sharedPassage to passage().replace('_ANTONY', '_SHARED').replace('_CLEOPATRA', '_SHARED')>>
+    <<set _passage to _sharedPassage + ':' + _receiveData.passageSuffix>>
+    <<run $('.passage').wiki(Story.get(_passage).processText())>>
+    <<run $('.passage').wiki('<br><br>')>>
+    <<run $('.passage').wiki(Story.get(passage() + ':Questions').processText())>>
+  <</if>>
+<</receive>>
+
 <<receive 'CH2_END_INTERVIEW' 'ALL'>>
   <<run $('#end-interview').append(setup.Roles.getSeal(_receiveData.role))>>
 
@@ -87,8 +102,11 @@
 <<widget "Question">><<nobr>>
   <<if !State.getVar(`_${_args[1]}`)>>
     <<button _args[0]>>
-      <<set _passage to setup.Roles.isAntony() ? `A${_args[1]}` : `C${_args[1]}`>>
-      <<AppendPassage _passage "" _args[1] "ALL">>
+      <<set _passageSuffix to setup.Roles.isAntony() ? `A${_args[1]}` : `C${_args[1]}`>>
+      <<set _data to { passageSuffix: _passageSuffix, choice: '', idempotencyKey: _args[1] }>>
+      <<send 'CH2_QUESTION' _data>><</send>>
+      <<run $('#options').remove()>>
+      <<run $('passage').wiki('<<SendingToServer>>')>>
     <</button>>
   <</if>>
 <</nobr>><</widget>>
