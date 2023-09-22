@@ -27,7 +27,18 @@
 <</nobr>><</widget>>
 
 
+:: AntonyMarkWidget [widget]
+<<widget "AntonyMark">><<nobr>>
+  <span class='antony-mark'><strong>A</strong></span>
+<</nobr>><</widget>>
+
+
 :: CleopatraSealWidget [widget]
 <<widget "CleopatraSeal">><<nobr>>
   <div id='role-CLEOPATRA-seal' class='cleopatra-seal'><strong>C</strong></div>
+<</nobr>><</widget>>
+
+:: CleopatraMarkWidget [widget]
+<<widget "CleopatraMark">><<nobr>>
+  <span class='cleopatra-mark'><strong>C</strong></span>
 <</nobr>><</widget>>

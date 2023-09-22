@@ -67,7 +67,7 @@ His maid takes the envelope and leaves the room.
   <<Question "Tell us what you know about Marlon's activities on the night he was murdered." "Brando">>
   /* TODO: Let the player confront him about Vitruvius */
   <<Question "What were you doing on the day Marlon was murdered?" "Dean">>
-  <<Question "Are you upset that Audrey got the job of CEO, even though Marlon clearly favored you to succeed him?" "Hepburn">>
+  <<Question "<<AntonyMark>> Are you upset that Audrey got the job of CEO, even though Marlon clearly favored you to succeed him?" "Hepburn">>
   <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
     <<Question "You mentioned an engineer named Vitruvius. Tell us more about him." "Vitruvius">>
   <</if>>

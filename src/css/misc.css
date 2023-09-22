@@ -113,6 +113,14 @@ body {
   margin: -30.8px 2.4px 2.4px 2.4px;
 }
 
+.antony-mark {
+  border-style: solid;
+  color: red;
+  border-color: red;
+  background-color: yellow;
+  border-radius: 50%;
+}
+
 .cleopatra-seal {
   width: 24px;
   text-align: center;
@@ -126,4 +134,12 @@ body {
   position: absolute;
   right: 0px;
   margin: -30.8px 2.4px 2.4px 2.4px;
+}
+
+.cleopatra-mark {
+  border-style: solid;
+  color: purple;
+  border-color: purple;
+  background-color: gold;
+  border-radius: 50%;
 }
