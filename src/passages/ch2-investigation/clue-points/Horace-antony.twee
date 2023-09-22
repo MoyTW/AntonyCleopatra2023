@@ -1,0 +1,50 @@
+:: CluePoint_Horace_ANTONY
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "Horace">>\
+A few minutes before you arrive, as your car rumbles through the suburbs of Alexandria, Hortensia leans forward. "Remember," she says, "Horace has a cold, so you'll want to wear these." She pulls a box of N95 masks from the vehicle's passenger storage and hands one to each of you before fitting one over herself.
+
+"Hortensia," says your wife, "you are wonderful. Thank you."
+
+"Just doing my job."
+
+You laugh. "You're doing it well," you say, pulling the straps over your head. The car pulls to a stop in front of a charming row of brick apartments.
+
+Horace greets you at the door with the usual fawning praise that the two of you tend to get. You let it play out, but you and your wife take care not to shake his hand. Eventually, he leads you into his living area. The apartment looks like a 1-bedroom, but it's reasonably sized. The area is expensive, but Raytheon isn't cheap. Horace himself is approaching middle-aged and seems simultaneously overweight and scrawny, which is an accomplishment. His voice is unpleasantly nasal, but he's also got a cold. At least he dresses well.
+
+His living room's fairly stylish, too, with nice chairs and a couple of fancy bookshelves, filled with poetry and classical literature. You can't fault his sense. He seats you all around his dining table, then frowns. "Sorry," he says, "should I be wearing a mask?"
+
+<div id='options'>\
+  <<button "That would be best.">>
+    <<AppendPassage "1" "A1" "CluePoint_Horace" "ALL">>
+  <</button>>
+  <<button "No, that's not necessary.">>
+    <<AppendPassage "1" "A2" "CluePoint_Horace" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_Horace_ANTONY:1
+<<include "CluePoint_Horace_CLEOPATRA:1_ReactionSnippet">>
+<<include "CluePoint_Horace_ANTONY:Questions">>
+
+
+:: CluePoint_Horace_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "Tell us what you know know about Marlon's activites on March 15." "Brando">>
+  <<Question "Can you account for your activities on the day of Marlon's death?" "Horace">>
+  <<Question "What was this business about Marlon's meeting with Labienus in the evening?" "Labienus">>
+  <<Question "Marlon's sister told us he was having an affair. I know you know about it." "Affair">>
+  <<Question "Now that Marlon's gone, what happens to you?" "Status">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_Horace_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TODO END INTERVIEW
+<<include "Ch2_EndInterview_ANTONY">>

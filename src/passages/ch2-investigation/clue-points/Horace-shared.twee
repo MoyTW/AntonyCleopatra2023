@@ -1,0 +1,153 @@
+:: CluePoint_Horace_SHARED:1Y_Snippet
+"Apologies," he says, "Unfortunately, I do not - ah," he says, as Hortensia hands him one over the table. He takes a moment to put it on. "Now that I'm properly dressed, I understand you had questions."
+
+:: CluePoint_Horace_SHARED:1N_Snippet
+"All right. Still, again, I'm sorry about my state." He puts on a wan smile. "Now, I understand that this visit is for business, not pleasure."
+
+:: CluePoint_Horace_CLEOPATRA:1_ReactionSnippet
+<<if _choice is 'A1'>>\
+  <span class='antony-response'>"That would be best."</span>
+
+  <<include "CluePoint_Horace_SHARED:1Y_Snippet">>
+<<elseif _choice is 'C1'>>\
+  <span class='cleopatra-response'>"We would appreciate it."</span>
+
+  <<include "CluePoint_Horace_SHARED:1Y_Snippet">>
+<<elseif _choice is 'A2'>>\
+  <span class='antony-response'>"No, that's not necessary."</span>
+
+  <<include "CluePoint_Horace_SHARED:1N_Snippet">>
+<<elseif _choice is 'C2'>>\
+  <span class='cleopatra-response'>"Thank you, but you needn't worry yoursef."</span>
+
+  <<include "CluePoint_Horace_SHARED:1N_Snippet">>
+<</if>>\
+
+
+:: CluePoint_Horace_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                            - */\
+/* --------------------------------------------------------------------- */\
+Horace takes a moment before leaning forward. "Well, it was a normal day, as far as I can tell. Nothing much unusual happened. Mr. Brando went to the <strong>Skunkworks</strong> facility in the morning to talk with Mr. Dean. Subsequently he went out for a business lunch, and then came back to the <strong>Raytheon offices</strong> for the remainder of the day. He appeared to be having a normal day in every way. At twenty-five minutes past seven he left the offices, and I stayed back around to take care of some affairs. At fourty minutes past the hour, more or less, I saw sirens, and went down to see what happened, at which point I learned of the murder." He pauses. "It was a most surreal evening."
+
+"Was it also normal that your boss left via they alley?"
+
+"Yes, that was exceedingly normal. He parked in Memorial Park, as he had several friends who died in the service. He passed by the memorial every day before work. With the alley, the walk is only about four minutes, and without it nine. Now, in retrospect, it is a very good place for a murder, but as far as I know he was the first. Certainly that will be on all our minds now, but you understand, at the time we did not consider capital violence a concern."
+
+"So the murderer could easily have known that he'd pass through the alley on the way back from work."
+
+"Oh, without a doubt. Any of his co-workers could have told you that. In fact, any miscreant who took it upon himself to surveil Mr. Brando could have discerned it in short order. Or," he says, smiling wryly, "herself. I should not make assumptions."
+
+:: CluePoint_Horace_SHARED:ABrando
+<span class='antony-response'>"Tell us what you know know about Marlon's activites on March 15."</span>
+
+<<include "CluePoint_Horace_SHARED:SBrandoSnippet">>
+
+:: CluePoint_Horace_SHARED:CBrando
+<span class='cleopatra-response'>"What do you know about Brando's activites on March 15?"</span>
+
+<<include "CluePoint_Horace_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_Horace_SHARED:SHoraceSnippet
+/* --------------------------------------------------------------------- */\
+/* - Horace                                                            - */\
+/* --------------------------------------------------------------------- */\
+"Certainly. However, I suspect that the only thing truly relevant to your interests my alibi. Surely you have read the FBI report?"
+
+"Of course. We're interested in anything that's relevant to the case."
+
+"Very well," he sighs, "I will recount again. I arrived at work at fifteen minutes before six. Executive Assistants work to their bosses' cadence, you see. The work was as routine as any routine may be. I then did not leave the building until fourty minutes past seven, well after the deed was done. All this may be proven by my badge records and the security camera footage covering the exits to the main building, which, I may remind you, the FBI has done."
+
+"Thank you for your cooperation."
+
+"Of course."
+
+:: CluePoint_Horace_SHARED:AHorace
+<span class='antony-response'>"Can you account for your activities on the day of Marlon's death?"</span>
+
+<<include "CluePoint_Horace_SHARED:SHoraceSnippet">>
+
+:: CluePoint_Horace_SHARED:CHorace
+<span class='cleopatra-response'>"Can you tell us what you were doing on March 15th?"</span>
+
+<<include "CluePoint_Horace_SHARED:SHoraceSnippet">>
+
+
+:: CluePoint_Horace_SHARED:SLabienusSnippet
+/* --------------------------------------------------------------------- */\
+/* - Labienus                                                          - */\
+/* --------------------------------------------------------------------- */\
+"I'm sorry?" His face shows genuine puzzlement.
+
+"We have a note indicating that he intended to meet with General Labienus at 8:30 that evening."
+
+"Well now, that is interesting." He furrows his brow. "Well, it wasn't on his itinerary, and it is extremely rare for him to take premeditated meetings outside of his itinerary. In fact, I would regularly schedule his dinner reservations, work or not. Are you sure that is what the note indicates?"
+
+"You think we misinterpreted the note?"
+
+"Well, I haven't seen it, and I assume you won't let me see it, but it would be very surprising if he had a meeting but didn't feel it possible to trust me with it. It would have to be something extremely unusual for that to be the case. Then again, if it's involved with the murder, it's unusual by default. Let me think for a moment." He leans back, then forward, then straightens. "I do know that he had historically harbored concerns about the security of Project STORM, over which General Labienus was tasked with overseeing. Perhaps a breach would have been of sufficient secrecy."
+
+"What kinds of concerns?"
+
+"The exact nature is known only to the two of them. He did, however, assign additional security resources to the Skunkworks facilities, where all of the technical data and prototypes are stored, but there was no change in the main offices. The main offices carry administrative data only. Now, to be clear, in terms of security administrative data is almost as valuable as technical data, but if he was concerned with blueprints and test data and such it's the Skunkworks that one should direct their attention towards. Unfortunately, I don't know anything more concrete. The good general would be the best person to ask, and doubtless eager to aid you."
+
+"Thank you."
+
+"Well this is exciting evidence, isn't it? Espionage, spies, murder. Was he caught carrying blueprints, in direct contravention of company policy, and murdered by a state-sponsored thief? Did he find a breach, and was shot to keep him silent? Might it have been a jealous lover - or the lover's enraged husband?" His excitement is plain on his face, but his smile quickly wanes at your lack of reaction. "Well," he says, deflating, "yes, I suppose that's a little insensitive of me. Did you have any other questions?"
+
+:: CluePoint_Horace_SHARED:ALabienus
+<span class='antony-response'>"What was this business about Marlon's meeting with Labienus in the evening?"</span>
+
+<<include "CluePoint_Horace_SHARED:SLabienusSnippet">>
+
+:: CluePoint_Horace_SHARED:CLabienus
+<span class='cleopatra-response'>"Do you know anything about Brando's meeting with General Labienus?"</span>
+
+<<include "CluePoint_Horace_SHARED:SLabienusSnippet">>
+
+
+:: CluePoint_Horace_SHARED:SAffairSnippet
+/* --------------------------------------------------------------------- */\
+/* - Affair                                                          - */\
+/* --------------------------------------------------------------------- */\
+"There's one easy trick to ensure that one cannot betray any secrets," says Horace, smiling grimly, "and that's to simply not know. Unfortunately, I cannot disclose the identity of his lover, as I assiduously avoiding obtaining any knowledge of her. Yes, I often scheduled their reservations, but no details on identity were sought and none were provided. All I know is that, unequivocally, such an affair was taking place."
+
+"You scheduled their dinner reservations?"
+
+"Yes. In fact, the last one was before the night of the murder. <strong>Gary Danko</strong>. Doubtless they will know more about the identity of this mysterious consort."
+
+:: CluePoint_Horace_SHARED:AAffair
+<span class='antony-response'>"Marlon's sister told us he was having an affair. I know you know about it."</span>
+
+"Of course," he says. "It was an open secret."
+
+"Well, out with it."
+
+<<include "CluePoint_Horace_SHARED:SAffairSnippet">>
+
+:: CluePoint_Horace_SHARED:CAffair
+<span class='cleopatra-response'>"Brando's sister thinks he was having an affair."</span>
+
+"Of course," he says. "It was an open secret."
+
+"Can you tell us more?"
+
+<<include "CluePoint_Horace_SHARED:SAffairSnippet">>
+
+
+:: CluePoint_Horace_SHARED:SStatusSnippet
+/* --------------------------------------------------------------------- */\
+/* - Status                                                          - */\
+/* --------------------------------------------------------------------- */\
+"Well," he says, "that's a good question. I'm in limbo at the moment, as Hepburn already has her own EA, so who is to know but the Gods?"
+
+:: CluePoint_Horace_SHARED:AStatus
+<span class='antony-response'>"Now that Marlon's gone, what happens to you?"</span>
+
+<<include "CluePoint_Horace_SHARED:SStatusSnippet">>
+
+:: CluePoint_Horace_SHARED:CStatus
+<span class='cleopatra-response'>"Are you going to stay at Raytheon, now that Brando's gone?"</span>
+
+<<include "CluePoint_Horace_SHARED:SStatusSnippet">>
