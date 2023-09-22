@@ -112,18 +112,18 @@ Clue points available:
       <tr>
         <td><<CalendarBlankSquare 2 14>></td>
         <td><<CalendarBlankSquare 2 15 "M. Brnd. killed">></td>
-        <td><<CalendarBlankSquare 2 16 "FBI invs">></td>
-        <td><<CalendarBlankSquare 2 17 "FBI invs">></td>
-        <td><<CalendarBlankSquare 2 18 "FBI invs">></td>
-        <td><<CalendarBlankSquare 2 19 "FBI invs">></td>
-        <td><<CalendarBlankSquare 2 20 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 16 "police invs">></td>
+        <td><<CalendarBlankSquare 2 17 "police invs">></td>
+        <td><<CalendarBlankSquare 2 18 "police invs">></td>
+        <td><<CalendarBlankSquare 2 19 "police invs">></td>
+        <td><<CalendarBlankSquare 2 20 "police invs">></td>
       </tr>
       <tr>
-        <td><<CalendarBlankSquare 2 21 "FBI invs">></td>
-        <td><<CalendarBlankSquare 2 22 "FBI invs">></td>
-        <td><<CalendarBlankSquare 2 23 "FBI invs">></td>
-        <td><<CalendarBlankSquare 2 24 "FBI invs">></td>
-        <td><<CalendarBlankSquare 2 25 "FBI invs">></td>
+        <td><<CalendarBlankSquare 2 21 "police invs">></td>
+        <td><<CalendarBlankSquare 2 22 "police invs">></td>
+        <td><<CalendarBlankSquare 2 23 "police invs">></td>
+        <td><<CalendarBlankSquare 2 24 "police invs">></td>
+        <td><<CalendarBlankSquare 2 25 "police invs">></td>
         <td><<CalendarBlankSquare 2 26 "doc rvw & plan">></td>
         <td><<CalendarSquare 2 27>></td>
       </tr>

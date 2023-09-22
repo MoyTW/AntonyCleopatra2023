@@ -24,7 +24,7 @@ His living room's fairly stylish, too, with nice chairs and a couple of fancy bo
 
 
 :: CluePoint_Horace_ANTONY:1
-<<include "CluePoint_Horace_CLEOPATRA:1_ReactionSnippet">>
+<<include "CluePoint_Horace_SHARED:1_ReactionSnippet">>
 <<include "CluePoint_Horace_ANTONY:Questions">>
 
 

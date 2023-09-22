@@ -23,7 +23,7 @@ He leads the three of you to his dining room table, then sits down opposite you.
 </div>
 
 :: CluePoint_Horace_CLEOPATRA:1
-<<include "CluePoint_Horace_CLEOPATRA:1_ReactionSnippet">>
+<<include "CluePoint_Horace_SHARED:1_ReactionSnippet">>
 <<include "CluePoint_Horace_CLEOPATRA:Questions">>
 
 

@@ -4,7 +4,7 @@
 :: CluePoint_Horace_SHARED:1N_Snippet
 "All right. Still, again, I'm sorry about my state." He puts on a wan smile. "Now, I understand that this visit is for business, not pleasure."
 
-:: CluePoint_Horace_CLEOPATRA:1_ReactionSnippet
+:: CluePoint_Horace_SHARED:1_ReactionSnippet
 <<if _choice is 'A1'>>\
   <span class='antony-response'>"That would be best."</span>
 
@@ -53,11 +53,11 @@ Horace takes a moment before leaning forward. "Well, it was a normal day, as far
 /* --------------------------------------------------------------------- */\
 /* - Horace                                                            - */\
 /* --------------------------------------------------------------------- */\
-"Certainly. However, I suspect that the only thing truly relevant to your interests my alibi. Surely you have read the FBI report?"
+"Certainly. However, I suspect that the only thing truly relevant to your interests my alibi. Surely you have read the police report?"
 
 "Of course. We're interested in anything that's relevant to the case."
 
-"Very well," he sighs, "I will recount again. I arrived at work at fifteen minutes before six. Executive Assistants work to their bosses' cadence, you see. The work was as routine as any routine may be. I then did not leave the building until fourty minutes past seven, well after the deed was done. All this may be proven by my badge records and the security camera footage covering the exits to the main building, which, I may remind you, the FBI has done."
+"Very well," he sighs, "I will recount again. I arrived at work at fifteen minutes before six. Executive Assistants work to their bosses' cadence, you see. The work was as routine as any routine may be. I then did not leave the building until fourty minutes past seven, well after the deed was done. All this may be proven by my badge records and the security camera footage covering the exits to the main building, which, I may remind you, the police has done."
 
 "Thank you for your cooperation."
 
