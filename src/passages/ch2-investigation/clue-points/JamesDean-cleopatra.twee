@@ -71,7 +71,7 @@ His maid takes the envelope and leaves the room.
   <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
     <<Question "You mentioned an engineer by the name of Vitruvius. Could you speak further about him?" "Vitruvius">>
   <</if>>
-  <<Question "That's all we needed for today." "Done">>
+  <<EndInterview "Thank you. That's all we needed for today.">>
 <</nobr>></div>\
 
 
@@ -79,9 +79,7 @@ His maid takes the envelope and leaves the room.
 /* --------------------------------------------------------------------- */\
 /* - Condolences                                                       - */\
 /* --------------------------------------------------------------------- */\
-<span class='antony-response'>"I wanted to offer my condolences. It's never easy to deal with the death of a friend."</span>
-
-"Yes. Thank you." Dean pauses, eyes wandering. "Yeah. I'm not sure I'd call him a friend, strictly speaking. I mean, you know his reputation, right?" Antony nods in assent. The dossier stated that Brando often threw temper tantrums, yelled in the office, and was emotinally abusive to employees and family, and it seems Dean had seen it in person. "Still, I appreciate the sentiment, and I don't want to give the impression that we were on bad terms. It's just Marlon was a prickly sort of fellow."
+<<include "CluePoint_JamesDean_SHARED:ACondolences">>
 
 <<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
 
@@ -145,3 +143,10 @@ His maid takes the envelope and leaves the room.
 <<include "CluePoint_JamesDean_SHARED:CVitruvius">>
 
 <<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+
+:: CluePoint_JamesDean_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+Ending Cleopatra

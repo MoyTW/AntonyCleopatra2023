@@ -71,7 +71,7 @@ His maid takes the envelope and leaves the room.
   <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
     <<Question "You mentioned an engineer named Vitruvius. Tell us more about him." "Vitruvius">>
   <</if>>
-  <<Question "That's all we needed for today." "Done">>
+  <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 
 
@@ -79,9 +79,7 @@ His maid takes the envelope and leaves the room.
 /* --------------------------------------------------------------------- */\
 /* - Condolences                                                       - */\
 /* --------------------------------------------------------------------- */\
-<span class='antony-response'>"I wanted to offer my condolences. It's never easy to deal with the death of a friend."</span>
-
-"Yes. Thank you." James pauses, eyes wandering. "Yeah. I'm not sure I'd call him a friend, strictly speaking. I mean, you know his reputation, right?" You nod. Marlon did have a reputation for being temperamental, an asshole, a harsh boss, and a serial womanizer. Maybe 'friend' might have been overstating it. "Still, I appreciate the sentiment," he says, "and I don't want to give the impression that we were on bad terms. It's just Marlon was a prickly sort of fellow."
+<<include "CluePoint_JamesDean_SHARED:ACondolences">>
 
 <<include "CluePoint_JamesDean_ANTONY:Questions">>
 
@@ -147,7 +145,8 @@ His maid takes the envelope and leaves the room.
 <<include "CluePoint_JamesDean_ANTONY:Questions">>
 
 
-:: CluePoint_JamesDean_ANTONY:ADone
+:: CluePoint_JamesDean_ANTONY:EndInterview
 /* --------------------------------------------------------------------- */\
-/* - Done                                                              - */\
+/* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
+Ending Antony

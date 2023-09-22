@@ -74,3 +74,5 @@ sugarcube-2:
       container: true
     Question:
       name: Question
+    EndInterview:
+      name: EndInterview

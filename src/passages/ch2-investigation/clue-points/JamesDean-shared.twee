@@ -1,7 +1,19 @@
-:: CluePoint_JamesDean_SHARED:CCondolences
+:: CluePoint_JamesDean_SHARED:ACondolences
 /* --------------------------------------------------------------------- */\
 /* - Condolences                                                       - */\
 /* --------------------------------------------------------------------- */\
+<span class='antony-response'>"I wanted to offer my condolences. It's never easy to deal with the death of a friend."</span>
+
+<<nobr>>
+  "Yes. Thank you." Dean pauses, eyes wandering. "Yeah. I'm not sure I'd call him a friend, strictly speaking. I mean, you know his reputation, right?"
+  <<if setup.Roles.isAntony()>>
+    You nod. Marlon did have a reputation for being temperamental, an asshole, a harsh boss, and a serial womanizer. Maybe 'friend' might have been overstating it. "Still, I appreciate the sentiment," he says, "and I don't want to give the impression that we were on bad terms. It's just Marlon was a prickly sort of fellow."
+  <<else>>
+    Antony nods in assent. The dossier stated that Brando often threw temper tantrums, yelled in the office, and was emotinally abusive to employees and family, and it seems Dean saw it in person. "Still, I appreciate the sentiment, and I don't want to give the impression that we were on bad terms. It's just Marlon was a prickly sort of fellow."
+  <</if>>
+<</nobr>>
+
+:: CluePoint_JamesDean_SHARED:CCondolences
 <span class='cleopatra-response'>"I heard that Brando was a mentor to you. I'd like to offer my sympathies."</span>
 
 "A mentor?" He pauses. "Yeah, I suppose. He was always very invested in me, if that's what you mean. He took a personal interest. I wouldn't say that I liked him much, and that's no secret. He had a reputation for being temperamental, but I guess he was a mentor to me." He has a faraway look in his eyes. "Well, anyways, he had a reputation. I don't want to give the impression that we were on bad terms, but he was a prickly sort of fellow. Anywas, I appreciate the sentiment."
@@ -96,7 +108,7 @@ James sighs. "Antony," he says, "are you trying to imply that I might have motiv
 
 "I do find the prominence of women in positions of leadership in American defense firms fascinating. Boeing Defense has Leanne Caret, General Motors Mary Barra, General Dynamics Phebe Novakovic, and Northrup Grumman has Kathy Warden. Now Raytheon has Hepburn. If not for Hewson stepping down at Lockheed Martin, all five of the top United States defense contractors would be lead by woman."
 
-"You, uh, well - that's a good memory you've got." <<if setup.Roles.isAntony()>>James<<else>><</if>> blinks. "Do you - is that the kind of things Your Majesty - well, I - I suppose keeping track of that thing is part of your job, isn't it?"
+"You, uh, well - that's a good memory you've got." <<if setup.Roles.isAntony()>>James<<else>>Dean<</if>> blinks. "Do you - is that the kind of things Your Majesty - well, I - I suppose keeping track of that thing is part of your job, isn't it?"
 
 "Oh," <<if setup.Roles.isAntony()>>your wife says,<<else>>you demur,<</if>> "like you said, I simply have a good memory. So, tell me, what do you think of Hepburn? I hear that she was well liked by most everybody but the former Brando."
 
