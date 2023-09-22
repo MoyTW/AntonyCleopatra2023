@@ -1,19 +1,24 @@
 :: AppendPassageReceivers
 <<receive 'APPEND_PASSAGE' 'ALL'>>
-  <<if _receiveData.role is setup.Roles.getRole()>>
-    <<run console.log(_receiveData)>>
-    <<run $('#options').remove()>>
-    <<set _choice to _receiveData.choice>>
-    <<set _passage to _receiveData.passage>>
-    <<set _lastPassage to passage()>>
-    <<run $('.passage').wiki(Story.get(_passage).processText())>>
+  <<if (_receiveData.role === 'ALL') || (_receiveData.role === setup.Roles.getRole())>>
+    <<if State.getVar(`_${_receiveData.idempotencyKey}`)>>
+      <<run console.log(`Ignoring APPEND_PASSAGE for key ${_receiveData.idempotencyKey}!`)>>
+    <<else>>
+      <<run console.log(_receiveData)>>
+      <<run State.setVar(`_${_receiveData.idempotencyKey}`, true)>>
+      <<run $('#options').remove()>>
+      <<set _choice to _receiveData.choice>>
+      <<run console.log(passage())>>
+      <<set _passage to passage() + ':' + _receiveData.passageSuffix>>
+      <<run $('.passage').wiki(Story.get(_passage).processText())>>
+    <</if>>
   <</if>>
 <</receive>>
 
 
 :: AppendPassageWidget [widget]
 <<widget 'AppendPassage'>>\
-  <<set _data to { passage: State.getVar('_args[0]'), role: setup.Roles.getRole(), choice: State.getVar('_args[1]') }>>
+  <<set _data to { passageSuffix: _args[0], choice: _args[1], idempotencyKey: _args[2], role: _args[3] || setup.Roles.getRole(), }>>
   <<send 'APPEND_PASSAGE' _data>><</send>>
   <<run $('#options').remove()>>
   <<run $('passage').wiki('<<SendingToServer>>')>>

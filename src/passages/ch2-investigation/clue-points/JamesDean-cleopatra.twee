@@ -1,0 +1,147 @@
+:: CluePoint_JamesDean_CLEOPATRA
+<<run setup.CluePoints.markCluePointKnown('GoldenLotus')>>\
+James Dean's Georgetown mansion is of moderate size, constructed in the Spanish style, most common on the American West Coast, although you recall from his dossier that the owner was birthed in Marion, Indiana. You take a moment to remember. Yes, he did have the house custom built. Interesting, although his specific architectural influences are unlikely to be relevant.
+
+A maid, who speaks little more than necessary, leads the two of you into a sitting room. It has contemporary chairs, a coffee table with a glass top, and a window as large as a wall that looks out over a swimming pool. Opposite the window is a bar, well-stocked with both alcohol and prominently displayed tobacco products of all kinds. On the coffee table are a pack of cigarettes, an ashtray, and a  face-down, unopened envelope.
+
+The sound of a door opening heralds the arrival of James Dean, looking every bit as young as his twenty-three years of age. His hair is immaculately combed, his eyes soulful and sharp, and his khaki sports jacket is as sharp as any Hollywood star's. He sits down at the coffe table opposite you, then notices the envelope.
+
+"Mr. Vice-President," he says, smoothing his face, "it's good to see you again. Your Majesty," he says, extending a hand, "it's a pleasure to meet you."
+
+"Likewise," you say. His handshake is laser built to convey trustworthiness, vital energy, and a good-natured affect.
+
+"Sorry," he says, pointing to the envelope, "do you mind if I take care of this first?"
+
+<div id='options'>\
+  <<button "Please, do.">>
+    <<AppendPassage "1" "C1" "CluePoint_JamesDean" "ALL">>
+  <</button>>
+  <<button "Might we speak first?">>
+    <<AppendPassage "1" "C2" "CluePoint_JamesDean" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_JamesDean_CLEOPATRA:1W_Snippet
+"Sure, no problem. Sei," he says, grabbing the envelope off the table and peering at the return address, "can you take this to, uh, the accountant? Sorry, bills or something, you know." He puts on a sheepish grin.
+
+:: CluePoint_JamesDean_CLEOPATRA:1E_Snippet
+"Thanks," he says. He pulls a pocket knife out of his pants and slits the envelope, taking a moment to scan its contents. "Ah," he says, sighing and restuffing it, "bills, right? Anyways, Sei, can you take this to the accountant?"
+
+:: CluePoint_JamesDean_CLEOPATRA:1
+<<if _choice is 'A1'>>\
+  <span class='antony-response'>"Go ahead."</span>
+
+  <<include "CluePoint_JamesDean_CLEOPATRA:1E_Snippet">>
+<<elseif _choice is 'C1'>>\
+  <span class='cleopatra-response'>"Please, do."</span>
+
+  <<include "CluePoint_JamesDean_CLEOPATRA:1E_Snippet">>
+<<elseif _choice is 'A2'>>\
+  <span class='antony-response'>"Sorry, it'll have to wait."</span>
+
+  <<include "CluePoint_JamesDean_CLEOPATRA:1W_Snippet">>
+<<elseif _choice is 'C2'>>\
+  <span class='cleopatra-response'>"Might we speak first?"</span>
+
+  <<include "CluePoint_JamesDean_CLEOPATRA:1W_Snippet">>
+<</if>>\
+
+His maid takes the envelope and leaves the room.
+
+"Sorry," says James. He grabs the cigarettes off the table, flips the pack open, and holds them out to you. "Does Your Majesty smoke? Made to order. From <strong>Golden Lotus</strong>, very good."
+
+"Thank you," you reply, "but I don't smoke."
+
+"Pity. And I know you don't," he says, nodding at Antony. "So. You wanted to talk."
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+
+:: CluePoint_JamesDean_CLEOPATRA:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "I heard that Brando was a mentor to you. I'd like to offer my sympathies." "Condolences">>
+  <<Question "What do you know about Brando's activities on the day of his murder?" "Brando">>
+  /* TODO: Let the player confront him about Vitruvius */
+  <<Question "Could you tell us what you were doing on the day Brando was murdered?" "Dean">>
+  <<Question "What do you think about Hepburn's recent promotion to CEO?" "Hepburn">>
+  <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
+    <<Question "You mentioned an engineer by the name of Vitruvius. Could you speak further about him?" "Vitruvius">>
+  <</if>>
+  <<Question "That's all we needed for today." "Done">>
+<</nobr>></div>\
+
+
+:: CluePoint_JamesDean_CLEOPATRA:ACondolences
+/* --------------------------------------------------------------------- */\
+/* - Condolences                                                       - */\
+/* --------------------------------------------------------------------- */\
+<span class='antony-response'>"I wanted to offer my condolences. It's never easy to deal with the death of a friend."</span>
+
+"Yes. Thank you." Dean pauses, eyes wandering. "Yeah. I'm not sure I'd call him a friend, strictly speaking. I mean, you know his reputation, right?" Antony nods in assent. The dossier stated that Brando often threw temper tantrums, yelled in the office, and was emotinally abusive to employees and family, and it seems Dean had seen it in person. "Still, I appreciate the sentiment, and I don't want to give the impression that we were on bad terms. It's just Marlon was a prickly sort of fellow."
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+:: CluePoint_JamesDean_CLEOPATRA:CCondolences
+<<include "CluePoint_JamesDean_SHARED:CCondolences">>
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+
+:: CluePoint_JamesDean_CLEOPATRA:ABrando
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                            - */\
+/* --------------------------------------------------------------------- */\
+<<include "CluePoint_JamesDean_SHARED:ABrando">>
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+:: CluePoint_JamesDean_CLEOPATRA:CBrando
+<<include "CluePoint_JamesDean_SHARED:CBrando">>
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+
+:: CluePoint_JamesDean_CLEOPATRA:ADean
+/* --------------------------------------------------------------------- */\
+/* - Dean                                                              - */\
+/* --------------------------------------------------------------------- */\
+<<include "CluePoint_JamesDean_SHARED:ADean">>
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+:: CluePoint_JamesDean_CLEOPATRA:CDean
+<<include "CluePoint_JamesDean_SHARED:CDean">>
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+
+:: CluePoint_JamesDean_CLEOPATRA:AHepburn
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                           - */\
+/* --------------------------------------------------------------------- */\
+<<include "CluePoint_JamesDean_SHARED:AHepburn">>
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+:: CluePoint_JamesDean_CLEOPATRA:CHepburn
+<<include "CluePoint_JamesDean_SHARED:CHepburn">>
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+
+:: CluePoint_JamesDean_CLEOPATRA:AVitruvius
+/* --------------------------------------------------------------------- */\
+/* - Vitruvius                                                         - */\
+/* --------------------------------------------------------------------- */\
+<<include "CluePoint_JamesDean_SHARED:AVitruvius">>
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>
+
+:: CluePoint_JamesDean_CLEOPATRA:CVitruvius
+<<include "CluePoint_JamesDean_SHARED:CVitruvius">>
+
+<<include "CluePoint_JamesDean_CLEOPATRA:Questions">>

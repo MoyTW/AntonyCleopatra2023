@@ -35,3 +35,12 @@ You wake up at 6:30, do your morning routine, and exercise for an hour before re
 You check the plan for today.
 
 <<include "Ch2_DecideVisitSnippet">>
+
+
+:: Ch2_Lunch_CLEOPATRA
+<<nobr>>
+  <<run setup.Calendar.advanceTime()>>
+<</nobr>>\
+you eat lunch
+
+<<include "Ch2_DecideVisitSnippet">>

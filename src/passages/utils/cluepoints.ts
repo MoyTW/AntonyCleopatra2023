@@ -9,7 +9,7 @@ interface CluePointData {
 
 interface CluePoints {
   getName: (cluePointId: string) => string | undefined
-  getPassage: (cluePointId: string) => string | undefined
+  getPassage: (cluePointId: string, role: string) => string | undefined
   getKnownCluePointIds: (type: string) => string[]  
 }
 
@@ -23,7 +23,7 @@ interface CluePoints {
     JocelynBrando: 'JocelynBrando',
     TaritaBrando: 'TaritaBrando',
     JamesDean: 'JamesDean',
-    AudryHepburn: 'AudryHepburn',
+    AudreyHepburn: 'AudreyHepburn',
     GeneralLabienus: 'GeneralLabienus',
     Horace: 'Horace',
     HoracesMother: "HoracesMother",
@@ -48,7 +48,7 @@ interface CluePoints {
     CluePointKey.JocelynBrando,
     CluePointKey.TaritaBrando,
     CluePointKey.JamesDean,
-    CluePointKey.AudryHepburn,
+    CluePointKey.AudreyHepburn,
     CluePointKey.GeneralLabienus,
     CluePointKey.Horace,
     CluePointKey.HoracesMother,
@@ -99,10 +99,10 @@ interface CluePoints {
       ]
     },
     {
-      id: CluePointKey.AudryHepburn,
-      name: 'Audry Hepburn',
+      id: CluePointKey.AudreyHepburn,
+      name: 'Audrey Hepburn',
       type: CluePointType.Person,
-      passage: 'CluePoint_AudryHepburn',
+      passage: 'CluePoint_AudreyHepburn',
       defaultKnown: true,
       reveals: []
     },
@@ -306,8 +306,9 @@ interface CluePoints {
       return this.dataMap.get(cluePointId)?.name
     }
 
-    getPassage = (cluePointId: string) => {
-      return this.dataMap.get(cluePointId)?.passage
+    getPassage = (cluePointId: string, role: string) => {
+      const prefix = this.dataMap.get(cluePointId)?.passage
+      return `${prefix}_${role}`
     }
 
     getKnownCluePointIds = (type: string | undefined) => {
@@ -320,6 +321,18 @@ interface CluePoints {
         return knownIds.filter((id) => this.dataMap.get(id)?.type === type)
       } else {
         return knownIds
+      }
+    }
+
+    cluePointIsKnown = (cluePointId: string) => {
+      return this.getKnownCluePointIds(undefined).includes(cluePointId)
+    }
+
+    markCluePointKnown = (cluePointId: string) => {
+      const knownIds = this.getKnownCluePointIds(undefined)
+      if (!knownIds.includes(cluePointId)) {
+        knownIds.push(cluePointId)
+        State.setVar('$knownCluePoints', knownIds)
       }
     }
   }

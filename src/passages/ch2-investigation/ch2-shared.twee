@@ -42,7 +42,7 @@
     <<set _slot to _cts.slot>>
     <<set _role to $Ch2_DecideVisitWriter>>
     <<set _id to $Ch2_DecideVisitAntony>>
-    <<set _passage to setup.CluePoints.getPassage(_id)>>
+    <<set _passage to setup.CluePoints.getPassage(_id, setup.Roles.getRole())>>
     <<run setup.Calendar.scheduleVisit(_month, _day, _slot, _role, _id)>>
 
     <<unset $Ch2_DecideVisitAntony>>
@@ -67,11 +67,23 @@
   <<set _scheduled to setup.Calendar.getScheduledNow()>>
   <<set _id to _scheduled.cluePointId>>
   <<set _name to setup.CluePoints.getName(_id)>>
-  <<set _passage to setup.CluePoints.getPassage(_id)>>
+  <<set _passage to setup.CluePoints.getPassage(_id, setup.Roles.getRole())>>
   /* TODO: update knowns */
 <</nobr>>\
 <<locationheader _name>>\
-<<include _passage>>
+<<include _passage>>\
+/* TODO: write the 'proceed' into the passage */\
+
+
+:: QuestionWidget [widget]
+<<widget "Question">><<nobr>>
+  <<if !State.getVar(`_${_args[1]}`)>>
+    <<button _args[0]>>
+      <<set _passage to setup.Roles.isAntony() ? `A${_args[1]}` : `C${_args[1]}`>>
+      <<AppendPassage _passage "" _args[1] "ALL">>
+    <</button>>
+  <</if>>
+<</nobr>><</widget>>
 
 
 :: Ch2_DecideVisitSnippet

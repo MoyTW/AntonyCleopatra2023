@@ -1,0 +1,156 @@
+:: CluePoint_JamesDean_SHARED:CCondolences
+/* --------------------------------------------------------------------- */\
+/* - Condolences                                                       - */\
+/* --------------------------------------------------------------------- */\
+<span class='cleopatra-response'>"I heard that Brando was a mentor to you. I'd like to offer my sympathies."</span>
+
+"A mentor?" He pauses. "Yeah, I suppose. He was always very invested in me, if that's what you mean. He took a personal interest. I wouldn't say that I liked him much, and that's no secret. He had a reputation for being temperamental, but I guess he was a mentor to me." He has a faraway look in his eyes. "Well, anyways, he had a reputation. I don't want to give the impression that we were on bad terms, but he was a prickly sort of fellow. Anywas, I appreciate the sentiment."
+
+
+:: CluePoint_JamesDean_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                            - */\
+/* --------------------------------------------------------------------- */\
+"Right." He pauses, thinking. "Well, he came to meet with me in the morning at the <strong>Skunkworks</strong> facility about the STORM program. Specifically, security. He thought an engineer named <strong>Vitruvius Pollio</strong> was acting suspiciously and might be a security risk. I didn't, and still don't, believe that to be true."
+
+"Did he say anything interesting in the meeting?"
+
+"Just what I told you. He had suspicions, but no evidence."
+
+"What about the rest of his day?"
+
+"That was the only meeting I had. That was the last time I - well, was going to say that was the last time I saw him that day, but I suppose it's the last time I saw him at all." He pauses. "I mean, I went to the wake. I saw his body. But that's different. Anyways, that's what I know. I've talked to folks afterwards, because of course his death was...well, it was a hot subject. Everybody was talking about it, but all that's secondhand. I wouldn't be able to put any stock in it."
+
+:: CluePoint_JamesDean_SHARED:ABrando
+<<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>\
+<span class='antony-response'>"Tell us what you know about Marlon's activities on the night he was murdered."</span>
+
+<<include "CluePoint_JamesDean_SHARED:SBrandoSnippet">>
+
+:: CluePoint_JamesDean_SHARED:CBrando
+<<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>\
+<span class='cleopatra-response'>"What do you know about Brando's activities on the day of his murder?"</span>
+
+<<include "CluePoint_JamesDean_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_JamesDean_SHARED:SDeanSnippet
+/* --------------------------------------------------------------------- */\
+/* - Dean                                                              - */\
+/* --------------------------------------------------------------------- */\
+"If you say so." He takes a moment to think. "Well, I got up at around 8, went in to work around 9, took a meeting with him in the morning, ate lunch in the cafeteria, and badged out at around 5. You can verify those times via the Raytheon records. After work I bought some groceries at the corner store, went home, ate dinner, and went to bed." He shrugs. "And, as you can doubtless read in the report, I have receipts for the groceries, and mobile phone data to prove that I did go home after work."
+
+"Thank you."
+
+"Sure. No problem. Any other questions?"
+
+:: CluePoint_JamesDean_SHARED:ADean
+<span class='antony-response'>"What were you doing on the day Marlon was murdered?"</span>
+
+"I appreciate that you're trying to cover you bases," he says, "but I gave a statement to the police the day after. That's likely to be more accurate than anything I say now, more than a week after."
+
+"I have read it," <<if setup.Roles.isAntony()>>you reply,<<else>>replies Antony,<</if>> "but I'd like to hear it from you, personally."
+
+<<include "CluePoint_JamesDean_SHARED:SDeanSnippet">>
+
+:: CluePoint_JamesDean_SHARED:CDean
+<span class='cleopatra-response'>"Could you tell us what you were doing on the day Brando was murdered?"</span>
+
+"I appreciate that you're trying to cover you bases," he says, "but I gave a statement to the police the day after. That's likely to be more accurate than anything I say now, more than a week after."
+
+"Of course," <<if setup.Roles.isCleopatra()>>you reply,<<else>>replies your wife,<</if>> "but I'd like to hear it from you, personally."
+
+<<include "CluePoint_JamesDean_SHARED:SDeanSnippet">>
+
+
+:: CluePoint_JamesDean_SHARED:AHepburn
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                           - */\
+/* --------------------------------------------------------------------- */\
+<span class='antony-response'>"Are you upset that Audrey got the job of CEO, even though Marlon clearly favored you to succeed him?"</span>
+
+"Not at all," <<if setup.Roles.isAntony()>>says James,<<else>>says Dean,<</if>> grinning. "She's fully qualified and has seniority. She's the obvious choice."
+
+"Don't you think she's a bit young to be CEO? She's only twenty-five."
+
+"I'm only twenty-three."
+
+"Marlon clearly didn't think that was an impediment. You were clearly his chosen successor."
+
+James sighs. "Antony," he says, "are you trying to imply that I might have motive for Marlon's death?"
+
+"Of course not, but if I were you, I'd be angry that I was passed over. Shouldn't the leader have the final say in which of his subordinates takes over for him?"
+
+"Come on!" laughs <<if setup.Roles.isAntony()>>James.<<else>>Dean.<</if>> "A corporation isn't a monarchy or a family. Look, Audrey's the obvious choice, no matter what Marlon thought about it. Why are you so hung up on this? In fact," he says, leaning forward, "Do you think Audrey is less qualified in any way than I am, Antony?"
+
+"Not at all," <<if setup.Roles.isAntony()>>you reply.<<else>>replies Antony.<</if>> "Like you say, she's the obvious choice."
+
+"Look, let me lay it out for you. If I had wanted to be CEO, my incentive lies in having Marlon live, not seeing him die. If anything, him dying has worsened by advancement prospects, so you could say that I have the opposite of a motive."
+
+"I see," <<if setup.Roles.isAntony()>>you say, and leave it at that.<<else>>says your husband.<</if>>
+
+:: CluePoint_JamesDean_SHARED:CHepburn
+<span class='cleopatra-response'>"What do you think about Hepburn's recent promotion to CEO?"</span>
+
+"I think it well deserved," answers <<if setup.Roles.isAntony()>>James.<<else>>Dean.<</if>>
+
+"I do find the prominence of women in positions of leadership in American defense firms fascinating. Boeing Defense has Leanne Caret, General Motors Mary Barra, General Dynamics Phebe Novakovic, and Northrup Grumman has Kathy Warden. Now Raytheon has Hepburn. If not for Hewson stepping down at Lockheed Martin, all five of the top United States defense contractors would be lead by woman."
+
+"You, uh, well - that's a good memory you've got." <<if setup.Roles.isAntony()>>James<<else>><</if>> blinks. "Do you - is that the kind of things Your Majesty - well, I - I suppose keeping track of that thing is part of your job, isn't it?"
+
+"Oh," <<if setup.Roles.isAntony()>>your wife says,<<else>>you demur,<</if>> "like you said, I simply have a good memory. So, tell me, what do you think of Hepburn? I hear that she was well liked by most everybody but the former Brando."
+
+"Oh, yeah, everybody likes Audrey. She has a real head for numbers and a easy way with people. Very trustworthy, very personable. People think that the CEOs of the defense firms are all assholes, and Marlon was, don't get me wrong, but the important thing is that you've got to be somebody who's trustworthy, and Marlon was that. Audrey's got that too. If she says she'll get something done, she'll get it done. That, and work ethic, those are two things you've got to have. And being smart. Knowing which way the wind blows, having contacts. She's got all that, in spades." He pauses. "Yeah, I think she's great. I can set up a meeting, if you're interested."
+
+"Oh, that's very kind of you. What did Marlon think of her, though?"
+
+"Ah, well," he says, sighing, "he, uh. He thought she was competent."
+
+"Was there friction?"
+
+"Well, you know, she made it to CMO under Marlon, so it didn't really cripple her advancement."
+
+"There was friction, wasn't there?"
+
+"I - you know, look, I'm not going to lie, but I'm not sure I'm the best person to talk about this. It was well-known that Marlon and Hepburn had some issues. I got on with the boss a lot better than her, and to be honest, you'd probably be best off asking her."
+
+"Thank you," <<if setup.Roles.isAntony()>>says your wife,<<else>>you say,<</if>> "and I do think your discretion does you credit."
+
+"Ah, thanks."
+
+
+:: CluePoint_JamesDean_SHARED:SVitruviusSnippet
+/* --------------------------------------------------------------------- */\
+/* - Vitruvius                                                         - */\
+/* --------------------------------------------------------------------- */\
+"There's not much to say. Vitruvius is an engineer who was working on the STORM program. Marlon thought he was acting suspiciously, and he wanted me to reassign him to a different program, but I honestly didn't think there was an issue."
+
+"What was he suspicious about?"
+
+"Well, he made a lot of visits to the French Ambassador."
+
+"To <strong>Napolean</strong>?"
+
+"Yeah. Marlon was pretty suspicious, especially given that Napolean is pretty important and Vitruvius, no offense to him, is just a engineer. A talented one, but still not very important. He has a good explanation, but it's his own business." He grins. "You can ask him about it if you like, but I'm not telling. Trust me that it's completely unrelated to possible corporate espionage. Besides, if he were doing espionage with the French, I imagine he'd try and keep the meetings a secret, which he definitely didn't do."
+
+"Did he talk about the visits a lot?"
+
+"Well, no, he didn't go out shouting to the world, but his co-workers knew. He was pretty popular, too. They were sad to see him go."
+
+"Sad to see him go? Was he fired?"
+
+"No, no, sorry, bad choice of words. I reassigned him. <strong>General Labienus</strong> followed the FBI investigation and didn't find his explanation credible, so he asked me to take him off the project and, since Labienus is the man in charge of the program, I had to." He shrugs. "It's a shame, but it's not career-threatening or anything. He seemed disappointed, but he took it in stride. I can get you his contact info, if you like."
+
+"Yes, that'd be very helpful."
+
+:: CluePoint_JamesDean_SHARED:AVitruvius
+<<run setup.CluePoints.markCluePointKnown('NapoleonBonaparte')>>\
+<span class='antony-response'>"You mentioned an engineer named Vitruvius. Tell us more about him."</span>
+
+<<include "CluePoint_JamesDean_SHARED:SVitruviusSnippet">>
+
+:: CluePoint_JamesDean_SHARED:CVitruvius
+<<run setup.CluePoints.markCluePointKnown('NapoleonBonaparte')>>\
+<span class='cleopatra-response'>"You mentioned an engineer by the name of Vitruvius. Could you speak further about him?"</span>
+
+<<include "CluePoint_JamesDean_SHARED:SVitruviusSnippet">>
