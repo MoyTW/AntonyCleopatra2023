@@ -10,6 +10,10 @@ body {
 
 #options button {
   width: 100%;
+  background-color: #0A3161;
+  color: #FFFFFF;
+  border-color: #B31942;
+  border-radius: 10px;
 }
 
 .div-container {
