@@ -5,6 +5,7 @@ interface Calendar {
   getCurrentTimeslot: () => Timeslot | undefined
   setCurrentTimeslot: (timeslot: Timeslot) => void
   getCurrentTimeslotText: () => string | undefined
+  isMorning: () => boolean
 
   advanceTime: () => void
 
@@ -69,6 +70,11 @@ interface Appointment {
           return `${withoutTime}, 1 p.m.`
         }
       }
+    }
+
+    isMorning = () => {
+      const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
+      return cts.slot === this.AM
     }
 
     advanceTime = () => {

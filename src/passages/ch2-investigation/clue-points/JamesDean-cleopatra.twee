@@ -1,5 +1,6 @@
 :: CluePoint_JamesDean_CLEOPATRA
 <<run setup.CluePoints.markCluePointKnown('GoldenLotus')>>\
+<<locationheader "James Dean">>\
 James Dean's Georgetown mansion is of moderate size, constructed in the Spanish style, most common on the American West Coast, although you recall from his dossier that the owner was birthed in Marion, Indiana. You take a moment to remember. Yes, he did have the house custom built. Interesting, although his specific architectural influences are unlikely to be relevant.
 
 A maid, who speaks little more than necessary, leads the two of you into a sitting room. It has contemporary chairs, a coffee table with a glass top, and a window as large as a wall that looks out over a swimming pool. Opposite the window is a bar, well-stocked with both alcohol and prominently displayed tobacco products of all kinds. On the coffee table are a pack of cigarettes, an ashtray, and a  face-down, unopened envelope.
@@ -80,3 +81,6 @@ His maid takes the envelope and leaves the room.
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
 Ending Cleopatra
+TODO
+
+<<include "Ch2_EndInterview_CLEOPATRA">>

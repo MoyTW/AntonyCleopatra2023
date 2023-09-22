@@ -16,9 +16,7 @@ TODO CH2 START
 
 
 :: Ch2_Bed_CLEOPATRA
-<<nobr>>
-  <<run setup.Calendar.advanceTime()>>
-<</nobr>>\
+<<locationheader 'TODO Bed'>>\
 TODO
 
 You retire to your chambers.
@@ -27,6 +25,9 @@ You retire to your chambers.
 
 
 :: Ch2_Morning_CLEOPATRA
+<<nobr>>
+  <<run setup.Calendar.advanceTime()>>
+<</nobr>>\
 <<locationheader 'Waking Up'>>\
 TODO
 
@@ -41,6 +42,15 @@ You check the plan for today.
 <<nobr>>
   <<run setup.Calendar.advanceTime()>>
 <</nobr>>\
+<<locationheader 'Lunch'>>\
 you eat lunch
 
 <<include "Ch2_DecideVisitSnippet">>
+
+
+:: Ch2_EndInterview_CLEOPATRA
+<<if setup.Calendar.isMorning()>>
+  <<button "Go to lunch." "Ch2_Lunch_CLEOPATRA">><</button>>
+<<else>>
+  <<button "Retire for the evening." "Ch2_Bed_CLEOPATRA">><</button>>
+<</if>>
