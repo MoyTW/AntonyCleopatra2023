@@ -1,0 +1,54 @@
+:: CluePoint_TaritaBrando_ANTONY
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "Tarita Brando">>\
+Marlon's house is a giant mid-century complex of four stories, decorated in the Mexican colonial style, covering a generous 4,300 square feet. Built on the side of a hill, the house proper is set back significantly from the street, with a low white wall and then metal gate guarding its entrance. Clearly a house, it still bears a passing similarity to a Spanish fortress, monastary, some strange fusion of both. Up against the street is a white garage, its doors made of joined wood and its roof covered in red tiles. Of course, given the wealth of the area, there are no sidewalks, so you disembark into the small sliver of diveway before the garage.
+
+Tarita meets you at the gate, her long black hair hanging loose. She wears a grim smile that doesn't reach her eyes, which given her skill as an actress must be a deliberate choice. "It's good to see you, Antony."
+
+"You too," you say. "Tarita, this is my wife, Cleopatra VII Philopater. Cleopatra, this is Tarita Brando."
+
+Your wife holds out her hand. "Pleased to meet you."
+
+"Likewise," says Tarita, executing a respectable shake. "Well. Welcome to my home." She ushers you through the gate, down some steps through the garden, past a pair of dark wooden doors, through an atrium with polished tile floors, up a spiral staircase, and finally into a living room adorned with an asian rug and brick fireplace, a dark wooden coffe table, several chairs, an oversize couch with two sets of cushions, and an breathtaking hillside view. "Please," she says, "take a seat."
+
+<div id='options'>\
+  <<button "Sit on the couch.">>
+    <<AppendPassage "1" "A1" "CluePoint_TaritaBrando" "ALL">>
+  <</button>>
+  <<button "Sit in one of the chairs.">>
+    <<AppendPassage "1" "A2" "CluePoint_TaritaBrando" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_TaritaBrando_ANTONY:1
+<<include "CluePoint_TaritaBrando_SHARED:1_ReactionSnippet">>
+
+<<include "CluePoint_TaritaBrando_ANTONY:Questions">>
+
+
+:: CluePoint_TaritaBrando_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "How would you describe Marlon, in general?" "Description">>
+  <<Question "What were you doing on the night of the murder?" "Tarita">>
+  <<Question "Did Marlon do anything unusual that night?" "Marlon">>
+  /* TODO: Flag affair knowledge */
+  <<Question "Jocelyn told us that he was having an affair." "Affair">>
+  <<Question "What do you know about Marlon's work?" "Work">>
+  <<if _Work>>
+    <<Question "Did you ever meet James Dean?" "Dean">>
+    <<Question "Have you met Audrey Hepburn?" "Hepburn">>
+  <</if>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_TaritaBrando_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_ANTONY">>

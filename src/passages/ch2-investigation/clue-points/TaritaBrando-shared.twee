@@ -1,0 +1,240 @@
+:: CluePoint_TaritaBrando_SHARED:1_ReactionSnippet
+/* --------------------------------------------------------------------- */\
+/* - Reaction                                                          - */\
+/* --------------------------------------------------------------------- */\
+<<if _choice is 'A1'>>\
+  <<if setup.Roles.isAntony()>>\
+    <span class='antony-response'>You take a seat on the couch.</span> Your wife join you as Tarita takes a chair.
+  <<else>>\
+    <span class='antony-response'>Antony moves first, making himself comfortable on the couch.</span> You sit next to him, leaving Tarita to take a chair.
+  <</if>>\
+<<elseif _choice is 'C1'>>\
+  <<if setup.Roles.isAntony()>>\
+    <span class='cleopatra-response'>Your wife claims half of the couch, and you follow to claim the other half.</span> Tarita sts in a chair, opposite the two of you.
+  <<else>>\
+    <span class='cleopatra-response'>You make yourself comfortable on the couch.</span> Antony joins you, and Tarita takes a chair.
+  <</if>>\
+<<elseif _choice is 'A2'>>\
+  <<if setup.Roles.isAntony()>>\
+    <span class='antony-response'>You claim one of the chairs.</span> Your wife claims another, and Tarita chooses the couch.
+  <<else>>\
+    <span class='antony-response'>Antony makes himself comfortable on one of the chairs.</span> You take another, and Tarita chooses the couch.
+  <</if>>\
+<<elseif _choice is 'C2'>>\
+  <<if setup.Roles.isAntony()>>\
+    <span class='cleopatra-response'>Your wife claims one of the chairs.</span> You claim the next, leaving Tarita the couch.
+  <<else>>\
+    <span class='cleopatra-response'>Your make yourself comfortable on one of the chairs.</span> Antony takes the next, and Tarita sits on the couch.
+  <</if>>\
+<</if>>\
+
+"Well, no use waiting. What do you want to talk about?"
+
+
+:: CluePoint_TaritaBrando_SHARED:SDescriptionSnippet
+/* --------------------------------------------------------------------- */\
+/* - Description                                                       - */\
+/* --------------------------------------------------------------------- */\
+"I did," <<if setup.Roles.isAntony()>>you say,<<else>>he says,<</if>> "but not well. In any case, I knew him as a businessman. I only ever met him at formal events."
+
+"He was sometimes cruel, sometimes kind. He was sometimes angry, sometimes loving. He was sometimes truthful, sometimes not. What do you want me to say?"
+
+"I'm just trying to get a good idea of the victim."
+
+"I see," she says, and says no more.
+
+:: CluePoint_TaritaBrando_SHARED:ADescription
+<span class='antony-response'>"How would you describe Marlon, in general?"</span>
+
+Tarita stares, dead-eyed, at <<if setup.Roles.isAntony()>>you.<<else>>Antony.<</if>> "You've met him, haven't you?"
+
+<<include "CluePoint_TaritaBrando_SHARED:SDescriptionSnippet">>
+
+:: CluePoint_TaritaBrando_SHARED:CDescription
+<span class='cleopatra-response'>"What was your late husband like?"</span>
+
+Tarita stares, dead-eyed, at <<if setup.Roles.isAntony()>>you.<<else>>Antony.<</if>> "Your husband knew him, didn't you?"
+
+<<include "CluePoint_TaritaBrando_SHARED:SDescriptionSnippet">>
+
+
+:: CluePoint_TaritaBrando_SHARED:STaritaSnippet
+/* --------------------------------------------------------------------- */\
+/* - Tarita                                                            - */\
+/* --------------------------------------------------------------------- */\
+"I was at home."
+
+"Can you give us some more detail?"
+
+"Mr. Vice-President, Your Majesty, I have spoken to the police. They have already agreed that I was at home. You can refer to their reports, which you no doubt have access to. I agreed to this because you might have success where they did not, so please don't waste all of our time."
+
+:: CluePoint_TaritaBrando_SHARED:ATarita
+<span class='antony-response'>"What were you doing on the night of the murder?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:STaritaSnippet">>
+
+:: CluePoint_TaritaBrando_SHARED:CTarita
+<span class='cleopatra-response'>"Was Mr. Brando acting unusually on March 15?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:STaritaSnippet">>
+
+
+:: CluePoint_TaritaBrando_SHARED:SMarlonSnippet
+/* --------------------------------------------------------------------- */\
+/* - Marlon                                                            - */\
+/* --------------------------------------------------------------------- */\
+"No."
+
+"Can you describe his actions on the day?"
+
+"He woke up before me, as he customarily does. I saw him as he left for work. That was the last of him."
+
+"Did you talk to him at all that day?"
+
+"No."
+
+:: CluePoint_TaritaBrando_SHARED:AMarlon
+<span class='antony-response'>"Did Marlon do anything unusual that night?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SMarlonSnippet">>
+
+:: CluePoint_TaritaBrando_SHARED:CMarlon
+<span class='cleopatra-response'>"Was Mr. Brando acting unusually on March 15?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SMarlonSnippet">>
+
+
+:: CluePoint_TaritaBrando_SHARED:SAffairSnippet
+/* --------------------------------------------------------------------- */\
+/* - Affair                                                            - */\
+/* --------------------------------------------------------------------- */\
+"He was."
+
+"Can you tell us anything more about it?"
+
+"No."
+
+"We realize that this may be personal. Everything you say here will be held under the strictest confidentiality."
+
+"His infidelity was as inevitable as the tides. That, I gave up on long ago. I know nothing more."
+
+:: CluePoint_TaritaBrando_SHARED:AAffair
+<span class='antony-response'>"Jocelyn told us that he was having an affair."</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SAffairSnippet">>
+
+:: CluePoint_TaritaBrando_SHARED:CAffair
+<span class='cleopatra-response'>"Mr. Brando's sister told us that he was having an affair."</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SAffairSnippet">>
+
+
+:: CluePoint_TaritaBrando_SHARED:SWorkSnippet
+/* --------------------------------------------------------------------- */\
+/* - Work                                                              - */\
+/* --------------------------------------------------------------------- */\
+"Marlon did not talk to me about his work."
+
+"Not at all?"
+
+"He did not believe in women in business."
+
+"Did he ever complain to you about work?"
+
+"On occasion he raged about it."
+
+"What kinds of things was he angry about?"
+
+"Almost anything."
+
+"Can you give an example?"
+
+"Mr. Vice-President, Your Majesty, I'm not here to provide you with an exhaustive list of every item to irk my husband. There are too many to count."
+
+"Did he ever talk about his co-workers?"
+
+"Yes." She does not continue.
+
+:: CluePoint_TaritaBrando_SHARED:AWork
+<span class='antony-response'>"What do you know about Marlon's work?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SWorkSnippet">>
+
+:: CluePoint_TaritaBrando_SHARED:CWork
+<span class='cleopatra-response'>"Did your husband talk to you about his work?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SWorkSnippet">>
+
+
+:: CluePoint_TaritaBrando_SHARED:SDeanSnippet
+/* --------------------------------------------------------------------- */\
+/* - Dean                                                              - */\
+/* --------------------------------------------------------------------- */\
+"Yes. I met him repeatedly at corporate functions."
+
+"What did you think about him?"
+
+"He is very young."
+
+"Do you know what your husband thought about him?"
+
+"He favored him."
+
+"Do you know what he thought about your husband?"
+
+"No."
+
+"Do you know what he thought about Ms. Hepburn?"
+
+"No."
+
+:: CluePoint_TaritaBrando_SHARED:ADean
+<span class='antony-response'>"Did you ever meet James Dean?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SDeanSnippet">>
+
+:: CluePoint_TaritaBrando_SHARED:CDean
+<span class='cleopatra-response'>"Are you personally familiar with James Dean?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SDeanSnippet">>
+
+
+:: CluePoint_TaritaBrando_SHARED:SHepburnSnippet
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                           - */\
+/* --------------------------------------------------------------------- */\
+"Yes. I met her at work parties and other events."
+
+"Can you tell me about her?"
+
+"She seems very capable."
+
+"And what did your husband think of her?"
+
+"Outwardly, he gave her begrudging acceptance. In private, he held her in contempt."
+
+"Why?"
+
+"Her age, gender, and looks."
+
+"Do you know what she thought about him?"
+
+"No."
+
+"Do you know what she thought about Mr. Dean?"
+
+"She admired him."
+
+"Admired him? In what sense?"
+
+"In a professional sense."
+
+:: CluePoint_TaritaBrando_SHARED:AHepburn
+<span class='antony-response'>"Have you met Audrey Hepburn?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SHepburnSnippet">>
+
+:: CluePoint_TaritaBrando_SHARED:CHepburn
+<span class='cleopatra-response'>"Are you personally familiar with Audrey Hepburn?"</span>
+
+<<include "CluePoint_TaritaBrando_SHARED:SHepburnSnippet">>

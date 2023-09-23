@@ -1,4 +1,4 @@
-:: CluePoint_TEMPLATE_Antony
+:: CluePoint_TEMPLATE_ANTONY
 /* TODO: distinguish between scheduled & unscheduled */\
 <<locationheader "TK">>\
 TK
@@ -13,12 +13,12 @@ TK
 </div>
 
 
-:: CluePoint_TEMPLATE_Antony:1
+:: CluePoint_TEMPLATE_ANTONY:1
 <<include "CluePoint_TEMPLATE_SHARED:1_ReactionSnippet">>
-<<include "CluePoint_TEMPLATE_Antony:Questions">>
+<<include "CluePoint_TEMPLATE_ANTONY:Questions">>
 
 
-:: CluePoint_TEMPLATE_Antony:Questions
+:: CluePoint_TEMPLATE_ANTONY:Questions
 /* ##################################################################### */\
 /* # QUESTIONS                                                         # */\
 /* ##################################################################### */\
@@ -28,9 +28,9 @@ TK
 <</nobr>></div>\
 
 
-:: CluePoint_TEMPLATE_Antony:EndInterview
+:: CluePoint_TEMPLATE_ANTONY:EndInterview
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
 TK
-<<include "Ch2_EndInterview_Antony">>
+<<include "Ch2_EndInterview_ANTONY">>

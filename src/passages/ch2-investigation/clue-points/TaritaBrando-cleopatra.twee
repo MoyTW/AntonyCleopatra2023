@@ -1,0 +1,54 @@
+:: CluePoint_TaritaBrando_CLEOPATRA
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "Tarita Brando">>\
+The Brando house squats on the side of a hill like a fortress, set downhill from the street by a significant margin. The building is three stories tall except at its center, where a main tower juts ominously over the rest of the residence. A white, waist-height wall surrounding the rest of the property adds to its imposing stature. You exit the car directly into the driveway, as this far up in the hills there are no sidewalks to speak of.
+
+Before you've finished disembarking, you spot Ms. Brando climbing up the steps from her door to the gate. She cuts a very distinct figure, with her long black hair and a cream-colored dress. As she approaches you can see that, while she's clearly put some effort into her appearance for this meeting, she's stuck with her indoors slippers for this meeting. "It's good to see you, Antony," she calls, her voice giving lie to her words.
+
+"You too," he replies. He waits for her to open the gate before continuing. "Tarita, this is my wife, Cleopatra VII Philopater. Cleopatra, this is Tarita Brando."
+
+"Pleased to meet you," you say, holding out your hand.
+
+"Likewise." Her handshake is curt. "Well. Welcome to my home." She ushers you through the gate, down some steps through the garden, past a pair of dark wooden doors, through an atrium with polished tile floors, up a spiral staircase, and finally into a living room adorned with an asian rug and brick fireplace, a dark wooden coffe table, several chairs, an oversize couch with two sets of cushions, and an breathtaking hillside view. "Please," she says, "take a seat."
+
+<div id='options'>\
+  <<button "Sit on the couch.">>
+    <<AppendPassage "1" "A1" "CluePoint_TaritaBrando" "ALL">>
+  <</button>>
+  <<button "Sit in one of the chairs.">>
+    <<AppendPassage "1" "A2" "CluePoint_TaritaBrando" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_TaritaBrando_CLEOPATRA:1
+<<include "CluePoint_TaritaBrando_SHARED:1_ReactionSnippet">>
+
+<<include "CluePoint_TaritaBrando_CLEOPATRA:Questions">>
+
+
+:: CluePoint_TaritaBrando_CLEOPATRA:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "What was your late husband like?" "Description">>
+  <<Question "Can tell us what you were doing on the evening of March 15?" "Tarita">>
+  <<Question "Was Mr. Brando acting unusually on March 15?" "Marlon">>
+  /* TODO: Flag affair knowledge */
+  <<Question "Mr. Brando's sister told us that he was having an affair." "Affair">>
+  <<Question "Did your husband talk to you about his work?" "Work">>
+  <<if _Work>>
+    <<Question "Are you personally familiar with James Dean?" "Dean">>
+    <<Question "Are you personally familiar with Audrey Hepburn?" "Hepburn">>
+  <</if>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_TaritaBrando_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_CLEOPATRA">>
