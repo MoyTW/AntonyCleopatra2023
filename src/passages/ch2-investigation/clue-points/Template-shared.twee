@@ -1,0 +1,15 @@
+:: CluePoint_TEMPLATE_SHARED:SIDEMPOTENCY_KEYSnippet
+/* --------------------------------------------------------------------- */\
+/* - IDEMPOTENCY_KEY                                                     - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+:: CluePoint_TEMPLATE_SHARED:AIDEMPOTENCY_KEY
+<span class='antony-response'>"TK"</span>
+
+<<include "CluePoint_TEMPLATE_SHARED:SIDEMPOTENCY_KEYSnippet">>
+
+:: CluePoint_TEMPLATE_SHARED:CIDEMPOTENCY_KEY
+<span class='cleopatra-response'>"TK"</span>
+
+<<include "CluePoint_TEMPLATE_SHARED:SIDEMPOTENCY_KEYSnippet">>

@@ -1,0 +1,36 @@
+:: CluePoint_TEMPLATE_Antony
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "TK">>\
+TK
+
+<div id='options'>\
+  <<button "TK">>
+    <<AppendPassage "1" "A1" "CluePoint_TEMPLATE" "ALL">>
+  <</button>>
+  <<button "TK">>
+    <<AppendPassage "1" "A2" "CluePoint_TEMPLATE" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_TEMPLATE_Antony:1
+<<include "CluePoint_TEMPLATE_SHARED:1_ReactionSnippet">>
+<<include "CluePoint_TEMPLATE_Antony:Questions">>
+
+
+:: CluePoint_TEMPLATE_Antony:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "TK" "TK">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_TEMPLATE_Antony:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_Antony">>
