@@ -2,28 +2,41 @@
 /* --------------------------------------------------------------------- */\
 /* - Reaction                                                          - */\
 /* --------------------------------------------------------------------- */\
-TK
-
-:: CluePoint_AudreyHepburn_SHARED:1N_Snippet
-TK
+She smiles. "It applies to anyone on the premises. If we have reason to suspect that you're intoxicated, we'll have to escort you out of the building. That said," she says, returning to her desk, "let's see what I've got." She slides open a compartment beneath her desk and leans down, inspecting its contents. "There's some sort of bourbon here, a sherry, maotai - I wonder how that got here - and I spy a Falernian. A sweet Falernian, at that." She pulls a bottle of sea-dark wine from her desk, along with a pair of glasses, and pours out a measure of the rich amber ambrosia. 
 
 :: CluePoint_AudreyHepburn_SHARED:1_ReactionSnippet
 <<if _choice is 'A1'>>\
-  <span class='antony-response'>"TK"</span>
+  <span class='antony-response'>"Well, if you're offering, I'll take a glass of the strongest stuff you've got."</span>
 
-  <<include "CluePoint_AudreyHepburn_SHARED:1Y_Snippet">>
+  "The strongest stuff I've got? Antony, surely you're aware that Raytheon policy on alcohol is very strict."
+
+  "Yeah? What about for guests?"
+
+  <<include "CluePoint_AudreyHepburn_SHARED:1Y_Snippet">> "And for you, Cleopatra?"
+
+  "Please," <<if setup.Roles.isAntony()>>affirms your wife.<<else>>you affirm.<</if>>
+
+  "Of course," says your host, pouring another and handing it to <<if setup.Roles.isAntony()>>your wife.<<else>>you.<</if>>  You give your drink a sip. The wine is sweet and honeyed, with strong hints of fruits and spices. "Now that we're settled, what would you like to discuss?"
 <<elseif _choice is 'C1'>>\
-  <span class='cleopatra-response'>"TK"</span>
+  <span class='cleopatra-response'>"Some wine, if you would."</span>
 
-  <<include "CluePoint_AudreyHepburn_SHARED:1Y_Snippet">>
+  "Of course. I do want to warn you," she says, "we have do have an alcohol policy here at Raytheon, so I'll sadly have to abstain."
+
+  "We understand. Does this apply to guests as well?"
+
+  <<include "CluePoint_AudreyHepburn_SHARED:1Y_Snippet">> "And for you, Antony?"
+
+  "Absolutely!"
+
+  Your host laughs. "Here you go," she says, pouring out another cup. "I hope you find it to your liking." You pull a sip of wine and take a moment to enjoy its honeyed taste, mixed with a mild fruitiness and hints of spices. "Now that we're settled, what would you like to discuss?"
 <<elseif _choice is 'A2'>>\
-  <span class='antony-response'>"TK"</span>
+  <span class='antony-response'>"No, I'm fine. Thanks, though."</span>
 
-  <<include "CluePoint_AudreyHepburn_SHARED:1N_Snippet">>
+  "All right," she says, sitting back down behind her desk. "Now, what would you like to discuss?"
 <<elseif _choice is 'C2'>>\
-  <span class='cleopatra-response'>"TK"</span>
+  <span class='cleopatra-response'>"We appreciate the offer, but no thank you"</span>
 
-  <<include "CluePoint_AudreyHepburn_SHARED:1N_Snippet">>
+  "All right," she says, sitting back down behind her desk. "Now, what would you like to discuss?"
 <</if>>\
 
 

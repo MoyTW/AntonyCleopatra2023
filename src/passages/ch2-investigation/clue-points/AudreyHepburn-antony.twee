@@ -20,10 +20,10 @@ He takes you up to the top floor and leads you to Audrey's office where a woman,
 "Well! I'm honored. Thank you very much, Cleopatra. Take a seat, please," she says, gesturing to the two chairs in front of the desk. "Would either of you like something to drink?"
 
 <div id='options'>\
-  <<button "TK">>
+  <<button "Well, if you're offering, I'll take a glass of the strongest stuff you've got.">>
     <<AppendPassage "1" "A1" "CluePoint_AudreyHepburn" "ALL">>
   <</button>>
-  <<button "TK">>
+  <<button "No, I'm fine. Thanks, though.">>
     <<AppendPassage "1" "A2" "CluePoint_AudreyHepburn" "ALL">>
   <</button>>
 </div>
