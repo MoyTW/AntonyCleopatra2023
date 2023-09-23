@@ -1,0 +1,211 @@
+:: CluePoint_JocelynBrando_SHARED:1Y_Snippet
+/* --------------------------------------------------------------------- */\
+/* - Reaction                                                          - */\
+/* --------------------------------------------------------------------- */\
+"Thank you," she says, putting her hand on her husband's. He takes it and looks over at you.
+
+"Don't worry," he says, smiling, "I won't interrupt."
+
+"So," asks Jocelyn, "what is it that you wanted to know?"
+
+:: CluePoint_JocelynBrando_SHARED:1N_Snippet
+"Oh," says Jocelyn. She looks over at her husband, who places her hand in his for a moment before rising.
+
+"I'll take a walk, then," he says. "Do you know how long you'll be? Actually, nevermind, just text me when you're done."
+
+"I will," she says, watching her husband depart. The door closes behind him, and she turns back to the table. "I'm ready."
+
+:: CluePoint_JocelynBrando_SHARED:1_ReactionSnippet
+<<if _choice is 'A1'>>\
+  <span class='antony-response'>"He can, but remember that you everything we say is strictly classified."</span>
+
+  <<include "CluePoint_JocelynBrando_SHARED:1Y_Snippet">>
+<<elseif _choice is 'C1'>>\
+  <span class='cleopatra-response'>"Of course, but please remember that what is said is confidential."</span>
+
+  <<include "CluePoint_JocelynBrando_SHARED:1Y_Snippet">>
+<<elseif _choice is 'A2'>>\
+  <span class='antony-response'>"Sorry. This case might be related to national security. He'll have to go."</span>
+
+  <<include "CluePoint_JocelynBrando_SHARED:1N_Snippet">>
+<<elseif _choice is 'C2'>>\
+  <span class='cleopatra-response'>"My apologies, Ms. Brando. However, if at any point you're uncomfortable, simply say so and we can take a break, or end the interview."</span>
+
+  <<include "CluePoint_JocelynBrando_SHARED:1N_Snippet">>
+<</if>>\
+
+
+:: CluePoint_JocelynBrando_SHARED:SCondolencesSnippet
+/* --------------------------------------------------------------------- */\
+/* - Condolences                                                       - */\
+/* --------------------------------------------------------------------- */\
+She smiles a tired smile. "Thank you," she says, "I appreciate it. Please, though, let's dispense with formalities. I hope you appreciate that I want to be finished as soon as we can."
+
+:: CluePoint_JocelynBrando_SHARED:ACondolences
+<span class='antony-response'>"Ms. Brando, let me offer my condolences. I know the death of a family member is always hard."</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SCondolencesSnippet">>
+
+:: CluePoint_JocelynBrando_SHARED:CCondolences
+<span class='cleopatra-response'>"Ms. Brando, I wish to offer my condolences. I understand you were close with your brother."</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SCondolencesSnippet">>
+
+
+:: CluePoint_JocelynBrando_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                            - */\
+/* --------------------------------------------------------------------- */\
+"Well, he was having an affair. That seems most relevant. He was a womanizer, so that wasn't unusual. He had three wives, after all." She paused. "He was a very intense sort of person. He had a temper, which I think he never really - well, you know, people said he was worse than he was, I think, but he did have a reputation for being short, both personally and professionally, but I don't think he was ever abusive. I don't think you could call it that."
+
+"Did other people think he was abusive?"
+
+She shrugs. "That's hard to say, isn't it? What people think is or isn't abusive will vary from person to person. I personally don't think he was ever abusive."
+
+"Are there any specific people you can think of who said that he was abusive?"
+
+"No, no," she says, "Well, some of his previous girlfriends. But none of them live in DC, as far as I'm aware."
+
+"Did he have any rivals or enemies?"
+
+"I really can't say," she sighs. "I was close to him but I live in San Francisco, when I'm not on set, so I don't know much about his personal life. I'm sorry I can't be of more help there."
+
+:: CluePoint_JocelynBrando_SHARED:ABrando
+<span class='antony-response'>"Tell us anything you know about Marlon that might be relevant to the case."</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SBrandoSnippet">>
+
+:: CluePoint_JocelynBrando_SHARED:CBrando
+<span class='cleopatra-response'>"Can you tell us about your brother?"</span>
+
+"Can you be more specific?"
+
+"What was he like, as a person? Was he personable? Was he friendly, or ruthless? Did he have many enemies?"
+
+<<include "CluePoint_JocelynBrando_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_JocelynBrando_SHARED:SAffairSnippet
+/* --------------------------------------------------------------------- */\
+/* - Affair                                                            - */\
+/* --------------------------------------------------------------------- */\
+"I don't know much."
+
+"Anything could be helpful."
+
+"Well," she says, "okay. He didn't tell me who it was, and he didn't really talk much about his infidelity. It isn't something you just talk about, but he did mention once when I was in town two months ago that he couldn't do dinner because he had an appointment with somebody. I don't recall his exact wording, but he referred to her as his latest catch. Something like, 'I've reeling in a new catch,' or the like, which is funny, because he didn't fish. Then, a week ago, <strong>Tarita</strong> had called me and told me that Marlon was out with 'his new catch.' She was angry, of course. But, I don't know who it was, or really any details."
+
+"So his wife was aware."
+
+"Oh, well, I said that Marlon and I didn't talk much about his infidelity, but that wasn't because he hid it, it was just because that's not the sort of thing you talk about. At least, that's not the sort of thing we talked about." She has a sour look on her face. "I'm sure he bragged to all his friends about it. In fact, I know he did, because he'd done so before."
+
+"Is there anything else you can tell us?"
+
+"No. I'm sorry. Perhaps <strong>Tarita</strong> could tell you more."
+
+:: CluePoint_JocelynBrando_SHARED:AAffair
+<span class='antony-response'>"You said he was having an affair. Please, tell us everything you know."</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SAffairSnippet">>
+
+:: CluePoint_JocelynBrando_SHARED:CAffair
+<span class='cleopatra-response'>"Do you know anything more about his affair?"</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SAffairSnippet">>
+
+
+:: CluePoint_JocelynBrando_SHARED:SBusinessSnippet
+/* --------------------------------------------------------------------- */\
+/* - Business                                                          - */\
+/* --------------------------------------------------------------------- */\
+I have met many of his co-workers. He would sometimes throw parties or host dinners, and I often attended those when I was in town. I do know that he wanted to retire in five or six years, but he'd been talking about retiring ten years ago and he...I'm sorry. A moment. I think he wouldn't have retired, even if he'd...had the time. He liked being a CEO very much. I can't tell you what exactly he did, though. I'm sorry, that's not very useful."
+
+"Was he actively making preparations to retire?"
+
+"No. He just talked about it to everybody who'd listen, but I don't think anybody could have taken it seriously."
+
+:: CluePoint_JocelynBrando_SHARED:ABusiness
+<span class='antony-response'>"What do you know about Marlon's work life?"</span>
+
+"Very little," says Jocelyn, "but <<include "CluePoint_JocelynBrando_SHARED:SBusinessSnippet">>
+
+:: CluePoint_JocelynBrando_SHARED:CBusiness
+<span class='cleopatra-response'>"Did Mr. Brando talk to you about his work?"</span>
+
+"No," says Jocelyn, "he didn't, although <<include "CluePoint_JocelynBrando_SHARED:SBusinessSnippet">>
+
+
+:: CluePoint_JocelynBrando_SHARED:SDeanSnippet
+/* --------------------------------------------------------------------- */\
+/* - Dean                                                              - */\
+/* --------------------------------------------------------------------- */\
+"No, I'm sorry. I've never met him. I do know that Marlon talked very highly of him. He joked that when he retired he'd have him take over for him. I think <strong>Dean</strong> was his favorite, out of all his subordinates."
+
+:: CluePoint_JocelynBrando_SHARED:ADean
+<span class='antony-response'>"Have you met Mr. Dean?"</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SDeanSnippet">>
+
+:: CluePoint_JocelynBrando_SHARED:CDean
+<span class='cleopatra-response'>"Are you personally familiar with Mr. Dean?"</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SDeanSnippet">>
+
+
+:: CluePoint_JocelynBrando_SHARED:SHepburnSnippet
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                           - */\
+/* --------------------------------------------------------------------- */\
+"I've met her twice. She was very sweet. We didn't talk about work, of course, but I liked her. She's done very well for herself, at such a young age, too. Very accomplished."
+
+"Do you know how Mr. Brando felt about her?"
+
+"He...he didn't like her." She pauses. "Marlon had some old-fashioned views on women in leadership positions. I think that he...is this going to go on the public record?"
+
+"No. We will keep records, but they won't be released."
+
+"Okay. Well, Marlon had some old-fashioned views on women in the workplace, and I think the fact that Hepburn was young and - well, she was young and pretty, and I think that made him a little angry. He told me that it made it hard to respect her as an executive. I think that's wrong, of course, I think that there's no reason at all to respect any woman less, but Marlon was very old-fashioned in some ways." She pauses, anxious. "I don't think you should hold it against him too much. He didn't let it get in the way of his work. After all, he promoted her to CMO, and she's CEO now, and deservedly so. So he clearly kept that sort of thing out of his professional life. I - well, I'm sorry, I don't know what you were asking. Did you have something specific you wanted to know?"
+
+"No, that's very helpful. Do you know what <strong>Ms. Hepburn</strong> thought about Mr. Brando?"
+
+"I don't," she says. "I don't know her very well, I only met her twice. All I know is that Marlon told me about her."
+
+:: CluePoint_JocelynBrando_SHARED:AHepburn
+<span class='antony-response'>"Have you met Ms. Hepburn?"</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SHepburnSnippet">>
+
+:: CluePoint_JocelynBrando_SHARED:CHepburn
+<span class='cleopatra-response'>"Are you personally familiar with Ms. Hepburn?"</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SHepburnSnippet">>
+
+
+:: CluePoint_JocelynBrando_SHARED:SBeneficiariesSnippet
+/* --------------------------------------------------------------------- */\
+/* - Beneficiaries                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Do you mean <strong>Tarita</strong>?"
+
+"I mean all of the recipients of his will."
+
+"Oh. Can you remind me what his will said?"
+
+"His will stated that half his assets were to be left to <strong>Tarita Brando</strong>, and the other half divided evenly among his eleven children."
+
+/* TODO: Interview with Simon */\
+"Oh. Well. I mean, I know <strong>Tarita</strong> pretty well, and I've met all of his children, but the only ones who live around here are <strong>Tarita</strong> and her boy, Simon. But Simon's only nine. I don't know how relevant he is."
+
+"Can you tell us about <strong>Ms. Brando</strong>, then?"
+
+"Well," she says, "she's very sweet. I know she had a hard time with him. He can be trying, and I think that they haven't gotten together very well lately. She did call me a week ago to talk about how it was going, and it seemed that it wasn't going very good, but they've gone through rough patches before. I - well, I, I don't think you should get the wrong idea. She's not the kind of person who would - you shouldn't suspect her because of anything I'm saying." Jocelyn takes a moment to compose herself. "Their marriage was rocky, but so were all his previous marriages. That wasn't anything out of the ordinary, for them."
+
+:: CluePoint_JocelynBrando_SHARED:ABeneficiaries
+<span class='antony-response'>"Tell us what you know about his beneficiaries."</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SBeneficiariesSnippet">>
+
+:: CluePoint_JocelynBrando_SHARED:CBeneficiaries
+<span class='cleopatra-response'>"Do you know the recipients of his will well?"</span>
+
+<<include "CluePoint_JocelynBrando_SHARED:SBeneficiariesSnippet">>

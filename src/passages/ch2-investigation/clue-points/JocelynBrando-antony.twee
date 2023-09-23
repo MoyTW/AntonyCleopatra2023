@@ -1,0 +1,52 @@
+:: CluePoint_JocelynBrando_ANTONY
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "JocelynBrando">>\
+Your driver pulls you up in front of the Mayflower Hotel, where Jocelyn is staying. An attendant greets your entourage and escorts you through the historic lobby, up the elevators, down a hallway on the fifth floor to arrive at Ms. Brando's room. At his knock the door opens to reveal a dignified, older-looking man with black hair and a button-down shirt. He looks familiar, but you're sure you never met him. Well, Jocelyn's an actress, so he's probably an actor - they tend to stick together.
+
+"Ah," he says, smiling, "please, come in." He leads you inside the suite where a similarly dignified Jocelyn Brando sits on a couch in front of a coffee table. On the other side of the table are two chairs. "This is Jocelyn, my wife. I'm Don. It's a pleasure to meet you, Mr. Vice-President, Your Majesty."
+
+Your wife holds out her hand. "It's our pleasure," she says as they shake. Don holds his hand out to you and pumps yours vigorously as soon as you take it.
+
+"Sorry," says Jocelyn, rising from the couch, "I've been out of sorts. It's a pleasure to meet you both." She holds out her hand and all of you shake again. "Please," she says, "take a seat." She waits a moment for you to be seated. "Your Majesty, Mr. Vice-President, I know that this isn't a social call, and that what you ask might be sensitive, but may my husband stay? The police insisted that I interview alone, and that was uncomfortable for me."
+
+<div id='options'>\
+  <<button "He can, but remember that you everything we say is strictly classified.">>
+    <<AppendPassage "1" "A1" "CluePoint_JocelynBrando" "ALL">>
+  <</button>>
+  <<button "Sorry. This case might be related to national security. He'll have to go.">>
+    <<AppendPassage "1" "A2" "CluePoint_JocelynBrando" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_JocelynBrando_ANTONY:1
+<<include "CluePoint_JocelynBrando_SHARED:1_ReactionSnippet">>
+<<include "CluePoint_JocelynBrando_ANTONY:Questions">>
+
+
+:: CluePoint_JocelynBrando_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "Ms. Brando, let me offer my condolences. I know the death of a family member is always hard." "Condolences">>
+  <<Question "Tell us anything you know about Marlon that might be relevant to the case." "Brando">>
+  <<if _Brando>>
+    <<Question "You said he was having an affair. Please, tell us everything you know." "Affair">>
+  <</if>>
+  <<Question "What do you know about Marlon's work life?" "Business">>
+  <<if _Business>>
+    <<Question "Have you met Mr. Dean?" "Dean">>
+    <<Question "Have you met Ms. Hepburn?" "Hepburn">>
+  <</if>>
+  <<Question "Tell us what you know about his beneficiaries." "Beneficiaries">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_JocelynBrando_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TODO END INTERVIEW
+<<include "Ch2_EndInterview_ANTONY">>
