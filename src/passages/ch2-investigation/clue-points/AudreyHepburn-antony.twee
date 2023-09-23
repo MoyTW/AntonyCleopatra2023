@@ -1,0 +1,57 @@
+:: CluePoint_AudreyHepburn_ANTONY
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "Audrey Hepburn">>\
+The Raytheon offices are housed in an tall semicircular tower, decorated from top to bottom with uniform bands of white panels and reflective windows. Just north of Arlington National Cemetary, it commands an impressive view of the cemetary and the Potomac. Appropriate for a defense company, you suppose.
+
+You're met at the door by a young man in an expensive suit carrying a stack of visitor badges. He introduces himself, gives you a brief spiel, and then begins handing out the badges.
+
+"Mr Vice-President," he says, handing you yours. You clip it on. "Your Majesty. Ms. Hortensia. I have one for Robert? One for Bill? And I believe these are for your bodyguards, Your Majesty. Aristonous? Here you go. Lysimachus, Peithon, Leon - I'm sorry, Leonnatus, Perdiccas, Ptolemy, and - I'm sorry, Pooestas? Ah, Peusestas. I'm sorry, with a hard k? Peucestas? Ah. Peucestas. Yes, sorry. Here you go. Now that we're all sorted, please follow me."
+
+He takes you up to the top floor and leads you to Audrey's office where a woman, presumably her EA, waves you in. Audrey stands up from behind her desk as you enter, a smile on her face. "Antony," she says, offering her hand, "it's good to see you again."
+
+"Yeah, great to see you too," you say, giving her hand a firm shake. "Audrey, this is my wife, Cleopatra. Cleopatra, Audrey."
+
+"A pleasure," says your wife, extending her hand.
+
+"It's all mine, Your Majesty."
+
+"Please, call me Cleopatra."
+
+"Well! I'm honored. Thank you very much, Cleopatra. Take a seat, please," she says, gesturing to the two chairs in front of the desk. "Would either of you like something to drink?"
+
+<div id='options'>\
+  <<button "TK">>
+    <<AppendPassage "1" "A1" "CluePoint_AudreyHepburn" "ALL">>
+  <</button>>
+  <<button "TK">>
+    <<AppendPassage "1" "A2" "CluePoint_AudreyHepburn" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_AudreyHepburn_ANTONY:1
+<<include "CluePoint_AudreyHepburn_SHARED:1_ReactionSnippet">>
+<<include "CluePoint_AudreyHepburn_ANTONY:Questions">>
+
+
+:: CluePoint_AudreyHepburn_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "<<AntonyMark>> So the Marlon's gone. Must be a load off your mind, huh?" "Death">>
+  <<Question "You knew Marlon better than I. Can you think of anything about him that might be helpful?" "Brando">>
+  <<Question "Was Marlon doing anything unusual that day?" "Unusual">>
+  <<Question "So, what were you doing on the night of the murder?" "Hepburn">>
+  <<Question "While we were going over the reports, the name Project STORM came up. Could you fill us in on it?" "STORM">>
+  <<Question "<<AntonyMark>> I heard James was the heir apparent. How'd you beat him out?" "Promotion">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_AudreyHepburn_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_ANTONY">>

@@ -1,0 +1,57 @@
+:: CluePoint_AudreyHepburn_CLEOPATRA
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "Audrey Hepburn">>\
+Ms. Hepburn's offices are housed in the main offices, which are located in an imposing building just north of Arlington National Cemetary. 31 floors tall and built in a semicircle banded in white and black, it's an unmistakable landmark. Along the top of the building are giant red letters reading "Raytheon" - a very respectable bit of monumental architecture.
+
+You leave your vehicle to see a young main in a nice suit holding a stack of visitor badges. He briefly outlines the rules of the visit, and then begins distributing his treasures.
+
+"Mr Vice-President," he says, handing Antony a badge. "Your Majesty." You take yours and clip it on. "Ms. Hortensia. I have one for Robert? One for Bill? And I believe these are for your bodyguards, Your Majesty. Aristonous? Here you go. Lysimachus, Peithon, Leon - I'm sorry, Leonnatus, Perdiccas, Ptolemy, and - I'm sorry, Pooestas? Ah, Peusestas. I'm sorry, with a hard k? Peucestas? Ah. Peucestas. Yes, sorry. Here you go. Now that we're all sorted, please follow me."
+
+He takes you up to the top floor and leads you to Audrey's office where a woman, presumably her EA, waves you in. Audrey stands up from behind her desk as you enter, a smile on her face. "Antony," she says, holding out her hand, "it's good to see you again."
+
+"Yeah, great to see you too," he says, shaking her hand. "Audrey, this is my wife, Cleopatra. Cleopatra, Audrey."
+
+"A pleasure," you say. She holds out her hand and you perform a handshake, putting on a polite smile.
+
+"It's all mine, Your Majesty."
+
+"Please, call me Cleopatra."
+
+"Well! I'm honored. Thank you very much, Cleopatra. Take a seat, please," she says, gesturing to the two chairs in front of the desk. "Would either of you like something to drink?"
+
+<div id='options'>\
+  <<button "TK">>
+    <<AppendPassage "1" "A1" "CluePoint_AudreyHepburn" "ALL">>
+  <</button>>
+  <<button "TK">>
+    <<AppendPassage "1" "A2" "CluePoint_AudreyHepburn" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_AudreyHepburn_CLEOPATRA:1
+<<include "CluePoint_AudreyHepburn_SHARED:1_ReactionSnippet">>
+<<include "CluePoint_AudreyHepburn_CLEOPATRA:Questions">>
+
+
+:: CluePoint_AudreyHepburn_CLEOPATRA:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "<<CleopatraMark>> I'd like to offer my condolences. This last couple of weeks must have been very trying." "Death">>
+  <<Question "Can you just describe Mr. Brando for us, so we can get a better picture of the man?" "Brando">>
+  <<Question "Did you notice anything unusual about how Mr. Brando was acting on that day?" "Unusual">>
+  <<Question "Can you describe your actions on the evening of March 15?" "Hepburn">>
+  <<Question "While we were going over the reports, we read about a project called STORM. Could you fill us in on it?" "STORM">>
+  <<Question "<<CleopatraMark>> Incidentally, you have my congratulations on your promotion. Becoming CEO at such a young age is an exceptional achievement." "Promotion">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_AudreyHepburn_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_CLEOPATRA">>
