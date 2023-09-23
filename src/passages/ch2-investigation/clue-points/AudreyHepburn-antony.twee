@@ -39,7 +39,7 @@ He takes you up to the top floor and leads you to Audrey's office where a woman,
 /* # QUESTIONS                                                         # */\
 /* ##################################################################### */\
 <div id='options'><<nobr>>
-  <<Question "<<AntonyMark>> So the Marlon's gone. Must be a load off your mind, huh?" "Death">>
+  <<Question "<<AntonyMark>> So Marlon's gone. Must be a load off your mind, huh?" "Death">>
   <<Question "You knew Marlon better than I. Can you think of anything about him that might be helpful?" "Brando">>
   <<Question "Was Marlon doing anything unusual that day?" "Unusual">>
   <<Question "So, what were you doing on the night of the murder?" "Hepburn">>

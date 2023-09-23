@@ -27,6 +27,142 @@ TK
 <</if>>\
 
 
+:: CluePoint_AudreyHepburn_SHARED:ADeath
+/* --------------------------------------------------------------------- */\
+/* - Death                                                             - */\
+/* --------------------------------------------------------------------- */\
+<span class='antony-response'>"So Marlon's gone. Must be a load off your mind, huh?"</span>
+
+<<if setup.Roles.isAntony()>>Audrey's<<else>>Hepburn's<</if>> face twitches, but she does an impressive job of keeping her composure. "I'm sorry?"
+
+"Well," <<if setup.Roles.isAntony()>>you say,<<else>>says Antony,<</if>> leaning forward, "Marlon did have a reputation. Everybody I've ever talked to has said he was hard to work with."
+
+"Yes. He did. And, at times, he was. However, I wouldn't say - Antony, just because somebody is difficult to work with doesn't mean you're happy about them dying."
+
+"Yeah, obviously. But I mean, you have to admit he was an asshole, right?"
+
+"Yes. He did have many sharp edges. That's not unusual among executives."
+
+"Very, uh, diplomatic of you."
+
+"I'm a diplomatic kind of person, Antony."
+
+"Yeah, but Marlon wasn't. Did you actually manage to get along with him?"
+
+"I would say that we had a working relationship. It's true that he made no secret of not liking me, but he was capable of compartmentalizing, however imperfectly. I wouldn't say that we got along, but I would say that we managed to work together."
+
+"Well, all right, there's that diplomacy again. You know, he's gone, it's not like he's gonna come after you for bad-mouthing him."
+
+"No, he won't. Antony, if you have a specific line of questioning where his behavior in the office is relevant, I'd be happy to help, but I don't see any reason to discuss this further. So, unless you have a specific question, let's move on."
+
+:: CluePoint_AudreyHepburn_SHARED:CDeath
+<span class='cleopatra-response'>"I'd like to offer my condolences. This last couple of weeks must have been very trying."</span>
+
+"Oh," says <<if setup.Roles.isAntony()>>Audrey,<<else>>Hepburn,<</if>> smiling, "I appreciate that. Yes, it's all been very sudden."
+
+"Did you get on well with Mr. Brando?"
+
+"Yes, I did, although it all stayed very professional. We didn't interact much outside of work."
+
+"No? Really? I was given to understand that for American executives, all the real work happened outside the office at golf and, what was it, baseball?"
+
+<<if setup.Roles.isAntony()>>Audrey<<else>>Hepburn<</if>> laughs. "That's true, it does, although some might consider baseball a little old-fashioned. Golf, however, is still going strong. Unfortunately Brando did not make a habit of inviting me to golf, or any other of those kinds of events."
+
+"Why not? Surely he should have invited all of his executives."
+
+"Well, you know how it is, Cleopatra. There are people who are part of the group, and people who aren't, and being younger, and a woman, I wasn't part of the group."
+
+"I see. That was very unfair of him."
+
+"Yes," she says drily, "it was."
+
+
+:: CluePoint_AudreyHepburn_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                     - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+:: CluePoint_AudreyHepburn_SHARED:ABrando
+<span class='antony-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SBrandoSnippet">>
+
+:: CluePoint_AudreyHepburn_SHARED:CBrando
+<span class='cleopatra-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_AudreyHepburn_SHARED:SUnusualSnippet
+/* --------------------------------------------------------------------- */\
+/* - Unusual                                                     - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+:: CluePoint_AudreyHepburn_SHARED:AUnusual
+<span class='antony-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SUnusualSnippet">>
+
+:: CluePoint_AudreyHepburn_SHARED:CUnusual
+<span class='cleopatra-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SUnusualSnippet">>
+
+
+:: CluePoint_AudreyHepburn_SHARED:SHepburnSnippet
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                     - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+:: CluePoint_AudreyHepburn_SHARED:AHepburn
+<span class='antony-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SHepburnSnippet">>
+
+:: CluePoint_AudreyHepburn_SHARED:CHepburn
+<span class='cleopatra-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SHepburnSnippet">>
+
+
+:: CluePoint_AudreyHepburn_SHARED:SSTORMSnippet
+/* --------------------------------------------------------------------- */\
+/* - STORM                                                     - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+:: CluePoint_AudreyHepburn_SHARED:ASTORM
+<span class='antony-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SSTORMSnippet">>
+
+:: CluePoint_AudreyHepburn_SHARED:CSTORM
+<span class='cleopatra-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SSTORMSnippet">>
+
+
+:: CluePoint_AudreyHepburn_SHARED:SPromotionSnippet
+/* --------------------------------------------------------------------- */\
+/* - Promotion                                                     - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+:: CluePoint_AudreyHepburn_SHARED:APromotion
+<span class='antony-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SPromotionSnippet">>
+
+:: CluePoint_AudreyHepburn_SHARED:CPromotion
+<span class='cleopatra-response'>"TK"</span>
+
+<<include "CluePoint_AudreyHepburn_SHARED:SPromotionSnippet">>
+
+
+
 
 
 :: Vestigal
