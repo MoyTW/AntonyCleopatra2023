@@ -40,10 +40,10 @@ He takes you up to the top floor and leads you to Audrey's office where a woman,
 /* ##################################################################### */\
 <div id='options'><<nobr>>
   <<Question "<<CleopatraMark>> I'd like to offer my condolences. This last couple of weeks must have been very trying." "Death">>
-  <<Question "Can you just describe Mr. Brando for us, so we can get a better picture of the man?" "Brando">>
+  <<Question "<<CleopatraMark>> Can you just describe Mr. Brando for us, so we can get a better picture of the man?" "Brando">>
   <<Question "Did you notice anything unusual about how Mr. Brando was acting on that day?" "Unusual">>
   <<Question "Can you describe your actions on the evening of March 15?" "Hepburn">>
-  <<Question "While we were going over the reports, we read about a project called STORM. Could you fill us in on it?" "STORM">>
+  <<Question "While we were going over the reports, we read about a project called STORM. Can you tell us what it is?" "STORM">>
   <<Question "<<CleopatraMark>> Incidentally, you have my congratulations on your promotion. Becoming CEO at such a young age is an exceptional achievement." "Promotion">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\

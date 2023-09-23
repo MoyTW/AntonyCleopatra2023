@@ -81,32 +81,38 @@ TK
 /* --------------------------------------------------------------------- */\
 /* - Brando                                                     - */\
 /* --------------------------------------------------------------------- */\
-TK
-
 :: CluePoint_AudreyHepburn_SHARED:ABrando
-<span class='antony-response'>"TK"</span>
+<span class='antony-response'>"You knew Marlon better than me. Can you think of anything about him that might be helpful?"</span>
 
-<<include "CluePoint_AudreyHepburn_SHARED:SBrandoSnippet">>
+"That's a tall ask," she says. "I don't know, Antony. Can you be more specific?"
+
+"Did he have any enemies you know of? Corporate rivals? Jilted lovers?"
+
+"You're asking the wrong person. I have no idea. He had plenty of rivals, yes, but despite the famed ruthlessness of the corporate world, I've never heard of an actual assassination. And if you're asking me to speculate on his love life, I'm sorry, I've got nothing, Antony. He doesn't even invite me to golf. I'm sorry, I mean he didn't." A frown passes over her face. "In any case, I'm sorry, I can't help you."
 
 :: CluePoint_AudreyHepburn_SHARED:CBrando
-<span class='cleopatra-response'>"TK"</span>
+<span class='cleopatra-response'>"Can you just describe Mr. Brando for us, so we can get a better picture of the man?"</span>
 
-<<include "CluePoint_AudreyHepburn_SHARED:SBrandoSnippet">>
+"Certainly, I would describe him as very driven, very intelligent, and extremely stubborn. He was very good at reading people, which is very good skill to have as a leader. However, when things didn't go well, he did have often get frustrated, and he could be tricky to work with." She looks out the window for a moment before turning back. "I admired him a great deal, Cleopatra, although I did think that would have been best served by keeping a closer handle on his temper. He never truly let it get in the way of his work, though, and maybe if he had he would have lost some of that drive. He was up and down, I think."
+
+"Thank you. That does paint a picture."
+
+"Maybe not the most flattering one, but that was how I saw him."
 
 
 :: CluePoint_AudreyHepburn_SHARED:SUnusualSnippet
 /* --------------------------------------------------------------------- */\
 /* - Unusual                                                     - */\
 /* --------------------------------------------------------------------- */\
-TK
+"No, not as far as I could tell. I passed him when I was going to lunch, though we didn't talk, and we shared a meeting at 2:30, but it was as routine as routine can be. That was all I saw of him that day."
 
 :: CluePoint_AudreyHepburn_SHARED:AUnusual
-<span class='antony-response'>"TK"</span>
+<span class='antony-response'>"Was Marlon doing anything unusual that day?"</span>
 
 <<include "CluePoint_AudreyHepburn_SHARED:SUnusualSnippet">>
 
 :: CluePoint_AudreyHepburn_SHARED:CUnusual
-<span class='cleopatra-response'>"TK"</span>
+<span class='cleopatra-response'>"Did you notice anything unusual about how Mr. Brando was acting on that day?"</span>
 
 <<include "CluePoint_AudreyHepburn_SHARED:SUnusualSnippet">>
 
@@ -115,15 +121,19 @@ TK
 /* --------------------------------------------------------------------- */\
 /* - Hepburn                                                     - */\
 /* --------------------------------------------------------------------- */\
-TK
+<<if setup.Roles.isAntony()>>Audrey<<else>>Hepburn<</if>> laughs. "Yes, of course, although I will note that I was interviewed by the police, and that they've verified everything I'm going to say here. I took a meeting from home at 8:15 in the morning, then arrived at the office at around 9:50. I stayed in the office until 2:30, badged out and went for a walk, returned at around 3:45, and stayed in the office until 7:50, when Bill told me that Marlon had been shot, and I left the office to go see, but I arrived well after the police and returned to the office until past midnight, I'm not exactly sure when I left."
+
+"Why did you go back to the office?"
+
+"Well, it was a big, uncertain event. Of course, we had a BCP that covered this, but having a plan and seeing it happen are different things. I felt that it might help to be visible, even if materially all we could do was wait and see if he pulled through."
 
 :: CluePoint_AudreyHepburn_SHARED:AHepburn
-<span class='antony-response'>"TK"</span>
+<span class='antony-response'>"So, what were you doing on the night of the murder?"</span>
 
 <<include "CluePoint_AudreyHepburn_SHARED:SHepburnSnippet">>
 
 :: CluePoint_AudreyHepburn_SHARED:CHepburn
-<span class='cleopatra-response'>"TK"</span>
+<span class='cleopatra-response'>"Can you describe your actions on the evening of March 15?"</span>
 
 <<include "CluePoint_AudreyHepburn_SHARED:SHepburnSnippet">>
 
@@ -135,12 +145,12 @@ TK
 TK
 
 :: CluePoint_AudreyHepburn_SHARED:ASTORM
-<span class='antony-response'>"TK"</span>
+<span class='antony-response'>"While we were going over the reports, the name Project STORM came up. Could you fill us in on it?"</span>
 
 <<include "CluePoint_AudreyHepburn_SHARED:SSTORMSnippet">>
 
 :: CluePoint_AudreyHepburn_SHARED:CSTORM
-<span class='cleopatra-response'>"TK"</span>
+<span class='cleopatra-response'>"While we were going over the reports, we read about a project called STORM. Can you tell us what it is?"</span>
 
 <<include "CluePoint_AudreyHepburn_SHARED:SSTORMSnippet">>
 
@@ -152,12 +162,12 @@ TK
 TK
 
 :: CluePoint_AudreyHepburn_SHARED:APromotion
-<span class='antony-response'>"TK"</span>
+<span class='antony-response'>"I heard James was the heir apparent. How'd you beat him out?"</span>
 
 <<include "CluePoint_AudreyHepburn_SHARED:SPromotionSnippet">>
 
 :: CluePoint_AudreyHepburn_SHARED:CPromotion
-<span class='cleopatra-response'>"TK"</span>
+<span class='cleopatra-response'>"Incidentally, you have my congratulations on your promotion. Becoming CEO at such a young age is an exceptional achievement."</span>
 
 <<include "CluePoint_AudreyHepburn_SHARED:SPromotionSnippet">>
 
