@@ -1,0 +1,36 @@
+:: CluePoint_GeneralLabienus_CLEOPATRA
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "General Labienus">>\
+TK
+
+<div id='options'>\
+  <<button "TK">>
+    <<AppendPassage "1" "A1" "CluePoint_GeneralLabienus" "ALL">>
+  <</button>>
+  <<button "TK">>
+    <<AppendPassage "1" "A2" "CluePoint_GeneralLabienus" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_GeneralLabienus_CLEOPATRA:1
+<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">>
+<<include "CluePoint_GeneralLabienus_CLEOPATRA:Questions">>
+
+
+:: CluePoint_GeneralLabienus_CLEOPATRA:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "TK" "TK">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_GeneralLabienus_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_CLEOPATRA">>

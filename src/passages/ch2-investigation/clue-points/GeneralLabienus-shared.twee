@@ -1,0 +1,71 @@
+:: CluePoint_GeneralLabienus_SHARED:Snippet
+/* --------------------------------------------------------------------- */\
+/* - Intro                                                             - */\
+/* --------------------------------------------------------------------- */\
+As soon as enter his office, Labienus stands up and comes out from behind his desk. "Antony," he exclaims, a broad grin on his face, "wonderful to see you!"
+
+"Labienus," <<if setup.Roles.isAntony()>>you say,<<else>>calls Antony,<</if>> "it's been a long time!" <<if setup.Roles.isAntony()>>You<<else>>They<</if>> grab each other by the shoulders and kiss, grinning. "It looks like you've got yourself tanged up some drama, haven't you?"
+
+"You could say that," he replies. He pulls back, <<if setup.Roles.isAntony()>>saluting your wife.<<else>>giving you a sharp salute.<</if>> "Your Majesty," he says.
+
+"General. It's good to see you again."
+
+"Honor's all mine," he says. "Anything to drink? Can't get alcohol, not here, but anything else, if you'd like."
+
+"No, no, don't worry about it," <<if setup.Roles.isAntony()>>you say.<<else>>says Antony.<</if>> "We do have business, after all."
+
+"Absolutely. All right, let's take a seat." He returns to his desk, clearing it of its many papers while you take a seat. "Look at this," he says, putting a printout of an email on his desk and turning it for you to see. The subject is <em>URGENT MEET ME TONIGH PENTAGON METRO ENTRANCE</em> You note the recipient date - March 15 - the recipient - General Labienus - and the sender - Marlon Brando. The body reads <em>meet me tonight 8:30 metro entrance at pentagon. have mps. will explain in person deadline 10 PM. URGENT!!!!!</em>
+
+<<if setup.Roles.isAntony()>>Your wife points<<else>>You point<</if>> to the letter. "What does he mean by 'mps,' General?"
+
+"He meant MPs, which stands for military police. They're police, but for the military. If you're wondering why he wouldn't go to the regular police, I think it's because the police ask you for pesky things like evidence and proof, and convincing them might have been hard." Labienus laughs. "On the other hand, I'd already been talking with him about the security for Project STORM, and knew he was looking into it. Given that he didn't want to explain in writing, and that he had a strict deadline, I think he was attempting to catch the spy red-handed, and time was of the essence. If I showed up my MPs could detain the spy, and with the smoking gun we'd have no trouble putting him away. Unfortunately it looks like they got the jump on him. I don't know how they knew - if he tipped them off, or they just had access to his email somehow - but being shot literally as he was going to arrest the culprits? Enemy action. Absolutely. I had my men investigate a little, but I have no formal powers so it's been rough." He pulls a short stack of folders from his desk.
+
+"You've very prepared, aren't you?"
+
+"Of course. It's a matter of national security. First, we have an engineer, <strong>Vitruvius Pollio,</strong> who had a habit of bringing packages to the French ambassador, <strong>Napoleon Bonaparte</strong>. I couldn't find anything definite, but <strong>Dean</strong> - you know <strong>Dean</strong>, right? Dean was adamant that he was innocent. Like I said, I have no formal powers, so we couldn't dig any deeper, but I did have Dean take him off the project. Aside from <strong>Napoleon</strong> I'd recommend looking at all the ambassadors of the continental powers - <strong>Bismarck</strong> and <strong>Rasputin</strong> especially. I have no evidence on them, of course, but just within the last six months we nearly had a breach by a German honey trap, and we've had repeated Russian cyberattacks against the program, so I know they both want it. Here," he says, handing you the dossiers, "take them. You might get more mileage out of them than me." He pauses. "That's all I have for you. Anything you want to ask?"
+
+
+:: CluePoint_GeneralLabienus_SHARED:1Y_Snippet
+/* --------------------------------------------------------------------- */\
+/* - Reaction                                                          - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+:: CluePoint_GeneralLabienus_SHARED:1N_Snippet
+TK
+
+:: CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet
+<<if _choice is 'A1'>>\
+  <span class='antony-response'>"TK"</span>
+
+  <<include "CluePoint_GeneralLabienus_SHARED:1Y_Snippet">>
+<<elseif _choice is 'C1'>>\
+  <span class='cleopatra-response'>"TK"</span>
+
+  <<include "CluePoint_GeneralLabienus_SHARED:1Y_Snippet">>
+<<elseif _choice is 'A2'>>\
+  <span class='antony-response'>"TK"</span>
+
+  <<include "CluePoint_GeneralLabienus_SHARED:1N_Snippet">>
+<<elseif _choice is 'C2'>>\
+  <span class='cleopatra-response'>"TK"</span>
+
+  <<include "CluePoint_GeneralLabienus_SHARED:1N_Snippet">>
+<</if>>\
+
+
+:: CluePoint_GeneralLabienus_SHARED:SIDEMPOTENCY_KEYSnippet
+/* --------------------------------------------------------------------- */\
+/* - IDEMPOTENCY_KEY                                                     - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+:: CluePoint_GeneralLabienus_SHARED:AIDEMPOTENCY_KEY
+<span class='antony-response'>"TK"</span>
+
+<<include "CluePoint_GeneralLabienus_SHARED:SIDEMPOTENCY_KEYSnippet">>
+
+:: CluePoint_GeneralLabienus_SHARED:CIDEMPOTENCY_KEY
+<span class='cleopatra-response'>"TK"</span>
+
+<<include "CluePoint_GeneralLabienus_SHARED:SIDEMPOTENCY_KEYSnippet">> 

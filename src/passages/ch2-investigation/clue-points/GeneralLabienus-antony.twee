@@ -1,0 +1,36 @@
+:: CluePoint_GeneralLabienus_ANTONY
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "General Labienus">>\
+<<include "CluePoint_GeneralLabienus_SHARED:Snippet">>
+
+<div id='options'>\
+  <<button "Just one box to check. What were you doing on that night?">>
+    <<AppendPassage "1" "A1" "CluePoint_GeneralLabienus" "ALL">>
+  <</button>>
+  <<button "No, that's all. We'll be taking those, thanks.">>
+    <<AppendPassage "1" "A2" "CluePoint_GeneralLabienus" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_GeneralLabienus_ANTONY:1
+<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">>
+<<include "CluePoint_GeneralLabienus_ANTONY:Questions">>
+
+
+:: CluePoint_GeneralLabienus_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "TK" "TK">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_GeneralLabienus_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_ANTONY">>
