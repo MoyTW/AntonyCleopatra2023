@@ -14,7 +14,7 @@ As soon as enter his office, Labienus stands up and comes out from behind his de
 
 "No, no, don't worry about it," <<if setup.Roles.isAntony()>>you say.<<else>>says Antony.<</if>> "We do have business, after all."
 
-"Absolutely. All right, let's take a seat." He returns to his desk, clearing it of its many papers while you take a seat. "Look at this," he says, putting a printout of an email on his desk and turning it for you to see. The subject is <em>URGENT MEET ME TONIGH PENTAGON METRO ENTRANCE</em> You note the recipient date - March 15 - the recipient - General Labienus - and the sender - Marlon Brando. The body reads <em>meet me tonight 8:30 metro entrance at pentagon. have mps. will explain in person deadline 10 PM. URGENT!!!!!</em>
+"Absolutely. All right, let's take a seat." He returns to his desk, clearing it of its many papers while you take a seat. "Look at this," he says, putting a printout of an email on his desk and turning it for you to see. The subject is <em>URGENT MEET ME TONIGH PENTAGON METRO ENTRANCE!</em> You note the recipient date - March 15 - the recipient - General Labienus - and the sender - Marlon Brando. The body reads <em>meet me tonight 8:30 metro entrance at pentagon. have mps. will explain in person deadline 10 PM. URGENT!!!!!</em>
 
 <<if setup.Roles.isAntony()>>Your wife points<<else>>You point<</if>> to the letter. "What does he mean by 'mps,' General?"
 
@@ -29,43 +29,30 @@ As soon as enter his office, Labienus stands up and comes out from behind his de
 /* --------------------------------------------------------------------- */\
 /* - Reaction                                                          - */\
 /* --------------------------------------------------------------------- */\
-TK
+He laughs. "I was talking to the head of security from 6:45 until 7:20, at which point he graciously let me borrow three MPs. They stayed with me until I heard about Marlon getting shot at around five minutes before eight, at which point we drove to the scene, but there wasn't much use after. I can give you their contact info if you want."
+
+"That's fine. Hortensia can follow up if it proves necessary."
+
+"Great, great."
 
 :: CluePoint_GeneralLabienus_SHARED:1N_Snippet
-TK
+"No problem," he says. "Always happy to help."
 
 :: CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet
 <<if _choice is 'A1'>>\
-  <span class='antony-response'>"TK"</span>
+  <span class='antony-response'>"Just one box to check. What were you doing on that night?"</span>
 
   <<include "CluePoint_GeneralLabienus_SHARED:1Y_Snippet">>
 <<elseif _choice is 'C1'>>\
-  <span class='cleopatra-response'>"TK"</span>
+  <span class='cleopatra-response'>"As a matter of course, could you tell us what were you doing on that night?"</span>
 
   <<include "CluePoint_GeneralLabienus_SHARED:1Y_Snippet">>
 <<elseif _choice is 'A2'>>\
-  <span class='antony-response'>"TK"</span>
+  <span class='antony-response'>"No, that's all. We'll be taking those, thanks."</span>
 
   <<include "CluePoint_GeneralLabienus_SHARED:1N_Snippet">>
 <<elseif _choice is 'C2'>>\
-  <span class='cleopatra-response'>"TK"</span>
+  <span class='cleopatra-response'>"I think you've done excellently, General. We appreciate the help."</span>
 
   <<include "CluePoint_GeneralLabienus_SHARED:1N_Snippet">>
 <</if>>\
-
-
-:: CluePoint_GeneralLabienus_SHARED:SIDEMPOTENCY_KEYSnippet
-/* --------------------------------------------------------------------- */\
-/* - IDEMPOTENCY_KEY                                                     - */\
-/* --------------------------------------------------------------------- */\
-TK
-
-:: CluePoint_GeneralLabienus_SHARED:AIDEMPOTENCY_KEY
-<span class='antony-response'>"TK"</span>
-
-<<include "CluePoint_GeneralLabienus_SHARED:SIDEMPOTENCY_KEYSnippet">>
-
-:: CluePoint_GeneralLabienus_SHARED:CIDEMPOTENCY_KEY
-<span class='cleopatra-response'>"TK"</span>
-
-<<include "CluePoint_GeneralLabienus_SHARED:SIDEMPOTENCY_KEYSnippet">> 

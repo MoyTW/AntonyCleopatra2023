@@ -14,23 +14,4 @@
 
 
 :: CluePoint_GeneralLabienus_ANTONY:1
-<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">>
-<<include "CluePoint_GeneralLabienus_ANTONY:Questions">>
-
-
-:: CluePoint_GeneralLabienus_ANTONY:Questions
-/* ##################################################################### */\
-/* # QUESTIONS                                                         # */\
-/* ##################################################################### */\
-<div id='options'><<nobr>>
-  <<Question "TK" "TK">>
-  <<EndInterview "That's all we needed for today.">>
-<</nobr>></div>\
-
-
-:: CluePoint_GeneralLabienus_ANTONY:EndInterview
-/* --------------------------------------------------------------------- */\
-/* - EndInterview                                                      - */\
-/* --------------------------------------------------------------------- */\
-TK
-<<include "Ch2_EndInterview_ANTONY">>
+<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">><<include "Ch2_EndInterview_ANTONY">>

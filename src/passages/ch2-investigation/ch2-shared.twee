@@ -44,6 +44,7 @@
     <<set _id to $Ch2_DecideVisitAntony>>
     <<set _passage to setup.CluePoints.getPassage(_id, setup.Roles.getRole())>>
     <<run setup.Calendar.scheduleVisit(_month, _day, _slot, _role, _id)>>
+    <<run setup.CluePoints.markCluePointVisited(_id)>>
 
     <<unset $Ch2_DecideVisitAntony>>
     <<unset $Ch2_DecideVisitCleopatra>>
@@ -85,17 +86,6 @@
   <<run $('#options').append(setup.Roles.getSeal())>>
   <<send 'CH2_END_PLANNING' { role: setup.Roles.getRole() }>><</send>>
 <</widget>>
-
-
-:: Ch2_Interview
-<<nobr>>
-  <<set _scheduled to setup.Calendar.getScheduledNow()>>
-  <<set _id to _scheduled.cluePointId>>
-  <<set _name to setup.CluePoints.getName(_id)>>
-  <<set _passage to setup.CluePoints.getPassage(_id, setup.Roles.getRole())>>
-<</nobr>>\
-<<locationheader _name>>\
-<<include _passage>>\
 
 
 :: QuestionWidget [widget]
@@ -148,13 +138,18 @@
     <<if _id !== _scheduledId>>
       <<capture _id>>
         <<set _name to setup.CluePoints.getName(_id)>>
-        <<iddiv _id>>
-          <<button _name>>
-            <<send 'CH2_DECIDE_VISIT' { scheduled: false, id: _id, role: setup.Roles.getRole() }>><</send>>
-          <</button>>
-          <<if $Ch2_DecideVisitAntony === _id>><<AntonySeal>><</if>>
-          <<if $Ch2_DecideVisitCleopatra === _id>><<CleopatraSeal>><</if>>
-        <</iddiv>>
+        <<if setup.CluePoints.cluePointVisited(_id)>>
+          <<set _text to _name + ' <em>[already visited]</em>'>>
+          <<disable>><<button _text>><</button>><</disable>>
+        <<else>>
+          <<iddiv _id>>
+            <<button _name>>
+              <<send 'CH2_DECIDE_VISIT' { scheduled: false, id: _id, role: setup.Roles.getRole() }>><</send>>
+            <</button>>
+            <<if $Ch2_DecideVisitAntony === _id>><<AntonySeal>><</if>>
+            <<if $Ch2_DecideVisitCleopatra === _id>><<CleopatraSeal>><</if>>
+          <</iddiv>>
+        <</if>>
       <</capture>>
     <</if>>
   <</for>>

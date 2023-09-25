@@ -10,7 +10,13 @@ interface CluePointData {
 interface CluePoints {
   getName: (cluePointId: string) => string | undefined
   getPassage: (cluePointId: string, role: string) => string | undefined
-  getKnownCluePointIds: (type: string) => string[]  
+  getKnownCluePointIds: (type: string) => string[]
+
+  cluePointIsKnown: (cluePointId: string) => boolean
+  markCluePointKnown: (cluePointId: string) => void
+
+  cluePointVisited: (cluePointId: string) => boolean
+  markCluePointVisited: (cluePointId: string) => void
 }
 
 (function () {
@@ -277,6 +283,8 @@ interface CluePoints {
   ]
 
   class CluePointsImpl implements CluePoints {
+    VISITED_VAR = '$CluePointsImpl_visited'
+
     dataMap: Map<string, CluePointData>
 
     constructor (data: CluePointData[]) {
@@ -334,6 +342,26 @@ interface CluePoints {
         knownIds.push(cluePointId)
         State.setVar('$knownCluePoints', knownIds)
       }
+    }
+
+    cluePointVisited = (cluePointId: string) => {
+      const visitedIds: string[] | undefined = State.getVar(this.VISITED_VAR)
+      if (!visitedIds) {
+        return false
+      } else {
+        return visitedIds.includes(cluePointId)
+      }
+    }
+
+    markCluePointVisited = (cluePointId: string) => {
+      let visitedIds: string[] | undefined = State.getVar(this.VISITED_VAR)
+      if (!visitedIds) {
+        visitedIds = [cluePointId]
+      } else {
+        // TODO: If we allow revisits, we want to track that!
+        visitedIds.push(cluePointId)
+      }
+      State.setVar(this.VISITED_VAR, visitedIds)
     }
   }
 

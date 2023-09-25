@@ -1,36 +1,17 @@
 :: CluePoint_GeneralLabienus_CLEOPATRA
 /* TODO: distinguish between scheduled & unscheduled */\
 <<locationheader "General Labienus">>\
-TK
+<<include "CluePoint_GeneralLabienus_SHARED:Snippet">>
 
 <div id='options'>\
-  <<button "TK">>
-    <<AppendPassage "1" "A1" "CluePoint_GeneralLabienus" "ALL">>
+  <<button "As a matter of course, could you tell us what were you doing on that night?">>
+    <<AppendPassage "1" "C1" "CluePoint_GeneralLabienus" "ALL">>
   <</button>>
-  <<button "TK">>
-    <<AppendPassage "1" "A2" "CluePoint_GeneralLabienus" "ALL">>
+  <<button "I think you've done excellently, General. We appreciate the help.">>
+    <<AppendPassage "1" "C2" "CluePoint_GeneralLabienus" "ALL">>
   <</button>>
 </div>
 
 
 :: CluePoint_GeneralLabienus_CLEOPATRA:1
-<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">>
-<<include "CluePoint_GeneralLabienus_CLEOPATRA:Questions">>
-
-
-:: CluePoint_GeneralLabienus_CLEOPATRA:Questions
-/* ##################################################################### */\
-/* # QUESTIONS                                                         # */\
-/* ##################################################################### */\
-<div id='options'><<nobr>>
-  <<Question "TK" "TK">>
-  <<EndInterview "That's all we needed for today.">>
-<</nobr>></div>\
-
-
-:: CluePoint_GeneralLabienus_CLEOPATRA:EndInterview
-/* --------------------------------------------------------------------- */\
-/* - EndInterview                                                      - */\
-/* --------------------------------------------------------------------- */\
-TK
-<<include "Ch2_EndInterview_CLEOPATRA">>
+<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">><<include "Ch2_EndInterview_CLEOPATRA">>
