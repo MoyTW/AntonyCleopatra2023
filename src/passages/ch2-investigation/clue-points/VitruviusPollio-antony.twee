@@ -51,7 +51,6 @@ A minute later, the car rolls to a stop in front of a block of three-story row h
 /* ##################################################################### */\
 /* # QUESTIONS                                                         # */\
 /* ##################################################################### */\
-/* TODO: This gets real weird if you haven't visited Dean or Labienus! */\
 <div id='options'><<nobr>>
   <<Question "What did you do at Raytheon?" "Raytheon">>
   <<if _Raytheon>>

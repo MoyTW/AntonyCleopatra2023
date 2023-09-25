@@ -136,10 +136,10 @@
     <<if _id !== _scheduledId>>
       <<capture _id>>
         <<set _name to setup.CluePoints.getName(_id)>>
-        <<if setup.CluePoints.cluePointVisited(_id)>>
+        /* <<if setup.CluePoints.cluePointVisited(_id)>> TOOD: Uncomment
           <<set _text to _name + ' <em>[already visited]</em>'>>
           <<disable>><<button _text>><</button>><</disable>>
-        <<else>>
+        <<else>> */
           <<iddiv _id>>
             <<button _name>>
               <<send 'CH2_DECIDE_VISIT' { scheduled: false, id: _id, role: setup.Roles.getRole() }>><</send>>
@@ -147,7 +147,7 @@
             <<if $Ch2_DecideVisitAntony === _id>><<AntonySeal>><</if>>
             <<if $Ch2_DecideVisitCleopatra === _id>><<CleopatraSeal>><</if>>
           <</iddiv>>
-        <</if>>
+        /* <</if>> */
       <</capture>>
     <</if>>
   <</for>>
