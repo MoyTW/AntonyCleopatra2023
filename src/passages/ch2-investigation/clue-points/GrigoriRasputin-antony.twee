@@ -1,0 +1,36 @@
+:: CluePoint_GrigoriRasputin_ANTONY
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "TK">>\
+TK
+
+<div id='options'>\
+  <<button "TK">>
+    <<AppendPassage "1" "A1" "CluePoint_GrigoriRasputin" "ALL">>
+  <</button>>
+  <<button "TK">>
+    <<AppendPassage "1" "A2" "CluePoint_GrigoriRasputin" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_GrigoriRasputin_ANTONY:1
+<<include "CluePoint_GrigoriRasputin_SHARED:1_ReactionSnippet">>
+<<include "CluePoint_GrigoriRasputin_ANTONY:Questions">>
+
+
+:: CluePoint_GrigoriRasputin_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "TK" "TK">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_GrigoriRasputin_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_ANTONY">>
