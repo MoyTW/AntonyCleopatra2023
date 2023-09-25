@@ -5,10 +5,10 @@ TK
 
 <div id='options'>\
   <<button "TK">>
-    <<AppendPassage "1" "A1" "CluePoint_TEMPLATE" "ALL">>
+    <<AppendPassage "1" "C1" "CluePoint_TEMPLATE" "ALL">>
   <</button>>
   <<button "TK">>
-    <<AppendPassage "1" "A2" "CluePoint_TEMPLATE" "ALL">>
+    <<AppendPassage "1" "C2" "CluePoint_TEMPLATE" "ALL">>
   <</button>>
 </div>
 

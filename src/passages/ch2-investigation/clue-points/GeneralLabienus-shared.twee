@@ -2,6 +2,13 @@
 /* --------------------------------------------------------------------- */\
 /* - Intro                                                             - */\
 /* --------------------------------------------------------------------- */\
+<<nobr>>
+  /* TODO: Use Titus not Labienus */
+  <<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>
+  <<run setup.CluePoints.markCluePointKnown('NapoleonBonaparte')>>
+  <<run setup.CluePoints.markCluePointKnown('OttoVonBismarck')>>
+  <<run setup.CluePoints.markCluePointKnown('GrigoriRasputin')>>
+<</nobr>>\
 As soon as enter his office, Labienus stands up and comes out from behind his desk. "Antony," he exclaims, a broad grin on his face, "wonderful to see you!"
 
 "Labienus," <<if setup.Roles.isAntony()>>you say,<<else>>calls Antony,<</if>> "it's been a long time!" <<if setup.Roles.isAntony()>>You<<else>>They<</if>> grab each other by the shoulders and kiss, grinning. "It looks like you've got yourself tanged up some drama, haven't you?"

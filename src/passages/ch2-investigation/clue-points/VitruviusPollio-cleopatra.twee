@@ -1,0 +1,65 @@
+:: CluePoint_VitruviusPollio_CLEOPATRA
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "TK">>\
+As your car rolls past Virginia Park, Hortensia clears her throat. "A moment, Mr. Vice-President, Your Majesty."
+
+"Yes?" you ask.
+
+"Our interviewee today noted that he'd caught a cold. If you wouldn't mind," she says, pulling out a trio of N95 masks from the car storage.
+
+"Of course not." You pull the mask over her head, but you can hear Antony's sigh.
+
+"Duty calls," he says. "Good thing I've not got a beard." You look over to see him fiddling with the straps.
+
+"You'd look terrible with a beard!"
+
+"And that's why I don't have one."
+
+A minute later, the car rolls to a stop in front of a block of three-story row houses, their facades alternating between brown brick and white siding. As you're disembarking, a young Asian man in a T-shirt and jeans comes out of the house, holding a tote bag, and heads towards a red Subaru.
+
+"One of his roommates," clarifies Hortensia.
+
+"Pity," quips Antony, "I do love a good chase. Warms the blood, and all." The roommate gives you all a strange look, but his curiosity doesn't stop him from getting in his car. You walk up to the door as he drives off, which opens before you can reach it to reveal a short, well-muscled man in his mid-thirties, adorned in a white button-down shirt and slacks, his face covered by a surgical mask. His left hand is empty, but in his right you can see a ziplock bag with several light blue facemasks in it.
+
+"Uhm. Hello," he says. He gives a little laugh. "I'm sorry, I was a little sick, I was going to offer masks but, uh, you seem to have that covered."
+
+"Thank you," you say. "You are Vitruvius Pollio?"
+
+"Yeah, yeah," he says. "Uh."
+
+"It's great to meet. I'm Cleopatra. I hope you'll forgive me if we don't shake hands."
+
+"Ha!" he says, "uh, yeah, it's no problem. So, uh, how about you, uuuuh." He pauses, looking over your group. "Well, there are more of you than I expected, I mean, I didn't know you had so many, uh. Guards. It might be a little tight."
+
+<div id='options'>\
+  <<button "Peucestas, Perdiccas, come with me. The rest will wait outside.">>
+    <<AppendPassage "1" "C1" "CluePoint_VitruviusPollio" "ALL">>
+  <</button>>
+  <<button "It is no issue.">>
+    <<AppendPassage "1" "C2" "CluePoint_VitruviusPollio" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_VitruviusPollio_CLEOPATRA:1
+<<include "CluePoint_VitruviusPollio_SHARED:1_ReactionSnippet">>
+
+<<include "CluePoint_VitruviusPollio_CLEOPATRA:Questions">>
+
+
+:: CluePoint_VitruviusPollio_CLEOPATRA:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "TK" "TK">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_VitruviusPollio_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_CLEOPATRA">>

@@ -1,0 +1,92 @@
+:: CluePoint_VitruviusPollio_SHARED:1_ReactionSnippet
+/* --------------------------------------------------------------------- */\
+/* - Reaction                                                          - */\
+/* --------------------------------------------------------------------- */\
+<<if _choice is 'A1'>>\
+  <span class='antony-response'>"All right, Robert, Bill, you heard the man, you'll just have to stay outside."</span>
+
+  "Sir," says Bill, "you know we can't do that."
+
+  "Ah, you never let me do anything fun. Guess we're stuck with them, Pollio, is that all right?"
+
+  "No, no," he says, "it's no problem. Come in, come in."\
+<<elseif _choice is 'C1'>>\
+  <span class='cleopatra-response'>"Peucestas, Perdiccas, come with me. The rest will wait outside."</span>
+
+  "Your Majesty," they chant in assent.
+
+  "Well, uh." Vitruvius seems taken aback. "Well, thank you, uh, Your Majesty is how I should call you?"
+
+  "Yes. Cleopatra is also fine."
+
+  "Oh, ok. Uhm, well, please, Your Majesty, all of you. Come on in."\
+<<elseif _choice is 'A2'>>\
+  <span class='antony-response'>"I've been in tighter, I'll bet."</span>
+
+  "Okay," he says. "Uh, well, please come in then, Mr. Vice-President, uh, Your Majesty."\
+<<elseif _choice is 'C2'>>\
+  <span class='cleopatra-response'>"It is no issue."</span>
+
+  "Okay," he says. "Uh, sure. If you say so." His hands hover awkwardly. "Please come in then, Mr. Vice-President, uh, Your Majesty."\
+<</if>> He ushers you into a small shared space with a television, couch, and a table for four. All the surfaces have been cleared, the carpet freshly vacuumed. All that stands on the table is a tall blue vase with a medley of fresh flowers, whose scents are entirely blocked by your mask.
+
+"Sorry for the, uh, well." He flushes. "So, it's an honor to meet you. Two, I mean. I just wanted to...say that."
+
+"Relax," <<if setup.Roles.isAntony()>>says your wife.<<else>>you say.<</if>> "How does it go? We don't bite?"
+
+"Oh, yeah," he laughs. "Uh, your English is very good, you know."
+
+"Thank you. You needn't be so nervous. We'd just like to ask you a few questions."
+
+"Yeah, okay, right. I mean, no promises, but, you know, go ahead."
+
+
+:: CluePoint_VitruviusPollio_SHARED:SIDEMPOTENCY_KEYSnippet
+/* --------------------------------------------------------------------- */\
+/* - IDEMPOTENCY_KEY                                                     - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+:: CluePoint_VitruviusPollio_SHARED:AIDEMPOTENCY_KEY
+<span class='antony-response'>"TK"</span>
+
+<<include "CluePoint_VitruviusPollio_SHARED:SIDEMPOTENCY_KEYSnippet">>
+
+:: CluePoint_VitruviusPollio_SHARED:CIDEMPOTENCY_KEY
+<span class='cleopatra-response'>"TK"</span>
+
+<<include "CluePoint_VitruviusPollio_SHARED:SIDEMPOTENCY_KEYSnippet">>
+
+
+:: Vestigal
+You meet Vitruvius in his one-bedroom apartment. He's a slim man with an impetuous gaze, about 30 years old. He greets you wearing a surgical mask. "Apologies. There's a cold going around," he says in a strained voice.
+
+You assure him it's no problem. He leads you into the main room and sits down at the table, on which is a pack of cigarettes with a golden lotus logo, a tall blue glass decanter, and some tissues. You ask him about his knowledge of the STORM.
+
+He laughs. "Been removed. Officially, it's because the IDAHO project is behind schedule and needs more resources, and I make a good fit. Unofficially it's because I keep visiting the French Embassy in my off time and that's apparently a bad look. Like I need an excuse." He pauses. "They're not wrong. It is kind of a bad look."
+
+You ask why he's visiting the French Embassy so much.
+
+"So, <strong>Napoleon</strong> has mistresses, right?"
+
+You agree that that is something you've heard said.
+
+"Well, one of his mistresses has a daughter, and for various reasons she's living in DC, and blah blah blah. Short version is that we want to marry, and part of that involves making nice with dad."
+
+You ask if Marlon Brando and <strong>James Dean</strong> were aware of this.
+
+"Yes. Obviously."
+
+You ask if he ever discussed Project STORM with Napoleon.
+
+"Ha! What, am I going to talk missile interception with Napoleon? The man might be a geopolitical genius but the details of missile defense aren't his duty. He has men for that. No, mostly I give gifts and make nice." He snatches the pack of cigarettes from the table and brandishes them. "Like these things. Expensive as hell and custom made, from a place called <strong>Golden Lotus.</strong> He loves gifts, the more exclusive the better - he views them kind of like a vow of allegiance, or something. Very old fashioned."
+
+You ask if the cigarettes are any good.
+
+"No idea," he laughs, "I don't smoke. But they have a reputation for being exclusive. So, probably?"
+
+You ask what he was doing on the 15th of March.
+
+"Dinner with Helene." You raise an eyebrow. "The woman I want to marry. Look, you don't have to take my word for it, I'm sure you can have your people track down my location data."
+
+You thank him for his time, and give him best wishes with his cold. As you're leaving, you prompt Hortensia to look up Vitrivius' phone data. She tells you that both him and Helene were present at Atlantic Catch on the evening of the 15th.
