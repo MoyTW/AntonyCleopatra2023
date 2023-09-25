@@ -121,7 +121,6 @@ interface Appointment {
         entries.deleteAt(matchingIdx)
       }
       entries.push({ month: month, day: day, slot: slot, role: role, cluePointId: cluePointId})
-      console.log('setting', entries)
       State.setVar(this.ENTRIES_VAR, entries)
     }
   }

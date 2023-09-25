@@ -24,7 +24,6 @@
 
 <<receive 'CH2_DECIDE_VISIT' 'ALL'>>
   /* { scheduled: boolean, id: string, role: string } */
-  <<run console.log(_receiveData)>>
   <<run $(`#${_receiveData.id}`).append(setup.Roles.getSeal(_receiveData.role))>>
 
   <<if _receiveData.role === setup.Roles.ANTONY>>
@@ -119,7 +118,6 @@
 <div id='options'><<nobr>>
   <<set _scheduled to setup.Calendar.getScheduledNow()>>
   <<if _scheduled>>
-    <<run console.log(_scheduled, _cts)>>
     <<set _scheduledId to _scheduled.cluePointId>>
     <<set _name to 'Visit ' + setup.CluePoints.getName(_scheduledId) + '.'>>
     <<iddiv _scheduledId>>

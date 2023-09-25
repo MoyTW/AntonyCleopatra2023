@@ -4,11 +4,9 @@
     <<if State.getVar(`_${_receiveData.idempotencyKey}`)>>
       <<run console.log(`Ignoring APPEND_PASSAGE for key ${_receiveData.idempotencyKey}!`)>>
     <<else>>
-      <<run console.log(_receiveData)>>
       <<run State.setVar(`_${_receiveData.idempotencyKey}`, true)>>
       <<run $('#options').remove()>>
       <<set _choice to _receiveData.choice>>
-      <<run console.log(passage())>>
       <<set _passage to passage() + ':' + _receiveData.passageSuffix>>
       <<run $('.passage').wiki(Story.get(_passage).processText())>>
     <</if>>

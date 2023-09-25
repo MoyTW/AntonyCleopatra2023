@@ -18,8 +18,6 @@ Day: $currentDay
   const text = $("#passages")[0].innerText;
   const wc = text.split(/\s+/).filter(n => n !== ' ').length;
   $("#wc-span").text(wc)
-  console.log(text)
-  console.log(text.split(/\s+/))
 <</script>><</button>>
 Word Count: <span id="wc-span">?</span>
 
