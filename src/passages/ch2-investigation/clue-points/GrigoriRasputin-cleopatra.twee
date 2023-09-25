@@ -1,13 +1,23 @@
 :: CluePoint_GrigoriRasputin_CLEOPATRA
 /* TODO: distinguish between scheduled & unscheduled */\
-<<locationheader "TK">>\
-TK
+<<locationheader "Grigori Rasputin">>\
+Rasputin is late.
+
+The waiting room is lavishly decorated in the traditional, overwhelming Imperial style, from its elaborately carbed chairs to the rows of fine liquor, housed in glittering glass, but it pales in comparison to your own palaces. Even if you were overawed, any power it could possibly hold would have worn off in the first five minutes, much less the fifteen that he has subjected you to. "Anna," you say, turning to the attendant, "surely the ambassador intends to keep to his commitments."
+
+The lady man smiles placidly, checking his phone. "His car has just arrived," she says. "I expect he will be up momentarily."
+
+Rasputin is not up momentarily, but he does arrive eventually. When he enters it's with his hair mussed, his normally sharp blue eyes dull and unfocused. Before him marches his signature smell, and on his body he bears his signature robes, unpressed and slightly unclean, as is his habit. His beard is wild, his normally controlled steps a little uncertain. In his wake he drags his omnipresent attendant, Aron. "Forgive me," he says. "It is a pleasure to see you both again, Mr. Vice-President, Your Majesty." To Antony he extends his hand, and to you he bows at the waist, which as by custom you do not return. "Come," he says, "come into my office."
+
+His office is even more ostentatiously decorated, at times spilling over into tackiness. He perches behind his wooden desk, and the two of you seat yourselves in the visitors' chairs.
+
+"A drink?" he asks, gesturing to his lavishly stocked in-office bar.
 
 <div id='options'>\
-  <<button "TK">>
+  <<button "Please. Wine, if you would.">>
     <<AppendPassage "1" "C1" "CluePoint_GrigoriRasputin" "ALL">>
   <</button>>
-  <<button "TK">>
+  <<button "Thank you for your consideration, but I will abstain.">>
     <<AppendPassage "1" "C2" "CluePoint_GrigoriRasputin" "ALL">>
   <</button>>
 </div>
@@ -23,7 +33,13 @@ TK
 /* # QUESTIONS                                                         # */\
 /* ##################################################################### */\
 <div id='options'><<nobr>>
-  <<Question "TK" "TK">>
+  <<Question "Have you ever met Marlon Brando?" "Brando">>
+  <<if _Brando>>
+    <<Question "Are you personally familiar with James Dean?" "Dean">>
+    <<Question "Are you personally familiar with Audrey Hepburn?" "Hepburn">>
+  <</if>>
+  <<Question "Have you ever heard of something called Project STORM?" "STORM">>
+  <<Question "Can you tell us what you were doing on the night of March 15?" "March">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 

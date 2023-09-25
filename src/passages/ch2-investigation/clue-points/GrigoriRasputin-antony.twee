@@ -1,13 +1,13 @@
 :: CluePoint_GrigoriRasputin_ANTONY
 /* TODO: distinguish between scheduled & unscheduled */\
 <<locationheader "TK">>\
-TK
+
 
 <div id='options'>\
-  <<button "TK">>
+  <<button "Sure. Got anything fancy?">>
     <<AppendPassage "1" "A1" "CluePoint_GrigoriRasputin" "ALL">>
   <</button>>
-  <<button "TK">>
+  <<button "No, let's just get to business.">>
     <<AppendPassage "1" "A2" "CluePoint_GrigoriRasputin" "ALL">>
   <</button>>
 </div>
@@ -23,7 +23,13 @@ TK
 /* # QUESTIONS                                                         # */\
 /* ##################################################################### */\
 <div id='options'><<nobr>>
-  <<Question "TK" "TK">>
+  <<Question "Did you know Marlon Brando?" "Brando">>
+  <<if _Brando>>
+    <<Question "Do you know James Dean?" "Dean">>
+    <<Question "Do you know Audrey Hepburn?" "Hepburn">>
+  <</if>>
+  <<Question "Does the name Project STORM ring any bells?" "STORM">>
+  <<Question "What were you doing on the fifteen of March?" "March">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 

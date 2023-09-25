@@ -2,71 +2,151 @@
 /* --------------------------------------------------------------------- */\
 /* - Reaction                                                          - */\
 /* --------------------------------------------------------------------- */\
-TK
+"Wine fit for not one, not two, but three emperors. I present to you, friends, a bottle of fine Cristal." He exhibits a clear bottle holding a amber champagne, as well as a trio of wine glasses. "One for the Lord," he says, pouring out a measure for <<if setup.Roles.isAntony()>>you,<<else>>Antony,<</if>> "one for the Lady, and one for the Holy Man." He lifts his glass. "Cheers," he says.
 
-:: CluePoint_GrigoriRasputin_SHARED:1N_Snippet
-TK
+"Cheers," you say. You sip the glass. It's juicy, crisp, and bubbly.
+
+"So," says your host, "again, I am sorry for my lateness."
+
+"No worries," <<if setup.Roles.isAntony()>>you say,<<else>>says Antony,<</if>> "but we do have some questions for you. So let's get to it."
+
+"Yes, let us."\
 
 :: CluePoint_GrigoriRasputin_SHARED:1_ReactionSnippet
 <<if _choice is 'A1'>>\
-  <span class='antony-response'>"TK"</span>
+  <span class='antony-response'>"Sure. Got anything fancy?"</span>
 
-  <<include "CluePoint_GrigoriRasputin_SHARED:1Y_Snippet">>
+  "The fanciest there is," says Rasputin, rising to the bar. <<include "CluePoint_GrigoriRasputin_SHARED:1Y_Snippet">>
 <<elseif _choice is 'C1'>>\
-  <span class='cleopatra-response'>"TK"</span>
+  <span class='cleopatra-response'>"Please. Wine, if you would."</span>
 
-  <<include "CluePoint_GrigoriRasputin_SHARED:1Y_Snippet">>
+  "I have just the thing," says Rasputin, rising to the bar. <<include "CluePoint_GrigoriRasputin_SHARED:1Y_Snippet">>
 <<elseif _choice is 'A2'>>\
-  <span class='antony-response'>"TK"</span>
+  <span class='antony-response'>"No, let's just get to business."</span>
 
-  <<include "CluePoint_GrigoriRasputin_SHARED:1N_Snippet">>
+  "Yes, business. Tell me what you need."
 <<elseif _choice is 'C2'>>\
-  <span class='cleopatra-response'>"TK"</span>
+  <span class='cleopatra-response'>"Thank you for your consideration, but I will abstain."</span>
 
-  <<include "CluePoint_GrigoriRasputin_SHARED:1N_Snippet">>
+  "And you, Mr. Vice-President?"
+
+  "Let's just get to the questions."
+
+  "Yes, questions. Question me freely, then."
 <</if>>\
 
 
-:: CluePoint_GrigoriRasputin_SHARED:SIDEMPOTENCY_KEYSnippet
+:: CluePoint_GrigoriRasputin_SHARED:SBrandoSnippet
 /* --------------------------------------------------------------------- */\
-/* - IDEMPOTENCY_KEY                                                     - */\
+/* - Brando                                                     - */\
 /* --------------------------------------------------------------------- */\
-TK
+"No. I'm sure somebody here was responsible for keeping track of him," he chuckles, "but that's all spy stuff. I leave that sort of thing to the professionals."
 
-:: CluePoint_GrigoriRasputin_SHARED:AIDEMPOTENCY_KEY
-<span class='antony-response'>"TK"</span>
+:: CluePoint_GrigoriRasputin_SHARED:ABrando
+<span class='antony-response'>"Did you know Marlon Brando?"</span>
 
-<<include "CluePoint_GrigoriRasputin_SHARED:SIDEMPOTENCY_KEYSnippet">>
+<<include "CluePoint_GrigoriRasputin_SHARED:SBrandoSnippet">>
 
-:: CluePoint_GrigoriRasputin_SHARED:CIDEMPOTENCY_KEY
-<span class='cleopatra-response'>"TK"</span>
+:: CluePoint_GrigoriRasputin_SHARED:CBrando
+<span class='cleopatra-response'>"Have you ever met Marlon Brando?"</span>
 
-<<include "CluePoint_GrigoriRasputin_SHARED:SIDEMPOTENCY_KEYSnippet">>
+<<include "CluePoint_GrigoriRasputin_SHARED:SBrandoSnippet">>
 
 
-:: CluePoint_GrigoriRasputin
-Rasptuin is a little hard to get a hold of, since his staff either aren't certain where he is, or are stonewalling you. Eventually they agree to a meeting in half an hour, at his residence. When you arrive it becomes clear that yesterday he had thrown a very extravagant party and is still nursing a hangover. He greets you politely, but seems somewhat subdued.
+:: CluePoint_GrigoriRasputin_SHARED:SDeanSnippet
+/* --------------------------------------------------------------------- */\
+/* - Dean                                                     - */\
+/* --------------------------------------------------------------------- */\
+"James Dean? I don't. Who is that?"
 
-"It is always a pleasure," he says. "Would you like something to drink?" He gestures over to an expansive glass-faced liquor cabinet.
+"He's the COO of Raytheon."
 
-You decline, and ask him about the evening of March 15th.
+"I didn't even know the CEO of Raytheon, why would I know his underlings?"
 
-"I…one moment," he says. "Anna, will you bring me my ledger?"
+:: CluePoint_GrigoriRasputin_SHARED:ADean
+<span class='antony-response'>"Do you know James Dean"</span>
 
-His maid brings out a small, leather-bound book. He opens it and pages through it. "March 15, March 15," he mutters. "Ah. March 15. I was drinking."
+<<include "CluePoint_GrigoriRasputin_SHARED:SDeanSnippet">>
 
-You ask him to clarify.
+:: CluePoint_GrigoriRasputin_SHARED:CDean
+<span class='cleopatra-response'>"Are you personally familiar with James Dean?"</span>
 
-"Well," he says, "I said what I meant." He frowns. "Anna," he says, "did you save the receipts?"
+<<include "CluePoint_GrigoriRasputin_SHARED:SDeanSnippet">>
 
-His maid, with a long-suffering roll of the eyes, fetches a binder and lays out six receipts.
 
-"You see," he says, examining them, "I started at…3:30 in the afternoon and continued until…2:30 the next day." He laughs. "Alibi enough?" He pushes the pile of receipts over to you. You notice that one of them is for <strong>First Connection.</strong>
 
-You take a picture and send them to Hortensia for verification. Then you ask him if he has any knowledge of the STORM project.
+:: CluePoint_GrigoriRasputin_SHARED:SHepburnSnippet
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                     - */\
+/* --------------------------------------------------------------------- */\
+"No, which is a pity. The Times ran a picture of her in the article on Mr. Brando's murder, and I must say, she is very young and beautiful."
 
-"Of course," he says, "it is our business to keep track of all your weapons systems. But we didn't murder your man. I don't know who did, but it wasn't us." He chuckles.
+"To be clear, you're saying that you never interacted with her in any way."
 
-You thank him for his help and leave him to his hangover.
+"Yes, I have not."
 
-As you're leaving, Hortensia informs you that she's checked the bars in question and all of them have matching records.
+:: CluePoint_GrigoriRasputin_SHARED:AHepburn
+<span class='antony-response'>"Do you know Audrey Hepburn?"</span>
+
+<<include "CluePoint_GrigoriRasputin_SHARED:SHepburnSnippet">>
+
+:: CluePoint_GrigoriRasputin_SHARED:CHepburn
+<span class='cleopatra-response'>"Are you personally familiar with Audrey Hepburn?"</span>
+
+<<include "CluePoint_GrigoriRasputin_SHARED:SHepburnSnippet">>
+
+
+
+:: CluePoint_GrigoriRasputin_SHARED:SSTORMSnippet
+/* --------------------------------------------------------------------- */\
+/* - STORM                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Project STORM? Do you mean STORM SHADOW?"
+
+"No, that's something else."
+
+"Oh. Well. I know of STORM SHADOW, but I don't know of this Project STORM."
+
+:: CluePoint_GrigoriRasputin_SHARED:ASTORM
+<span class='antony-response'>"Does the name Project STORM ring any bells?"</span>
+
+<<include "CluePoint_GrigoriRasputin_SHARED:SSTORMSnippet">>
+
+:: CluePoint_GrigoriRasputin_SHARED:CSTORM
+<span class='cleopatra-response'>"Have you ever heard of something called Project STORM?"</span>
+
+<<include "CluePoint_GrigoriRasputin_SHARED:SSTORMSnippet">>
+
+
+
+:: CluePoint_GrigoriRasputin_SHARED:SMarchSnippet
+/* --------------------------------------------------------------------- */\
+/* - March                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Aron," he says, "do you have the expense reports?"
+
+"Of course," responds his secretary, poking at his tablet. "I'll print them out. One moment, please."
+
+"Sorry," says Rasputin, "we were delayed. We haven't had as much time to prepare as we would have liked." A printer under his desk whirs to life, and he leans down and pulls up a half-inch thick stack of papers. Shock ripples across his face. "I didn't drink <em>that</em> much, did I Aron?"
+
+"I printed three copies."
+
+"Ha! Haha. Yes, obviously." He suffles throught he papers. "Here's a copy for you, Mr. Vice-President. Your copy, Your Majesty. And this is mine." He leafs through his still substantial stack of expense reports. You take the opportunity to do the same. According to these records, he had been bar hopping. He started at 3:50pm with an impossible number of drinks, probably indicating that he was buying for a group. From there, there's a continuous trail of receipts from a different bar every half hour until 7:39 onwards, where he stayed at a bar called <strong>First Connection</strong> until no later than 10:11, at which point you can see a receipt from a different location. His final receipt is stamped as 2:38am on the next day.
+
+<<if setup.Roles.isAntony()>>You whistle.<<else>>Antony whistles.<</if>> "You're a hell of a drinker, aren't you?"
+
+Rasptuin guffaws. "Why do you think I was late today?"
+
+"Yeah, maybe cut back a little," <<if setup.Roles.isAntony()>>you grouse.<<else>>grouses Antony.<</if>> "Can we keep these?"
+
+"Yes, please do."
+
+:: CluePoint_GrigoriRasputin_SHARED:AMarch
+<span class='antony-response'>"What were you doing on the fifteen of March?"</span>
+
+<<include "CluePoint_GrigoriRasputin_SHARED:SMarchSnippet">>
+
+:: CluePoint_GrigoriRasputin_SHARED:CMarch
+<span class='cleopatra-response'>"Can you tell us what you were doing on the night of March 15?"</span>
+
+<<include "CluePoint_GrigoriRasputin_SHARED:SMarchSnippet">>
