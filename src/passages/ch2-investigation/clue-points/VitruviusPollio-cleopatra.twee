@@ -52,7 +52,14 @@ A minute later, the car rolls to a stop in front of a block of three-story row h
 /* # QUESTIONS                                                         # */\
 /* ##################################################################### */\
 <div id='options'><<nobr>>
-  <<Question "TK" "TK">>
+  <<Question "Can you tell us about your job at Raytheon?" "Raytheon">>
+  <<if _Raytheon>>
+    <<Question "Can you talk more about your visits to Napoleon?" "Embassy">>
+  <</if>>
+  <<if _Embassy>>
+    <<Question "<<CleopatraMark>> Vitruvius, I want you to think about what you just told us about your visits to Napoleon. If somebody chose to interpet them in a hostile way, that could look very bad, couldn't it?" "Espionage">>
+  <</if>>
+  <<Question "What were you doing on the 15th of March?" "Pollio">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 

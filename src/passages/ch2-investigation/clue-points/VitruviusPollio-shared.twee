@@ -19,7 +19,7 @@
 
   "Yes. Cleopatra is also fine."
 
-  "Oh, ok. Uhm, well, please, Your Majesty, all of you. Come on in."\
+  "Oh, ok. Uhm, well, call me Vitruvius. Uh, please, Your Majesty, all of you. Come on in."\
 <<elseif _choice is 'A2'>>\
   <span class='antony-response'>"I've been in tighter, I'll bet."</span>
 
@@ -28,7 +28,7 @@
   <span class='cleopatra-response'>"It is no issue."</span>
 
   "Okay," he says. "Uh, sure. If you say so." His hands hover awkwardly. "Please come in then, Mr. Vice-President, uh, Your Majesty."\
-<</if>> He ushers you into a small shared space with a television, couch, and a table for four. All the surfaces have been cleared, the carpet freshly vacuumed. All that stands on the table is a tall blue vase with a medley of fresh flowers, whose scents are entirely blocked by your mask.
+<</if>> He ushers you into a small shared space with a television, couch, and a table for four. All the surfaces have been cleared, the carpet freshly vacuumed. On the table is a folder full of papers, a plastic tub with what looks like party supplies, and a tall blue vase with a medley of fresh flowers, whose scents are entirely blocked by your mask.
 
 "Sorry for the, uh, well." He flushes. "So, it's an honor to meet you. Two, I mean. I just wanted to...say that."
 
@@ -41,52 +41,148 @@
 "Yeah, okay, right. I mean, no promises, but, you know, go ahead."
 
 
-:: CluePoint_VitruviusPollio_SHARED:SIDEMPOTENCY_KEYSnippet
+:: CluePoint_VitruviusPollio_SHARED:SRaytheonSnippet
 /* --------------------------------------------------------------------- */\
-/* - IDEMPOTENCY_KEY                                                     - */\
+/* - Raytheon                                                          - */\
 /* --------------------------------------------------------------------- */\
-TK
+"Well, I used to be the technical lead on Project STORM. Uhm. I'm not any more, I was told that I was a security risk, so they moved me onto a different project, project IDAHO, as a team lead for the - can I talk about IDAHO? Are we - I mean. Uh. It's classified?" He pauses, looking between the two of you.
 
-:: CluePoint_VitruviusPollio_SHARED:AIDEMPOTENCY_KEY
-<span class='antony-response'>"TK"</span>
+"Don't worry about IDAHO. Did they tell you why they thought you were a security risk?"
 
-<<include "CluePoint_VitruviusPollio_SHARED:SIDEMPOTENCY_KEYSnippet">>
+"Yeah, I mean, well, yes. It only happened after Mr. Brando was, uh, shot. They did a security review and thought I was suspicious because, uh, I visited <strong>Napoleon</strong>."
 
-:: CluePoint_VitruviusPollio_SHARED:CIDEMPOTENCY_KEY
-<span class='cleopatra-response'>"TK"</span>
+"Is that suspicious?"
 
-<<include "CluePoint_VitruviusPollio_SHARED:SIDEMPOTENCY_KEYSnippet">>
+"Well. Uh." He pauses. "I visited...a lot. And brought presents. Which, look, I'm not working on anything - STORM wasn't a French program, it wasn't being sold to the French, it's definitely not bribery. I wasn't a salesperson, it wasn't a business thing. You're allowed to give personal gifts, and I had no way to, like...uh, give him kickbacks. So it was in the clear. But, uh. I guess it did look bad. Close ties with foreign nationals and all that."
+
+"You think that's why you were reassigned?"
+
+"Yeah. Uh, well, kind of demoted? And I know it is. <strong>Dean</strong> told me it was. So I'm only a team lead, not the technical lead. But it's mostly, uh, lateral." He frowns. "It's, it's fine, really."
+
+:: CluePoint_VitruviusPollio_SHARED:ARaytheon
+<span class='antony-response'>"What did you do at Raytheon?"</span>
+
+"Did? Like, past tense? I mean, uh, I'm still employed at Raytheon."
+
+"Okay, well, how tell us what you did before and what you do now."
+
+<<include "CluePoint_VitruviusPollio_SHARED:SRaytheonSnippet">>
+
+:: CluePoint_VitruviusPollio_SHARED:CRaytheon
+<span class='cleopatra-response'>"Can you tell us about your job at Raytheon?"</span>
+
+<<include "CluePoint_VitruviusPollio_SHARED:SRaytheonSnippet">>
 
 
-:: Vestigal
-You meet Vitruvius in his one-bedroom apartment. He's a slim man with an impetuous gaze, about 30 years old. He greets you wearing a surgical mask. "Apologies. There's a cold going around," he says in a strained voice.
+:: CluePoint_VitruviusPollio_SHARED:SEmbassySnippet
+/* --------------------------------------------------------------------- */\
+/* - Embassy                                                     - */\
+/* --------------------------------------------------------------------- */\
+He swallows. "Uhm. Well, so. You know that <strong>Napoleon</strong> has mistresses, right?"
 
-You assure him it's no problem. He leads you into the main room and sits down at the table, on which is a pack of cigarettes with a golden lotus logo, a tall blue glass decanter, and some tissues. You ask him about his knowledge of the STORM.
+"Of course."
 
-He laughs. "Been removed. Officially, it's because the IDAHO project is behind schedule and needs more resources, and I make a good fit. Unofficially it's because I keep visiting the French Embassy in my off time and that's apparently a bad look. Like I need an excuse." He pauses. "They're not wrong. It is kind of a bad look."
+"Of - of course?"
 
-You ask why he's visiting the French Embassy so much.
+"Everybody knows."
 
-"So, <strong>Napoleon</strong> has mistresses, right?"
+"Uh. Really? Uh. Okay. I thought - I mean, I guess that's not relevant. My point is, uh, he has mistresses, and he has kids with his mistresses, and one of his mistresses' daughters lives here, and, uh, we're...involved."
 
-You agree that that is something you've heard said.
+"Involved."
 
-"Well, one of his mistresses has a daughter, and for various reasons she's living in DC, and blah blah blah. Short version is that we want to marry, and part of that involves making nice with dad."
+"Well, uh, we want to get married." He takes a deep breath. "She's named Helene. She, uh, doesn't live in the embassy, but I try and stay on her dad's good side. So, uh, that's why I visited so often. I was bringing gifts for <strong>Napoleon</strong>. I have a list." He flips open his folder and pulls out a list. "This is, uh, it's an itemized list of everything I gave him, with dates. And, uh," he says, pulling a bottle and a pack of cigarettes out of the plastic tub, "I was planning on, uh, giving these to him before, you know, the...the incident." The label on the bottle indicates that it's Falernian wine, the finest Italian vintage, and on the cigarettes you can see <strong>"Golden Lotus"</strong> printed over a stylized painting of a lotus flower.
 
-You ask if Marlon Brando and <strong>James Dean</strong> were aware of this.
+"Those are expensive gifts, aren't they?"
 
-"Yes. Obviously."
+"Well, I mean," he laughs, "he's <strong>Napoleon</strong>, I don't really...I mean, yeah. I mean, I don't smoke, but...I don't even know if he smokes, I think he likes snuff, which is - uh. Well, he likes expensive things, even if he doesn't use them."
 
-You ask if he ever discussed Project STORM with Napoleon.
+"Did you ever talk to <strong>Napoleon</strong> about your work?"
 
-"Ha! What, am I going to talk missile interception with Napoleon? The man might be a geopolitical genius but the details of missile defense aren't his duty. He has men for that. No, mostly I give gifts and make nice." He snatches the pack of cigarettes from the table and brandishes them. "Like these things. Expensive as hell and custom made, from a place called <strong>Golden Lotus.</strong> He loves gifts, the more exclusive the better - he views them kind of like a vow of allegiance, or something. Very old fashioned."
+"No. No, never. Uh. That would be...very, very bad." He laughs. "Uh. It's not like he talked to me about his, uh, statecraft, either. We didn't talk about that."
 
-You ask if the cigarettes are any good.
 
-"No idea," he laughs, "I don't smoke. But they have a reputation for being exclusive. So, probably?"
+:: CluePoint_VitruviusPollio_SHARED:AEmbassy
+<span class='antony-response'>"So why were you visiting the French embassy so much?"</span>
 
-You ask what he was doing on the 15th of March.
+<<include "CluePoint_VitruviusPollio_SHARED:SEmbassySnippet">>
 
-"Dinner with Helene." You raise an eyebrow. "The woman I want to marry. Look, you don't have to take my word for it, I'm sure you can have your people track down my location data."
+:: CluePoint_VitruviusPollio_SHARED:CEmbassy
+<span class='cleopatra-response'>"Can you talk more about your visits to <strong>Napoleon</strong>?"</span>
 
-You thank him for his time, and give him best wishes with his cold. As you're leaving, you prompt Hortensia to look up Vitrivius' phone data. She tells you that both him and Helene were present at Atlantic Catch on the evening of the 15th.
+<<include "CluePoint_VitruviusPollio_SHARED:SEmbassySnippet">>
+
+
+:: CluePoint_VitruviusPollio_SHARED:AEspionage
+/* --------------------------------------------------------------------- */\
+/* - Espionage                                                         - */\
+/* --------------------------------------------------------------------- */\
+<span class='antony-response'>"You just told us you, the technical head of Project STORM, were visiting <strong>Napoleon</strong> regularly, carrying sealed packages, which you personally delivered to him, in order to gain his favor so you could marry his illegitimate daughter. That gives you perfect means, motive, and opportunity for espionage."</span>
+
+"Uhm," he says. "I, uh." You can see him sweating.
+
+"Did you?"
+
+"No!"
+
+"Can you prove it?"
+
+"Uh." He swallows. "I don't - I don't - I, I mean, that's a negative. You can't prove a negative. That's just, not possible." He vibrates in his seat, sweat beading on his forehead. "I don't - I wouldn't have told you if I were guilty, would I? I could have just not said!"
+
+"Come on," <<if setup.Roles.isAntony()>>you scoff,<<else>>scoffs Antony,<</if>> "you couldn't hide it. Remember, the FBI can track your phone, your car, your purchases - we already knew."
+
+"No," he says, "no, I didn't! You have to believe me! Ask <strong>Napoleon</strong>, ask Helene, I'm telling the truth!"
+
+"Ask the man who you're passing the secrets to?"
+
+"I - ask <strong>James!</strong> <strong>James</strong> knew and he thought it was fine! Mr. Brando knew, too, he thought it was fine! Look, you - I gave you a list!" He's almost shouting.
+
+"So you admit you can't prove it!" <<if setup.Roles.isAntony()>>you roar,<<else>>roars Antony,<</if>> and Vitruvius slumps down in his seat, defeated. "Can! You! Disprove! It!"
+
+"Look," he mutters, "you've got to believe me."
+
+
+:: CluePoint_VitruviusPollio_SHARED:CEspionage
+<span class='cleopatra-response'>"Vitruvius, I want you to think about what you just told us about your visits to <strong>Napoleon</strong>. If somebody chose to interpet them in a hostile way, that could look very bad, couldn't it?"</span>
+
+"Uhm," he says. "I, uh." Sweat beads on his forehead.
+
+"I believe you," <<if setup.Roles.isAntony()>>says your wife,<<else>>you say,<</if>> "don't worry. I don't think you were doing anything wrong."
+
+"That's, uh, that's a relief," he says, chuckling. "Uh. Yeah, I wouldn't have told you if I were guilty, right?"
+
+"Of course not. That said, as this investigation does involve the FBI - as Hortensia here is an FBI agent - do you have any way of proving that your visits to <strong>Napoleon</strong> did not involve any espionage or selling of secrets?"
+
+"Uhm." He swallows. "You could ask him, but...obviously, that's not proof." He frowns. "I mean, I - I don't. I don't know. I mean, the regular security measures. The company would have known if I'd taken any documents out or downloaded any files. But...you're right, it, it doesn't look very good." He seems to deflate in his chair.
+
+"I see. I believe you, but I can't promise that everybody will."
+
+"I guess," he says.
+
+
+:: CluePoint_VitruviusPollio_SHARED:SPollioSnippet
+/* --------------------------------------------------------------------- */\
+/* - Pollio                                                     - */\
+/* --------------------------------------------------------------------- */\
+<<if _Espionage>>\
+  "I didn't kill him," he mutters, his tone glum.
+
+  "Can you prove it?"
+
+  "Yes," he says, puffing up in his seat, "yes, I can! I was at dinner with Helene, at Rooster & Owl, and, and, and if you don't believe her you can call them up and ask! So I can prove it!"\
+<<else>>\
+  "Well, uh, I went to work, like usual. I left at 6:20 to go to dinner with <<if _Embassy>>Helene<<else>>my fiancee<</if>> at, uh, Rooster & Owl. You can call them up. They'll have, like, receipts."
+  
+  "Did you see Mr. Brando that day?"
+
+  "I saw him, but I didn't talk to him. He came in to the <strong>Skunkworks</strong> at, uh, I'm not sure when, but it was in the morning. He was waiting in <strong>Dean's</strong> office, I think. That was all I remember."\
+<</if>>\
+
+:: CluePoint_VitruviusPollio_SHARED:APollio
+<span class='antony-response'>"What were you doing on the 15th of March?"</span>
+
+<<include "CluePoint_VitruviusPollio_SHARED:SPollioSnippet">>
+
+:: CluePoint_VitruviusPollio_SHARED:CPollio
+<span class='cleopatra-response'>"What were you doing on the 15th of March?"</span>
+
+<<include "CluePoint_VitruviusPollio_SHARED:SPollioSnippet">>
