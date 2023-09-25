@@ -16,6 +16,10 @@ body {
   border-radius: 10px;
 }
 
+#options button:disabled {
+  filter: grayscale(.8)
+}
+
 .div-container {
   position: relative;
   width: 100%;
