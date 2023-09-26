@@ -1,0 +1,20 @@
+:: CluePoint_FirstConnection_ANTONY
+<<locationheader "First Connection">>\
+<<nobr>>
+  <<run setup.CluePoints.markCluePointKnown('GrigoriRasputin')>>
+  <<run setup.CluePoints.markCluePointKnown('GeorgeRandolphHearst')>>
+<</nobr>>\
+TK
+
+<div id='options'><<nobr>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_FirstConnection_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+TK Tell the player about unlocks
+<<include "Ch2_EndInterview_ANTONY">>

@@ -23,13 +23,6 @@ You peer into the alcove. It's grimy and dark, but you can clearly see a half-be
 
 You search the area further, but find nothing else of interest.
 
-<<include "CluePoint_TheMurderScene_CLEOPATRA:Questions">>
-
-
-:: CluePoint_TheMurderScene_CLEOPATRA:Questions
-/* ##################################################################### */\
-/* # QUESTIONS                                                         # */\
-/* ##################################################################### */\
 <div id='options'><<nobr>>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\

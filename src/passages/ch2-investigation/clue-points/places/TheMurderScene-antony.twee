@@ -23,13 +23,6 @@ You nod. "I assume they searched the alcove?"
 
 You search the area further, but find nothing else of interest.
 
-<<include "CluePoint_TheMurderScene_ANTONY:Questions">>
-
-
-:: CluePoint_TheMurderScene_ANTONY:Questions
-/* ##################################################################### */\
-/* # QUESTIONS                                                         # */\
-/* ##################################################################### */\
 <div id='options'><<nobr>>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
