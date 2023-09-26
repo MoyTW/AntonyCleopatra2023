@@ -179,6 +179,7 @@ interface CluePoints {
       reveals: []
     },
     {
+      /* TODO: make sure you can reach this clue point */
       id: CluePointKey.GeorgeRandolphHearst,
       name: 'George Randolph Hearst',
       type: CluePointType.Person,

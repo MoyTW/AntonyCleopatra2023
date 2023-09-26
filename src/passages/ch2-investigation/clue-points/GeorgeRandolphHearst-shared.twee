@@ -1,0 +1,77 @@
+:: CluePoint_GeorgeRandolphHearst_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Yeah," he says, "I knew Marlon. Knew his wife. Shame about the shooting. Tragic."
+
+"Did you discuss his work with him?"
+
+"Sometimes. This about Dean and Audrey?"
+
+"Well, is there anything about Dean and Audrey that you think could be useful?"
+
+"No. Everybody knew Marlon liked Dean. Everybody knew Audrey was the better choice. Even he knew that." He shrugs. "Don't think Audrey would have offed him though. Doesn't have it in her. Too nice."
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:ABrando
+<span class='antony-response'>"Did you know Marlon Brando?"</span>
+
+<<include "CluePoint_GeorgeRandolphHearst_SHARED:SBrandoSnippet">>
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:CBrando
+<span class='cleopatra-response'>"Were you personally familiar with Marlon Brando?"</span>
+
+<<include "CluePoint_GeorgeRandolphHearst_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:SSTORMSnippet
+/* --------------------------------------------------------------------- */\
+/* - STORM                                                     - */\
+/* --------------------------------------------------------------------- */\
+"What?"
+
+"No, then."
+
+"Never heard of it. That what got Marlon killed?"
+
+"Sorry, I can't say any more."
+
+"Hmph. Must be."
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:ASTORM
+<span class='antony-response'>"Does the name Project STORM ring any bells?"</span>
+
+<<include "CluePoint_GeorgeRandolphHearst_SHARED:SSTORMSnippet">>
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:CSTORM
+<span class='cleopatra-response'>"Have you ever heard of something called Project STORM?"</span>
+
+<<include "CluePoint_GeorgeRandolphHearst_SHARED:SSTORMSnippet">>
+
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:SMarchSnippet
+/* --------------------------------------------------------------------- */\
+/* - March                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Let me check my calendar," he says, banging away at his keyboard. "I was."
+
+"Can you tell us what you remember from that evening?"
+
+His hands stop. "This is relevant?"
+
+"It is."
+
+"Interesting." He pauses. He drums his fingers on the table. "Let me check my schedule. I see. I was there from seven until eight, with five others. Business meething. Can give receipts, but can't tell you what about."
+
+"Can't, or won't?"
+
+"Won't." His drumming intensifies. "Only thing I saw was the Russian ambassador. Rasputin. Out of his monk's clothes. For once, he didn't smell. Nothing else. That's it."
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:AMarch
+<span class='antony-response'>"You were at the bar <strong>First Connection</strong> the fifteen of March, weren't you?"</span>
+
+<<include "CluePoint_GeorgeRandolphHearst_SHARED:SMarchSnippet">>
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:CMarch
+<span class='cleopatra-response'>"Were you at the bar <strong>First Connection</strong> on March 15?"</span>
+
+<<include "CluePoint_GeorgeRandolphHearst_SHARED:SMarchSnippet">>
