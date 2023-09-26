@@ -1,0 +1,53 @@
+:: CluePoint_NapoleonBonaparte_CLEOPATRA
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "Napoleon Bonaparte">>\
+You arrive at the French embassy nearly minutes before your appointment. You're met by a tired-looking you man who escorts you through the doors, up an elevator, and down a hallway. Halfway through the hallway a voice calls out. "Hold, Jean!"
+
+It's Napoleon, wearing his usual finery and long coat, although his tricorn is missing. He strides forward, smiling. "Mr. Vice-President," he cries, "Your Majesty, it is my honor again to see you!" He embraces Antony, kissing him on the cheeck, then you next. You return his kisses, as Antony did, and he claps his hands. "My office is far too formal for a meeting such as this," he says. "Come with me!"
+
+He leads you in the opposite direction, ambling through a couple of corridors as he chats idly about the movements of the powers and the state of the world. Finally you're freed from his chatter when he opens the door to his lounge, a moderately decorated sitting room with embroidered couches, wide windows, and intricate tapestries covering all four walls. There's a table with various refreshments off to the side, mostly pastries. A side table sports a wealth of tobacco products, including what looks like a snuff box. There are six pipes, arrayed in a neat row, and a variety of cigarette brands, the place of honor being given to an unopened carton of <strong>Golden Lotus</strong> cigarettes.
+
+Napoleon gestures towards the table. "Would you care for a drink? A bite to eat?"
+
+<div id='options'>\
+  <<button "Take a pastry.">>
+    <<AppendPassage "1" "C1" "CluePoint_NapoleonBonaparte" "ALL">>
+  <</button>>
+  <<button "Politely decline.">>
+    <<AppendPassage "1" "C2" "CluePoint_NapoleonBonaparte" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_NapoleonBonaparte_CLEOPATRA:1
+<<include "CluePoint_NapoleonBonaparte_SHARED:1_ReactionSnippet">>
+
+<<include "CluePoint_NapoleonBonaparte_CLEOPATRA:Questions">>
+
+
+:: CluePoint_NapoleonBonaparte_CLEOPATRA:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "I've never seen this brand of cigarettes before. Golden Lotus? Are they an Asian product?" "Cigarettes">>
+  <<Question "Have you ever met Marlon Brando?" "Brando">>
+  <<if _Brando>>
+    <<Question "Are you personally familiar with James Dean?" "Dean">>
+    <<Question "Are you personally familiar with Audrey Hepburn?" "Hepburn">>
+  <</if>>
+  <<Question "Have you ever heard of something called Project STORM?" "STORM">>
+  <<Question "Can you tell us what you were doing on the night of March 15?" "March">>
+  <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
+    <<Question "Are you personally familiar with an engineer named Vitruvius Pollio?" "Vitruvius">>
+  <</if>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_NapoleonBonaparte_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_CLEOPATRA">>

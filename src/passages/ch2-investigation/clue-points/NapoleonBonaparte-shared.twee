@@ -1,0 +1,206 @@
+:: CluePoint_NapoleonBonaparte_SHARED:1Y_Snippet
+/* --------------------------------------------------------------------- */\
+/* - Reaction                                                          - */\
+/* --------------------------------------------------------------------- */\
+:: CluePoint_NapoleonBonaparte_SHARED:1_ReactionSnippet
+<<nobr>>
+  <<run setup.CluePoints.markCluePointKnown('GoldenLotus')>>
+<</nobr>>\
+<<if _choice is 'A1'>>\
+  <<if setup.Roles.isAntony()>>\
+    <span class='antony-response'>"Don't mind if I do," you say, grabbing a custard pastry.</span>
+  <<else>>\
+    <span class='antony-response'>"Don't mind if I do," says Antony, grabbing a custard pastry.</span> "Not sure about the snuff, though."
+  <</if>>\
+<<elseif _choice is 'C1'>>\
+  <<if setup.Roles.isAntony()>>\
+    <span class='cleopatra-response'>"Thank you for your hospitality," says your wife, taking a fruit pastry.</span>
+  <<else>>\
+    <span class='cleopatra-response'>"Thank you for your hospitality," you say, taking a fruit pastry.</span>
+  <</if>>\
+<<elseif _choice is 'A2'>>\
+  <<if setup.Roles.isAntony()>>\
+    <span class='antony-response'>"No thank you," you say. "It's an impressive spread, though."</span>
+  <<else>>\
+    <span class='antony-response'>"No thank you," says Antony. "It's an impressive spread, though."</span>
+  <</if>>\
+<<elseif _choice is 'C2'>>\
+  <<if setup.Roles.isAntony()>>\
+    <span class='cleopatra-response'>"No thank you," says your wife, "water will do."</span>
+  <<else>>\
+    <span class='cleopatra-response'>"No thank you," you say, "water will do."</span>
+  <</if>>\
+<</if>>\
+
+"Might I recommend the snuff? I will assure you that it is of the highest quality," he says, "although if it's not to your taste, feel free to take a cigar or cigarette. This is, as you Americans like to say, a smoking area."
+
+"I'm sure it's very high quality, but we should get to business."
+
+"Yes," says Napoleon, seating himself in a chair, "to business."
+
+
+:: CluePoint_NapoleonBonaparte_SHARED:SCigarettesSnippet
+/* --------------------------------------------------------------------- */\
+/* - Cigarettes                                                     - */\
+/* --------------------------------------------------------------------- */\
+<span class='antony-response'>"I've never seen that brand of cigarettes before. Are they any good?"</span>
+
+"This is business indeed," he says, smiling.
+
+"I was just curious."
+
+"They are excellent," he says, "although I prefer snuff."
+
+"I never would have guessed. Why did you buy them if you don't use them?"
+
+Napoleon laughs. "I didn't, they were gifts - but of course, I must have cigarettes for guests! If I had none to give away I would certainly have my people acquire some, simply for that."
+
+"Can't argue with that."
+
+"A pity you don't smoke. I can attest to their quality."
+
+:: CluePoint_NapoleonBonaparte_SHARED:CCigarettes
+<span class='cleopatra-response'>"I've never seen this brand of cigarettes before. Golden Lotus? Are they an Asian product?"</span>
+
+"This is business indeed," he says, smiling.
+
+"They caught my eye."
+
+"As to the provenance, I don't believe so," he says, frowning. "They're local, although perhaps the shop that makes them is Asian. I wouldn't know, I received them as a gift."
+
+"A gift?"
+
+"Yes," he says, "perhaps it is gauche to offer them to guests, but there were a lot of them, and I prefer snuff. Still, I have tried them, and I can attest to their quality."
+
+
+:: CluePoint_NapoleonBonaparte_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                     - */\
+/* --------------------------------------------------------------------- */\
+"I met him only once, six years ago, and I can only tell you that because I had my assistant search my schedule. I remember nothing of the meeting, or him. Perhaps I met him at some state dinner or other function, but if so he must have proved himself unmemorable."
+
+:: CluePoint_NapoleonBonaparte_SHARED:ABrando
+<span class='antony-response'>"Did you know Marlon Brando?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SBrandoSnippet">>
+
+:: CluePoint_NapoleonBonaparte_SHARED:CBrando
+<span class='cleopatra-response'>"Have you ever met Marlon Brando?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_NapoleonBonaparte_SHARED:SDeanSnippet
+/* --------------------------------------------------------------------- */\
+/* - Dean                                                     - */\
+/* --------------------------------------------------------------------- */\
+"I'm sorry, who is James Dean?"
+
+"Chief Operating Officer of Raytheon."
+
+"Unfortunately, I do not know him."
+
+:: CluePoint_NapoleonBonaparte_SHARED:ADean
+<span class='antony-response'>"Do you know James Dean"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SDeanSnippet">>
+
+:: CluePoint_NapoleonBonaparte_SHARED:CDean
+<span class='cleopatra-response'>"Are you personally familiar with James Dean?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SDeanSnippet">>
+
+
+
+:: CluePoint_NapoleonBonaparte_SHARED:SHepburnSnippet
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                     - */\
+/* --------------------------------------------------------------------- */\
+"I'm not familiar with the lady in question. If you could perhaps jog my memory?"
+
+"She's the new CEO of Raytheon."
+
+"Oh, yes, of course! No, unfortunately I have not had the pleasure."
+
+:: CluePoint_NapoleonBonaparte_SHARED:AHepburn
+<span class='antony-response'>"Do you know Audrey Hepburn?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SHepburnSnippet">>
+
+:: CluePoint_NapoleonBonaparte_SHARED:CHepburn
+<span class='cleopatra-response'>"Are you personally familiar with Audrey Hepburn?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SHepburnSnippet">>
+
+
+
+:: CluePoint_NapoleonBonaparte_SHARED:SSTORMSnippet
+/* --------------------------------------------------------------------- */\
+/* - STORM                                                     - */\
+/* --------------------------------------------------------------------- */\
+"It is SCALP," he says, "SCALP-EG precisely."
+
+"I'm sorry?"
+
+"That's the proper name. STORM SHADOW is what the British call it."
+
+"Sorry, we're talking about a different project called Project STORM."
+
+"Oh. The perils of weather-based nomenclature, I suppose. Unfortunately I know of only one storm-related project."
+
+:: CluePoint_NapoleonBonaparte_SHARED:ASTORM
+<span class='antony-response'>"Does the name Project STORM ring any bells?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SSTORMSnippet">>
+
+:: CluePoint_NapoleonBonaparte_SHARED:CSTORM
+<span class='cleopatra-response'>"Have you ever heard of something called Project STORM?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SSTORMSnippet">>
+
+
+
+:: CluePoint_NapoleonBonaparte_SHARED:SMarchSnippet
+/* --------------------------------------------------------------------- */\
+/* - March                                                     - */\
+/* --------------------------------------------------------------------- */\
+"A state dinner," he says. "In France. Come, now. This is publicly available information."
+
+:: CluePoint_NapoleonBonaparte_SHARED:AMarch
+<span class='antony-response'>"What were you doing on the fifteen of March?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SMarchSnippet">>
+
+:: CluePoint_NapoleonBonaparte_SHARED:CMarch
+<span class='cleopatra-response'>"Can you tell us what you were doing on the night of March 15?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SMarchSnippet">>
+
+
+:: CluePoint_NapoleonBonaparte_SHARED:SVitruviusSnippet
+/* --------------------------------------------------------------------- */\
+/* - Vitruvius                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Well!" he exclaims, "I do, yes. Why do you ask?"
+
+"He seems to have been a frequent visitor."
+
+"Yes, he was. He has a courtship with the daughter of one of my staff. He often brought me gifts."
+
+"Why would he bring you gifts?"
+
+"Of course, I tell you this in trust. I trust that you, being people of character, will hold it dear, although I cannot doubt that the vaunted CIA spies already have every relevant detail. Helene is, of course, my daughter, and Vitruvius wishes for my blessing. In fact, those cigarettes over there," he says, gesturing to the table, "are from him."
+
+"Did he ever talk about his work?"
+
+Napoleon laughs. "He is far too meek a man to do anything that would jeapordize his employment. I would have preferred that Helene find a less timid man, but as she is of a determined character as her father, I am planning on giving them my blessing. Later, of course." He smiles. "I won't make it easy."
+
+:: CluePoint_NapoleonBonaparte_SHARED:AVitruvius
+<span class='antony-response'>"Do you know an engineer named Vitruvius Pollio?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SVitruviusSnippet">>
+
+:: CluePoint_NapoleonBonaparte_SHARED:CVitruvius
+<span class='cleopatra-response'>"Are you personally familiar with an engineer named Vitruvius Pollio?"</span>
+
+<<include "CluePoint_NapoleonBonaparte_SHARED:SVitruviusSnippet">>

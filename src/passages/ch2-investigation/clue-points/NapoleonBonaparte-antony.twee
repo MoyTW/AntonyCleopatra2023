@@ -1,0 +1,53 @@
+:: CluePoint_NapoleonBonaparte_ANTONY
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "Napoleon Bonaparte">>\
+You arrive at the French embassy nearly minutes before your appointment. You're met by a tired-looking you man who escorts you through the doors, up an elevator, and down a hallway. Halfway through the hallway a voice calls out. "Hold, Jean!"
+
+You turn to see Napoleon himself, decked out in his usual finery with his trademark long coat, although he has opted to leave his hat behind. "Mr. Vice-President," he cries, "Your Majesty, it is my honor again to see you!" He marches up to you, kissing you on the cheek, and you return the gesture, which he repeats with your wife. "My office is far too formal for a meeting such as this," he says. "Come with me!"
+
+He leads you in the opposite direction, ambling through a couple of corridors as he talks endlessly about politics and great powers and all that. Finally, he opens the door to his lounge, an extravagantly decorated sitting room with embroidered couches, wide windows, and intricate tapestries covering all four walls. Off to the side is a table replete with refreshments, from wine to water, with pastries and biscuits and buns. A side table sports a variety of tobacco products. A dark wooden snuff box waits next to a container of cigars, and a carton of <strong>Golden Lotus</strong> cigarettes next to a couple of wooden pipes.
+
+Napoleon gestures towards the table. "Would you care for a drink? A bite to eat?"
+
+<div id='options'>\
+  <<button "Grab something to munch on.">>
+    <<AppendPassage "1" "A1" "CluePoint_NapoleonBonaparte" "ALL">>
+  <</button>>
+  <<button "Decline. Politely, of course.">>
+    <<AppendPassage "1" "A2" "CluePoint_NapoleonBonaparte" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_NapoleonBonaparte_ANTONY:1
+<<include "CluePoint_NapoleonBonaparte_SHARED:1_ReactionSnippet">>
+
+<<include "CluePoint_NapoleonBonaparte_ANTONY:Questions">>
+
+
+:: CluePoint_NapoleonBonaparte_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "I've never seen that brand of cigarettes before. Are they any good?" "Cigarettes">>
+  <<Question "Did you know Marlon Brando?" "Brando">>
+  <<if _Brando>>
+    <<Question "Do you know James Dean?" "Dean">>
+    <<Question "Do you know Audrey Hepburn?" "Hepburn">>
+  <</if>>
+  <<Question "Does the name Project STORM ring any bells?" "STORM">>
+  <<Question "What were you doing on the fifteen of March?" "March">>
+  <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
+    <<Question "Do you know an engineer named Vitruvius Pollio?" "Vitruvius">>
+  <</if>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_NapoleonBonaparte_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_ANTONY">>
