@@ -1,0 +1,77 @@
+:: CluePoint_TheRaytheonSkunkworks_ANTONY
+<<locationheader "The Raytheon Skunkworks">>\
+<<nobr>>
+  <<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>
+<</nobr>>\
+Located in the northern section of Bethesda, the Skunkworks facility is one of the most unimpressive research labs you've ever seen. The building is a squat, three-story beige perched next to a small parking lot, with only the fence around to distinguish it from office retail. No guards are visible when you pull up to the gate. After a minute or so of waiting, a security officer and a balding, slim, fifty-year old man in a white button-down shirt leave the building. The man introduces himself as Brian Whiskers, the head of Project STORM, and invites you all into his office. His office turns out to be a cramped room on the third floor, sporting a thoroughly mediocre view of the parking lot of an outdoor mall.
+
+"So," he says, "this is about Brando."
+
+"Yes," you say. "Did you see Marlon the day of his death?"
+
+"Yeah," he says. "Mr. Brando came down to talk to <strong>James</strong>, but James had some stomach trouble that morning, so he ran down to the CVS to get some pills. He just missed him. Mr. Brando waited around for a bit, then he gave me a note and told me to give it to him."
+
+"Did you give it to him?"
+
+"Yeah, of course."
+
+"Did Mr. Dean read the note?"
+
+"I dunno. I assume he did, but he didn't say anything to me about it."
+
+"Do you know what it was about?"
+
+"No idea," he said. "Buddy, I wanna be clear. I don't go reading notes that aren't addressed to me."
+
+"Mr. Whiskers," asks your wife, "may we ask about the nature of Project STORM?"
+
+"Well," he says, frowning, "it's classified. Now, I don't mean any offense, but you are technically a foreign head of state. I don't know how far I can talk about it."
+
+You sigh. "Anything you can say to me you can say to my wife."
+
+"You sure?" You nod. "You're the boss, boss. Now, Project STORM is a missile defense system, very advanced, very cutting-edge. I don't know what kind of details would be relevant to the case. What are you looking for?"
+
+Your wife thinks for a moment. "All the development of this system takes place in this building?"
+
+"In this building, yeah. It's all on-site, all airgapped. That means it's not connected to the internet, so it's harder to hack. If you need to take data in or out, you have to physically connect to a computer here. For security, of course."
+
+"And what kinds of data do you store?"
+
+"Blueprints, test data, anything technical," he says.
+
+"So if somebody wanted to steal, say, blueprints, they'd come here, not the main offices."
+
+"That is an awful suspicious statement for a foreign head of state to make."
+
+"Right," you say, "lay off, 'buddy.'"
+
+"All right, all right! Sorry! Yes, if somebody wanted to steal blueprints they'd come here. Sheesh. What, was Mr. Brando walking around with a briefcase full of blueprints, because CEO or not, he's not supposed to be allowed to do that."
+
+Your wife smiles. "I'm afraid that's classified."
+
+"Ah, come on. All right. I deserved that." He sighs. "Talking about stealing blueprints, there's something I just remembered that might be relevant."
+
+"Yes?"
+
+"We have an engineer, <strong>Vitruvius,</strong> who used to work on the project. After Mr. Brando got shot, some general came in and made a big fuss about him. He wanted him fired, but <strong>James</strong> didn't think that was necessary, so instead of firing him, we reassigned him, but he still has his office in this building. I don't know the details of the case, you'd have to ask <strong>James</strong> for that, but I bring him to you now if you want."
+
+"Sure," you say, "let's go take a look."
+
+Mr. Whiskers leads you down a story and through a long hallway, stopping at a nondescript door. "Hey, Vitruvius," he says, walking in without knocking. You follow him in to see an empty office. "Oh," he says, "now I remember. He's out sick. Right, fellas, nothing to see here," he says, turning around.
+
+"Excuse me," says your wife. He stops mid-stride. "This is him?" She points to a picture of a young man and woman in front of the burnt-out husk of Notre Dame.
+
+"Yeah," he says, "him and his girlfriend." He frowns. "Why the hell did he frame that one? Get a picture of the Eiffel Tower or something, jeez. All right, folks, move along, move along, let's all give the man his privacy back. Just because you're the Queen of Egypt doesn't mean you can go through his stuff."
+
+<div id='options'><<nobr>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_TheRaytheonSkunkworks_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+TK Tell the player about unlocks
+<<include "Ch2_EndInterview_ANTONY">>
