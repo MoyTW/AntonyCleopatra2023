@@ -1,0 +1,66 @@
+:: CluePoint_GoldenLotus_ANTONY
+<<locationheader "Golden Lotus">>\
+<<nobr>>
+  <<run setup.CluePoints.markCluePointKnown('JamesDean')>>
+  <<run setup.CluePoints.markCluePointKnown('NapoleonBonaparte')>>
+  <<run setup.CluePoints.markCluePointKnown('GaiusMarius')>>
+  <<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>
+  <<run setup.CluePoints.markCluePointKnown('LiviaDrusilla')>>
+  /* TODO TK: Ask Otto about the cigarettes */
+  <<run setup.CluePoints.markCluePointKnown('OttoVonBismarck')>>
+<</nobr>>\
+"I'm sorry," says the salesperson, "I can't, I really can't! I understand that this is important but if I told you I'd definitely lose my job, I'm sorry."
+
+"Hortensia," you growl, "arrest this man."
+
+"What!?" he exclaims, eyes wide.
+
+"No, wait," says your wife. "That's not yet necessary. Mr. Mills, may we speak to your manager?"
+
+"You can't arrest me for...for that! Can you?"
+
+"Nobody needs to get arrested," she sighs, "We're just looking for some information. Please, get your manager."
+
+"I - yes, I'll go get her." He practically runs into the back room, shaking all the while. You can hear an exclamation, followed by silence. A lady with blind hair peeks through the door and hastily retreats, followed by a barrage of urgent whispers.
+
+"Hello," says the woman, dressed in a sharp suit and a nervous smile. "Marissa Singh. Can you explain to me what the problem is?"
+
+Thirty seconds into the explanation you can already tell that she's resolved to kick it upstairs, which she does immediately after you stop explaining.
+
+Twenty minutes later, you're on a conference call with somebody who introduces himself as William C. Durant, Chief Legal Officer. He listens patiently to your request. "I see," he says. "Ms. Singh, are you able to hear us?"
+
+"Yes, I am," she says.
+
+"Do what he asks. Call my office afterwards and we'll handle it. Got it?"
+
+"Yes, sir." With that, the line goes dead.
+
+From there on Ms. Singh is very helpful. She explains that the particular cigarettes you've found, the Golden Lotus house line, are the second most expensive in the world. The most expensive is some company in London, apparently. She also says that while the line can't be bought on the open market, the list of purchasers numbers in the thousands and includes people from all across the globe, including many foreign dignitaries.
+
+"Of course we understand your position," says Cleopatra. "We're not asking you to give us a full list of anybody who's ever bought them. We're looking for people who bought them recently, say within the last three months, and did so at this location, or had them shipped to D.C., or the adjoining Maryland and Virginia areas. Would you find that reasonable?"
+
+"Reasonable or not," she says, "I was instructed to cooperate. One moment." She pokes away at her computer. "Okay. I have a list of people who bought them in the last three months in this area." She looks up. "Should I just tell you?"
+
+"Can you print it?"
+
+"Absolutely," she says. You leave the building with a list of six names.
+
+<strong>James Dean</strong>
+<strong>Napoleon Bonaparte</strong>
+<strong>Gaius Marius</strong>
+<strong>Vitruvius Pollio</strong>
+<strong>Livia Drusilla</strong>
+<strong>Otto von Bismarck</strong>
+
+<div id='options'><<nobr>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_GoldenLotus_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+TK Tell the player about unlocks
+<<include "Ch2_EndInterview_ANTONY">>
