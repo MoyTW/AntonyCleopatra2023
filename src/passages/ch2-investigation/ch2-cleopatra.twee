@@ -49,8 +49,12 @@ you eat lunch
 
 
 :: Ch2_EndInterview_CLEOPATRA
-<<if setup.Calendar.isMorning()>>
-  <<button "Go to lunch." "Ch2_Lunch_CLEOPATRA">><</button>>
-<<else>>
-  <<button "Retire for the evening." "Ch2_Bed_CLEOPATRA">><</button>>
-<</if>>
+<<nobr>>
+  <div id='options'>
+    <<if setup.Calendar.isMorning()>>
+      <<button "Go to lunch." "Ch2_Lunch_CLEOPATRA">><</button>>
+    <<else>>
+      <<button "Retire for the evening." "Ch2_Bed_CLEOPATRA">><</button>>
+    <</if>>
+  </div>
+<</nobr>>\

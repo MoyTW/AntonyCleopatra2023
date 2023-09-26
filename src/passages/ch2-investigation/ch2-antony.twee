@@ -49,8 +49,12 @@ you eat lunch
 
 
 :: Ch2_EndInterview_ANTONY
-<<if setup.Calendar.isMorning()>>
-  <<button "Knock off for lunch." "Ch2_Lunch_ANTONY">><</button>>
-<<else>>
-  <<button "Call it a night." "Ch2_Bed_ANTONY">><</button>>
-<</if>>
+<<nobr>>
+  <div id='options'>
+    <<if setup.Calendar.isMorning()>>
+      <<button "Knock off for lunch." "Ch2_Lunch_ANTONY">><</button>>
+    <<else>>
+      <<button "Call it a night." "Ch2_Bed_ANTONY">><</button>>
+    <</if>>
+  </div>
+<</nobr>>\

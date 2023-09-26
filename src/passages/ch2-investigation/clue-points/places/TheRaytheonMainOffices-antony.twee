@@ -1,0 +1,48 @@
+:: CluePoint_TheRaytheonMainOffices_ANTONY
+<<locationheader "The Raytheon MainOffices">>\
+The main offices are located just north of Arlington National Cemetary in a thirty-one story semicircular tower. You're met at the entrance by the head of security, a fourty-something man who distributes visitor passes to your party without incident. He's plainly excited to meet you, but his professionalism keeps his enthusiasm in check. He leads you to a conference room with a television in the far wall, flanked by whiteboards.
+
+"So," he says, "I'm sure you've read the police reports."
+
+"Yes," you say, "but I think it would be helpful to get your perspective on things."
+
+"Right. Well," he says, fiddling with his computer, "I'll put up the timeline." A graphic pops up on the television. "We don't have much," he admits. "We know Mr. Brando badged out at 7:26 on the fifteenth, and that he was discovered at 7:29, show dead in an alley. That gives us a three-minute window in which he was ambushed, shot, and robbed. Unfortunately we don't have camera coverage of either ends of the alley, and neither does anybody else. That would be too easy."
+
+"Three minutes?" asks your wife. "That is not very long."
+
+"No, it isn't. If you asked me, I think this was targeted. It would have taken him at least a minute to reach the alley, giving the murderer only two minutes to shoot him, search the body, and escape undetected. If it were a normal robbery, it's likely that the murderer would have first demanded his valuables, not just shot and left, and there just isn't enough time for that. Additionally, Mr. Brando was extremely consistent in the path he took, since he always parked near the memorial and always entered and left through the alley. Any amount of surveillance would have told you that."
+
+"Can you think of any possible leads?"
+
+He sighs. "That's beyond my remit, I'm afraid."
+
+"No problem," you say. "Can we see Marlon's office?"
+
+"Unfortunately, it's already been reassigned to Ms. Hepburn. All of his personal effects have been returned to his wife, <em>Tarita</em>."
+
+"That is unfortunate. Can you think of anything else that might be helpful?"
+
+"Not at this time."
+
+"I see. Thank you very much."
+
+"Pleasure's all mine."
+
+<div id='options'><<nobr>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_TheRaytheonMainOffices_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+Just as you're getting back into your car, your wife pipes up. "He was right."
+
+"What?"
+
+"That was all in the police reports. Aside, I think, from the fact that his office has been cleaned out."
+
+"Why waste the space?" you ask, shutting the door.
+
+<<include "Ch2_EndInterview_ANTONY">>
