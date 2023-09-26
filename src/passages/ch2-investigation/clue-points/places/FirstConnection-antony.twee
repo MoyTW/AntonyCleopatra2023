@@ -4,7 +4,103 @@
   <<run setup.CluePoints.markCluePointKnown('GrigoriRasputin')>>
   <<run setup.CluePoints.markCluePointKnown('GeorgeRandolphHearst')>>
 <</nobr>>\
-TK
+First Connection's facade looks exactly like you would expect a moderately quirky Georgetown bar's facade to look, and its inside matches. On the other hand, it might be fancy for the area. The places around colleges tend to be cheaper, and this doesn't look cheap. On the other hand, it's been a while since your bar-frequenting days. Perhaps you've lost touch. Maybe this is just the style.
+
+The barender, a young woman with copious tattoos around her arms and a vaguely punkish air, stares at your party as you enter. Recognition and disbelief are warring across her face, a very common reaction nowadays. You wander up to the bar. "Hello. I'm Antony, and this is my wife, Cleopatra. We were wondering if we could ask you some questions."
+
+"Holy shit," she mutters. She swallows. "Uh. Excuse me. Are you <em>the</em> Antony and Cleopatra?"
+
+"I'm afraid we are."
+
+"<em>Holy fuck.</em> Mm, yeah, I can - do you want to order something?"
+
+"No, we've just got some questions."
+
+"Shit, like, okay, yeah. Are you - are you working on a case?"
+
+"Yes, we are."
+
+"Wow. I, uh, yeah, ask away." Her eyes flit between the two of you, a gigantic grin on her face. "I'm a big fan of the show, by the way! It's a real honor to meet you!"
+
+"A moment," says your wife, leaning over the bar. "What show?"
+
+"Your show? Antony and Cleopatra: Crime-solvers?"
+
+You chuckle at her frown. "You didn't know?" you ask. She shakes her head. "It's a very fictionalized American serial about our detective work. Extremely popular with the true crime demographic, I believe."
+
+"About us?"
+
+"Yep."
+
+"They're allowed to do that? Just make a show about us without asking?"
+
+"They are."
+
+"Interesting. Well," she says, turning to the bartender, "I hope you've enjoyed watching whatever it is this show has shown you."
+
+"Oh, I thought it was - so you two <em>didn't</em> know about the show?"
+
+"I did," you say. "They asked my office, but we can't really stop them without a lawsuit, and honestly why would we? It's good PR."
+
+"So - the cases in the show, are they <em>true<em>?"
+
+"Well, I've never seen it, but the one staffer in my office who does watch it tells me that all the facts are accurate, and all the speculation is wrong."
+
+"Wow," says the bartender. "That's amazing. I'm Ruby, by the way." She holds out her hand.
+
+"Pleasure's all mine," you say, pumping it.
+
+"It's a pleasure to meet you, Ruby," says your wife, shaking it in turn. "Now, may we ask you a few questions?"
+
+"Of course!" she says, beaming.
+
+"Were you working here on March 15?"
+
+"I...hold on," she says, pulling out her phone. "Yeah, the whole evening."
+
+"Did anybody with the initial G.R. come into the bar that night?"
+
+"Mmmm, I wouldn't be able to...oh! I can check the receipts, maybe?" She spends a few minutes humming to herself as she jabs away at her computer. "Yes," she says, squinting, "it was first name starting with G, last name starting with R?"
+
+"Any combination of the two," you say. "Could be reversed, or it could be a middle name somewhere in there."
+
+"I see a <strong>Grigori Rasputin</strong> and a <strong>George Randolph Hearst</strong>. Maybe he does his name like Dubya?"
+
+"Dubya?" asks your wife.
+
+"Like G.W.?" She glances over to see her continued incomprehension. "Like George W. Bush? Gee-Dubs? No? Okay, well, he was a former president."
+
+"Yes, I am aware of George W. Bush. He wrote his initials G.W. instead of G.B.?"
+
+"I don't actually know if he did," says Ruby, coming back over from the computer, "but I think people called him that? I wasn't actually old enough to know, that's just what I've heard."
+
+"Former presidents aside," you interject, "do you remember anything about Rasputin or Hearst? Anything about how they looked, what they were doing, whether they met with anybody else?"
+
+"Well, Grigori looked kind of sketchy. He had a great big beard and shaggy hair. He had a old-timey white shirt, like from Game of Thrones, and black pants. They also looked kind of like they were from Game of Thrones, come to think of it. I think he had a briefcase, too, which really clashed with his vibe."
+
+"Did he come alone?"
+
+"Yeah," she said, "he came alone. He hung around at the bar, then another young guy who was dressed beltway normal came in and talked to him for a bit. I didn't catch what they talked about, but he left after a while and Grigori stuck around for another hour and a half. That guy ran up his tab, let me tell you." She grins. "Big tipper, too."
+
+"Can you be more specific than beltway normal?"
+
+"Mmmm, sorry, not really. He was just dressed really generic. I don't even know if he ordered anything. Maybe Rasputin paid for him, I can't remember."
+
+"Okay. What about Hearst?"
+
+"He was old. He had a whole group of people with him," she says, "journalists or editors or something. He paid for the group. I don't think he met with anybody else, but I wasn't trying to keep track of him or anything, so I couldn't say for sure." She grins apologetically. "I know that's not a lot to go off."
+
+"You've been a great help," says your wife. "This has been extremely informative."
+
+"Great!" she says. "That's great. Do you need anything else?"
+
+"Antony?"
+
+"No, I think that's all. Thank you, Ruby."
+
+"Wait," says Ruby, "before you go, could you - could we get a selfie? And," she says, pointing to a T-shirt on the wall replete with the autographs of various luminaries, "could you, uh, would it be okay if you signed some stuff?"
+
+"Sure," you say, "no problem."
 
 <div id='options'><<nobr>>
   <<EndInterview "That's all we needed for today.">>
