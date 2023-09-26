@@ -1,0 +1,68 @@
+:: CluePoint_GaryDanko_ANTONY
+<<locationheader "Gary Danko">>\
+When you arrive at Gary Danko you're immediately ambused by Gary Danko, chef and owner of the one-star Michelin restaurant Gary Danko. An older, balding man, dressed in a long-sleeve chef's shirt, he is almost fawning in his eagerness to accomdate you. It takes some effort to get through the introductions. As soon as you are able, your wife asks about Marlon Brando's March 14 reservation.
+
+"Now unfortunately, I do not remember the exact dates of all our guests, but I will call the majordomo, if you will wait one moment."
+
+"Of course," says your wife.
+
+He leaves and the returns momentarily with a tall, severe-looking man in a black uniform, carrying an oversized ledger. "This is Mr. Carson," he says. "He can answer all your scheduling-related questions." He smiles, then retreats to hover anxiously in the background.
+
+"Mr. Carson," you ask, "can you tell us about Marlon Brando's visit on the fourteenth of March?"
+
+"Of course," replies Mr. Carson. He places the ledger on a nearby table and pages through it. "On the fifteenth of March, Mr. Brando booked a private room with one other guest."
+
+"Do you know who that guest was?"
+
+"Regrettably, I do not. No name has been provided."
+
+"Can you describe her?"
+
+"That question seems unduly intrusive." Mr. Carson pauses, examining your group carefully. "It comes to my attention that the two of you here bear a striking resemblence to the Vice-President and his wife."
+
+"Yes," replies your wife, "we are them. Were you aware that Mr. Brando has been murdered?"
+
+"What?" he says, blinking. "I was not. I was not aware."
+
+"Well," you interject, "we're here to figure out what happened. Hortensia, show him your badge."
+
+Hortensia pulls out her badge. "Hortensia," she says, "Agent, FBI. I can confirm that this is the Vice-President and the Queen of Egypt, if the crowd of bodyguards didn't already give it away."
+
+"I see," says Mr. Carson. "I'm sorry, I seem to have been momentarily...a moment. Can you please restate your question?"
+
+"Can you describe the woman who ate with Mr. Brando on March 14?"
+
+"Yes, of course," he says. "She was a very tall white woman with wavy dark hair to the shoulder. She came in wearing a white painted mask in the style of a noh mask, although hers was more naturalistic than your usual noh mask, and less unnerving. She took it off once she was in her private room, of course. I don't recall anything else about how she was dressed. I will note that Mr. Brando and her were frequent visitors."
+
+"How frequent?"
+
+"One moment," he said, paging through the ledger. "They visited ten times over the last three months, reserving a private room for each occasion. Unfortunately for us, Mr. Brando always paid, and we have no record of her name."
+
+"Wait," you say. "Do you have security camera footage?"
+
+"We do, but we keep it for only a week."
+
+"Damn."
+
+"I see a note here from the 2nd of March," he says, "stating that the woman left a ring, which was placed in the lost and found. I can go and check to see if it is still present." He looks over at Hortensia.
+
+"Yes, if it's still present we'll take it as evidence."
+
+"One moment," he says, vanishing into the back rooms. He returns bearing an silver ring with an emerald set into it, which Hortensia trades for a slip of paper for their records, and then bags and stuffs away into her suit.
+
+"Thank you for your help," she says.
+
+"It is my honor," replies Mr. Carson.
+
+<div id='options'><<nobr>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_GaryDanko_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+
+<<include "Ch2_EndInterview_ANTONY">>
