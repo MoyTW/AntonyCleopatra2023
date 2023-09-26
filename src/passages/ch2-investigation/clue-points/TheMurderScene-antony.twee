@@ -1,0 +1,44 @@
+:: CluePoint_TheMurderScene_ANTONY
+<<locationheader "The Murder Scene">>\
+<<run setup.CluePoints.markCluePointKnown('GoldenLotus')>>\
+The alley where Marlon was killed is a small alley, just south of the Raytheon building and just north of the Marine Corps War Memorial. It's narrow and mostly unremarkable except for a alcove halfway through the alley large enough to fit a person but entirely hidden from either entrance.
+
+Hortensia pulls out a tablet and walks to a spot in the middle of the alley, some eight feet away from the alcove. "This is where the victim was found," she says, "face down, his briefcase near his right hand, and the contents of his pockets left on top of the body." She pulls up a picture on her tablet and shows you. "The police believe that whoever shot him hid in the alcove, shot him, searched his body, and left."
+
+You nod. "I assume they searched the alcove?"
+
+"They reported that they did, but found nothing."
+
+"Did they?" asks your wife.
+
+"That's what their report says."
+
+"Come here," she says. The three of you squeeze into the alcove. "Hortensia," she says, pointing to a half-bent, unsmoked cigarette slowly decaying in the corner of the alcove, "was that there at the time of the crime?"
+
+"Let me - ah." She sighs and flips her tablet around to reveal a picture of the alcove, taped off by yellow tape, with the cigarette clearly visible. "Unprofessional," she comments.
+
+"Great job!" you say. "You want to take that back to the lab, Hortensia?"
+
+"On it," she says, gloves already on bag out.
+
+You search the area further, but find nothing else of interest.
+
+<<include "CluePoint_TheMurderScene_ANTONY:Questions">>
+
+
+:: CluePoint_TheMurderScene_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_TheMurderScene_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+TK Tell the player Golden Lotus unlocked
+<<include "Ch2_EndInterview_ANTONY">>
