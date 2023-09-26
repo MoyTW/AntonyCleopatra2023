@@ -1,0 +1,61 @@
+:: CluePoint_LiviaDrusilla_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                     - */\
+/* --------------------------------------------------------------------- */\
+"I know only what I've read in the papers, which isn't a lot. Sorry I can't be of help, but you knew that was a long shot anyways."
+
+:: CluePoint_LiviaDrusilla_SHARED:ABrando
+<span class='antony-response'>"Did you know Marlon Brando?"</span>
+
+<<include "CluePoint_LiviaDrusilla_SHARED:SBrandoSnippet">>
+
+:: CluePoint_LiviaDrusilla_SHARED:CBrando
+<span class='cleopatra-response'>"You didn't happen to know Marlon Brando, did you?"</span>
+
+<<include "CluePoint_LiviaDrusilla_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_LiviaDrusilla_SHARED:SCigarettesSnippet
+/* --------------------------------------------------------------------- */\
+/* - Cigarettes                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Oh, this <em>is</em> interesting, isn't it? They're the second-most expensive cigarettes in the world, made to order only, and they vet their buyers. Octavian and I buy them to put in gift packages. So why are you asking <em>me</em> about this particular brand? Well, neither of you smoke, and neither I nor Octavian smokes, and I know we've never gifted any of them to you. So, why would you know to ask me? One way could be that somebody we've given them to offered them to you, or you saw them lying around and asked, and you just happened to remember that they sourced them to us. Or, alternatively, you've seen our financial records. Another possibility is you've seen the company's financial records." She pauses. "But that doesn't explain why you asked. My immediate thought is that you asked because you've found something that cases suspicion on buyers of that brand, which honestly seems like the most obvious and straightforward explanation. If I had to bet, I'd bet on that, and that you know to ask me because you subpeona'd the company for their sales records."
+
+"Close," <<if setup.Roles.isAntony()>>you say.<<else>>says Antony.<</if>>
+
+"Pity," she sighs. "Where'd I go wrong?"
+
+"We didn't subpeona the records."
+
+Livia bursts out in laughter. "Can you think of how annoying this would all be if you were just a regular old detective?"
+
+:: CluePoint_LiviaDrusilla_SHARED:ACigarettes
+<span class='antony-response'>"Tell us what you know about Golden Lotus cigarettes."</span>
+
+<<include "CluePoint_LiviaDrusilla_SHARED:SCigarettesSnippet">>
+
+:: CluePoint_LiviaDrusilla_SHARED:CCigarettes
+<span class='cleopatra-response'>"Can you tell us about Golden Lotus cigarettes?"</span>
+
+<<include "CluePoint_LiviaDrusilla_SHARED:SCigarettesSnippet">>
+
+
+:: CluePoint_LiviaDrusilla_SHARED:SMarchSnippet
+/* --------------------------------------------------------------------- */\
+/* - March                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Gods," she says, rolling her eyes, and gesturing towards her two Secret Service escorts, "you think they'd let me out of their sight for even a minute? Proper fun police, they are. Tyrannical. They won't even let me drive."
+
+"Livia," <<if setup.Roles.isAntony()>>you say,<<else>>says Antony,<</if>> "I sympathize, but they don't let us drive either."
+
+"Yes, but you're the <em>Vice-President</em> and she's the <em>Queen</em>. I'm just a daughter-in-law, you'd think they'd let up a bit."
+
+:: CluePoint_LiviaDrusilla_SHARED:AMarch
+<span class='antony-response'>"What were you doing on the fifteen of March?"</span>
+
+<<include "CluePoint_LiviaDrusilla_SHARED:SMarchSnippet">>
+
+:: CluePoint_LiviaDrusilla_SHARED:CMarch
+<span class='cleopatra-response'>"Can you tell us what you were doing on the night of March 15?"</span>
+
+<<include "CluePoint_LiviaDrusilla_SHARED:SMarchSnippet">>

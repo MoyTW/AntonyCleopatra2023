@@ -19,7 +19,7 @@ TODO CH2 START
 <<locationheader 'TODO Bed'>>\
 TODO
 
-You retire to your chambers.
+<<InvestigationCalendar>>
 
 <<button [[Sleep.|Ch2_Morning_CLEOPATRA]]>><</button>>
 

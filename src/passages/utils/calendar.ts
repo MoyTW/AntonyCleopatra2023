@@ -78,6 +78,7 @@ interface Appointment {
     }
 
     advanceTime = () => {
+      // TODO: Month rollover
       // TODO
       const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
       // TODO End game

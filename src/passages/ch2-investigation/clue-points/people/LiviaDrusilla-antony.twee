@@ -1,0 +1,47 @@
+:: CluePoint_LiviaDrusilla_ANTONY
+<<locationheader "Livia Drusilla">>\
+Livia opts to meet you in the Naval Observatory rather than the White House, which is fine. You have the staff tidy up a bit, although she definitely wouldn't care anyways. You come down to the door a little late to see Livia kissing your wife in greeting. She's clad in the traditional style, with a blue stole and orange palla, but has opted to leave her long, wavy hair free of any covering. You descend the stairs as they chat.
+
+"More healthy than it's worth, I think, they've been driving us mad lately. Octavian is doing well. Antony!" she cries, pulling you close and greeting you with a kiss, "what a wonderful thing, to see you!"
+
+"Good to see you too," you says. "How's Octavian? How are the kids?"
+
+"Well and well," she says, "which is all that can be asked for. How fare little Alexander and Cleopatra?"
+
+"They're doing great," you say, leading the group across the hall and into the Red Room. You chat for a while, catching up on old news. Eventually, after a pause in the conversation, Livia leans forwards.
+
+"I hear that our esteemed President has threatened to ban you from the Christmas Ball," she says.
+
+"Bah," you say, "he does that every year. Never does."
+
+"Well, you've never failed a case, have you?"
+
+"No," laughs Cleopatra, "we have. Do you recall the ghost rat?"
+
+"The - oh, well, you could have hardly been blamed for that! Neither of you are wizards."
+
+"Yes, but I do have the best wizards in my employ."
+
+"But you aren't! Leave the wizarding to the wizards, I say. Of course he didn't ban you over that, that would have been ridiculous. Anyways, this whole murder business is very exciting, though I'm not sure how you expect me to help."
+
+<<include "CluePoint_LiviaDrusilla_ANTONY:Questions">>
+
+
+:: CluePoint_LiviaDrusilla_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "Did you know Marlon Brando?" "Brando">>
+  <<Question "Tell us what you know about Golden Lotus cigarettes." "Cigarettes">>
+  <<Question "What were you doing on the fifteen of March?" "March">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_LiviaDrusilla_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_ANTONY">>
