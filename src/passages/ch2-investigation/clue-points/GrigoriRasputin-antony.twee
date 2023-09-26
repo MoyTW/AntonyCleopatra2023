@@ -1,7 +1,19 @@
 :: CluePoint_GrigoriRasputin_ANTONY
 /* TODO: distinguish between scheduled & unscheduled */\
-<<locationheader "TK">>\
+<<locationheader "Grigori Rasputin">>\
+Rasputin is late. Fifteen minutes late. Being Vice-President hasn't saved you from waiting - waiting's a fact of life, and this sort of thing has nothing on what waiting in the army was like - but it's still annoying. At least the waiting room is nice, with a very ornate woven rug and carved cabinets faced with glittering glass, but you shouldn't make appointments you can't keep. An embassy attendant hovers nervously around, dressed in to match the room's antiquated, courtly style.
 
+"Anna," says your wife, "surely the ambassador intends to keep to his commitments."
+
+Anna smiles placidly, checking his phone. "His car has just arrived," she says. "I expect he will be up momentarily."
+
+That is a lie.
+
+When he enters he looks kind of like he was run over by a truck, even more than he usually does. His hear's all messed up and his eyes, famously sharp and hypnotic, are dull and unfocused. Also, he smells like hell, even more than he usually does, which his dirty robes probably aren't helping. He wobbles a little on his feet, and he seems to be making an unsuccessful effort not to clutch his head. He's followed by a worried-looking secretary. "Forgive me," he says. "It is a pleasure to see you both again, Mr. Vice-President, Your Majesty." He gives you his hand, which you shake gingerly, and bows at the waist to your wife. "Come," he says, "come into my office."
+
+His office is even more ostentatiously decorated, which just makes it look tacky. He perches behind his wooden desk, and the two of you seat yourselves in the visitors' chairs.
+
+"A drink?" he asks, gesturing to his lavishly stocked in-office bar.
 
 <div id='options'>\
   <<button "Sure. Got anything fancy?">>
