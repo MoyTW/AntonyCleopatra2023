@@ -1,0 +1,32 @@
+:: CluePoint_OttoVonBismarck_ANTONY
+/* TODO: distinguish between scheduled & unscheduled */\
+<<locationheader "Otto Von Bismarck">>\
+Exactly one minute before your appointment, Otto Von Bismarck's secretary grabs you from the waiting room and marches you through a reception area straight into his boss's office, which is nice enough but positively spartan for somebody of his status. In the center of the room is a nice but unadorned table, a bunch of mobile filing cabinets, and chairs to match. Along the walls of the room are more filing cabinets, over which hang various illustrations of looking dignitaries and famous German architecture.
+
+The man himself is the very vision of a distinguished German luminary, tall, a little overweight, and wearing a walrus-like mustache and clad in a dark blue uniform. He marches forwards to greet you and your wife with firm handshakes. "Mr Vice-President, Your Majesty, welcome. Please take a seat." As soon as you're all seated, he launches right in. "I understand that you wish to discuss the murder of Mr. Brando, the former CEO of Raytheon. We all have many pressing calls on our time, so let us get to business immediately."
+
+<<include "CluePoint_OttoVonBismarck_ANTONY:Questions">>
+
+
+:: CluePoint_OttoVonBismarck_ANTONY:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "Did you know Marlon Brando?" "Brando">>
+  <<if _Brando>>
+    <<Question "Do you know James Dean?" "Dean">>
+    <<Question "Do you know Audrey Hepburn?" "Hepburn">>
+  <</if>>
+  <<Question "Does the name Project STORM ring any bells?" "STORM">>
+  <<Question "What were you doing on the fifteen of March?" "March">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_OttoVonBismarck_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_ANTONY">>

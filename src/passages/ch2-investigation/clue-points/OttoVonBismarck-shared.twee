@@ -1,0 +1,102 @@
+:: CluePoint_OttoVonBismarck_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                     - */\
+/* --------------------------------------------------------------------- */\
+"I have never met nor corresponded with the late Mr. Brando."
+
+:: CluePoint_OttoVonBismarck_SHARED:ABrando
+<span class='antony-response'>"Did you know Marlon Brando?"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SBrandoSnippet">>
+
+:: CluePoint_OttoVonBismarck_SHARED:CBrando
+<span class='cleopatra-response'>"Have you ever met Marlon Brando?"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_OttoVonBismarck_SHARED:SDeanSnippet
+/* --------------------------------------------------------------------- */\
+/* - Dean                                                     - */\
+/* --------------------------------------------------------------------- */\
+"You are referring to the current COO of Raytheon?"
+
+"Yes."
+
+"No. I have never met nor corresponded with that man."
+
+:: CluePoint_OttoVonBismarck_SHARED:ADean
+<span class='antony-response'>"Do you know James Dean"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SDeanSnippet">>
+
+:: CluePoint_OttoVonBismarck_SHARED:CDean
+<span class='cleopatra-response'>"Are you personally familiar with James Dean?"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SDeanSnippet">>
+
+
+
+:: CluePoint_OttoVonBismarck_SHARED:SHepburnSnippet
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                     - */\
+/* --------------------------------------------------------------------- */\
+"You are referring to the current CEO of Raytheon?"
+
+"I am."
+
+"No. I have never met nor corresponded with that woman."
+
+:: CluePoint_OttoVonBismarck_SHARED:AHepburn
+<span class='antony-response'>"Do you know Audrey Hepburn?"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SHepburnSnippet">>
+
+:: CluePoint_OttoVonBismarck_SHARED:CHepburn
+<span class='cleopatra-response'>"Are you personally familiar with Audrey Hepburn?"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SHepburnSnippet">>
+
+
+
+:: CluePoint_OttoVonBismarck_SHARED:SSTORMSnippet
+/* --------------------------------------------------------------------- */\
+/* - STORM                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Are you referring to the British/French weapons system that is called STORM SHADOW?"
+
+"No, it's a different project."
+
+"I have not heard of any such project."
+
+:: CluePoint_OttoVonBismarck_SHARED:ASTORM
+<span class='antony-response'>"Does the name Project STORM ring any bells?"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SSTORMSnippet">>
+
+:: CluePoint_OttoVonBismarck_SHARED:CSTORM
+<span class='cleopatra-response'>"Have you ever heard of something called Project STORM?"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SSTORMSnippet">>
+
+
+
+:: CluePoint_OttoVonBismarck_SHARED:SMarchSnippet
+/* --------------------------------------------------------------------- */\
+/* - March                                                     - */\
+/* --------------------------------------------------------------------- */\
+"I was in Germany. Surely your people have briefed you on this."
+
+"We ask this to everybody we interview."
+
+"Well, you have your answer."
+
+:: CluePoint_OttoVonBismarck_SHARED:AMarch
+<span class='antony-response'>"What were you doing on the fifteen of March?"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SMarchSnippet">>
+
+:: CluePoint_OttoVonBismarck_SHARED:CMarch
+<span class='cleopatra-response'>"Can you tell us what you were doing on the night of March 15?"</span>
+
+<<include "CluePoint_OttoVonBismarck_SHARED:SMarchSnippet">>
