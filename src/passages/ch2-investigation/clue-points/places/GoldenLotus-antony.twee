@@ -41,7 +41,7 @@ From there on Ms. Singh is very helpful. She explains that the particular cigare
 
 "Can you print it?"
 
-"Absolutely," she says. You leave the building with a list of six names.
+"Absolutely," she says. You leave the building with a list of five names.
 
 <strong>James Dean</strong>
 <strong>Gaius Marius</strong>
@@ -58,6 +58,26 @@ From there on Ms. Singh is very helpful. She explains that the particular cigare
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
-TK Tell the player about unlocks
+Once you're settled back in the car, you glance at the list again. "I didn't know <strong>Livia</strong> bought these."
+
+"It's been a while since we've seen her. We should get together."
+
+"You think she'll be able to help with the case?"
+
+"No, but her company is most enjoyable."
+
+<<if setup.CluePoints.cluePointVisited('VitruviusPollio')>>\
+  "This is a very convenient list, actually." You grin. "I've met everybody on this list."
+<<else>>\
+  "This is a very convenient list, actually." You grin. "I've met everybody on this list, except for <strong>Pollio</strong>."
+<</if>>\
+
+"Then we won't have any issue getting appointments."
+
+"We don't really have any issues with appointments anyways, do we?"
+
+"Well, Hortensia would know. Hortensia, do we?"
+
+She has on a sly smile. "Not when I'm the one making them."
+
 <<include "Ch2_EndInterview_ANTONY">>

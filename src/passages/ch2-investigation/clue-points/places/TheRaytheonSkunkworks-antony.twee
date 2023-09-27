@@ -72,6 +72,16 @@ Mr. Whiskers leads you down a story and through a long hallway, stopping at a no
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
-TK Tell the player about unlocks
+"Cleo," you ask, "when did Notre Dame burn down?"
+
+"2019. Hortensia?"
+
+"A moment," she says, typing away at her tablet. "April 15, 2019."
+
+"That gives us a definite date by which <strong>Vitruvius</strong> was in France with his ladyfriend."
+
+"It does," agrees your wife. "Of more interest to me is the note that was delivered."
+
+"Yeah. That definitely is interesting."
+
 <<include "Ch2_EndInterview_ANTONY">>
