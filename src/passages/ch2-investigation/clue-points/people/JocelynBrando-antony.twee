@@ -47,5 +47,20 @@ Your wife holds out her hand. "It's our pleasure," she says as they shake. Don h
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TODO END INTERVIEW
+As soon as you're in the elevator, your wife turns to you. "Antony, you knew Brando."
+
+"Not well."
+
+"Did you know of his infidelity?"
+
+"I didn't, but I assume he didn't go around shouting it from the rooftops."
+
+"Did he show you an unpleasant a human as his sister did today?"
+
+You laugh as you walk through the lobby. "Of course not. That's not the kind of thing you'd flaunt when you're meeting with equals or superiors. I'm eager to hear what <strong>Audrey</strong> has to say about him, now that he's no longer here."
+
+"You believe it will be less than flattering?"
+
+"That's a good question. She's very diplomatic, so maybe not - but now that he's gone, who knows?"
+
 <<include "Ch2_EndInterview_ANTONY">>

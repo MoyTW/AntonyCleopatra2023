@@ -69,7 +69,7 @@ His maid takes the envelope and leaves the room.
   /* TODO: Let the player confront him about Vitruvius */
   <<Question "Could you tell us what you were doing on the day Brando was murdered?" "Dean">>
   <<Question "<<CleopatraMark>> What do you think about Hepburn's recent promotion to CEO?" "Hepburn">>
-  <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
+  <<if _Brando>>
     <<Question "You mentioned an engineer by the name of Vitruvius. Could you speak further about him?" "Vitruvius">>
   <</if>>
   <<EndInterview "Thank you. That's all we needed for today.">>
@@ -80,6 +80,14 @@ His maid takes the envelope and leaves the room.
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+Antony wait until you're back in the car before he speaks. "Do you think he's lying about Hepburn?"
+
+"No," you say. "And besides, what would it change if he was?"
+
+"You might have motive."
+
+"A weak one," you laughs. "How often do American businesspeople assassinate each other? Almost never. It is a thing that is just not done, as you say."
+
+"What can I say? We're a peaceful people."
 
 <<include "Ch2_EndInterview_CLEOPATRA">>

@@ -4,7 +4,6 @@
   <<run setup.CluePoints.markCluePointKnown('GaiusMarius')>>
   <<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>
   <<run setup.CluePoints.markCluePointKnown('LiviaDrusilla')>>
-  /* TODO TK: Ask Otto about the cigarettes */
   <<run setup.CluePoints.markCluePointKnown('OttoVonBismarck')>>
 <</nobr>>\
 "I'm sorry," says the salesperson, "I can't, I really can't! I understand that this is important but if I told you I'd definitely lose my job, I'm sorry."

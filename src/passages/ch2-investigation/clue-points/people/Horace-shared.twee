@@ -80,17 +80,17 @@ Horace takes a moment before leaning forward. "Well, it was a normal day, as far
 /* --------------------------------------------------------------------- */\
 "I'm sorry?" His face shows genuine puzzlement.
 
-"We have a note indicating that he intended to meet with General Labienus at 8:30 that evening."
+"We have a note indicating that he intended to meet with <strong>General Labienus</strong> at 8:30 that evening."
 
 "Well now, that is interesting." He furrows his brow. "Well, it wasn't on his itinerary, and it is extremely rare for him to take premeditated meetings outside of his itinerary. In fact, I would regularly schedule his dinner reservations, work or not. Are you sure that is what the note indicates?"
 
 "You think we misinterpreted the note?"
 
-"Well, I haven't seen it, and I assume you won't let me see it, but it would be very surprising if he had a meeting but didn't feel it possible to trust me with it. It would have to be something extremely unusual for that to be the case. Then again, if it's involved with the murder, it's unusual by default. Let me think for a moment." He leans back, then forward, then straightens. "I do know that he had historically harbored concerns about the security of Project STORM, over which General Labienus was tasked with overseeing. Perhaps a breach would have been of sufficient secrecy."
+"Well, I haven't seen it, and I assume you won't let me see it, but it would be very surprising if he had a meeting but didn't feel it possible to trust me with it. It would have to be something extremely unusual for that to be the case. Then again, if it's involved with the murder, it's unusual by default. Let me think for a moment." He leans back, then forward, then straightens. "I do know that he had historically harbored concerns about the security of Project STORM, over which <strong>General Labienus</strong> was tasked with overseeing. Perhaps a breach would have been of sufficient secrecy."
 
 "What kinds of concerns?"
 
-"The exact nature is known only to the two of them. He did, however, assign additional security resources to the Skunkworks facilities, where all of the technical data and prototypes are stored, but there was no change in the main offices. The main offices carry administrative data only. Now, to be clear, in terms of security administrative data is almost as valuable as technical data, but if he was concerned with blueprints and test data and such it's the Skunkworks that one should direct their attention towards. Unfortunately, I don't know anything more concrete. The good general would be the best person to ask, and doubtless eager to aid you."
+"The exact nature is known only to the two of them. He did, however, assign additional security resources to the <strong>Skunkworks</strong> facilities, where all of the technical data and prototypes are stored, but there was no change in the main offices. The main offices carry administrative data only. Now, to be clear, in terms of security administrative data is almost as valuable as technical data, but if he was concerned with blueprints and test data and such it's the <strong>Skunkworks</strong> that one should direct their attention towards. Unfortunately, I don't know anything more concrete. The good general would be the best person to ask, and doubtless eager to aid you."
 
 "Thank you."
 
@@ -102,7 +102,7 @@ Horace takes a moment before leaning forward. "Well, it was a normal day, as far
 <<include "CluePoint_Horace_SHARED:SLabienusSnippet">>
 
 :: CluePoint_Horace_SHARED:CLabienus
-<span class='cleopatra-response'>"Do you know anything about Brando's meeting with General Labienus?"</span>
+<span class='cleopatra-response'>"Do you know anything about Brando's meeting with <strong>General Labienus</strong>?"</span>
 
 <<include "CluePoint_Horace_SHARED:SLabienusSnippet">>
 
@@ -140,7 +140,7 @@ Horace takes a moment before leaning forward. "Well, it was a normal day, as far
 /* --------------------------------------------------------------------- */\
 /* - Status                                                          - */\
 /* --------------------------------------------------------------------- */\
-"Well," he says, "that's a good question. I'm in limbo at the moment, as Hepburn already has her own EA, so who is to know but the Gods?"
+"Well," he says, "that's a good question. I'm in limbo at the moment, as <strong>Hepburn</strong> already has her own EA, so who is to know but the Gods?"
 
 :: CluePoint_Horace_SHARED:AStatus
 <span class='antony-response'>"Now that Marlon's gone, what happens to you?"</span>

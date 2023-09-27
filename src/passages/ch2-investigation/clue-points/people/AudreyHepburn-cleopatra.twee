@@ -52,5 +52,20 @@ He takes you up to the top floor and leads you to Audrey's office where a woman,
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+"I knew she was diplomatic," remark Antony as you exit the building, "but I didn't know that she was that diplomatic."
+
+"Hortensia," you ask, "were you able to verify her alibi?"
+
+"Wait until we're in the car," replies the agent, tapping away. Once safely seated, she resumes. "No, unfortunately. The police work was sloppy."
+
+"Do explain, please."
+
+"We can verify that she went to dinner, and that her phone arrived at her home at 7:08. However, her phone stays stationary from 7:08 until 7:53, when it leaves her house. The police interpreted this to mean that she was at her house during the whole interval, which is not necessarily true. Given that she lives less than ten minutes from the offices, the window is narrow, but plausible."
+
+"I see."
+
+"Well," asks Antony, "do you think she's enough of a risk-taker to try a stunt like this? Marlon was pretty up there in terms of years, and if she was the obvious choice, I don't see why she'd go for it."
+
+"Never underestimate ambition," you reply.
+
 <<include "Ch2_EndInterview_CLEOPATRA">>

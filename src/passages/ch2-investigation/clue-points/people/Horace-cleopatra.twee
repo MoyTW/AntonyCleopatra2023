@@ -45,5 +45,16 @@ He leads the three of you to his dining room table, then sits down opposite you.
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TODO END INTERVIEW
+Back in the car, Antony grins. "The man was very helpful."
+
+"Would that he had snooped further in his employer's private affairs."
+
+"It's a good quality to have. I'm sure he appreciated his EA's discretion."
+
+"Oh," you scoff, "I think perhaps his spirit would prefer that his murderer see justice."
+
+"Well, he always struck me as a worldly guy. I think he might be an atheist, actually."
+
+"Really? More fool him. His spirit won't appreciate that at all."
+
 <<include "Ch2_EndInterview_CLEOPATRA">>

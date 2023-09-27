@@ -134,7 +134,7 @@ She smiles. "It applies to anyone on the premises. If we have reason to suspect 
 /* --------------------------------------------------------------------- */\
 /* - Hepburn                                                     - */\
 /* --------------------------------------------------------------------- */\
-<<if setup.Roles.isAntony()>>Audrey<<else>>Hepburn<</if>> laughs. "Yes, of course, although I will note that I was interviewed by the police, and that they've verified everything I'm going to say here. I took a meeting from home at 8:15 in the morning, then arrived at the office at around 9:50. I stayed in the office until 2:30, badged out and went for a walk, returned at around 3:45, and stayed in the office until 7:50, when Bill told me that Marlon had been shot, and I left the office to go see, but I arrived well after the police and returned to the office until past midnight, I'm not exactly sure when I left."
+<<if setup.Roles.isAntony()>>Audrey<<else>>Hepburn<</if>> laughs. "Yes, of course, although I will note that I was interviewed by the police, and that they've verified everything I'm going to say here. I took a meeting from home at 8:15 in the morning, then arrived at the office at around 9:50. I stayed in the office until 2:30, badged out and went for a walk, and returned at around 3:45. I left for an early dinner at 5:45 with a co-worker, leaving dinner at around 7 and returning home. At 7:50 I got a call from Bill, telling me that Marlon had been shot, at which point I returned to the office, where I stayed until past midnight. I'm not exactly sure when I left."
 
 "Why did you go back to the office?"
 
@@ -155,7 +155,11 @@ She smiles. "It applies to anyone on the premises. If we have reason to suspect 
 /* --------------------------------------------------------------------- */\
 /* - STORM                                                     - */\
 /* --------------------------------------------------------------------- */\
-TK
+"Of course," she says. "Project STORM is focused on developing a revolutionary short-range air defense system for defense against a wide variety of air-based threats, from rotary-wing aircraft to missiles to loitering munitions and small drones. It's still in the early stages, and it's being developed at our <strong>Skunkworks</strong> facility. I could go on, if you like, or if you have more specific questions, I'd be happy to answer them. If you'd like to arrange a visit, we can do that as well."
+
+"No, thank you. That's enough."
+
+"Very well."
 
 :: CluePoint_AudreyHepburn_SHARED:ASTORM
 <span class='antony-response'>"While we were going over the reports, the name Project STORM came up. Could you fill us in on it?"</span>
@@ -168,45 +172,15 @@ TK
 <<include "CluePoint_AudreyHepburn_SHARED:SSTORMSnippet">>
 
 
-:: CluePoint_AudreyHepburn_SHARED:SPromotionSnippet
+:: CluePoint_AudreyHepburn_SHARED:APromotion
 /* --------------------------------------------------------------------- */\
 /* - Promotion                                                     - */\
 /* --------------------------------------------------------------------- */\
-TK
-
-:: CluePoint_AudreyHepburn_SHARED:APromotion
 <span class='antony-response'>"I heard James was the heir apparent. How'd you beat him out?"</span>
 
-<<include "CluePoint_AudreyHepburn_SHARED:SPromotionSnippet">>
+"As you know, Antony, in most corporations the CEO is not appointed by the previous CEO, but are elected by the board. While Brando did advocate for James, he was not the decision maker in that process, and the board agreed that my combination of skills and experience was best suited for the job."
 
 :: CluePoint_AudreyHepburn_SHARED:CPromotion
 <span class='cleopatra-response'>"Incidentally, you have my congratulations on your promotion. Becoming CEO at such a young age is an exceptional achievement."</span>
 
-<<include "CluePoint_AudreyHepburn_SHARED:SPromotionSnippet">>
-
-
-
-
-
-:: Vestigal
-You call ahead to office. A woman, presumably her EA, informs you that she's in a meeting and is booked for the day, but that he'll pass on a message. You tell her to catch Hepburn while she's switching meetings and inform her of your visit and start heading to the Raytheon complex anyways.
-
-Just as the car pulls into the parking lot, Hepburn's EA calls and tells you that the next half hour has suddenly cleared up.
-
-You meet her in her office. Hepburn is sharply dressed and extremely collected. She greets you briskly, and the two of you get down to business.
-
-"Regarding Marlon, I am very upset by his death, of course. I had wanted to be CEO, but not this way. I can't pretend I'm not excited at the chance to run the company, but I had hoped for the transition to be smoother, and with Marlon alive and well."
-
-You question her about the STORM project.
-
-"It's a revolutionary anti-missile system, being developed at our <strong>Skunkworks</strong> location. <strong>James Dean</strong> is in charge of it, and while I know it intimately from a strategic perspective, I don't have detailed knowledge of its operations. You should talk to him for more information."
-
-You ask her about what she was doing on the night of the murder.
-
-She laughs. "Me? Surely for form's sake only, I hope?"
-
-You make a noncommital answer.
-
-"Well," she says, "I was in the office until 7:30 that evening. I can tell security to turn over the security camera footage and badge records, if you like."
-
-You tell her to get in touch with Hortensia. Soon after you leave, Hortensia texts you a confirmation.
+"Thank you," she says. "The expectations are high, and I hope to live up to them."

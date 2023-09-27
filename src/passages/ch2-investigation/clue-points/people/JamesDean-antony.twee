@@ -69,7 +69,7 @@ His maid takes the envelope and leaves the room.
   /* TODO: Let the player confront him about Vitruvius */
   <<Question "What were you doing on the day Marlon was murdered?" "Dean">>
   <<Question "<<AntonyMark>> Are you upset that Audrey got the job of CEO, even though Marlon clearly favored you to succeed him?" "Hepburn">>
-  <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
+  <<if _Brando>>
     <<Question "You mentioned an engineer named Vitruvius. Tell us more about him." "Vitruvius">>
   <</if>>
   <<EndInterview "That's all we needed for today.">>
@@ -80,6 +80,14 @@ His maid takes the envelope and leaves the room.
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+You wait until you're back in the car before you speak. "Do you think he's lying about Hepburn?"
+
+"No," says your wife. "And besides, what would it change if he was?"
+
+"You might have motive."
+
+"A weak one," she laughs. "How often do American businesspeople assassinate each other? Almost never. It is a thing that is just not done, as you say."
+
+"What can I say? We're a peaceful people."
 
 <<include "Ch2_EndInterview_ANTONY">>
