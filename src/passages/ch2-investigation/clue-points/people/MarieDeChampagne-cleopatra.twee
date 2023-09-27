@@ -1,0 +1,50 @@
+:: CluePoint_MarieDeChampagne_CLEOPATRA
+<<locationheader "Marie de Champagne">>\
+As your car eases its way through Dupont Circle, Hortensia squints at her tablet. "So," she says, "here's what we know about Marie. This is somewhat last-minute, unfortunately, so expect it to be a little spotty." She waits until she has your attention. "She's thirty-eight years old and married to Henry of Champagne. She was married unusally young, at fifteen years of age, which was apparently legal in France until 2006. Yes, I was surprised as well. She's remained married ever since. She has four children from ages 4 to 17, and is not currently employed. This next section is hard to substantiate without further investigation, but judging from some of her posts on social media and various messaging services, both public and private, she seems to either have an open marriage or is a serial adulterer, we're not sure which. She appears to have met Marlon Brando within the last four months, and her location data indicates she likely had contact with him at least twenty times, possibly more."
+
+"Modern technology," mutters Antony.
+
+"This is why you don't get to buy your own phones," she says with a dry grin. "Now, as for her husband, he's an executive at a large British wine producer, and is away extremely frequently on business trips. He was out of the country from March 11th to March 21st. He's currently out of the country again, scheduled to return on April 19th. Something to note is that all the likely meetings that Marie had with Brando were while her husband was away, which over the last six months was over half the time."
+
+"Anything else?"
+
+"She has a solid alibi. She was having dinner at Atlantic Catch with another paramour, which we can verify from a combination of cell phone location data and pictures that she and her paramour took of each other during the time period."
+
+Hortensia leaves it at that. Eventually, your car pulls up in front of a plain mainsion with an expansive lawn and sturdy gate, which rolls upon to admit you. At the end of the driveway waits Marie de Champage, tall and elegant with an ochre dress, dark blue hat, and black rosette pinned directly over her heart. She is polite, introducing herself litte ceremony, and little awed by her guests. She leads you into a room with its windows fully drawn and its lights covered in shades. The floor is covered in thick black carpet which swallows up any excess sounds. "I wish," she says, "we could meet under better circumstances. Would you care for some refreshments?" She gestures to a cabinet, well-stocked with drink.
+
+<div id='options'>\
+  <<button "Apologies. We aren't allowed to receive any food or drinks.">>
+    <<AppendPassage "1" "C1" "CluePoint_MarieDeChampagne" "ALL">>
+  <</button>>
+  <<button "No, I am fine.">>
+    <<AppendPassage "1" "C2" "CluePoint_MarieDeChampagne" "ALL">>
+  <</button>>
+</div>
+
+
+:: CluePoint_MarieDeChampagne_CLEOPATRA:1
+<<include "CluePoint_MarieDeChampagne_SHARED:1_ReactionSnippet">>
+<<include "CluePoint_MarieDeChampagne_CLEOPATRA:Questions">>
+
+
+:: CluePoint_MarieDeChampagne_CLEOPATRA:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "What can you tell us about Marlon Brando?" "Brando">>
+  <<if _Brando>>
+    <<Question "Did he discuss James Dean with you?" "Dean">>
+    <<Question "Did he discuss Audrey Hepburn with you?" "Hepburn">>
+  <</if>>
+  <<Question "Have you ever heard of something called Project STORM?" "STORM">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_MarieDeChampagne_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_CLEOPATRA">>

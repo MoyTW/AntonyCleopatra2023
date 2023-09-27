@@ -1,0 +1,128 @@
+:: CluePoint_MarieDeChampagne_SHARED:1Y_Snippet
+/* --------------------------------------------------------------------- */\
+/* - Reaction                                                          - */\
+/* --------------------------------------------------------------------- */\
+"Oh," she says. "I suppose that makes sense." She looks down, then up. "I'm ready to begin."
+
+:: CluePoint_MarieDeChampagne_SHARED:1N_Snippet
+"I see," she says. She looks down, then up. "I'm ready to begin."
+
+:: CluePoint_MarieDeChampagne_SHARED:1_ReactionSnippet
+<<if _choice is 'A1'>>\
+  <span class='antony-response'>"Sorry. We're not allowed to eat or drink anything that's not been vetted."</span>
+
+  <<include "CluePoint_MarieDeChampagne_SHARED:1Y_Snippet">>
+<<elseif _choice is 'C1'>>\
+  <span class='cleopatra-response'>"Apologies. We aren't allowed to receive any offered food or drink."</span>
+
+  <<include "CluePoint_MarieDeChampagne_SHARED:1Y_Snippet">>
+<<elseif _choice is 'A2'>>\
+  <span class='antony-response'>"No thank you."</span>
+
+  <<include "CluePoint_MarieDeChampagne_SHARED:1N_Snippet">>
+<<elseif _choice is 'C2'>>\
+  <span class='cleopatra-response'>"No, I am fine."</span>
+
+  <<include "CluePoint_MarieDeChampagne_SHARED:1N_Snippet">>
+<</if>>\
+
+
+:: CluePoint_MarieDeChampagne_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                     - */\
+/* --------------------------------------------------------------------- */\
+She takes a deep breath. "Of course," she says, "you know that he and I were romantically involved."
+
+"We do," <<if setup.Roles.isAntony()>>says your wife.<<else>>you say.<</if>>
+
+"May I ask how?"
+
+"I am afraid not."
+
+"I suppose it was inevitable," she sighs. "Never mind. Let me answer your question. We met about five months ago, at a wine tasting function. We continued up until he was shot. In fact, I saw him the day before he was shot at Gary Danko."
+
+"Was your husband aware?"
+
+"He was not."
+
+"Was he acting unusually in any way the night before he was shot?"
+
+"He seemed frustrated about something, but I don't know what. He was extremely wound up, which wasn't unpreccedented, but it was unusual. What it is that had him so worked up, he didn't tell me. I believe that it was related to his work, because that was the only area where he was completely uninterested in discussion. On anything else, he'd talk at least a little. Work, on the other hand, was verboten with him." She thinks. "No, work was not verboten. What it was is that he could talk about work at his own will, but he would never answer any questions on it. So I caught snippets only, and almost aways complaints and gripes, mainly about his coworkers. With regards to his work, he wished for me to listen, not to speak. But, I can't recall anything out of the ordinary that night."
+
+
+:: CluePoint_MarieDeChampagne_SHARED:ABrando
+<span class='antony-response'>"Tell us what you know about Marlon Brando."</span>
+
+<<include "CluePoint_MarieDeChampagne_SHARED:SBrandoSnippet">>
+
+:: CluePoint_MarieDeChampagne_SHARED:CBrando
+<span class='cleopatra-response'>"What can you tell us about Marlon Brando?"</span>
+
+<<include "CluePoint_MarieDeChampagne_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_MarieDeChampagne_SHARED:SDeanSnippet
+/* --------------------------------------------------------------------- */\
+/* - Dean                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Yes, though rarely. He was very complimentary with James. He said once that he saw himself in him. I don't remember much else. I'm sorry."
+
+"Did you ever happen to meet him?"
+
+"No, of course not."
+
+:: CluePoint_MarieDeChampagne_SHARED:ADean
+<span class='antony-response'>"Did he ever talk about James Dean?"</span>
+
+<<include "CluePoint_MarieDeChampagne_SHARED:SDeanSnippet">>
+
+:: CluePoint_MarieDeChampagne_SHARED:CDean
+<span class='cleopatra-response'>"Did he discuss James Dean with you?"</span>
+
+<<include "CluePoint_MarieDeChampagne_SHARED:SDeanSnippet">>
+
+
+:: CluePoint_MarieDeChampagne_SHARED:SHepburnSnippet
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Sometimes."
+
+"What did he say?"
+
+"He didn't like her," she says, "for a number of reasons. He wanted James to take over when he retired, and he viewed Audrey as a threat. He was angry about her not always doing what he wanted. Once he told me once that she was too attractive to be an executive, and that she should be a secretary instead."
+
+"Did he use those words?"
+
+"No," she sighs. "He used less flattering ones."
+
+"Do you know how she felt about him?"
+
+"I have no idea. I also don't know how he acted around her. He might have acted perfectly normal, and only expressed those opinions in private. I can't really offer any more, I'm sorry."
+
+:: CluePoint_MarieDeChampagne_SHARED:AHepburn
+<span class='antony-response'>"Did he ever talk about Audrey Hepburn?"</span>
+
+<<include "CluePoint_MarieDeChampagne_SHARED:SHepburnSnippet">>
+
+:: CluePoint_MarieDeChampagne_SHARED:CHepburn
+<span class='cleopatra-response'>"Did he discuss Audrey Hepburn with you?"</span>
+
+<<include "CluePoint_MarieDeChampagne_SHARED:SHepburnSnippet">>
+
+
+:: CluePoint_MarieDeChampagne_SHARED:SSTORMSnippet
+/* --------------------------------------------------------------------- */\
+/* - STORM                                                     - */\
+/* --------------------------------------------------------------------- */\
+"No. He never talked about it."
+
+:: CluePoint_MarieDeChampagne_SHARED:ASTORM
+<span class='antony-response'>"Does the name Project STORM ring any bells?"</span>
+
+<<include "CluePoint_MarieDeChampagne_SHARED:SSTORMSnippet">>
+
+:: CluePoint_MarieDeChampagne_SHARED:CSTORM
+<span class='cleopatra-response'>"Have you ever heard of something called Project STORM?"</span>
+
+<<include "CluePoint_MarieDeChampagne_SHARED:SSTORMSnippet">>
