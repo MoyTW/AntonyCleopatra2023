@@ -34,7 +34,6 @@ Your wife holds out her hand. "Pleased to meet you."
   <<Question "How would you describe Marlon, in general?" "Description">>
   <<Question "What were you doing on the night of the murder?" "Tarita">>
   <<Question "Did Marlon do anything unusual that night?" "Marlon">>
-  /* TODO: Flag affair knowledge */
   <<Question "Jocelyn told us that he was having an affair." "Affair">>
   <<Question "What do you know about Marlon's work?" "Work">>
   <<if _Work>>

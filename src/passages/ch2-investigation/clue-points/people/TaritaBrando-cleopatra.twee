@@ -34,7 +34,6 @@ Before you've finished disembarking, you spot Ms. Brando climbing up the steps f
   <<Question "What was your late husband like?" "Description">>
   <<Question "Can tell us what you were doing on the evening of March 15?" "Tarita">>
   <<Question "Was Mr. Brando acting unusually on March 15?" "Marlon">>
-  /* TODO: Flag affair knowledge */
   <<Question "Mr. Brando's sister told us that he was having an affair." "Affair">>
   <<Question "Did your husband talk to you about his work?" "Work">>
   <<if _Work>>

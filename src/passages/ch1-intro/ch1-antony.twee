@@ -12,17 +12,17 @@ TODO: Proper Initialization!
 <h2>The Case of the Raytheon CEO.</h2>\
 <strong>March 26, 2021</strong>
 
-TODO REWRITE THIS
+You and your beautiful wife, Cleopatra, are lounging around on your gigantic pleasure barge, soaking up the sun and watching the Potomac go by, when both your phones light up at once.
 
-You and <<InfoLink "Cleopatra" "Ch1_CaseIntro_1_ANTONY_Cleopatra">> are lounging around on your gigantic pleasure barge, soaking up the sun and watching the Potomac go by, when both your phones light up at once.
-
-You check the number. It's the FBI hotline. You take the call. "A murder!" cries the officer on the other side. "A murder most foul! <<InfoLink "Marlon Brando" "Ch1_CaseIntro_1_ANTONY_MarlonBrando">> is dead! This is now a matter of," and his voice drops to a whisper, "<em>national security!</em>"
+You check the number. It's the FBI hotline. You take the call. "A murder!" cries the officer on the other side. "A murder most foul! Marlon Brando, CEO of Raytheon, is dead! This is now a matter of," and his voice drops to a whisper, "<em>national security!</em>"
 
 "We'll be there in fifteen, you say, and hang up. You look over at Cleopatra.
 
 "Time…" you say in unison, "to fight crime!"
 
-<<button [[But first: Clothes!|Ch1_CaseIntro_2_ANTONY]]>><</button>>
+<div id='options'>\
+  <<button [[But first: Clothes!|Ch1_CaseIntro_2_ANTONY]]>><</button>>
+</div>\
 
 :: Ch1_CaseIntro_1_ANTONY_Cleopatra
 TODO Your Wife
@@ -42,14 +42,16 @@ With that, he sweeps out of the room.
 
 "Jocelyn Brando," she says, standing. She takes in a deep breath as the two of you walk over. "A pleasure to meet you." After the introductions are done, you all take seats at the table.
 
-<<button [[Now, to business.|Ch1_CaseIntro_3_ANTONY]]>><</button>>
+<div id='options'>\
+  <<button [[Now, to business.|Ch1_CaseIntro_3_ANTONY]]>><</button>>
+</div>\
 
 
 :: Ch1_CaseIntro_3_ANTONY
 <<include IntroductionSnippet>>
 
-TODO: Rewrite
+<em><strong>[ TODO You can review the introduction at any point via the right sidebar. ]</strong></em>
 
-<em><strong>[ You can review the introduction at any point via the right sidebar. ]</strong></em>
-
-<<button [[Start your investigation!|Ch2_Start_ANTONY]]>><</button>>
+<div id='options'>\
+  <<button [[Start your investigation!|Ch2_Start_ANTONY]]>><</button>>
+</div>\
