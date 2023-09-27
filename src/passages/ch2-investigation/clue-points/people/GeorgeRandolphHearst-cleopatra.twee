@@ -1,6 +1,5 @@
 :: CluePoint_GeorgeRandolphHearst_CLEOPATRA
-/* TODO: distinguish between scheduled & unscheduled */\
-<<locationheader "TK">>\
+<<locationheader "George Randolph Hearst">>\
 Hearst's office is a mess. A small room, it's made smaller by the profusion of bookshelves lined up against the walls, and made almost impassable by towers of boxes, all spilling over with newspapers, magazines, and reams and reams of paperwork. Almost all of the rest of the space is taken up by Hearst's enormous desk, on which he has placed a computer with a comically large monitor. There are no chairs.
 
 "Come in," says his secretary. He waves you in, and between you, Antony, and Hortensia, the room is quickly filled. The Secret Service agents manage to squeeze in but you're forced to leave your bodyguards outside. Hearst fails to greet you, sitting in an ash grey suit and typing away as his computer as if fully alone. Once the door shuts, he sighs.
@@ -18,6 +17,9 @@ Hearst's office is a mess. A small room, it's made smaller by the profusion of b
   <<Question "Were you personally familiar with Marlon Brando?" "Brando">>
   <<Question "Have you ever heard of something called Project STORM?" "STORM">>
   <<Question "Were you at the bar <strong>First Connection</strong> on March 15?" "March">>
+  <<if _March>>
+    <<Question "Did Rasputin meet with anybody?" "Rasputin">>
+  <</if>>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 
@@ -26,5 +28,18 @@ Hearst's office is a mess. A small room, it's made smaller by the profusion of b
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+"A talkative man," you say as your car pulls away from the Hearst Tower.
+
+"Very."
+
+"I can hardly imagine what interacting with an unscented Rasputin would be like. A wonder of wonders, I imagine."
+
+"Yep."
+
+"He did clarify the color of the briefcase, at least. Unfortunate that he hadn't paid closer attention."
+
+"Unfortunate."
+
+"Antony," you sigh, as he bursts out laughing, "please, dear, use your words."
+
 <<include "Ch2_EndInterview_CLEOPATRA">>

@@ -75,3 +75,24 @@ His hands stop. "This is relevant?"
 <span class='cleopatra-response'>"Were you at the bar <strong>First Connection</strong> on March 15?"</span>
 
 <<include "CluePoint_GeorgeRandolphHearst_SHARED:SMarchSnippet">>
+
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:SRasputinSnippet
+/* --------------------------------------------------------------------- */\
+/* - Rasputin                                                     - */\
+/* --------------------------------------------------------------------- */\
+"He came in alone." He frowns. "I don't remember if he met anybody."
+
+"Was he carrying anything noteworthy?"
+
+"A brown briefcase. Looked cheap. That's all I know."
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:ARasputin
+<span class='antony-response'>"Was Rasputin alone, or in a group?"</span>
+
+<<include "CluePoint_GeorgeRandolphHearst_SHARED:SRasputinSnippet">>
+
+:: CluePoint_GeorgeRandolphHearst_SHARED:CRasputin
+<span class='cleopatra-response'>"Did Rasputin meet with anybody?"</span>
+
+<<include "CluePoint_GeorgeRandolphHearst_SHARED:SRasputinSnippet">>

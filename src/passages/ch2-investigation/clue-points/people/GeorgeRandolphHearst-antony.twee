@@ -1,5 +1,4 @@
 :: CluePoint_GeorgeRandolphHearst_ANTONY
-/* TODO: distinguish between scheduled & unscheduled */\
 <<locationheader "George Randolph Hearst">>\
 You peer into Hearst's office, which you've never seen, despite having met the man several times before. It's neither large nor small but much of the room is taken up by stacks of boxes, filled with newspapers and magazines, haphazardly propped up along the sides of the rooms. The enormous size of his desk does nothing to help the clutter, and he has neglected to put out any chairs for you. You suspect is an intentional power play.
 
@@ -18,6 +17,9 @@ You peer into Hearst's office, which you've never seen, despite having met the m
   <<Question "Did you know Marlon Brando?" "Brando">>
   <<Question "Does the name Project STORM ring any bells?" "STORM">>
   <<Question "You were at the bar <strong>First Connection</strong> the fifteen of March, weren't you?" "March">>
+  <<if _March>>
+    <<Question "Was Rasputin alone, or in a group?" "Rasputin">>
+  <</if>>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 
@@ -26,5 +28,18 @@ You peer into Hearst's office, which you've never seen, despite having met the m
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+"A talkative man," says your wife as your car pulls away from the Hearst Tower.
+
+"Very."
+
+"I can hardly imagine what interacting with an unscented Rasputin would be like. A wonder of wonders, I imagine."
+
+"Yep."
+
+"He did clarify the color of the briefcase, at least. Unfortunate that he hadn't paid closer attention."
+
+"Unfortunate."
+
+"Antony," sighs your wife as you struggle to suppress your laughter, "please, dear, use your words."
+
 <<include "Ch2_EndInterview_ANTONY">>
