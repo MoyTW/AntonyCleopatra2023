@@ -29,18 +29,6 @@ body {
   width: 100%;
 }
 
-.brother-icon {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
-
-.sister-icon {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
-
 .remnant-selected {
   color: purple;
 }
@@ -55,19 +43,9 @@ body {
   width: 100%;
 }
 
-/* ########## ID Chit ########## */
-.id-chit {
+/* ########## Main Screen ########## */
+.game-title {
   text-align: center;
-  padding: 15px;
-  margin: 10px;
-  border: 1px;
-  border-color: black;
-  background-color: rgb(114, 31, 31);
-}
-
-.id-chit input {
-  min-width: 5em;
-  width: 5em;
 }
 
 /* ########## Footer ########## */
@@ -77,28 +55,6 @@ body {
   margin: 0 auto;
   position: fixed;
   bottom: 0px;
-}
-
-.navigation-rose {
-  display: inline-flex;
-  text-align: center;
-}
-
-.navigation-rose button {
-  width: 140px;
-  height: 30px;
-  margin: 5px;
-  border-radius: 10px;
-}
-
-.navigation-rose-filler {
-  width: 40px;
-  text-align: center;
-  height: 40px;
-  line-height: 40px;
-  border-style: dotted;
-  border-color: white;
-  border-radius: 50%;
 }
 
 /* ########## Seals ########## */

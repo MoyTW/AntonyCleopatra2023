@@ -10,7 +10,7 @@ TODO: Proper Initialization!
 <</script>>
 <h1>CASE ONE</h1>\
 <h2>The Case of the Raytheon CEO.</h2>\
-<strong>March 26, 2021</strong>
+<strong>March 29, 2021</strong>
 
 You and your handsome husband, Antony, are lounging around on your gigantic pleasure barge, soaking up the sun and watching the Potomac go by, when both your phones light up at once.
 
@@ -26,16 +26,25 @@ You check the number. It's the FBI hotline. You take the call. "A murder!" cries
 
 
 :: Ch1_CaseIntro_2_CLEOPATRA
-TODO TK REWRITE THIS
-Your helicopter buzzes over the FBI headquarters, trailed by the larger, more spacious Secret Service bird. Your pilot touches down on the helipad, and the two of you waste no time disembarking. Your FBI liaison meets you on the tarmac as your Secret Service escorts disembark, and you are lead through the maze at Langley to an unassuming briefing room.
+You burst into the conference room deep within the bowls of the FBI headquarters with your husband. In the center is a table, surrounded by chairs and filled with evidence. In front of the screen at the end of the room stands Special Agent Hortensia, standing tall in her black suit. Antony strides forward and calls out. "What's the situation?"
 
-There are three people at the table, a stern looking woman with a FBI nametag, a devastated looking businesswoman on the verge of tears, and Sejanus, head of the FBI, at his customary spot at the head of the table. "Vice President," he says, nodding to Antony. "My Queen." He bows curtly to you. "I'm not here to brief you. I'm just here to impress the importance of the situation to you. And, as you can guess, it's very important. From the President's mouth to your ears. <strong>Two days.</strong>" He cracks a grin and then gestures to the agent sitting beside him, a tall, stern-looking woman. "Hortensia will take it from here."
+"You're feeling energetic today," she says, "aren't you?"
 
-With that, he sweeps out of the room.
+"A murderer is afoot, Hortensia! There's not a moment to waste!"
 
-"Good to see you, Hortensia," you say, and shoot a significant glance over at the businesswoman. "I don't believe we've been introduced."
+She clicks her tongue. "What did Dave tell you about the timeframe?"
 
-"Jocelyn Brando," she says, standing. She takes in a deep breath as the two of you walk over. "A pleasure to meet you." After the introductions are done, you all take seats at the table.
+"Nothing at all!"
+
+"Marcus, Cleopatra, you may want to sit down. I suspect that me made the situation sound more acute than it is."
+
+"Hortensia," you sigh as you take a seat, "this isn't a cold case, is it? I do so dislike those."
+
+"It is not. We'll get to that in a moment. First, I've been instructed to read you this message from Sejanus." That has your attention. Sejanus, the head of the FBI, is the person most likely to resort to the sword in defense of national security, and while your station gives you leeway it's never wise to turn your back on a lion. "The message says, 'The President wants this taken care of by the ninth of March. He tells me that if you don't he will bar you from the Winter Ball. I am not so forgiving. If you don't get this taken care of by the ninth of March I will have to' - and I'm quoting exactly here - 'get stabby on you two.'"
+
+"Ah, don't worry," says Antony, "he always says that about the stabbing."
+
+"I'm just the messenger. Now, I've been assigned to support you for the duration of this case, as seems to be the custom. We can start the briefing when you're both ready."
 
 <div id='options'>\
   <<button [[Now, to business.|Ch1_CaseIntro_3_CLEOPATRA]]>><</button>>

@@ -16,7 +16,7 @@ He leads the three of you to his dining room table, then sits down opposite you.
   <<button "We would appreciate it.">>
     <<AppendPassage "1" "C1" "CluePoint_Horace" "ALL">>
   <</button>>
-  <<button "Thank you, but you needn't worry yoursef.">>
+  <<button "Thank you, but you needn't worry yourself.">>
     <<AppendPassage "1" "C2" "CluePoint_Horace" "ALL">>
   <</button>>
 </div>
@@ -30,7 +30,6 @@ He leads the three of you to his dining room table, then sits down opposite you.
 /* ##################################################################### */\
 /* # QUESTIONS                                                         # */\
 /* ##################################################################### */\
-/* TODO: Add in a question about his mom */\
 <div id='options'><<nobr>>
   <<Question "What do you know about Brando's activites on March 15?" "Brando">>
   <<Question "Can you tell us what you were doing on March 15th?" "Horace">>

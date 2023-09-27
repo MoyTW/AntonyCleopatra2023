@@ -1,5 +1,5 @@
 :: IntroductionSnippet
-"Marlon Brando, CEO of Raytheon at the time of his death, was found dead on Tuesday, March 15, in an alley near the Raytheon complex at 7:29 by a passerby. The passerby immediately called 911. DC Police cordoned off the area and handled it as usual. They concluded that he was shot twice at close range through the chest and determined it a likely robbery. Evidence given is that his wallet was empty and his phone, wristwatch, and gold wedding band were all taken. Before you ask, no, we haven't been able to track the phone. Consider that line of questioning dead. As of now, DC police have effectively shelved the case, even if they won't admit it. Any questions so far?"
+"Marlon Brando, CEO of Raytheon at the time of his death, was found dead on Tuesday, March 15, in an <strong>alley near the Raytheon main office</strong> at 7:29 by a passerby. The passerby immediately called 911. DC Police cordoned off the area and handled it as usual. They concluded that he was shot twice at close range through the chest and determined it a likely robbery. Evidence given is that his wallet was empty and his phone, wristwatch, and gold wedding band were all taken. Before you ask, no, we haven't been able to track the phone. Consider that line of questioning dead. As of now, DC police have effectively shelved the case, even if they won't admit it. Any questions so far?"
 
 "No," <<if setup.Roles.isAntony()>>replies your wife.<<else>>you reply.<</if>>
 
@@ -7,11 +7,11 @@
 
 <<if setup.Roles.isAntony()>>You clear your<<else>>Antony clears his<</if>> throat. "What was the line of succession?"
 
-"Audrey Hepburn is now CEO. She was formerly the CMO."
+"<strong>Audrey Hepburn</strong> is now CEO. She was formerly the CMO."
 
-"Not James Dean?"
+"Not <strong>James Dean</strong>?"
 
-"No. Despite Brando favoring Dean, the board elected Hepburn."
+"No. Despite Brando favoring <strong>Dean</strong>, the board elected <strong>Hepburn</strong>."
 
 "Sure," <<if setup.Roles.isAntony()>>you say.<<else>>he says.<</if>>
 
@@ -35,7 +35,7 @@
 
 "Well," <<if setup.Roles.isAntony()>>you say,<<else>>says Antony,<</if>> "it looks like you're stuck with us again, aren't you?"
 
-"I suppose I am," replies the agent, an amused smile on her face, "but it's always a fun time, so I don't mind."
+"I suppose I am," replies the agent, an amused smile on her face, "but it's always enjoyable, so I don't mind."
 
 
 :: QuestionsSnippet

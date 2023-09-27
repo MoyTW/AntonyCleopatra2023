@@ -169,7 +169,6 @@ interface CluePoints {
       reveals: []
     },
     {
-      /* TODO: make sure you can reach this clue point */
       id: CluePointKey.GeorgeRandolphHearst,
       name: 'George Randolph Hearst',
       type: CluePointType.Person,
@@ -348,7 +347,6 @@ interface CluePoints {
       if (!visitedIds) {
         visitedIds = [cluePointId]
       } else {
-        // TODO: If we allow revisits, we want to track that!
         visitedIds.push(cluePointId)
       }
       State.setVar(this.VISITED_VAR, visitedIds)

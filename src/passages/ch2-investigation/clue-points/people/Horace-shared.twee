@@ -18,7 +18,7 @@
 
   <<include "CluePoint_Horace_SHARED:1N_Snippet">>
 <<elseif _choice is 'C2'>>\
-  <span class='cleopatra-response'>"Thank you, but you needn't worry yoursef."</span>
+  <span class='cleopatra-response'>"Thank you, but you needn't worry yourself."</span>
 
   <<include "CluePoint_Horace_SHARED:1N_Snippet">>
 <</if>>\

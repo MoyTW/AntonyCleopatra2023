@@ -22,9 +22,13 @@ Multiplayer Hello, World!
   <<set $partnerClientId to undefined>>
   <<run setup.Websocket.assignRoleToClient('ALL', State.variables.clientId)>>
 <</nobr>>\
-<h1 class="game-title">Mutiplayer Hello, World! TODO</h1>\
-<h2 class="passage-h2">Main Menu</h2>\
-<<button [[Host a game|HostGame]]>>
+<h1 class="game-title" style="margin-bottom: 0px">Antony & Cleopatra</h1>\
+<h2 class="game-title" style="margin: 0px">Case IV</h2>\
+<h1 class="game-title" style="margin-top: 0px">The Murder of Marlon Brando</h1>\
+
+<h2 class="passage-h2" style="text-align:center">Main Menu</h2>\
+<div id='options'><<nobr>>
+  <<button [[Host a game|HostGame]]>>
   <<set $sessionId to setup.Websocket.uuidv4()>>
   <<set $hostClientId to setup.Websocket.getClientId()>>
   <<connect $sessionId>>
@@ -32,6 +36,7 @@ Multiplayer Hello, World!
 <<button [[Join a game|JoinGame]]>><</button>>
 <<button [[Credits|MainMenu_Credits]]>><</button>>
 <<button [[About|MainMenu_About]]>><</button>>
+<</nobr>></div>
 
 
 :: HostGame

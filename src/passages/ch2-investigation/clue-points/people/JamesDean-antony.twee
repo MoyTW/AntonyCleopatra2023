@@ -66,7 +66,6 @@ His maid takes the envelope and leaves the room.
 <div id='options'><<nobr>>
   <<Question "I wanted to offer my condolences. It's never easy to deal with the death of a friend." "Condolences">>
   <<Question "Tell us what you know about Marlon's activities on the night he was murdered." "Brando">>
-  /* TODO: Let the player confront him about Vitruvius */
   <<Question "What were you doing on the day Marlon was murdered?" "Dean">>
   <<Question "<<AntonyMark>> Are you upset that Audrey got the job of CEO, even though Marlon clearly favored you to succeed him?" "Hepburn">>
   <<if _Brando>>
