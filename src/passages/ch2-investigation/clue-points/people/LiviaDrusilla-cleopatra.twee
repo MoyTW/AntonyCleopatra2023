@@ -45,5 +45,10 @@ Livia opts to meet you in the Naval Observatory rather than the White House, whi
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+"Antony," you say, an hour later, as Livia's driver conveys her off the premises, "what did we expect to get out of this meeting when we scheduled it?"
+
+"You know, I'm not sure."
+
+"Well. At least she makes for pleasant company."
+
 <<include "Ch2_EndInterview_CLEOPATRA">>

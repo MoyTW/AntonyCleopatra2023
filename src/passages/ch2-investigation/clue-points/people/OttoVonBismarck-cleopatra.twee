@@ -1,5 +1,4 @@
 :: CluePoint_OttoVonBismarck_CLEOPATRA
-/* TODO: distinguish between scheduled & unscheduled */\
 <<locationheader "Otto Von Bismarck">>\
 One minute before your appointment, Otto Von Bismarck's secretary enters the lavisly decorated waiting room and conveys you through a reception area into the ambassador's inner office, a well lit but modestly decorated room. Instead of a desk, the man sits behind a large table with several mobile filing trays arranged neatly against its sides. For this occasion he's cleared the table of everything but his sundry writing implements. Along the walls of the room are more filing cabinets, over which hang various artful illustrations of distinguished looking dignitaries and beautiful buildings.
 
@@ -29,5 +28,10 @@ He rises from his chair. Fully upright, he stands quite tall, his height combini
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+"Well," says Antony, "at least he's punctual."
+
+"I enjoyed the artwork he chose for his walls," you say. "They suit him, even if it's not what I would choose."
+
+"That's true, his office is certainly distinctive."
+
 <<include "Ch2_EndInterview_CLEOPATRA">>

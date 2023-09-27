@@ -21,7 +21,7 @@ As soon as enter his office, Labienus stands up and comes out from behind his de
 
 "No, no, don't worry about it," <<if setup.Roles.isAntony()>>you say.<<else>>says Antony.<</if>> "We do have business, after all."
 
-"Absolutely. All right, let's take a seat." He returns to his desk, clearing it of its many papers while you take a seat. "Look at this," he says, putting a printout of an email on his desk and turning it for you to see. The subject is <em>URGENT MEET ME TONIGH PENTAGON METRO ENTRANCE!</em> You note the recipient date - March 15 - the recipient - General Labienus - and the sender - Marlon Brando. The body reads <em>meet me tonight 8:30 metro entrance at pentagon. have mps. will explain in person deadline 10 PM. URGENT!!!!!</em>
+"Absolutely. All right, let's take a seat." He returns to his desk, clearing it of its many papers while you take a seat. "Look at this," he says, putting a printout of an email on his desk and turning it for you to see. The subject is <em>URGENT MEET ME TONIGH PENTAGON METRO ENTRANCE!</em> You note the recipient date - March 15, 1:12 p.m. - the recipient - General Labienus - and the sender - Marlon Brando. The body reads <em>meet me tonight 8:30 metro entrance at pentagon. have mps. will explain in person deadline 10 PM. URGENT!!!!!</em>
 
 <<if setup.Roles.isAntony()>>Your wife points<<else>>You point<</if>> to the letter. "What does he mean by 'mps,' General?"
 

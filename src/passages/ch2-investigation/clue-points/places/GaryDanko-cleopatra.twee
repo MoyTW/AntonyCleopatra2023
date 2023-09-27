@@ -66,8 +66,24 @@ Hortensia pulls out her badge. "Hortensia," she says, "Agent, FBI. I can confirm
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+"I've found the jeweler who made the ring," announces Hortensia.
 
-TODO: BOOD DIAMOND
+"Well?" prompts Antony.
+
+"It's called <strong>Blood Diamond</strong>. A local jeweler in the D.C. -"
+
+"Wait, wait. It's called <strong>Blood Diamond</strong>?"
+
+"That's what the lab tells me."
+
+"What a name!"
+
+"What's wrong with the name?" you ask.
+
+"In America, when people say 'blood diamond' they're usually talking about a diamond from a warzone, which is bad because usually the assumption is that when you buy a diamond from a warzone, the profits go to continuing the war. Which most of the American public has a very negative opinion of. So, if you name your shop after the term blood diamond...well, let me tell you, that kind of nomenclature wouldn't poll well. How long have they been in business, Hortensia?"
+
+"Since 2012."
+
+"What the hell."
 
 <<include "Ch2_EndInterview_CLEOPATRA">>

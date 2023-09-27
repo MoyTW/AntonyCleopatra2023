@@ -25,5 +25,10 @@ You meet Gaius Marius, Senator from Nebraska, at his office. On the walls are mo
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+As soon as you're out of earshot of Gaius' office you sigh. "That was a waste of time."
+
+"Did he actually hunt all those animals?"
+
+"Probably, believe it or not! He was pretty in shape when he was younger. Actually, he was in the army." You pause. "I don't think he's done much hunting lately, but I'd believe him if he said those were all real."
+
 <<include "Ch2_EndInterview_ANTONY">>

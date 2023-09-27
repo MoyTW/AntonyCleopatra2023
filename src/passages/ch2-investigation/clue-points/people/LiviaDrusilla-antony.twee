@@ -43,5 +43,10 @@ Livia opts to meet you in the Naval Observatory rather than the White House, whi
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+Livia sticks around for an hour or so before she goes. As her car drives off, your wife sighs. "Antony, what did we expect to get out of this meeting when we scheduled it?"
+
+"You know, I'm not sure."
+
+"Well. At least she makes for pleasant company."
+
 <<include "Ch2_EndInterview_ANTONY">>

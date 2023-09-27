@@ -32,6 +32,10 @@ You search the area further, but find nothing else of interest.
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
-TK Tell the player Golden Lotus unlocked
+"The cigarette has been identified as a cigarette from the house line of <strong>Golden Lotus,</strong> a small multinational specializing in luxury tobacco products. Unfortunately," sighs Hortensia, "the lab has found no traces of DNA on it, as it was unsmoked. Given that we have no proof that it didn't predate the murder, we can't necessarily tie it to the case, but going over his financial records, we can say that while Mr. Brando smoked, he has never bought this particular brand of cigarettes."
+
+"How can you be so sure?" asks your wife.
+
+"They only sell direct and don't take cash," she says, "and I see nothing in his purchases that indicate checks or electronic payments to the seller. They have a physical location in D.C. that you could likely visit for further information."
+
 <<include "Ch2_EndInterview_ANTONY">>

@@ -6,6 +6,11 @@
 + Saturday, March 27: Planning Session
 + Monday, April 9: Conclusion
 
+# Marlon Brando's Bad Day
+8am meet James Dean, searched Dean's office & found note & gave to foreman as he left
+1am lunch & send email to Labienus
+got shot leaving
+
 # Answers
 
 :: Ch3_Answers
