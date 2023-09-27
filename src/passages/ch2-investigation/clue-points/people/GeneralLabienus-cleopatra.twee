@@ -1,5 +1,4 @@
 :: CluePoint_GeneralLabienus_CLEOPATRA
-/* TODO: distinguish between scheduled & unscheduled */\
 <<locationheader "General Labienus">>\
 <<include "CluePoint_GeneralLabienus_SHARED:Snippet">>
 
