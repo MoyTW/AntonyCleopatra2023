@@ -48,5 +48,18 @@ His office is even more ostentatiously decorated, at times spilling over into ta
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+"Hortensia," you say, handing the agent your stack of printed receipts, "can you see that these are checked?"
+
+"Of course."
+
+"Awful man." You shudder. "I don't see why they keep him around. If it were up me, I'd have him exiled."
+
+Antony laughs. "I just wish he'd bathe. Who ever heard of a dirty holy man? Not how it's done at all. The funny thing is, when he came to the inaguration, he was perfectly hygenic. I think he does it on purpose."
+
+"Sorry to interrupt," says Hortensia, "but we've verified that all of the receipts are genuine, as corroborated by the establishments in question. Of note is that he did linger at <strong>First Connection</strong>."
+
+"Wonderful!" you cry, beaming. "As prompt as always."
+
+"Just doing my job."
+
 <<include "Ch2_EndInterview_CLEOPATRA">>

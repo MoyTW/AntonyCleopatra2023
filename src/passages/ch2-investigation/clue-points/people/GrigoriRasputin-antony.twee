@@ -50,5 +50,18 @@ His office is even more ostentatiously decorated, which just makes it look tacky
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+"Hortensia," says your wife, handing the agent her stack of printed receipts, "can you see that these are checked?"
+
+"Of course."
+
+"Awful man." Your wife shudders. "I don't see why they keep him around. If it were up me, I'd have him exiled."
+
+You laugh. "I just wish he'd bathe. Who ever heard of a dirty holy man? Not how it's done at all. The funny thing is, when he came to the inaguration, he was perfectly hygenic. I think he does it on purpose."
+
+"Sorry to interrupt," says Hortensia, "but we've verified that all of the receipts are genuine, as corroborated by the establishments in question. Of note is that he did linger at <strong>First Connection</strong>."
+
+"Wonderful!" cries your wife. "As prompt as always."
+
+"Just doing my job."
+
 <<include "Ch2_EndInterview_ANTONY">>

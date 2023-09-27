@@ -254,7 +254,6 @@ interface CluePoints {
       passage: 'CluePoint_GoldenLotus',
       defaultKnown: false,
       reveals: [
-        CluePointKey.NapoleonBonaparte,
         CluePointKey.GaiusMarius,
         CluePointKey.VitruviusPollio,
         CluePointKey.LiviaDrusilla,

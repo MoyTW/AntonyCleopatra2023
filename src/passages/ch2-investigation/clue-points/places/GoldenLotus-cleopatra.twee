@@ -1,8 +1,6 @@
 :: CluePoint_GoldenLotus_CLEOPATRA
 <<locationheader "Golden Lotus">>\
 <<nobr>>
-  <<run setup.CluePoints.markCluePointKnown('JamesDean')>>
-  <<run setup.CluePoints.markCluePointKnown('NapoleonBonaparte')>>
   <<run setup.CluePoints.markCluePointKnown('GaiusMarius')>>
   <<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>
   <<run setup.CluePoints.markCluePointKnown('LiviaDrusilla')>>
@@ -46,7 +44,6 @@ From there on Ms. Singh is very helpful. She explains that the particular cigare
 "Absolutely," she says. You leave the building with a list of six names.
 
 <strong>James Dean</strong>
-<strong>Napoleon Bonaparte</strong>
 <strong>Gaius Marius</strong>
 <strong>Vitruvius Pollio</strong>
 <strong>Livia Drusilla</strong>

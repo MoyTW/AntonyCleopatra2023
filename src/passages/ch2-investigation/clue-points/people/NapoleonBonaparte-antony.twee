@@ -38,9 +38,7 @@ Napoleon gestures towards the table. "Would you care for a drink? A bite to eat?
   <</if>>
   <<Question "Does the name Project STORM ring any bells?" "STORM">>
   <<Question "What were you doing on the fifteen of March?" "March">>
-  <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
-    <<Question "Do you know an engineer named Vitruvius Pollio?" "Vitruvius">>
-  <</if>>
+  <<Question "Do you know an engineer named Vitruvius Pollio?" "Vitruvius">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 
@@ -49,5 +47,12 @@ Napoleon gestures towards the table. "Would you care for a drink? A bite to eat?
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+After you reach the safety of the car, your wife turns to Hortensia. "Tell me, did the FBI know about Helene?"
+
+"It was in his dossier," she says.
+
+"So we can definitely say that Helene exists, that Pollio has in fact brought Napoleon packages, which included gifts, and that the two of them are familiar."
+
+"But," you add, "we can't definitely say that the packages didn't also contain secrets."
+
 <<include "Ch2_EndInterview_ANTONY">>

@@ -50,5 +50,20 @@ Your wife holds out her hand. "Pleased to meet you."
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+"A bit like prying teeth," you say, frowning.
+
+Your wife nods. "I'm surprised that she agreed to an interview. She was not enthusiastic about participating."
+
+"Well, she was in...would you call what she was in mourning?"
+
+"In pain, certainly. Mourning? It could be called that."
+
+"Hortensia," you say, "what's your opinion on the quality of the police report? You think we can trust them on her location on the night of?"
+
+"You can't trust the report, but I've gone over it and augmented it with other sources of information, and I'm comfortable saying that Tarita Brando was provably present at her home from 5:35 to 11:44 on that evening."
+
+"Hortensia," says your wife, "may I again tell you how wonderful you are?"
+
+"Just doing my job."
+
 <<include "Ch2_EndInterview_ANTONY">>

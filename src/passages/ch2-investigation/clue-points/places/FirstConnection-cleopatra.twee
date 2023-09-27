@@ -113,6 +113,20 @@ You frown as Antony laughs. "You didn't know?" he asks. You shake your head. "It
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
-TK Tell the player about unlocks
+"<strong>Rasputin</strong> seems suspicious," you declare.
+
+Antony nod. "<strong>Rasputin</strong> is always suspicious."
+
+"<strong>Rasputin</strong> with a briefcase is doubly so."
+
+"Shoot! We should've asked if they had security camera footage. Well, we can turn -"
+
+"Don't bother," says Hortensia, "they only keep a week's worth."
+
+"Oh."
+
+You sigh. "Would that your police were more competent, Antony."
+
+"Yeah. Yeah. No use crying over spilt milk. Maybe <strong>Hearst</strong> saw something."
+
 <<include "Ch2_EndInterview_CLEOPATRA">>

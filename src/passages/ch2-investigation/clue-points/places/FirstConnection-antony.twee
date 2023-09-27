@@ -111,6 +111,20 @@ You chuckle at her frown. "You didn't know?" you ask. She shakes her head. "It's
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
-TK Tell the player about unlocks
+"<strong>Rasputin</strong> seems suspicious," declares your wife.
+
+You nod. "<strong>Rasputin</strong> is always suspicious."
+
+"<strong>Rasputin</strong> with a briefcase is doubly so."
+
+"Shoot! We should've asked if they had security camera footage. Well, we can turn -"
+
+"Don't bother," says Hortensia, "they only keep a week's worth."
+
+"Oh."
+
+Your wife sighs. "Would that your police were more competent, Antony."
+
+"Yeah. Yeah. No use crying over spilt milk. Maybe <strong>Hearst</strong> saw something."
+
 <<include "Ch2_EndInterview_ANTONY">>

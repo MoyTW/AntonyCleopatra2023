@@ -1,5 +1,4 @@
 :: CluePoint_NapoleonBonaparte_CLEOPATRA
-/* TODO: distinguish between scheduled & unscheduled */\
 <<locationheader "Napoleon Bonaparte">>\
 You arrive at the French embassy nearly minutes before your appointment. You're met by a tired-looking you man who escorts you through the doors, up an elevator, and down a hallway. Halfway through the hallway a voice calls out. "Hold, Jean!"
 
@@ -38,9 +37,7 @@ Napoleon gestures towards the table. "Would you care for a drink? A bite to eat?
   <</if>>
   <<Question "Have you ever heard of something called Project STORM?" "STORM">>
   <<Question "Can you tell us what you were doing on the night of March 15?" "March">>
-  <<if setup.CluePoints.cluePointIsKnown('VitruviusPollio')>>
-    <<Question "Are you personally familiar with an engineer named Vitruvius Pollio?" "Vitruvius">>
-  <</if>>
+  <<Question "Are you personally familiar with an engineer named Vitruvius Pollio?" "Vitruvius">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 
@@ -49,5 +46,12 @@ Napoleon gestures towards the table. "Would you care for a drink? A bite to eat?
 /* --------------------------------------------------------------------- */\
 /* - EndInterview                                                      - */\
 /* --------------------------------------------------------------------- */\
-TK
+After you reach the safety of the car, you turn to Hortensia. "Tell me, did the FBI know about Helene?"
+
+"It was in his dossier," she says.
+
+"So we can definitely say that Helene exists, that Pollio has in fact brought Napoleon packages, which included gifts, and that the two of them are familiar."
+
+"But," says Antony, "we can't definitely say that the packages didn't also contain secrets."
+
 <<include "Ch2_EndInterview_CLEOPATRA">>
