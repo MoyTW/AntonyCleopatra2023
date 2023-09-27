@@ -83,9 +83,13 @@ Clue points available:
 
 :: CalendarSquareWidget [widget]
 <<widget "CalendarSquare">><<nobr>>
+  /* If you're past the date */
   <<set _month to _args[0]>>
   <<set _day to _args[1]>>
   <<set _disable to _args[2]>>
+  <<if setup.Calendar.isPastTimeslot(_month, _day)>>
+    <<set _disable to true>>
+  <</if>>
   <<capture _month, _day>>
     <<set _mtext to setup.Calendar.getMonthShortText(_month)>>
     <div style="text-align:right;"><strong>_mtext. _day</strong></div>

@@ -1,7 +1,8 @@
 :: LocationHeader [widget]
 <<widget "locationheader">><<nobr>>
   <div class="locationheader">_args[0]</div>
-  <<set _text to setup.Calendar.getCurrentTimeslotText()>>
+  <<set _dateSuffix to _args[1]>>
+  <<set _text to setup.Calendar.getCurrentTimeslotText(_dateSuffix)>>
   <<if _text>>
     <div class="dateheader">_text</div>
   <</if>>

@@ -6,8 +6,9 @@ interface Calendar {
 
   getCurrentTimeslot: () => Timeslot | undefined
   setCurrentTimeslot: (timeslot: Timeslot) => void
-  getCurrentTimeslotText: () => string | undefined
+  getCurrentTimeslotText: (suffix: string | undefined) => string | undefined
   isMorning: () => boolean
+  isPastTimeslot: (month: number, day: number, slot: string) => boolean
 
   advanceTime: () => void
 
@@ -62,7 +63,7 @@ interface Appointment {
       State.setVar(this.TIMESLOT_VAR, timeslot)
     }
 
-    getCurrentTimeslotText = () => {
+    getCurrentTimeslotText = (suffix: string | undefined) => {
       const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
       if (!cts) {
         return undefined
@@ -71,6 +72,8 @@ interface Appointment {
         const withoutTime = `${dayNames[d.getDay()]}, ${monthNames[(d.getMonth())]} ${cts.day}`
         if (cts.slot === this.ALL_DAY) {
           return withoutTime
+        } else if (suffix) {
+          return withoutTime + ', ' + suffix
         } else if (cts.slot === this.AM) {
           return `${withoutTime}, 9 a.m.`
         } else {
@@ -82,6 +85,12 @@ interface Appointment {
     isMorning = () => {
       const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
       return cts.slot === this.AM
+    }
+
+    // This is hella jank because our time advancement happens in the morning - hence if day is equal it's 'past'
+    isPastTimeslot = (month: number, day: number) => {
+      const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
+      return cts.month > month || (cts.month === month && cts.day >= day)
     }
 
     advanceTime = () => {

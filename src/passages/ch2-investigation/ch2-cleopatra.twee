@@ -16,7 +16,7 @@ TODO CH2 START
 
 
 :: Ch2_Bed_CLEOPATRA
-<<locationheader 'TODO Bed'>>\
+<<locationheader 'The Planning Room' 'Evening'>>\
 TODO
 
 <<InvestigationCalendar>>
@@ -50,8 +50,12 @@ you eat lunch
 
 :: Ch2_EndInterview_CLEOPATRA
 <<nobr>>
+  /* TODO: This is a jank as hell place to put this. */
+  <<set _cts to setup.Calendar.getCurrentTimeslot()>>
   <div id='options'>
-    <<if setup.Calendar.isMorning()>>
+    <<if _cts.month === 3 && _cts.day === 7 && _cts.slot === 'PM'>>
+      <<button "Retire for the evening." "Ch3_Start_CLEOPATRA">><</button>>
+    <<elseif setup.Calendar.isMorning()>>
       <<button "Go to lunch." "Ch2_Lunch_CLEOPATRA">><</button>>
     <<else>>
       <<button "Retire for the evening." "Ch2_Bed_CLEOPATRA">><</button>>
