@@ -69,9 +69,14 @@ Clue points available:
 
 :: CalendarSpanAndButtonWidget [widget]
 <<widget "CalendarSpanAndButton">><<nobr>>
+  <<set _disable to _args[3]>>
   <<set _spanId to setup.Calendar.makeSpanId(_args[0], _args[1], _args[2])>>
   <<idspan _spanId>>
-    <<CalendarButton _args[0] _args[1] _args[2]>>
+    <<if _disable>>
+      <<disable>><<CalendarButton _args[0] _args[1] _args[2]>><</disable>>
+    <<else>>
+      <<CalendarButton _args[0] _args[1] _args[2]>>
+    <</if>>
   <</idspan>>
 <</nobr>><</widget>>
 
@@ -80,13 +85,14 @@ Clue points available:
 <<widget "CalendarSquare">><<nobr>>
   <<set _month to _args[0]>>
   <<set _day to _args[1]>>
+  <<set _disable to _args[2]>>
   <<capture _month, _day>>
     <<set _mtext to setup.Calendar.getMonthShortText(_month)>>
     <div style="text-align:right;"><strong>_mtext. _day</strong></div>
     <div style="width:100%;">
-      <<CalendarSpanAndButton _month _day setup.Calendar.AM>>
+      <<CalendarSpanAndButton _month _day setup.Calendar.AM _disable>>
       <br/>
-      <<CalendarSpanAndButton _month _day setup.Calendar.PM>>
+      <<CalendarSpanAndButton _month _day setup.Calendar.PM _disable>>
     </div>
   <</capture>>
 <</nobr>><</widget>>
@@ -133,7 +139,7 @@ Clue points available:
       <tr>
         <td><<CalendarBlankSquare 2 28 "DC police">></td>
         <td><<CalendarBlankSquare 2 29 "doc rvw, plan">></td>
-        <td><<CalendarSquare 2 30>></td>
+        <td><<CalendarSquare 2 30 true>></td>
         <td><<CalendarSquare 2 31>></td>
         <td><<CalendarSquare 3 1>></td>
         <td><<CalendarSquare 3 2>></td>
