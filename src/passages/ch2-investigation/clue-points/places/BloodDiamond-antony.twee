@@ -1,0 +1,29 @@
+:: CluePoint_BloodDiamond_ANTONY
+<<locationheader "Blood Diamond">>\
+<<nobr>>
+  <<run setup.CluePoints.markCluePointKnown('MarieDeChampagne')>>
+<</nobr>>\
+Atop the jewelry sellers storefront are a stunningly crafted set of deep red glass letters, shimmering like gems in the daylight. You're not sure if the fact that they spell out the words "Blood Diamond" makes it better or worse, but it's certainly memorable. Their window displays are subdued in comparison, although their display pieces are pretty impressive. As soon as you enter, you can see recognition in the eyes of the staff, and while they're too polite to swarm you the hunger is palpable.
+
+If you'd thought that making it clear that you're here for a different, less commercial kind of business would sate their hunger, you were wrong. It merely transfigured it. As soon as you explain that you need the purchaser of the ring you found at <strong>Gary Danko</strong> identified, they immediately comply without even a hint of concern for the privacy of the party in question, who turns out to be a lady of means named <strong>Marie de Champagne</strong>. They top it off with her email and address, which is likely against company policy, but you don't complain.
+
+You manage to extricate yourself only after a long session of selfies, pictures, and autographs.
+
+<div id='options'><<nobr>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_BloodDiamond_ANTONY:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+As soon as you're safely in the car, Hortensia lets out a chuckle. "What an interesting set of salespeople."
+
+"Yeah," you grumble, "tell me about it."
+
+"Never mind the saplespeople," says your wife, "you have the name and address, yes?"
+
+"Yes," replies Hortensia. "I can set up an appointment any time."
+
+<<include "Ch2_EndInterview_ANTONY">>

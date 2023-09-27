@@ -1,0 +1,30 @@
+:: CluePoint_GaiusMarius_CLEOPATRA
+<<locationheader "Gaius Marius">>\
+The offices of Gaius Marius are adorned with hunting trophies, from antlers to a lion's head to the skin of a tiger laid out on the floor. A taxidermied beaver sniffs the air atop his bookshelf. You're forced to wonder how many of them he hunted himself, as the man looks barely capable of walking, much less any sort of stalking or shooting. He wears an eager grin on his baggy face as he waves at you "Come in," he says, "come in. I hear you've been given another case by your honored leader. Well, well. How can I help?"
+
+<<include "CluePoint_GaiusMarius_CLEOPATRA:Questions">>
+
+
+:: CluePoint_GaiusMarius_CLEOPATRA:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<Question "Have you ever met Marlon Brando?" "Brando">>
+  <<if _Brando>>
+    <<Question "Are you personally familiar with James Dean?" "Dean">>
+    <<Question "Are you personally familiar with Audrey Hepburn?" "Hepburn">>
+  <</if>>
+  <<Question "Do you smoke Golden Lotus cigarettes?" "Cigarettes">>
+  <<Question "Can you tell us what you were doing on the night of March 15?" "March">>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_GaiusMarius_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+TK
+<<include "Ch2_EndInterview_CLEOPATRA">>
+

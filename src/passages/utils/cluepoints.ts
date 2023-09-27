@@ -32,7 +32,6 @@ interface CluePoints {
     AudreyHepburn: 'AudreyHepburn',
     GeneralLabienus: 'GeneralLabienus',
     Horace: 'Horace',
-    HoracesMother: "HoracesMother",
     VitruviusPollio: 'VitruviusPollio',
     NapoleonBonaparte: 'NapoleonBonaparte',
     OttoVonBismarck: 'OttoVonBismarck',
@@ -57,7 +56,6 @@ interface CluePoints {
     CluePointKey.AudreyHepburn,
     CluePointKey.GeneralLabienus,
     CluePointKey.Horace,
-    CluePointKey.HoracesMother,
     CluePointKey.VitruviusPollio,
     CluePointKey.NapoleonBonaparte,
     CluePointKey.OttoVonBismarck,
@@ -130,14 +128,6 @@ interface CluePoints {
       name: 'Horace',
       type: CluePointType.Person,
       passage: 'CluePoint_Horace',
-      defaultKnown: true,
-      reveals: []
-    },
-    {
-      id: CluePointKey.HoracesMother,
-      name: "Horace's mother",
-      type: CluePointType.Person,
-      passage: 'CluePoint_HoracesMother',
       defaultKnown: true,
       reveals: []
     },

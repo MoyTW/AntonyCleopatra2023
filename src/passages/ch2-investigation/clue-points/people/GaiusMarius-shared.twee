@@ -1,0 +1,87 @@
+:: CluePoint_GaiusMarius_SHARED:SBrandoSnippet
+/* --------------------------------------------------------------------- */\
+/* - Brando                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Gracious, yes, we met often. You know how it is with senators and defense contracts. I was very sorry to hear what happened, I wish it hadn't. At least it was fast, from what I read." He sighs. "We hadn't met recently. I'm sorry, I can't think of anything that might be helpful."
+
+:: CluePoint_GaiusMarius_SHARED:ABrando
+<span class='antony-response'>"Did you know Marlon Brando?"</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SBrandoSnippet">>
+
+:: CluePoint_GaiusMarius_SHARED:CBrando
+<span class='cleopatra-response'>"Have you ever met Marlon Brando?"</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SBrandoSnippet">>
+
+
+:: CluePoint_GaiusMarius_SHARED:SDeanSnippet
+/* --------------------------------------------------------------------- */\
+/* - Dean                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Marlon introduced him to me once. We talked a little, but never much, and only about niceties."
+
+:: CluePoint_GaiusMarius_SHARED:ADean
+<span class='antony-response'>"Do you know James Dean?"</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SDeanSnippet">>
+
+:: CluePoint_GaiusMarius_SHARED:CDean
+<span class='cleopatra-response'>"Are you personally familiar with James Dean?"</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SDeanSnippet">>
+
+
+:: CluePoint_GaiusMarius_SHARED:SHepburnSnippet
+/* --------------------------------------------------------------------- */\
+/* - Hepburn                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Not yet," he says, "not yet! I imagine we'll become very familiar in the future, likely when the next big contract rolls around." He winks.
+
+:: CluePoint_GaiusMarius_SHARED:AHepburn
+<span class='antony-response'>"Do you know Audrey Hepburn?"</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SHepburnSnippet">>
+
+:: CluePoint_GaiusMarius_SHARED:CHepburn
+<span class='cleopatra-response'>"Are you personally familiar with Audrey Hepburn?"</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SHepburnSnippet">>
+
+
+:: CluePoint_GaiusMarius_SHARED:SCigarettesSnippet
+/* --------------------------------------------------------------------- */\
+/* - Cigarettes                                                     - */\
+/* --------------------------------------------------------------------- */\
+"I do. Why do you ask?"
+
+"It turns out that the brand of cigarettes might be related to the case."
+
+"Golly. I still don't see the relevance. Lots of folks have them."
+
+:: CluePoint_GaiusMarius_SHARED:ACigarettes
+<span class='antony-response'>"I hear you smoke Golden Lotus cigarettes."</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SCigarettesSnippet">>
+
+:: CluePoint_GaiusMarius_SHARED:CCigarettes
+<span class='cleopatra-response'>"Do you smoke Golden Lotus cigarettes?"</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SCigarettesSnippet">>
+
+
+:: CluePoint_GaiusMarius_SHARED:SMarchSnippet
+/* --------------------------------------------------------------------- */\
+/* - March                                                     - */\
+/* --------------------------------------------------------------------- */\
+"Let me check my calendar. Ah. You see," he says, "you may consider me above suspicion, as I was I was in Iowa. Look!" He spins his monitor around to reveal a picture of him in a sweaty white shirt, holding aloft a giant ear of corn. "Those Iowans do love thier corn," he chortles. "Sturdy, corn-fed lads they are, salt of the earth."
+
+:: CluePoint_GaiusMarius_SHARED:AMarch
+<span class='antony-response'>"What were you doing on the fifteen of March?"</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SMarchSnippet">>
+
+:: CluePoint_GaiusMarius_SHARED:CMarch
+<span class='cleopatra-response'>"Can you tell us what you were doing on the night of March 15?"</span>
+
+<<include "CluePoint_GaiusMarius_SHARED:SMarchSnippet">>

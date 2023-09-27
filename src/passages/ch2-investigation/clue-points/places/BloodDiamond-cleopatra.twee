@@ -1,0 +1,29 @@
+:: CluePoint_BloodDiamond_CLEOPATRA
+<<locationheader "Blood Diamond">>\
+<<nobr>>
+    <<run setup.CluePoints.markCluePointKnown('MarieDeChampagne')>>
+<</nobr>>\
+While you don't necessarily have any issues with buying diamonds or gems with blood, as blood is an essential part of statecraft and a Queen cannot avoid it, you're given to understand that many Americans do. This makes the naming of the establishment that you're about to enter curious. It can't help that they've mounted gigantic, blood-red letters of glass atop their storefront, proudly proclaiming their name to the world.
+
+When you enter, it becomes immediately clear that the proprieters are looking for a more financial type of violence. They immediately attempt to sell you on their jewelry, hard. It takes some argumentation before the nature of your visit becomes clear, at which point they become extremely amenable. They identify the buyer of the ring from <strong>Gary Danko</strong> immediately, without any of the quibbling about privacy or legal qualms so common amongst most Americans. It was purchased, they tell you, by a woman named <strong>Marie de Champagne</strong>. They even give you her email and address.
+
+They release you, but only after requesting an unusually large amount of autographs and photos, which you of course grant.
+
+<div id='options'><<nobr>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_BloodDiamond_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+As soon as you're safely in the car, Hortensia lets out a chuckle. "What an interesting set of salespeople."
+
+"Yeah," grumbles Antony, "tell me about it."
+
+"Never mind the salespeople," you say, "you have the name and address, yes?"
+
+"Yes," replies Hortensia. "I can set up an appointment any time."
+
+<<include "Ch2_EndInterview_CLEOPATRA">>
