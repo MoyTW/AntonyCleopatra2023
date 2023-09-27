@@ -2,6 +2,8 @@ interface Calendar {
   AM: string
   PM: string
 
+  getMonthShortText: (idx: number) => string | undefined
+
   getCurrentTimeslot: () => Timeslot | undefined
   setCurrentTimeslot: (timeslot: Timeslot) => void
   getCurrentTimeslotText: () => string | undefined
@@ -33,6 +35,7 @@ interface Appointment {
 
 (function () {
   const dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const shortMonthNames = ['Jan' ,'Feb' ,'Mar' ,'Apr' ,'May' ,'Jun' ,'Jul' ,'Aug' ,'Sep' ,'Oct' ,'Nov' ,'Dec'];
   const monthNames = ['January' ,'February' ,'March' ,'April' ,'May' ,'June' ,'July' ,'August' ,'September' ,'October' ,'November' ,'December'];
 
   class CalendarImpl implements Calendar {
@@ -42,6 +45,10 @@ interface Appointment {
 
     ENTRIES_VAR = '$CalendarImpl_entries'
     TIMESLOT_VAR = '$CalendarImpl_currentTimeslot'
+
+    getMonthShortText = (idx: number) => {
+      return shortMonthNames[idx]
+    }
 
     getCurrentTimeslot = () => {
       const cts = State.getVar(this.TIMESLOT_VAR)
@@ -78,8 +85,6 @@ interface Appointment {
     }
 
     advanceTime = () => {
-      // TODO: Month rollover
-      // TODO
       const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
       // TODO End game
       if (cts.slot === this.ALL_DAY || cts.slot === this.PM) {
@@ -87,6 +92,17 @@ interface Appointment {
         cts.slot = this.AM
       } else {
         cts.slot = this.PM
+      }
+
+      // Month rollover
+      if (cts.day === 32) {
+        cts.month += 1
+        cts.day = 1
+      }
+
+      // End game
+      if (cts.month === 3 && cts.day === 8) {
+        console.log('!!!!!!!!!!!!!!!!!!!!!!!!!')
       }
     }
 
