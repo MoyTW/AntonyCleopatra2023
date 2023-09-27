@@ -1,5 +1,4 @@
 :: CluePoint_JamesDean_SHARED:ACondolences
-/* TODO TK: Ask James Dean about the STORM program */\
 /* --------------------------------------------------------------------- */\
 /* - Condolences                                                       - */\
 /* --------------------------------------------------------------------- */\
@@ -33,6 +32,10 @@
 "What about the rest of his day?"
 
 "That was the only meeting I had. That was the last time I - well, was going to say that was the last time I saw him that day, but I suppose it's the last time I saw him at all." He pauses. "I mean, I went to the wake. I saw his body. But that's different. Anyways, that's what I know. I've talked to folks afterwards, because of course his death was...well, it was a hot subject. Everybody was talking about it, but all that's secondhand. I wouldn't be able to put any stock in it."
+
+"You mentioned the STORM program. Can you explain more?"
+
+"It's a new short-range air defense program, designed to protect against a range of air-based threats, from loitering munitions to missiles and helicopters." He shrugs. "It's very advanced but I don't know how much you're interested in the technical details."
 
 :: CluePoint_JamesDean_SHARED:ABrando
 <<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>\
