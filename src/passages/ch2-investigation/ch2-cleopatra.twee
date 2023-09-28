@@ -29,12 +29,12 @@ Antony sighs. "All right, all right, you point's taken."
 
 
 :: Ch2_Bed_CLEOPATRA
-<<locationheader 'The Planning Room' 'Evening'>>\
-TODO
-
+<<locationheader 'The Planning Room' 'Evening'>>
+After dinner you return to the Naval Observatory, where Hortensia busies herself with her files.
 <<InvestigationCalendar>>
-
-<<button [[Sleep.|Ch2_Morning_CLEOPATRA]]>><</button>>
+<div id='options'>\
+  <<button [[Go to sleep.|Ch2_Morning_CLEOPATRA]]>><</button>>
+</div>\
 
 
 :: Ch2_Morning_CLEOPATRA
@@ -52,14 +52,13 @@ You take a peaceful breakfast in the Naval Observatory with Antony and the kids.
   <<run setup.Calendar.advanceTime()>>
 <</nobr>>\
 <<locationheader 'Lunch' 'Noon'>>
-you eat lunch
+With the first investgation of the day done, you take a moment to eat a nice lunch and check your calendar.
 
 <<include "Ch2_DecideVisitSnippet">>
 
 
 :: Ch2_EndInterview_CLEOPATRA
 <<nobr>>
-  /* TODO: This is a jank as hell place to put this. */
   <<set _cts to setup.Calendar.getCurrentTimeslot()>>
   <div id='options'>
     <<if _cts.month === 3 && _cts.day === 7 && _cts.slot === 'PM'>>

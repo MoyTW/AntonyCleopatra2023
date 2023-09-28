@@ -36,30 +36,3 @@
 "Well," <<if setup.Roles.isAntony()>>you say,<<else>>says Antony,<</if>> "it looks like you're stuck with us again, aren't you?"
 
 "I suppose I am," replies the agent, an amused smile on her face, "but it's always enjoyable, so I don't mind."
-
-
-:: QuestionsSnippet
-/* TODO: remove this */
-<strong>\
-1) Who killed Marlon Brando? (9 points)
-2) Why was Marlon Brando killed? (5 points)
-3) Was there a security breach in Project STORM? If so, what was its nature, and who was involved? (5 points)
-4) What was Brando's note about First Connection about? (3 points)
-5) Was General Labienus involved, and if so, how? (3 points)
-</strong>\
-
-
-:: HowToPlaySnippet
-The goal of the game is to gather enough evidence to solve the case and answer a quiz at the end of the game.
-
-The game takes place over <strong>$startTurns turns.</strong>
-
-<strong>Every turn</strong>, each player can choose to <strong>investigate one lead.</strong>
-
-The possible leads listed in <strong>People & Places</strong> on the sidebar. As you interview people and investigate locations, new people and locations may unlock. After doing an interview of investigation, option for that character to revisit the location will be locked, but you can review the text of the result will be added to the sidebar for review, which you can do at any time.
-
-Once the 7 turns are over, you must present your case before Sejanus and answer a quiz, with each question being worth a certain number of points. Then the points are added to give a final score. The questions are as follows:
-
-<<include [[QuestionsSnippet]]>>
-
-

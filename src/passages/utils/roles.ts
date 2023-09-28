@@ -39,7 +39,6 @@ interface Roles {
       }
     }
 
-    // TODO: Unify this with the widgets (probably by calling wikify)
     getSeal = (role: string | undefined): JQuery<HTMLElement> => {
       if (role === undefined) {
         role = this.getRole()

@@ -49,7 +49,7 @@ Clue points available:
   <<capture _month, _day, _slot>>
     <<set _scheduled to setup.Calendar.getScheduled(_month, _day, _slot)>>
     <<if _scheduled.length > 0>>
-      <<set _buttonText to _scheduled[0].cluePointId>>
+      <<set _buttonText to setup.CluePoints.getName(_scheduled[0].cluePointId)>>
       <<set _class to _scheduled[0].role === setup.Roles.ANTONY ? 'antony-writing' : 'cleopatra-writing'>>
     <<else>>
       <<set _buttonText to ''>>
