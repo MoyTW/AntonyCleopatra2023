@@ -1,7 +1,8 @@
 :: Ch3_Receivers
-/* I want to do this in TS... */
-/* ...but I don't want an extra TS file that just adds unnecessary indirection. */
-/* I built this real awkwardly didn't I. */
+/* ##################################################################### */\
+/* # RECEIVERS                                                            # */\
+/* ##################################################################### */\
+/* lol we in crunch mode now ain't we */
 <<receive 'CH3_END_PLANNING' 'ALL'>>
   <<run $('#options').append(setup.Roles.getSeal(_receiveData.role))>>
 
@@ -25,24 +26,28 @@
 <<receive 'CH3_VOTE_KILLER' 'ALL'>>
   <<set _selector to `#${_receiveData.id}`>>
   <<run $(_selector).append(setup.Ch3.getVoteSeal(_receiveData.role))>>
+  <<run setup.Ch3.saveKiller(_receiveData.id)>>
   <<run setup.Ch3.processNonFinalVote()>>
 <</receive>>
 
 <<receive 'CH3_VOTE_MOTIVE' 'ALL'>>
   <<set _selector to `#${_receiveData.id}`>>
   <<run $(_selector).append(setup.Ch3.getMotiveSeal(_receiveData.role))>>
+  <<run setup.Ch3.saveMotive(_receiveData.id)>>
   <<run setup.Ch3.processNonFinalVote()>>
 <</receive>>
 
 <<receive 'CH3_VOTE_BREACH' 'ALL'>>
   <<set _selector to `#${_receiveData.id}`>>
   <<run $(_selector).append(setup.Ch3.getBreachSeal(_receiveData.role))>>
+  <<run setup.Ch3.saveBreach(_receiveData.id)>>
   <<run setup.Ch3.processNonFinalVote()>>
 <</receive>>
 
 <<receive 'CH3_VOTE_BREACHER' 'ALL'>>
   <<set _selector to `#${_receiveData.id}`>>
   <<run $(_selector).append(setup.Ch3.getBreacherSeal(_receiveData.role))>>
+  <<run setup.Ch3.saveBreacher(_receiveData.id)>>
   <<run setup.Ch3.processNonFinalVote()>>
 <</receive>>
 
@@ -51,9 +56,8 @@
 
   <<set _aseal to setup.Ch3.getSubmitSeal('ANTONY')[0]>>
   <<set _cseal to setup.Ch3.getSubmitSeal('CLEOPATRA')[0]>>
-  <<run console.log(_aseal, _cseal, _aseal.parentNode, _cseal.parentNode)>>
   <<if _aseal && _cseal && _aseal.parentNode && _aseal.parentNode === _cseal.parentNode>>
-    <<run console.log('?????????????????????????????????? TODO LOL')>>
+    <<goto "Ch3_LetterToSejanus">>
   <</if>>
 <</receive>>
 
@@ -66,6 +70,9 @@
 
 
 :: Ch3_EndSurvey
+/* ##################################################################### */\
+/* # END SURVEY                                                            # */\
+/* ##################################################################### */\
 <<nobr>>
   <div style="color:white; background:purple; text-align:center"><strong>Who killed Marlon Brando? [ Choose 1 ]</strong></div>
   <<set _peopleKnown to setup.CluePoints.getKnownCluePointIds('PERSON')>>
@@ -159,7 +166,7 @@
 <</nobr>>\
 
 <<nobr>>
-  <div style="color:white; background:purple; text-align:center"><strong>If there was a breach, who was responsible? [ Choose 1 ]</strong></div>
+  <div style="color:white; background:purple; text-align:center"><strong>If there was a breach, who was responsible? [ Choose 1, ignored if above is 'No'. ]</strong></div>
   <<set _peopleKnown to setup.CluePoints.getKnownCluePointIds('PERSON')>>
   <<set _left to _peopleKnown.slice(0, Math.ceil(_peopleKnown.length / 2))>>
   <<set _right to _peopleKnown.slice(Math.ceil(_peopleKnown.length / 2))>>
@@ -213,3 +220,72 @@
     <</iddiv>>
   </div>
 <</nobr>>\
+
+
+:: Ch3_LetterToSejanus
+/* ##################################################################### */\
+/* # LETTER                                                            # */\
+/* ##################################################################### */\
+<<nobr>>
+  <<set _killerName to setup.CluePoints.getName($Ch3K)>>
+  <<set _breacherName to setup.CluePoints.getName($Ch3BR)>>
+<</nobr>>\
+<span style='text-align:center'><h2><strong>New Message</strong></h2></span>\
+<hr>
+<strong>To:</strong> <em>LuciusAeliusSejanus@fbi.gov, Hortensia@fbi.gov</em>
+<hr>
+<strong>Subject:</strong> The Brando Case
+<hr>
+Hey Sejanus,
+
+We found your killer. Take a look at <strong>_killerName</strong>, who did it <<nobr>><strong>
+  <<if $Ch3M is 'MAdvancement'>>
+    in order to climb the corporate ladder.
+  <<elseif $Ch3M is 'MGrudge'>>
+    because Brando was an exceedingly awful person in private.
+  <<elseif $Ch3M is 'MRivalry'>>
+    because they saw him as a professional rival.
+  <<elseif $Ch3M is 'MCoverup'>>
+    to cover up a crime that Brando was on the verge of discovering.
+  <<elseif $Ch3M is 'MInfidelity'>>
+    because of his extramarital affair.
+  <<elseif $Ch3M is 'MWeapons'>>
+    in order to steal technical data regarding Project STORM.
+  <<elseif $Ch3M is 'MPersonnel'>>
+    in order to steal sensitive employee records from Raytheon.
+  <<elseif $Ch3M is 'MTheft'>>
+    to loot his wallet and other valuables.
+  <</if>>
+</strong><</nobr>> Hope that clears it up!
+
+Oh, and by the way, we found that <<nobr>>
+  <<if $Ch3BD is false>>
+    <strong>Project STORM hasn't been breached,</strong> so you don't need to worry about that.
+  <<else>>
+    <strong>_breacherName</strong> went and <strong>got into the Project STORM data,</strong> so you should get on that.
+  <</if>>
+<</nobr>>
+
+Transcripts, recordings, all that are attached.
+
+Toodles,
+Antony & Cleopatra
+
+<<nobr>>
+  <<if setup.Roles.isAntony()>>
+    <<set _p to "Ch3_Conclusion_ANTONY">>
+  <<else>>
+    <<set _p to "Ch3_Conclusion_CLEOPATRA">>
+  <</if>>
+  <div id='options'>
+    <<button "Send" _p>><</button>>
+  </div>
+<</nobr>>\
+
+
+:: Ch3_End
+<div class="locationheader">The End</div>
+Thank you for playing Antony & Cleopatra: Case IV: The Murder of Marlon Brando! I hope you enjoyed! If you'd like to give feedback or report a bug, you can visit TODO TK
+<div id='options'>\
+  <<button "Return to Main Menu.">><<run Engine.restart()>><</button>>
+</div>\

@@ -38,7 +38,7 @@ interface Motives {
     },
     {
       id: MotiveKey.Grudge,
-      description: `His repeated abusive behavior.`,
+      description: `His awful private behavior.`,
     },
     {
       id: MotiveKey.Rivalry,

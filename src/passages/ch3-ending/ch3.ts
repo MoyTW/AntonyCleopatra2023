@@ -4,6 +4,13 @@ interface Ch3 {
 
 (function () {
   class Ch3Impl implements Ch3 {
+    KILLER_ID_VAR = '$Ch3K'
+    MOTIVE_ID_VAR = '$Ch3M'
+    BREACHED_ID_VAR = '$Ch3BD'
+    BREACHER_ID_VAR = '$Ch3BR'
+
+    NO_BREACH_STR = 'no-breach'
+
     getVoteSeal = (role: string): JQuery<HTMLElement> => {
       const Roles = (setup as any).Roles as Roles
 
@@ -82,6 +89,24 @@ interface Ch3 {
           .addClass(sealClass)
           .html(html)
       }
+    }
+
+    saveKiller = (idstr: string) => {
+      State.setVar(this.KILLER_ID_VAR, idstr)
+    }
+
+    saveMotive = (idstr: string) => {
+      State.setVar(this.MOTIVE_ID_VAR, idstr)
+    }
+
+    saveBreach = (idstr: string) => {
+      const breached: boolean = idstr === 'breach-yes-button'
+      State.setVar(this.BREACHED_ID_VAR, breached)
+    }
+
+    saveBreacher = (idstr: string) => {
+      const id = idstr.replace('breach-', '')
+      State.setVar(this.BREACHER_ID_VAR, id)
     }
 
     _disableSubmission = () => {

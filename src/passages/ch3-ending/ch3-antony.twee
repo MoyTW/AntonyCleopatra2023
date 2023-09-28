@@ -18,3 +18,126 @@ The two of you rise early, take a pleasant breakfast, and then clear the dining 
 "No use delaying," says Cleopatra. "Let's start at the top."
 
 <<include "Ch3_EndSurvey">>
+
+
+:: Ch3_Conclusion_ANTONY
+/* ##################################################################### */\
+/* # Conclusion                                                        # */\
+/* ##################################################################### */\
+<div class="locationheader">The National Zoological Park</div>
+<div class="dateheader">Sunday, June 14, 11:37 a.m.</div>
+"This is boring," declares Alexander, pouting. "They barely have any elephants, and they won't even let you ride them!"
+
+Selene sighs at her brother. "It's a zoo, dummy. It's not a menagerie."
+
+"So? Mom's menagerie is better. This place only has, like, two elephants," he says, waving at the Elephant Trail. "Mom has like, ten back in Egypt, and they let you ride them!"
+
+Your wife laughs. "Little sun, the zoo has five elephants, and the only reason they let you ride them back home is your station. I must tell you that most people would consider this a very fine selection of beasts. And before you pass judgement on this zoo, you should realize that they have many animals which I do not."
+
+"Yeah? Like what?"
+
+"Well," you say, turning to address your son, a flash of red and silver catches your eye, gone faster than you can register it it. You shake your head.
+
+"Pandas," says your wife, meandering away from the Elephant Trail. "Panamanian Golden Frogs. Arapaimas."
+
+"What are those?" asks Selene.
+
+"They're the world's largest freshwater fish," she says. You scan the Sunday crowds. Nothing. "They live in the Amazon, in South America. They can grow bigger than you are tall, little moon, and they can breathe air."
+
+"Fishes can't breathe air," declares Alexander. "They breathe water!"
+
+"These fishes can," she says. "Do you want to go see them?"
+
+A hand lands on your shoulder, and you start, turning to see the dead eyes of Lucius Aelius Sejanus, clad in his distinctive red and silver, staring unblinkingly into yours.
+
+"Hello, Marcus," he says.
+
+<div id='options'>\
+  <<button "Hello, Lucius.">>
+    <<AppendPassage "1" "A1" "Ch3_Conclusion" "ALL">>
+  <</button>>
+</div>\
+
+
+:: CluePoint_AudreyHepburn_ANTONY:1
+<<nobr>>
+  <<set _killerName to setup.CluePoints.getName($Ch3K)>>
+  <<set _breacherName to setup.CluePoints.getName($Ch3BR)>>
+<</nobr>>\
+<<if _choice is 'A1'>>\
+  <span class='antony-response'>"Hello, Lucius."</span>
+
+  His hands lifts from your shoulder. "And the ever-lovely Cleopatra, I see. Your Majesty."
+
+  "Sejanus," she says, "such a surprise! It's good to see you."
+
+  You clear your throat. "Selene, Alexander, can you go with Bill and Perdiccas and watch the elephants?"
+
+  Selene looks like she might protest, but Alexander elbows her. "Yes, father," he says. They depart in under the watchful eyes of their guards.
+<<elseif _choice is 'C1'>>\
+  <span class='cleopatra-response'>"Little sun, little moon, go with Lysimachus and Perdiccas and watch the giraffes. We'll be along shortly."</span>
+
+  Selene looks like she might protest, but Alexander elbows her. "Yes, mother," he says. They depart in under the watchful eyes of their guards.
+
+  "Cleopatra," says Sejanus, "lovely as ever, Your Majesty."
+
+  "Sejanus, such a surprise! It's good to see you."
+<</if>>\
+
+<<if $Ch3K is 'JamesDean'>>\
+  "I must congratulate you both on your help."
+
+  "I see. Please, remind me what exactly we did."
+
+  "You recall that you were called upon to bring the murderer of the late Marlon Brando to justice."
+
+  "Yeah," you say, "how could I forget?"
+
+  "Well, you were correct. It was indeed <strong>James Dean</strong> who did the deed. It appears that your invitations to the Christmas Ball...<em>remain intact.</em>"
+
+  "Well, that's good. Did you get the rest of the story from him?"
+
+  "Oh, yes. He sang like a bird."\
+<<else>>\
+  "You have made an unfortunate mess of things," he says.
+
+  "Have we?"
+
+  "Yes. Recall that you were called upon to bring the murderer of the late Marlon Brando to justice."
+
+  "Yeah," you say, "how could I forget?"
+
+  "Well, you have failed. It was <strong>James Dean</strong>, not _killerName, and now he has fled to China, which as you well know has no extradition treaty with Neo-America. What a shame. It looks like your invitations to the Christmas Ball...<em>have been rescinded.</em>"
+
+  "Well, you win some you lose some. So, did you get the whole story?"
+
+  "No thanks to you."\
+<</if>> He paces back and forth in front of the Elephant Trail as he speaks. "<strong>Dean</strong> intercepted Brando as he left work and shot him to <strong>conceal his great crime</strong> - that he was <strong>selling the blueprints from Project STORM</strong> to one <strong>Grigori Rasputin.</strong> Brando had discovered proof of this, you see, when he visited Dean's office in the morning, where Dean had carelessly left a handwritten note from the perpetually piquant holy man, detailing a time and place for the exchange. He had already had his suspicions that there was a breach, seemingly involving his COO, but this confirmation forced a drastic recontextualization. Since Dean was away and missed that meeting, Brando couldn't confront him, so he copied down the note and left one of his own with Brian Whiskers, foreman at the location. And do you know what that note said?"
+
+"Please," says your wife, "cast light on this mystery for us."
+
+"It said that he had found him out, and that he had best turn him in or face justice by the end of the day! You couldn't have known that, of course. We found the note amongst <strong>Dean's</strong> posessions when we searched his house. But now, equipped with knowledge that the knowledge of his crime was no longer his secret, <strong>Dean</strong> was forced to act - and the act itself was distressingly straightforward. He hid, like a brigand waiting in shadows, and burst out at the exact moment that his target was passing by, putting two bullets into him and rifling through his posessions, pulling the evidence that Brando was carrying out of his briefcase and absconding with the contents of his pockets to make it seem a petty robbery." Sejanus stops to stare intently at Spike, the only male elephant at the zoo.
+
+"I see. Thank you-"
+
+"But that was not the end!" cries Sejanus. "You see, with Brando now dead, nothing stood between our villain and his devious ambitions! He headed to <strong>First Connection,</strong> meeting his apparently scent-less contact, proof that the man is indeed capable of withstanding the touch of water and soap. Witnesses there attest to his shocking cleanliness and a full head of hair which, when combed, shampooed, and conditioned, still looked awful. Why we haven't expelled that man I have no idea."
+
+"You should," agrees your wife.
+
+"I'll talk to the President about it. In any case, <strong>Rasputin</strong> and <strong>Dean</strong> carried identical briefcases, swapped them, and that's where the story ends."
+
+"Well," you say, "thanks for filling us in. You want to go see the - what were those fishes, Cleo?"
+
+"Arapaimas, the largest freshwater fish in the world, capable of surviving out of water for an entire day."
+
+"How's that sound, Lucius?"
+
+"Thank you for the offer," he says, "but there's always more work to be done. Marcus, Cleopatra, always a pleasure."
+
+"A pleasure," you say, watching him march off towards the parking lot. "Well."
+
+"Well, indeed," agrees your wife.
+
+<div id='options'>\
+  <<button "And that's the end of that." "Ch3_End">><</button>>
+</div>\
