@@ -9,7 +9,7 @@
   font-family: "Quattrocento";
   src:
     local("Quattrocento"),
-    url("fonts/Kalam/Quattrocento-Regular.ttf") format("TrueType");
+    url("fonts/Quattrocento/Quattrocento-Regular.ttf") format("TrueType");
 }
 
 .antony-writing {
