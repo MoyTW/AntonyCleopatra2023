@@ -1,6 +1,4 @@
 :: Ch1_CaseIntro_1_CLEOPATRA
-TODO: Proper Initialization!
-TODO: Hard-schedule Jocelyn, visit to crime scene
 <<script>>
   setup.Calendar.setCurrentTimeslot({
     year: 2021,
@@ -10,10 +8,10 @@ TODO: Hard-schedule Jocelyn, visit to crime scene
   })
   setup.Calendar.scheduleVisit(2, 30, 'AM', setup.Roles.CLEOPATRA, 'JocelynBrando')
   setup.Calendar.scheduleVisit(2, 30, 'PM', setup.Roles.CLEOPATRA, 'TheMurderScene')
-<</script>>
-<h1>CASE ONE</h1>\
-<h2>The Case of the Raytheon CEO.</h2>\
-<strong>March 29, 2021</strong>
+<</script>>\
+<span style='text-align:center'><h1>CASE ONE</h1></span>\
+<span style='text-align:center'><h2>The Case of the Raytheon CEO.</h2></span>\
+<div style='text-align:center'><strong>March 29, 2021</strong></div>\
 
 You and your handsome husband, Antony, are lounging around on your gigantic pleasure barge, soaking up the sun and watching the Potomac go by, when both your phones light up at once.
 

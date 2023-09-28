@@ -20,6 +20,13 @@ body {
   filter: grayscale(.8)
 }
 
+.hostcopy button {
+  background-color: #0A3161;
+  color: #FFFFFF;
+  border-color: #B31942;
+  border-radius: 10px;
+}
+
 .options {
   position: relative;
   width: 100%;
@@ -54,6 +61,14 @@ body {
 
 .irp-rec-div button {
   width: 100%;
+}
+
+.granite {
+  color: #000000b5;
+  border-style: inset;
+  border-width: thick;
+  background-color: #b9b4b1;
+  text-shadow: rgb(255 255 255 / 50%) 0.5px 1px 0.5px;
 }
 
 /* ########## Column ########## */
@@ -91,6 +106,38 @@ body {
 }
 
 /* ########## Seals ########## */
+.select-host-seal {
+  width: 24px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  border-style: solid;
+  color: green;
+  border-color: green;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  position: absolute;
+  /* right: 31.2px;
+  margin: -30.8px 2.4px 2.4px 2.4px; */
+  margin: 2.4px 33.6px 2.4px 2.4px;
+}
+
+.select-joiner-seal {
+  width: 24px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  border-style: solid;
+  color: pink;
+  border-color: pink;
+  background-color: lightseagreen;
+  border-radius: 50%;
+  position: absolute;
+  /* right: 0px;
+  margin: -30.8px 2.4px 2.4px 2.4px; */
+  margin: 2.4px 2.4px 2.4px 2.4px;
+}
+
 .antony-seal {
   width: 24px;
   text-align: center;

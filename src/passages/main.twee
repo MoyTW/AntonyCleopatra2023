@@ -1,5 +1,5 @@
 :: StoryTitle
-Multiplayer Hello, World!
+Antony & Cleopatra: Case IV: The Murder of Marlon Brando
 
 
 :: StoryData
@@ -23,7 +23,7 @@ Multiplayer Hello, World!
   <<run setup.Websocket.assignRoleToClient('ALL', State.variables.clientId)>>
   /* Pic dimensions - main: 68px - case: xx-large - murder: xxx-large */
 <</nobr>>\
-<div style="color: #000000b5; border-style: inset; border-width: thick; background-color: #b9b4b1; text-shadow: rgb(255 255 255 / 50%) 0.5px 1px 0.5px;">\
+<div class="granite">\
 <h1 class="game-title roman" style="margin-bottom: 0px; margin-top: 0px; font-size: xxx-large;">ANTONY & CLEOPATRA</h1>\
 <h2 class="game-title roman" style="margin: 0px">CASE IV</h2>\
 <h1 class="game-title roman" style="margin-top: 0px">THE <span style='color: darkred;'>MURDER</span> OF MARLON BRANDO</h1>\
@@ -53,12 +53,22 @@ Multiplayer Hello, World!
 
 :: HostGame
 <<run setup.Websocket.assignRoleToClient('HOST', State.variables.clientId)>>\
-<h1>Hosting a new game...</h1>\
-Your session ID is:
-<strong>$sessionId</strong>
-Send this ID to your partner.
+<div style='text-align:center'>\
+  <h1>Hosting a new game...</h1>\
+  Your session ID is:
+  <strong>$sessionId</strong>
+  <span id='hostcopy' class='hostcopy'><<button "Copy to clipboard">>
+    <<run navigator.clipboard.writeText($sessionId);>>
+  <</button>></span>
 
-The game will automatically start once your partner has joined.
+  Send this ID to your partner.
+
+  The game will automatically start once your partner has joined.
+
+  <div id='options'>\
+    <<button "Main Menu">><<run Engine.restart()>><</button>>
+  </div>\
+</div>\
 <<nobr>>
   <<receive 'JOIN_GAME_CLIENT_CONNECTED' 'HOST'>>
     <<if $clientId === $hostClientId>>
@@ -75,17 +85,22 @@ The game will automatically start once your partner has joined.
 :: JoinGame
 <<run setup.Websocket.assignRoleToClient('CLIENT', State.variables.clientId)>>\
 <<set _input>>\
-Please enter the session identifier you'd like to join.
-@@#jg-session-input;<<textbox '_input' '' autofocus>>@@
-@@#jg-join-button;<<disable>><<button 'Session identifier is invalid.'>>
-  <<run $('#jg-join-button').text('Joining game...')>>
-  <<run $('#jg-join-button').prop('disabled', true)>>
-  <<set $sessionId to $('#jg-session-input input')[0].value>>
-  <<connect $sessionId>>
-  <<set $partnerClientId to $clientId>>
-  <<send 'JOIN_GAME_CLIENT_CONNECTED' { partnerClientId: $clientId }>><</send>>
-<</button>><</disable>>@@\
-<<button [[Main Menu|Start]]>><</button>>
+<div style='text-align: center;'>\
+  Please enter the session identifier you'd like to join.
+  @@#jg-session-input;<<textbox '_input' '' autofocus>>@@
+</div>\
+
+<div id='options'>\
+  @@#jg-join-button;<<disable>><<button 'Session identifier is invalid.'>>
+    <<run $('#jg-join-button').text('Joining game...')>>
+    <<run $('#jg-join-button').prop('disabled', true)>>
+    <<set $sessionId to $('#jg-session-input input')[0].value>>
+    <<connect $sessionId>>
+    <<set $partnerClientId to $clientId>>
+    <<send 'JOIN_GAME_CLIENT_CONNECTED' { partnerClientId: $clientId }>><</send>>
+  <</button>><</disable>>@@\
+  <<button [[Main Menu|Start]]>><</button>>
+</div>\
 <<done>><<script>>
   const button = $('#jg-join-button button')
   $('#jg-session-input input').on('input', function(ev) {
@@ -107,104 +122,128 @@ Please enter the session identifier you'd like to join.
 
 
 :: MainMenu_Credits
-TODO: Credits!
+<strong>Antony & Cleopatra: Case IV: The Murder of Marlon Brando</strong> was made by by <strong>Travis Moy</strong> (<a href="https://muffituffiwuffi.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a>) and released for <a href="https://ifcomp.org/comp/2022" target="_blank" rel="noopener noreferrer">IFComp 2023</a>.
 
-<<button [[Main Menu|Start]]>><</button>>
+Thanks to:
+<ul>\
+  <li>Autumn Chen</li>
+  <li>Dan Fabulich</li>
+  <li>Kelsey</li>
+  <li>Amanda Walker</li>
+  <li>Tom</li>
+  <li>Ian Holmes</li>
+  <li>Milo van Mesdag</li>
+</ul>\
+
+<div id='options'>\
+  <<button [[Main Menu|Start]]>><</button>>
+</div>\
 
 
 :: MainMenu_About
-TODO: About!
+Oh my God this game is as dumb as rocks.
 
-<<button [[Main Menu|Start]]>><</button>>
+If you're interested in how this was done, I've put the source code up on GitHub:
+<ul>\
+  <li><a href="https://github.com/MoyTW/sugarcube-2/tree/resize-dialog-selectively" target="_blank" rel="noopener noreferrer">The modified version of Sugarcube</a></li>
+  <li><a href="https://github.com/MoyTW/AntonyCleopatra2023" target="_blank" rel="noopener noreferrer">The game</a></li>
+  <li><a href="https://github.com/MoyTW/MultiplayerTwineServer" target="_blank" rel="noopener noreferrer">The server</a></li>
+</ul>\
+You can reach me at moytravis@gmail.com for questions, comments, bug reports, or whatever else.
+
+<div id='options'>\
+  <<button [[Main Menu|Start]]>><</button>>
+</div>\
 
 
 :: SelectCharacter
 /* TODO: Rewrite the select character screen to be not ugly and also let you unready! */
-<h1 class="passage-h1">Pick Your Character</h1>\
-@@#sc-character-buttons;<div class='row'>\
-  <div class='column'>\
-    <h2 class="passage-h2">Marcus Antonius</h2>\
-    TODO: Description
-    <<button "Antony">>
-      <<script>>
-        if (State.variables.clientId === State.variables.hostClientId) {
-          $("#sc-host-selection").text(`TODO`)
-        } else {
-          $("#sc-partner-selection").text(`TODO`)
-        }
-      <</script>>
-      <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "ANTONY", characterName: "Antony" }>><</send>>
-    <</button>>\
-  </div>\
-  <div class='column'>\
-    <h2 class="passage-h2">Cleopatra VII Thea Philopater</h2>\
-    TODO: Description
-
-    <<button "Cleopatra">>
-      <<script>>
-        if (State.variables.clientId === State.variables.hostClientId) {
-          $("#sc-host-selection").text(`TODO`)
-        } else {
-          $("#sc-partner-selection").text(`TODO`)
-        }
-      <</script>>
-      <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "CLEOPATRA", characterName: "Cleopatra" }>><</send>>\
-    <</button>>\
-  </div>\
-</div>@@\
+<span style='text-align: center'><h1 class="passage-h1">Select Your Character</h1></span>\
+<<nobr>>
+  <div class='row' style='text-align:center; align-items: center;'>
+    <div class='column granite' style='margin: 0px 5px 0px 5px;'>
+      <h1 class="roman" style='margin: 0px 5px 0px 5px;'>Marcus Antonius</h1>
+      <h2 class="roman" style='margin: 0px 5px 0px 5px;'>Vice-President of Neo-America</h2>
+    </div>
+    <div class='column granite' style='margin: 0px 5px 0px 5px;'>
+      <h1 class="roman" style='margin: 0px 5px 0px 5px;'>Cleopatra VII Thea Philopater</h1>
+      <h2 class="roman" style='margin: 0px 5px 0px 5px;'>Queen of Egypt</h2>
+    </div>
+  </div>
+  <div class='row' style='text-align:center; align-items: center;'>
+    <div class='column' style='margin: 0px 5px 0px 5px;'>
+      <br>
+      <em>"It is an incredible thing, and almost a miracle, how he in a few, not months, but days, squandered all that vast wealth. There was an immense quantity of wine, an excessive abundance of very valuable plate, much precious apparel, great quantities of splendid furniture, and other magnificent things in many places, such as one was likely to see belonging to a man who was not indeed luxurious but who was very wealthy. Of all this in a few days there was nothing left. What Charybdis was ever so voracious? Charybdis, do I say? Charybdis, if she existed at all, was only one animal."</em>
+      <span style='text-align:right'>- Cicero, 2nd Philippic</span>
+      <br>
+    </div>
+    <div class='column' style='margin: 0px 5px 0px 5px;'>
+      <br>
+      <em>"He had love affairs with queens too, including Eunoe the Moor, wife of Bogudes, on whom, as well as on her husband, he bestowed many splendid presents, as Naso writes; but above all with Cleopatra, with whom he often feasted until daybreak, and he would have gone through Egypt with her in her state-barge almost to Aethiopia, had not his soldiers refused to follow him. Finally he called her to Rome and did not let her leave until he had ladened her with high honours and rich gifts, and he allowed her to give his name to the child which she bore."</em>
+      <span style='text-align:right'>- Suetonius, The Twelve Caesars</span>
+      <br>
+    </div>
+  </div>
+<</nobr>>\
+@@#sc-character-buttons;<<nobr>>
+  <div class='row ch3-seal-div' style='text-align:center'>
+    <div id='antony-btn' class='column' style='margin: 0px 5px 0px 5px; flex-direction: row-reverse;'>
+      <<button "Antony">>
+        <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "ANTONY", characterName: "Antony" }>><</send>>
+      <</button>>
+    </div>
+    <div id='cleopatra-btn' class='column' style='margin: 0px 5px 0px 5px; flex-direction: row-reverse;'>
+      <<button "Cleopatra">>
+        <<send 'SELECT_CHARACTER_SELECTED' { characterRole: "CLEOPATRA", characterName: "Cleopatra" }>><</send>>
+      <</button>>
+    </div>
+  </div>
+<</nobr>>@@\
 <<nobr>><<receive 'SELECT_CHARACTER_SELECTED' 'ALL'>><<script>>
   const data = State.temporary.receiveData
   if (data.clientId === State.variables.hostClientId) {
     State.variables.hostCharacterRole = data.characterRole
     State.variables.hostCharacterName = data.characterName
-    $("#sc-host-selection").text(`Host has selected ${State.variables.hostCharacterName}.`)
+    if (data.characterRole === 'ANTONY') {
+      $('#antony-btn').append(setup.Roles.getHostSeal())
+    } else {
+      $('#cleopatra-btn').append(setup.Roles.getHostSeal())
+    }
   } else {
     State.variables.partnerCharacterRole = data.characterRole
     State.variables.partnerCharacterName = data.characterName
-    $("#sc-partner-selection").text(`Joiner has selected ${State.variables.partnerCharacterName}.`)
+    if (data.characterRole === 'ANTONY') {
+      $('#antony-btn').append(setup.Roles.getJoinerSeal())
+    } else {
+      $('#cleopatra-btn').append(setup.Roles.getJoinerSeal())
+    }
   }
   if (State.variables.hostCharacterRole && State.variables.partnerCharacterRole && State.variables.hostCharacterRole != State.variables.partnerCharacterRole) {
-    $('#sc-confirm button').prop('disabled', false)
+    $('#options button').prop('disabled', false)
   } else {
-    $('#sc-confirm button').prop('disabled', true)
+    const hcs = setup.Roles.getHostConfirmSeal()[0]
+    if (hcs) { hcs.remove() }
+    const jcs = setup.Roles.getJoinerConfirmSeal()[0]
+    if (jcs) { jcs.remove() }
+    console.log('??????', hcs, jcs)
+    $('#options button').prop('disabled', true)
   }
 <</script>><</receive>><</nobr>>\
 
-@@#sc-host-selection;<<if $hostCharacterRole is undefined>>\
-  Host has not yet selected a character.\
-<<else>>\
-  Host has selected $hostCharacterName.\
-<</if>>@@
-@@#sc-partner-selection;<<if $partnerCharacterRole is undefined>>\
-  Joiner has not yet selected a character.\
-<<else>>\
-  Joiner has selected $partnerCharacterName.\
-<</if>>@@
-
-@@#sc-confirm;<<disable>><<button "Confirm choices">>
-  <<script>>
-    const button = $('#sc-confirm button')
-    button.html('Waiting for partner to confirm...')
-    button.prop('disabled', true)
-    $('#sc-character-buttons button').prop('disabled', true)
-  <</script>>
+<div id='options' class='ch3-submit'><<disable>><<button "Confirm choices">>
   <<send 'SELECT_CHARACTER_CONFIRMED' {}>><</send>>
-<</button>><</disable>>@@
+<</button>><</disable>></div>\
 <<nobr>><<receive 'SELECT_CHARACTER_CONFIRMED' 'ALL'>><<script>>
   const data = State.temporary.receiveData
-  // selectCharacterHostConfirmed
-  if (data.clientId === State.variables.clientId) {
-    const button = $('#sc-confirm button')
-    button.html('Waiting for partner to confirm...')
-    button.prop('disabled', true)
-    $('#sc-character-buttons button').prop('disabled', true)
-  }
   if (data.clientId === State.variables.hostClientId) {
-    State.variables.selectCharacterHostConfirmed = true
+    $('#options').append(setup.Roles.getHostConfirmSeal())
   } else {
-    State.variables.selectCharacterPartnerConfirmed = true
+    $('#options').append(setup.Roles.getJoinerConfirmSeal())
   }
-  if (State.variables.selectCharacterHostConfirmed && State.variables.selectCharacterPartnerConfirmed) {
+  const hcs = setup.Roles.getHostConfirmSeal()[0]
+  const jcs = setup.Roles.getJoinerConfirmSeal()[0]
+
+  if (hcs && jcs && hcs.parentNode && hcs.parentNode === jcs.parentNode) {
     setup.Websocket.assignRoleToClient(State.variables.hostCharacterRole, State.variables.hostClientId)
     setup.Websocket.assignRoleToClient(State.variables.partnerCharacterRole, State.variables.partnerClientId)
     if (setup.Roles.isAntony()) {

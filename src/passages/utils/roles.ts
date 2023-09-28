@@ -57,6 +57,51 @@ interface Roles {
           .html(html)
       }
     }
+
+    getHostSeal = (): JQuery<HTMLElement> => {
+      const onPage = $(`#role-HOST-seal`)
+      if (onPage.length > 0) {
+        return onPage
+      } else {
+        return jQuery(document.createElement('div'))
+          .attr('id', `role-HOST-seal`)
+          .addClass('select-host-seal')
+          .html('<strong>H</strong>')
+      }
+    }
+    getHostConfirmSeal = (): JQuery<HTMLElement> => {
+      const onPage = $(`#role-HOST-CONFIRM-seal`)
+      if (onPage.length > 0) {
+        return onPage
+      } else {
+        return jQuery(document.createElement('div'))
+          .attr('id', `role-HOST-CONFIRM-seal`)
+          .addClass('select-host-seal')
+          .html('<strong>H</strong>')
+      }
+    }
+    getJoinerSeal = (): JQuery<HTMLElement> => {
+      const onPage = $(`#role-JOINER-seal`)
+      if (onPage.length > 0) {
+        return onPage
+      } else {
+        return jQuery(document.createElement('div'))
+          .attr('id', `role-JOINER-seal`)
+          .addClass('select-joiner-seal')
+          .html('<strong>J</strong>')
+      }
+    }
+    getJoinerConfirmSeal = (): JQuery<HTMLElement> => {
+      const onPage = $(`#role-JOINER-CONFIRM-seal`)
+      if (onPage.length > 0) {
+        return onPage
+      } else {
+        return jQuery(document.createElement('div'))
+          .attr('id', `role-JOINER-CONFIRM-seal`)
+          .addClass('select-joiner-seal')
+          .html('<strong>J</strong>')
+      }
+    }
   }
 
   (setup as any).Roles = new RolesImpl()
