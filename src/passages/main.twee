@@ -40,6 +40,8 @@ Antony & Cleopatra: Case IV: The Murder of Marlon Brando
   Together, <strong>they fight crime!</strong>
 </div>\
 
+<em><strong>[ This is a two-player text game which can take up to two hours. Voice chat is recommended, but not required. ]</strong></em>
+
 <div id='options'><<nobr>>
   <<button [[Host a game|HostGame]]>>
   <<set $sessionId to setup.Websocket.uuidv4()>>
@@ -62,7 +64,7 @@ Antony & Cleopatra: Case IV: The Murder of Marlon Brando
     <<run navigator.clipboard.writeText($sessionId);>>
   <</button>></span>
 
-  Send this ID to your partner.
+  Send this ID to your partner. If you're not already on voice chat, this is a good chance to do so.
 
   The game will automatically start once your partner has joined.
 
@@ -87,7 +89,7 @@ Antony & Cleopatra: Case IV: The Murder of Marlon Brando
 <<run setup.Websocket.assignRoleToClient('CLIENT', State.variables.clientId)>>\
 <<set _input>>\
 <div style='text-align: center;'>\
-  Please enter the session identifier you'd like to join.
+  Please enter the session identifier you'd like to join. If you're not already on voice chat, this is a good chance to do so.
   @@#jg-session-input;<<textbox '_input' '' autofocus>>@@
 </div>\
 
