@@ -131,8 +131,11 @@ You spend a few hours relaxing and attending to affairs of state.
 
 :: Ch2_DecideVisitSnippet
 <<set _cts to setup.Calendar.getCurrentTimeslot()>>\
-/* TODO: center this, probably, & disable all the buttons */\
-<<CalendarSquare _cts.month _cts.day>>
+<div style="display: flex; justify-content: center;">\
+  <table class="planning-calendar" style="width:50%">\
+    <tbody><tr><td><<CalendarSquare _cts.month _cts.day>></td></tr></tbody>
+  </table>\
+</div>\
 <div id='options'><<nobr>>
   /* ##### Scheduled Visit ##### */
   <<set _scheduled to setup.Calendar.getScheduledNow()>>

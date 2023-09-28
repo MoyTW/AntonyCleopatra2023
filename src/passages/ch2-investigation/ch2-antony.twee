@@ -18,7 +18,7 @@ You sigh. "All right, all right, you point's taken."
 
 "Just doing my job."
 
-<strong>[ TODO: You can access the How To Play window on the sidebar. ]</strong>
+<em><strong>[ TODO: You can access the How To Play window on the sidebar. ]</strong></em>
 <<InvestigationCalendar>>
 <div id='options'>\
   <<button "Enough planning. Time to call it a night.">>
@@ -41,12 +41,8 @@ TODO
 <<nobr>>
   <<run setup.Calendar.advanceTime()>>
 <</nobr>>\
-<<locationheader 'Waking Up'>>\
-TODO
-
-You wake up at 6:30, do your morning routine, and exercise for an hour before reconvening.
-
-You check the plan for today.
+<<locationheader 'Breakfast' '7:30 a.m.'>>
+You take a peaceful breakfast in the Naval Observatory with your wife and the kids. Once the kids are off for school, you check the investigation calendar and get ready for the day.
 
 <<include "Ch2_DecideVisitSnippet">>
 
@@ -55,7 +51,7 @@ You check the plan for today.
 <<nobr>>
   <<run setup.Calendar.advanceTime()>>
 <</nobr>>\
-<<locationheader "Lunch">>
+<<locationheader "Lunch" "Noon">>
 you eat lunch
 
 <<include "Ch2_DecideVisitSnippet">>

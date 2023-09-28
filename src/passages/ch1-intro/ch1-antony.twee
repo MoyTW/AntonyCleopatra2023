@@ -56,7 +56,7 @@ She clicks her tongue. "What did Dave tell you about the timeframe?"
 <<set $Ch1_IntroSeen to true>>\
 <<include IntroductionSnippet>>
 
-<em><strong>[ You can review the introduction at any point via the right sidebar. ]</strong></em>
+<em><strong>[ You can now review the introduction at any point via the right sidebar, as well as the dramatis personae. ]</strong></em>
 
 <div id='options'>\
   <<button [[Start your investigation!|Ch2_Start_ANTONY]]>><</button>>
