@@ -10,7 +10,7 @@
 <</nobr>>\
 As soon as enter his office, Titus stands up and comes out from behind his desk. "Antony," he exclaims, a broad grin on his face, "wonderful to see you!"
 
-"Titus," <<if setup.Roles.isAntony()>>you say,<<else>>calls Antony,<</if>> "it's been a long time!" <<if setup.Roles.isAntony()>>You<<else>>They<</if>> grab each other by the shoulders and kiss, grinning. "It looks like you've got yourself tanged up some drama, haven't you?"
+"Titus," <<if setup.Roles.isAntony()>>you say,<<else>>calls Antony,<</if>> "it's been a long time!" <<if setup.Roles.isAntony()>>You<<else>>They<</if>> grab each other by the shoulders and kiss, grinning. "It looks like you've got yourself tangled up in some drama, haven't you?"
 
 "You could say that," he replies. He pulls back, <<if setup.Roles.isAntony()>>saluting your wife.<<else>>giving you a sharp salute.<</if>> "Your Majesty," he says.
 

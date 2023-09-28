@@ -40,7 +40,7 @@ His office is even more ostentatiously decorated, which just makes it look tacky
     <<Question "Do you know Audrey Hepburn?" "Hepburn">>
   <</if>>
   <<Question "Does the name Project STORM ring any bells?" "STORM">>
-  <<Question "What were you doing on the fifteen of March?" "March">>
+  <<Question "What were you doing on the fifteenth of March?" "March">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 

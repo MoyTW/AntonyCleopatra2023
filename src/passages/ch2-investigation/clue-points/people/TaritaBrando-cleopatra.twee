@@ -12,10 +12,10 @@ Before you've finished disembarking, you spot Ms. Brando climbing up the steps f
 
 <div id='options'>\
   <<button "Sit on the couch.">>
-    <<AppendPassage "1" "A1" "CluePoint_TaritaBrando" "ALL">>
+    <<AppendPassage "1" "C1" "CluePoint_TaritaBrando" "ALL">>
   <</button>>
   <<button "Sit in one of the chairs.">>
-    <<AppendPassage "1" "A2" "CluePoint_TaritaBrando" "ALL">>
+    <<AppendPassage "1" "C2" "CluePoint_TaritaBrando" "ALL">>
   <</button>>
 </div>
 

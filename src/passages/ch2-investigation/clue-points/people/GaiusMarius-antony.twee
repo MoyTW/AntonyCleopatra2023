@@ -16,7 +16,7 @@ You meet Gaius Marius, Senator from Nebraska, at his office. On the walls are mo
     <<Question "Do you know Audrey Hepburn?" "Hepburn">>
   <</if>>
   <<Question "I hear you smoke Golden Lotus cigarettes." "Cigarettes">>
-  <<Question "What were you doing on the fifteen of March?" "March">>
+  <<Question "What were you doing on the fifteenth of March?" "March">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 

@@ -34,7 +34,7 @@ Livia opts to meet you in the Naval Observatory rather than the White House, whi
 <div id='options'><<nobr>>
   <<Question "Did you know Marlon Brando?" "Brando">>
   <<Question "Tell us what you know about Golden Lotus cigarettes." "Cigarettes">>
-  <<Question "What were you doing on the fifteen of March?" "March">>
+  <<Question "What were you doing on the fifteenth of March?" "March">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\
 

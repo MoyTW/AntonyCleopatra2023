@@ -1,6 +1,6 @@
 :: CluePoint_NapoleonBonaparte_ANTONY
 <<locationheader "Napoleon Bonaparte">>\
-You arrive at the French embassy nearly minutes before your appointment. You're met by a tired-looking you man who escorts you through the doors, up an elevator, and down a hallway. Halfway through the hallway a voice calls out. "Hold, Jean!"
+You arrive at the French embassy only minutes before your appointment. You're met by a tired-looking you man who escorts you through the doors, up an elevator, and down a hallway. Halfway through the hallway a voice calls out. "Hold, Jean!"
 
 You turn to see Napoleon himself, decked out in his usual finery with his trademark long coat, although he has opted to leave his hat behind. "Mr. Vice-President," he cries, "Your Majesty, it is my honor again to see you!" He marches up to you, kissing you on the cheek, and you return the gesture, which he repeats with your wife. "My office is far too formal for a meeting such as this," he says. "Come with me!"
 
@@ -36,7 +36,7 @@ Napoleon gestures towards the table. "Would you care for a drink? A bite to eat?
     <<Question "Do you know Audrey Hepburn?" "Hepburn">>
   <</if>>
   <<Question "Does the name Project STORM ring any bells?" "STORM">>
-  <<Question "What were you doing on the fifteen of March?" "March">>
+  <<Question "What were you doing on the fifteenth of March?" "March">>
   <<Question "Do you know an engineer named Vitruvius Pollio?" "Vitruvius">>
   <<EndInterview "That's all we needed for today.">>
 <</nobr>></div>\

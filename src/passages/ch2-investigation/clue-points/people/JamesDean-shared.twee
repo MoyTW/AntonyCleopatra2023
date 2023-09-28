@@ -110,7 +110,7 @@ James sighs. "Antony," he says, "are you trying to imply that I might have motiv
 
 "I think it well deserved," answers <<if setup.Roles.isAntony()>>James.<<else>>Dean.<</if>>
 
-"I do find the prominence of women in positions of leadership in American defense firms fascinating. Boeing Defense has Leanne Caret, General Motors Mary Barra, General Dynamics Phebe Novakovic, and Northrup Grumman has Kathy Warden. Now Raytheon has Hepburn. If not for Hewson stepping down at Lockheed Martin, all five of the top United States defense contractors would be lead by woman."
+"I do find the prominence of women in positions of leadership in American defense firms fascinating. Boeing Defense has Leanne Caret, General Motors Mary Barra, General Dynamics Phebe Novakovic, and Northrup Grumman has Kathy Warden. Now Raytheon has Hepburn. If not for Hewson stepping down at Lockheed Martin, all five of the top United States defense contractors would be led by woman."
 
 "You, uh, well - that's a good memory you've got." <<if setup.Roles.isAntony()>>James<<else>>Dean<</if>> blinks. "Do you - is that the kind of things Your Majesty - well, I - I suppose keeping track of that thing is part of your job, isn't it?"
 

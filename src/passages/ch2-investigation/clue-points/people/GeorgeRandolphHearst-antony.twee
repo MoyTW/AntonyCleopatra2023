@@ -16,7 +16,7 @@ You peer into Hearst's office, which you've never seen, despite having met the m
 <div id='options'><<nobr>>
   <<Question "Did you know Marlon Brando?" "Brando">>
   <<Question "Does the name Project STORM ring any bells?" "STORM">>
-  <<Question "You were at the bar <strong>First Connection</strong> the fifteen of March, weren't you?" "March">>
+  <<Question "You were at the bar <strong>First Connection</strong> the fifteenth of March, weren't you?" "March">>
   <<if _March>>
     <<Question "Was Rasputin alone, or in a group?" "Rasputin">>
   <</if>>

@@ -57,7 +57,7 @@ She clicks her tongue. "What did Dave tell you about the timeframe?"
 <<set $Ch1_IntroSeen to true>>\
 <<include IntroductionSnippet>>
 
-<em><strong>[ You can now review the introduction at any point via the right sidebar, as well as the dramatis personae. ]</strong></em>
+<em><strong>[ You can now review the introduction at any point via the right sidebar, as well as the dramatis personae. Visitable characters and locations are marked in bold and added to the People & Places tab as you discover them. ]</strong></em>
 
 <div id='options'>\
   <<button [[Start your investigation!|Ch2_Start_ANTONY]]>><</button>>

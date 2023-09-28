@@ -142,7 +142,7 @@ Rasptuin guffaws. "Why do you think I was late today?"
 "Yes, please do."
 
 :: CluePoint_GrigoriRasputin_SHARED:AMarch
-<span class='antony-response'>"What were you doing on the fifteen of March?"</span>
+<span class='antony-response'>"What were you doing on the fifteenth of March?"</span>
 
 <<include "CluePoint_GrigoriRasputin_SHARED:SMarchSnippet">>
 

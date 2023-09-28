@@ -77,7 +77,7 @@
 "Let me check my calendar. Ah. You see," he says, "you may consider me above suspicion, as I was I was in Iowa. Look!" He spins his monitor around to reveal a picture of him in a sweaty white shirt, holding aloft a giant ear of corn. "Those Iowans do love thier corn," he chortles. "Sturdy, corn-fed lads they are, salt of the earth."
 
 :: CluePoint_GaiusMarius_SHARED:AMarch
-<span class='antony-response'>"What were you doing on the fifteen of March?"</span>
+<span class='antony-response'>"What were you doing on the fifteenth of March?"</span>
 
 <<include "CluePoint_GaiusMarius_SHARED:SMarchSnippet">>
 

@@ -10,10 +10,10 @@ You take his hand and put on the customary handshake. He pulls your hand up and 
 
 <div id='options'>\
   <<button "Of course, but please remember that what is said is confidential.">>
-    <<AppendPassage "1" "A1" "CluePoint_JocelynBrando" "ALL">>
+    <<AppendPassage "1" "C1" "CluePoint_JocelynBrando" "ALL">>
   <</button>>
   <<button "My apologies, Ms. Brando. However, if at any point you're uncomfortable, simply say so and we can take a break, or end the interview.">>
-    <<AppendPassage "1" "A2" "CluePoint_JocelynBrando" "ALL">>
+    <<AppendPassage "1" "C2" "CluePoint_JocelynBrando" "ALL">>
   <</button>>
 </div>
 

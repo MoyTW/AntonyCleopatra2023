@@ -20,10 +20,10 @@ He takes you up to the top floor and leads you to Audrey's office where a woman,
 
 <div id='options'>\
   <<button "Some wine, if you would.">>
-    <<AppendPassage "1" "A1" "CluePoint_AudreyHepburn" "ALL">>
+    <<AppendPassage "1" "C1" "CluePoint_AudreyHepburn" "ALL">>
   <</button>>
   <<button "We appreciate the offer, but no thank you.">>
-    <<AppendPassage "1" "A2" "CluePoint_AudreyHepburn" "ALL">>
+    <<AppendPassage "1" "C2" "CluePoint_AudreyHepburn" "ALL">>
   <</button>>
 </div>
 
