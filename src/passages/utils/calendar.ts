@@ -16,7 +16,7 @@ interface Calendar {
 
   getScheduled: (month: number, day: number, slot: string) => Appointment[]
   getScheduledNow: () => Appointment | undefined
-  scheduleVisit: (month: number, day: number, slot: string, role: string, cluePointId: string) => void
+  scheduleVisit: (month: number, day: number, slot: string, role: string, cluePointId: string) => Appointment | undefined
 }
 
 interface Timeslot {
@@ -61,6 +61,11 @@ interface Appointment {
 
     setCurrentTimeslot = (timeslot: Timeslot) => {
       State.setVar(this.TIMESLOT_VAR, timeslot)
+    }
+
+    getTextForDate = (month: number, day: number) => {
+      const d = new Date(2021, month, day)
+      return `${dayNames[d.getDay()]}, ${monthNames[(d.getMonth())]} ${day}`
     }
 
     getCurrentTimeslotText = (suffix: string | undefined) => {
@@ -120,11 +125,6 @@ interface Appointment {
         cts.month += 1
         cts.day = 1
       }
-
-      // End game
-      if (cts.month === 3 && cts.day === 8) {
-        console.log('!!!!!!!!!!!!!!!!!!!!!!!!!')
-      }
     }
 
     makeSpanId = (month: number, day: number, slot: string) => {
@@ -151,15 +151,29 @@ interface Appointment {
     }
 
     scheduleVisit = (month: number, day: number, slot: string, role: string, cluePointId: string) => {
+      // TODO: also check for the same cluePointId
       const entries: Appointment[] = State.getVar(this.ENTRIES_VAR) || []
-      const matchingIdx = entries.findIndex((e) => {
+      
+      const matchingSlotIdx = entries.findIndex((e) => {
         return e.month ===  month && e.day === day && e.slot === slot
       })
-      if (matchingIdx > -1) {
-        entries.deleteAt(matchingIdx)
+      if (matchingSlotIdx > -1) {
+        entries.deleteAt(matchingSlotIdx)
       }
+
+      let matchingItem: Appointment | undefined = undefined
+      const matchingCluePointIdx = entries.findIndex((e) => {
+        return e.cluePointId === cluePointId
+      })
+      if (matchingCluePointIdx > -1) {
+        matchingItem = entries[matchingCluePointIdx]
+        entries.deleteAt(matchingCluePointIdx)
+      }
+
       entries.push({ month: month, day: day, slot: slot, role: role, cluePointId: cluePointId})
       State.setVar(this.ENTRIES_VAR, entries)
+
+      return matchingItem
     }
   }
 

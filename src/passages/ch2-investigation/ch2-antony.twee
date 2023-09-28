@@ -32,6 +32,7 @@ You sigh. "All right, all right, you point's taken."
 <<locationheader 'The Planning Room' 'Evening'>>
 After dinner you return to the Naval Observatory, where Hortensia busies herself with her files.
 <<InvestigationCalendar>>
+/* TODO require sync */\
 <div id='options'>\
   <<button [[Go to sleep.|Ch2_Morning_ANTONY]]>><</button>>
 </div>\

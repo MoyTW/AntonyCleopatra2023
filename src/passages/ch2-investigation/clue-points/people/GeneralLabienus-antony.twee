@@ -13,4 +13,5 @@
 
 
 :: CluePoint_GeneralLabienus_ANTONY:1
-<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">><<include "Ch2_EndInterview_ANTONY">>
+<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">>
+<<include "Ch2_EndInterview_ANTONY">>

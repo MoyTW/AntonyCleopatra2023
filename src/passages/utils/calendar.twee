@@ -6,11 +6,15 @@
   <<set _slot to _data.slot>>
   <<set _role to _data.role>>
 
-  <<run setup.Calendar.scheduleVisit(_month, _day, _slot, _role, _data.id)>>
+  <<set _toRemove to setup.Calendar.scheduleVisit(_month, _day, _slot, _role, _data.id)>>
 
-  <<capture _month, _day, _slot, _role>>
+  <<capture _month, _day, _slot, _role, _toRemove>>
     <<set _selector to `#${setup.Calendar.makeSpanId(_month, _day, _slot)}`>>
     <<run $(State.getVar('_selector')).html(Wikifier.wikifyEval("<<CalendarButton _month _day _slot _role>>"))>>
+    <<if _toRemove>>
+      <<set _removeSelector to `#${setup.Calendar.makeSpanId(_toRemove.month, _toRemove.day, _toRemove.slot)}`>>
+      <<run $(State.getVar('_removeSelector')).html(Wikifier.wikifyEval("<<CalendarButton _toRemove.month _toRemove.day _toRemove.slot _toRemove.role>>"))>>
+    <</if>>
   <</capture>>
 <</receive>>
 
@@ -27,18 +31,58 @@
 <</nobr>><</widget>>
 
 
+:: ColumnForWidget [widget]
+<<widget "ColumnFor">><<nobr>>
+  <div class='column'>
+    <<set _knownList to _args[0]>>
+    <<for _i to 0; _i lt _knownList.length; _i++>>
+      <<set _id to _knownList[_i]>>
+      <<capture _id>>
+        <<set _name to setup.CluePoints.getName(_id)>>
+        <<if setup.CluePoints.cluePointVisited(_id)>>
+          <<set _text to _name + ' <em>[already visited]</em>'>>
+          <<disable>><<button _text>><</button>><</disable>>
+        <<else>>
+          <<button _name>>
+            <<run Dialog.close()>>
+            <<set _role to setup.Roles.getRole()>>
+            <<send "CALENDAR_SCHEDULE" { month: _month, day: _day, slot: _slot, role: _role, id: _id }>><</send>>
+          <</button>>
+        <</if>>
+      <</capture>>
+    <</for>>
+  </div>
+<</nobr>><</widget>>\
+
+
 :: SelectCluePointModal
-Clue points available:
-<<for _i, _id range setup.CluePoints.getKnownCluePointIds()>>\
-  <<capture _id>>\
-    <<button _id>>
-      /* TODO: Smoothify this */
-      <<run Dialog.close()>>
-      <<set _role to setup.Roles.getRole()>>
-      <<send "CALENDAR_SCHEDULE" { month: _month, day: _day, slot: _slot, role: _role, id: _id }>><</send>>
-    <</button>>
-  <</capture>>
-<</for>>\
+<<nobr>>
+  Plan a visit for <<if _slot is setup.Calendar.AM>>the <strong>morning</strong> investigation <<else>><strong>afternoon</strong> investigation <</if>> of <<print setup.Calendar.getTextForDate(_month, _day)>>.
+
+  <br><br>
+  
+  <div style="color:white; background:purple; text-align:center"><strong>People</strong></div>
+  <<set _peopleKnown to setup.CluePoints.getKnownCluePointIds('PERSON')>>
+  <<set _left to _peopleKnown.slice(0, Math.ceil(_peopleKnown.length / 2))>>
+  <<set _right to _peopleKnown.slice(Math.ceil(_peopleKnown.length / 2))>>
+
+  <div class='row'>
+    <<ColumnFor _left>>
+    <<ColumnFor _right>>
+  </div>
+  
+  <br><br>
+
+  <div style="color:white; background:purple; text-align:center"><strong>Places</strong></div>
+  <<set _placesKnown to setup.CluePoints.getKnownCluePointIds('PLACE')>>
+  <<set _left to _placesKnown.slice(0, Math.ceil(_placesKnown.length / 2))>>
+  <<set _right to _placesKnown.slice(Math.ceil(_placesKnown.length / 2))>>
+
+  <div class='row'>
+    <<ColumnFor _left>>
+    <<ColumnFor _right>>
+  </div>
+<</nobr>>\
 
 
 :: CalendarButtonWidget [widget]
@@ -57,7 +101,7 @@ Clue points available:
     <<classspan _class>>
       <<button _buttonText>>
         <<script>>
-          Dialog.setup('SCHEDULING TODO', 'SELECT_CLUE_POINT_MODAL_CLASS');
+          Dialog.setup('Plan a visit', 'SELECT_CLUE_POINT_MODAL_CLASS');
           Dialog.wiki(Story.get("SelectCluePointModal").processText());
           Dialog.open();
         <</script>>

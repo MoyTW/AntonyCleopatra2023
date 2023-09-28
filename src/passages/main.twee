@@ -224,7 +224,6 @@ You can reach me at moytravis@gmail.com for questions, comments, bug reports, or
     if (hcs) { hcs.remove() }
     const jcs = setup.Roles.getJoinerConfirmSeal()[0]
     if (jcs) { jcs.remove() }
-    console.log('??????', hcs, jcs)
     $('#options button').prop('disabled', true)
   }
 <</script>><</receive>><</nobr>>\

@@ -98,6 +98,10 @@ body {
   border-radius: 10px;
 }
 
+.column button:disabled {
+  filter: grayscale(.8)
+}
+
 /* ########## Main Screen ########## */
 .game-title {
   text-align: center;

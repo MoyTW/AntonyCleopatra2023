@@ -13,4 +13,5 @@
 
 
 :: CluePoint_GeneralLabienus_CLEOPATRA:1
-<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">><<include "Ch2_EndInterview_CLEOPATRA">>
+<<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">>
+<<include "Ch2_EndInterview_CLEOPATRA">>
