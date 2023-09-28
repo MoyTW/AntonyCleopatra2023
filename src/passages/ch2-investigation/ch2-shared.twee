@@ -84,6 +84,7 @@
   <<set _aseal to $('#role-ANTONY-seal')[0]>>
   <<set _cseal to $('#role-CLEOPATRA-seal')[0]>>
   <<if _aseal && _cseal && _aseal.parentNode && _aseal.parentNode === _cseal.parentNode>>
+    <<run setup.Transcript.saveToCluePointId()>>
     <<set _passage to passage() + ':EndInterview'>>
     <<goto _passage>>
   <</if>>

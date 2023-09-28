@@ -5,7 +5,7 @@
   <<else>>
     <<if setup.Roles.getRole()>>
       <<include "StatusBar">>
-      <br><br>
+      <br>
       <<include "StoryCaptionRestartButton">>
     <<else>>
       You have not yet selected a character.
@@ -62,6 +62,26 @@ Are you sure you want to quit the session? You will not be able to rejoin, and y
     Dialog.open();
   <</script>><</button>></div>\
 <</if>>\
+<<nobr>>
+  <div class='options'>
+    <br>
+    <strong>Transcripts</strong>
+    <<for _i, _id range setup.CluePoints.getAllKeys()>>
+      <<capture _id>>
+        <<if setup.CluePoints.cluePointVisited(_id) && setup.Transcript.getForCluePointId(_id) !== undefined>>
+          <<set _name to setup.CluePoints.getName(_id)>>
+          <<button _name>><<script>>
+            Dialog.setup(setup.CluePoints.getName(State.getVar('_id')), 'TRANSCRIPT_CLASS');
+            Dialog.wiki(setup.Transcript.getForCluePointId(State.getVar('_id')));
+            Dialog.open();
+          <</script>><</button>>
+        <</if>>
+      <</capture>>
+    <</for>>
+  </div>
+<</nobr>>
+
+
 
 
 :: PeopleAndPlacesSnippet

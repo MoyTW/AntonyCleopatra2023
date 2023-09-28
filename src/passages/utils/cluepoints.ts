@@ -8,6 +8,8 @@ interface CluePointData {
 }
 
 interface CluePoints {
+  getAllKeys: () => string[]
+
   getName: (cluePointId: string) => string | undefined
   getPassage: (cluePointId: string, role: string) => string | undefined
   getKnownCluePointIds: (type: string) => string[]
@@ -299,6 +301,10 @@ interface CluePoints {
           console.error(`Clue point in ordering ${k} not in data!`)
         }
       })
+    }
+
+    getAllKeys = () => {
+      return cluePointIdsInOrder
     }
 
     getName = (cluePointId: string) => {
