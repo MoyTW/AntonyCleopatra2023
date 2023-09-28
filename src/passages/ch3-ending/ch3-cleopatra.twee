@@ -1,6 +1,6 @@
 :: Ch3_Start_CLEOPATRA
 <<locationheader 'The Planning Room' 'End of the Road'>>\
-The two of you meet in the planning room. "That's it," you say.
+The two of you meet in the planning room one last time. "That's it," you say.
 
 "That's it," affirms Antony.
 
@@ -25,7 +25,7 @@ The two of you rise early, take a pleasant breakfast, and then clear the dining 
 /* ##################################################################### */\
 /* # Conclusion                                                        # */\
 /* ##################################################################### */\
-<div class="locationheader">The National Zoological Park</div>
+<div class="locationheader">The National Zoological Park</div>\
 <div class="dateheader">Sunday, June 14, 11:37 a.m.</div>
 "This is boring," declares Alexander, pouting. "They barely have any elephants, and they won't even let you ride them!"
 
@@ -55,7 +55,7 @@ Antony gasps, and you turn to see him staring directly into the dead eyes of Luc
 
 <div id='options'>\
   <<button "Little sun, little moon, go with Lysimachus and Perdiccas and watch the giraffes.">>
-    <<AppendPassage "1" "A1" "Ch3_Conclusion" "ALL">>
+    <<AppendPassage "1" "C1" "Ch3_Conclusion" "ALL">>
   <</button>>
 </div>\
 

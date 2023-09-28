@@ -61,6 +61,19 @@
   <</if>>
 <</receive>>
 
+<<receive 'CH3_SEND_EMAIL' 'ALL'>>
+  <<run $('#options').append(setup.Roles.getSeal(_receiveData.role))>>
+
+  <<set _aseal to setup.Roles.getSeal('ANTONY')[0]>>
+  <<set _cseal to setup.Roles.getSeal('CLEOPATRA')[0]>>
+  <<if _aseal && _cseal && _aseal.parentNode && _aseal.parentNode === _cseal.parentNode>>
+    <<if setup.Roles.isAntony()>>
+      <<goto "Ch3_Conclusion_ANTONY">>
+    <<else>>
+      <<goto "Ch3_Conclusion_CLEOPATRA">>
+    <</if>>
+  <</if>>
+<</receive>>
 
 :: Ch3_SendEndPlanningWidget [widget]
 <<widget 'Ch3_SendEndPlanning'>>
@@ -272,13 +285,8 @@ Toodles,
 Antony & Cleopatra
 
 <<nobr>>
-  <<if setup.Roles.isAntony()>>
-    <<set _p to "Ch3_Conclusion_ANTONY">>
-  <<else>>
-    <<set _p to "Ch3_Conclusion_CLEOPATRA">>
-  <</if>>
   <div id='options'>
-    <<button "Send" _p>><</button>>
+    <<button "Send.">><<send 'CH3_SEND_EMAIL' { role: setup.Roles.getRole() }>><</send>><</button>>
   </div>
 <</nobr>>\
 

@@ -1,6 +1,6 @@
 :: Ch3_Start_ANTONY
 <<locationheader 'The Planning Room' 'End of the Road'>>\
-The two of you meet in the planning room. "That's it," says your wife.
+The two of you meet in the planning room one last time. "That's it," says your wife.
 
 "That's it," you say.
 
@@ -24,7 +24,7 @@ The two of you rise early, take a pleasant breakfast, and then clear the dining 
 /* ##################################################################### */\
 /* # Conclusion                                                        # */\
 /* ##################################################################### */\
-<div class="locationheader">The National Zoological Park</div>
+<div class="locationheader">The National Zoological Park</div>\
 <div class="dateheader">Sunday, June 14, 11:37 a.m.</div>
 "This is boring," declares Alexander, pouting. "They barely have any elephants, and they won't even let you ride them!"
 
@@ -59,7 +59,7 @@ A hand lands on your shoulder, and you start, turning to see the dead eyes of Lu
 </div>\
 
 
-:: CluePoint_AudreyHepburn_ANTONY:1
+:: Ch3_Conclusion_ANTONY:1
 <<nobr>>
   <<set _killerName to setup.CluePoints.getName($Ch3K)>>
   <<set _breacherName to setup.CluePoints.getName($Ch3BR)>>
