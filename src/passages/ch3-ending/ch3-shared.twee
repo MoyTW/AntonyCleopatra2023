@@ -1,0 +1,215 @@
+:: Ch3_Receivers
+/* I want to do this in TS... */
+/* ...but I don't want an extra TS file that just adds unnecessary indirection. */
+/* I built this real awkwardly didn't I. */
+<<receive 'CH3_END_PLANNING' 'ALL'>>
+  <<run $('#options').append(setup.Roles.getSeal(_receiveData.role))>>
+
+  <<if _receiveData.role === setup.Roles.ANTONY>>
+    <<set $Ch2_EndPlanningAntony to true>>
+  <<else>>
+    <<set $Ch2_EndPlanningCleopatra to true>>
+  <</if>>
+
+  <<if $Ch2_EndPlanningAntony and $Ch2_EndPlanningCleopatra>>
+    <<unset $Ch2_EndPlanningAntony>>
+    <<unset $Ch2_EndPlanningCleopatra>>
+    <<if setup.Roles.isAntony()>>
+      <<goto 'Ch3_WriteReport_ANTONY'>>
+    <<else>>
+      <<goto 'Ch3_WriteReport_CLEOPATRA'>>
+    <</if>>
+  <</if>>
+<</receive>>
+
+<<receive 'CH3_VOTE_KILLER' 'ALL'>>
+  <<set _selector to `#${_receiveData.id}`>>
+  <<run $(_selector).append(setup.Ch3.getVoteSeal(_receiveData.role))>>
+  <<run setup.Ch3.processNonFinalVote()>>
+<</receive>>
+
+<<receive 'CH3_VOTE_MOTIVE' 'ALL'>>
+  <<set _selector to `#${_receiveData.id}`>>
+  <<run $(_selector).append(setup.Ch3.getMotiveSeal(_receiveData.role))>>
+  <<run setup.Ch3.processNonFinalVote()>>
+<</receive>>
+
+<<receive 'CH3_VOTE_BREACH' 'ALL'>>
+  <<set _selector to `#${_receiveData.id}`>>
+  <<run $(_selector).append(setup.Ch3.getBreachSeal(_receiveData.role))>>
+  <<run setup.Ch3.processNonFinalVote()>>
+<</receive>>
+
+<<receive 'CH3_VOTE_BREACHER' 'ALL'>>
+  <<set _selector to `#${_receiveData.id}`>>
+  <<run $(_selector).append(setup.Ch3.getBreacherSeal(_receiveData.role))>>
+  <<run setup.Ch3.processNonFinalVote()>>
+<</receive>>
+
+<<receive 'CH3_FINISH_REPORT' 'ALL'>>
+  <<run $('#finish-report').append(setup.Ch3.getSubmitSeal(_receiveData.role))>>
+
+  <<set _aseal to setup.Ch3.getSubmitSeal('ANTONY')[0]>>
+  <<set _cseal to setup.Ch3.getSubmitSeal('CLEOPATRA')[0]>>
+  <<run console.log(_aseal, _cseal, _aseal.parentNode, _cseal.parentNode)>>
+  <<if _aseal && _cseal && _aseal.parentNode && _aseal.parentNode === _cseal.parentNode>>
+    <<run console.log('?????????????????????????????????? TODO LOL')>>
+  <</if>>
+<</receive>>
+
+
+:: Ch3_SendEndPlanningWidget [widget]
+<<widget 'Ch3_SendEndPlanning'>>
+  <<run $('#options').append(setup.Roles.getSeal())>>
+  <<send 'CH3_END_PLANNING' { role: setup.Roles.getRole() }>><</send>>
+<</widget>>
+
+
+:: Ch3_EndSurvey
+<<nobr>>
+  <div style="color:white; background:purple; text-align:center"><strong>Who killed Marlon Brando? [ Choose 1 ]</strong></div>
+  <<set _peopleKnown to setup.CluePoints.getKnownCluePointIds('PERSON')>>
+  <<set _left to _peopleKnown.slice(0, Math.ceil(_peopleKnown.length / 2))>>
+  <<set _right to _peopleKnown.slice(Math.ceil(_peopleKnown.length / 2))>>
+  
+  <div class='row'>
+    <div class='column'>
+      <<for _i to 0; _i lt _left.length; _i++>>
+        <<set _id to _left[_i]>>
+        <<capture _id>>
+          <<set _name to setup.CluePoints.getName(_id)>>
+          <<iddiv _id 'ch3-seal-div'>>
+            <<button _name>>
+              <<send 'CH3_VOTE_KILLER' { id: _id, role: setup.Roles.getRole() }>><</send>>
+            <</button>>
+          <</iddiv>>
+        <</capture>>
+      <</for>>
+    </div>
+    <div class='column'>
+      <<for _i to 0; _i lt _right.length; _i++>>
+        <<set _id to _right[_i]>>
+        <<capture _id>>
+          <<set _name to setup.CluePoints.getName(_id)>>
+          <<iddiv _id 'ch3-seal-div'>>
+            <<button _name>>
+              <<send 'CH3_VOTE_KILLER' { id: _id, role: setup.Roles.getRole() }>><</send>>
+            <</button>>
+          <</iddiv>>
+        <</capture>>
+      <</for>>
+    </div>
+  </div>
+<</nobr>>\
+
+<<nobr>>
+  <div style="color:white; background:purple; text-align:center"><strong>What was their primary motive? [ Choose 1 ]</strong></div>
+  <<set _motives to setup.Motives.getMotives()>>
+  <<set _left to _motives.slice(0, Math.ceil(_motives.length / 2))>>
+  <<set _right to _motives.slice(Math.ceil(_motives.length / 2))>>
+  
+  <div class='row'>
+    <div class='column'>
+      <<for _i to 0; _i lt _left.length; _i++>>
+        <<set _id to _left[_i].id>>
+        <<capture _id>>
+          <<set _name to _left[_i].description>>
+          <<iddiv _id 'ch3-seal-div'>>
+            <<button _name>>
+              <<send 'CH3_VOTE_MOTIVE' { id: _id, role: setup.Roles.getRole() }>><</send>>
+            <</button>>
+          <</iddiv>>
+        <</capture>>
+      <</for>>
+    </div>
+    <div class='column'>
+      <<for _i to 0; _i lt _right.length; _i++>>
+        <<set _id to _right[_i].id>>
+        <<capture _id>>
+          <<set _name to _right[_i].description>>
+          <<iddiv _id 'ch3-seal-div'>>
+            <<button _name>>
+              <<send 'CH3_VOTE_MOTIVE' { id: _id, role: setup.Roles.getRole() }>><</send>>
+            <</button>>
+          <</iddiv>>
+        <</capture>>
+      <</for>>
+    </div>
+  </div>
+<</nobr>>\
+
+<<nobr>>
+  <div style="color:white; background:purple; text-align:center"><strong>Was there a security breach in Project STORM? [ Yes / No ]</strong></div>
+  <div class='row'>
+    <div class='column'>
+      <<iddiv 'breach-yes-button' 'ch3-seal-div'>>
+        <<button 'Yes'>>
+          <<send 'CH3_VOTE_BREACH' { id: 'breach-yes-button', role: setup.Roles.getRole() }>><</send>>
+        <</button>>
+      <</iddiv>>
+    </div>
+    <div class='column'>
+      <<iddiv 'breach-no-button' 'ch3-seal-div'>>
+        <<button 'No'>>
+          <<send 'CH3_VOTE_BREACH' { id: 'breach-no-button', role: setup.Roles.getRole() }>><</send>>
+        <</button>>
+      <</iddiv>>
+    </div>
+  </div>
+<</nobr>>\
+
+<<nobr>>
+  <div style="color:white; background:purple; text-align:center"><strong>If there was a breach, who was responsible? [ Choose 1 ]</strong></div>
+  <<set _peopleKnown to setup.CluePoints.getKnownCluePointIds('PERSON')>>
+  <<set _left to _peopleKnown.slice(0, Math.ceil(_peopleKnown.length / 2))>>
+  <<set _right to _peopleKnown.slice(Math.ceil(_peopleKnown.length / 2))>>
+  
+  <div class='row'>
+    <div class='column'>
+      <<for _i to 0; _i lt _left.length; _i++>>
+        <<set _id to _left[_i]>>
+        <<set _did to 'breach-' + _id>>
+        <<capture _id, _did>>
+          <<set _name to setup.CluePoints.getName(_id)>>
+          <<iddiv _did 'ch3-seal-div'>>
+            <<button _name>>
+              <<send 'CH3_VOTE_BREACHER' { id: _did, role: setup.Roles.getRole() }>><</send>>
+            <</button>>
+          <</iddiv>>
+        <</capture>>
+      <</for>>
+    </div>
+    <div class='column'>
+      <<for _i to 0; _i lt _right.length; _i++>>
+        <<set _id to _right[_i]>>
+        <<set _did to 'breach-' + _id>>
+        <<capture _id, _did>>
+          <<set _name to setup.CluePoints.getName(_id)>>
+          <<iddiv _did 'ch3-seal-div'>>
+            <<button _name>>
+              <<send 'CH3_VOTE_BREACHER' { id: _did, role: setup.Roles.getRole() }>><</send>>
+            <</button>>
+          <</iddiv>>
+        <</capture>>
+      <</for>>
+    </div>
+  </div>
+  <div class='options'>
+    <<iddiv 'breach-no-breach' 'ch3-seal-div'>>
+      <<button "There was no breach.">>
+        <<send 'CH3_VOTE_BREACHER' { id: 'breach-no-breach', role: setup.Roles.getRole() }>><</send>>
+      <</button>>
+    <</iddiv>>
+  </div>
+<</nobr>>\
+
+<<nobr>>
+  <div style="color:white; background:purple; text-align:center"><strong>Submit your report?</strong></div>
+  <div class='options'>
+    <<iddiv 'finish-report' 'ch3-submit'>>
+      <<disable>><<button "Submit the report!">>
+        <<send 'CH3_FINISH_REPORT' { role: setup.Roles.getRole() }>><</send>>
+      <</button>><</disable>>
+    <</iddiv>>
+  </div>
+<</nobr>>\

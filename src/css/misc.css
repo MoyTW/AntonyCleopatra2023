@@ -20,6 +20,19 @@ body {
   filter: grayscale(.8)
 }
 
+.options {
+  position: relative;
+  width: 100%;
+}
+
+.options button {
+  width: 100%;
+  background-color: #0A3161;
+  color: #FFFFFF;
+  border-color: #B31942;
+  border-radius: 10px;
+}
+
 .div-container {
   position: relative;
   width: 100%;
@@ -41,6 +54,26 @@ body {
 
 .irp-rec-div button {
   width: 100%;
+}
+
+/* ########## Column ########## */
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.column button {
+  width: 100%;
+  background-color: #0A3161;
+  color: #FFFFFF;
+  border-color: #B31942;
+  border-radius: 10px;
 }
 
 /* ########## Main Screen ########## */
@@ -102,4 +135,49 @@ body {
   border-color: purple;
   background-color: gold;
   border-radius: 50%;
+}
+
+/* ch3 */
+.ch3-seal-div {
+  display: flex;
+  justify-content: flex-end;
+}
+.antony-ch3-seal {
+  width: 24px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  border-style: solid;
+  color: red;
+  border-color: red;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  margin: 2.4px 33.6px 2.4px 2.4px;
+}
+.cleopatra-ch3-seal {
+  width: 24px;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  border-style: solid;
+  color: purple;
+  border-color: purple;
+  background-color: gold;
+  border-radius: 50%;
+  position: absolute;
+  margin: 2.4px 2.4px 2.4px 2.4px;
+}
+
+.ch3-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ch3-submit span {
+  width: 100%
+}
+
+.ch3-submit button:disabled {
+  filter: grayscale(.8)
 }

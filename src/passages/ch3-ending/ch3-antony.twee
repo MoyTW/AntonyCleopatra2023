@@ -1,2 +1,20 @@
 :: Ch3_Start_ANTONY
-ch3 TK TODO
+<<locationheader 'The Planning Room' 'End of the Road'>>\
+The two of you meet in the planning room. "That's it," says your wife.
+
+"That's it," you say.
+
+You take one last look at the calendar before you head off to bed.
+<<InvestigationCalendar>>
+<div id='options'>\
+  <<button "Call it a night.">><<Ch3_SendEndPlanning>><</button>>
+</div>\
+
+:: Ch3_WriteReport_ANTONY
+<<run setup.Calendar.advanceTime()>>\
+<<locationheader 'The Dining Room' 'Morning'>>\
+The two of you rise early, take a pleasant breakfast, and then clear the dining room table, replacing plates and glasses with folders and files and a pair of shiny laptops. "Right," you say. "So."
+
+"No use delaying," says Cleopatra. "Let's start at the top."
+
+<<include "Ch3_EndSurvey">>

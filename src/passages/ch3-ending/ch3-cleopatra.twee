@@ -1,2 +1,21 @@
 :: Ch3_Start_CLEOPATRA
-ch3 TK TODO
+<<locationheader 'The Planning Room' 'End of the Road'>>\
+The two of you meet in the planning room. "That's it," you say.
+
+"That's it," affirms Antony.
+
+You take one last look at the calendar before you head off to bed.
+<<InvestigationCalendar>>
+<div id='options'>\
+  <<button "Call it a night.">><<Ch3_SendEndPlanning>><</button>>
+</div>\
+
+
+:: Ch3_WriteReport_CLEOPATRA
+<<run setup.Calendar.advanceTime()>>\
+<<locationheader 'The Dining Room' 'Morning'>>\
+The two of you rise early, take a pleasant breakfast, and then clear the dining room table, replacing plates and glasses with folders and files and a pair of shiny laptops. "Right," says Antony. "So."
+
+"No use delaying," says Cleopatra. "Let's start at the top."
+
+<<include "Ch3_EndSurvey">>

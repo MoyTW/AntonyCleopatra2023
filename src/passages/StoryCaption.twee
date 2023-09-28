@@ -5,6 +5,13 @@
   Dialog.open();
 <</script>><</button>>
 
+<<set _cts to setup.Calendar.getCurrentTimeslot()>>\
+<span id='timespan'>Time: _cts.month, _cts.day, _cts.slot</span>
+<<button "advancetime">>
+  <<run setup.Calendar.advanceTime()>>
+  <<replace "#timespan">>Time: _cts.month, _cts.day, _cts.slot<</replace>>
+<</button>>
+
 <strong>Debug:</strong>
 Role: <<print setup.Roles.getRole()>>
 ClientId: $clientId

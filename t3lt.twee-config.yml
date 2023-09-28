@@ -78,3 +78,5 @@ sugarcube-2:
       name: EndInterview
     Ch2_SendEndPlanning:
       name: Ch2_SendEndPlanning
+    Ch3_SendEndPlanning:
+      name: Ch3_SendEndPlanning

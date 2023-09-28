@@ -54,7 +54,7 @@ you eat lunch
   <<set _cts to setup.Calendar.getCurrentTimeslot()>>
   <div id='options'>
     <<if _cts.month === 3 && _cts.day === 7 && _cts.slot === 'PM'>>
-      <<button "Retire for the evening." "Ch3_Start_ANTONY">><</button>>
+      <<button "Call it a night." "Ch3_Start_ANTONY">><</button>>
     <<elseif setup.Calendar.isMorning()>>
       <<button "Knock off for lunch." "Ch2_Lunch_ANTONY">><</button>>
     <<else>>
