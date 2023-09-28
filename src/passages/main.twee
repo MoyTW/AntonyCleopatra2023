@@ -21,10 +21,13 @@ Multiplayer Hello, World!
   <<set $hostClientId to undefined>>
   <<set $partnerClientId to undefined>>
   <<run setup.Websocket.assignRoleToClient('ALL', State.variables.clientId)>>
+  /* Pic dimensions - main: 68px - case: xx-large - murder: xxx-large */
 <</nobr>>\
-<h1 class="game-title" style="margin-bottom: 0px">Antony & Cleopatra</h1>\
-<h2 class="game-title" style="margin: 0px">Case IV</h2>\
-<h1 class="game-title" style="margin-top: 0px">The Murder of Marlon Brando</h1>\
+<div style="color: #000000b5; border-style: inset; border-width: thick; background-color: #b9b4b1; text-shadow: rgb(255 255 255 / 50%) 0.5px 1px 0.5px;">\
+<h1 class="game-title roman" style="margin-bottom: 0px; margin-top: 0px; font-size: xxx-large;">ANTONY & CLEOPATRA</h1>\
+<h2 class="game-title roman" style="margin: 0px">CASE IV</h2>\
+<h1 class="game-title roman" style="margin-top: 0px">THE <span style='color: darkred;'>MURDER</span> OF MARLON BRANDO</h1>\
+</div>\
 
 <h2 class="passage-h2" style="text-align:center">Main Menu</h2>\
 <div id='options'><<nobr>>

@@ -12,12 +12,23 @@
     url("fonts/Kalam/Kalam-Regular.ttf") format("TrueType");
 }
 
+@font-face {
+  font-family: "Quattrocento";
+  src:
+    local("Quattrocento"),
+    url("fonts/Kalam/Quattrocento-Regular.ttf") format("TrueType");
+}
+
 .antony-writing {
   font-family: WindSong;
 }
 
 .cleopatra-writing {
   font-family: Kalam;
+}
+
+.roman {
+  font-family: Quattrocento;
 }
 
 .antony-response {
