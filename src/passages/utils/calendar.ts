@@ -112,7 +112,7 @@ interface Appointment {
 
     advanceTime = () => {
       const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
-      // TODO End game
+
       if (cts.slot === this.ALL_DAY || cts.slot === this.PM) {
         cts.day += 1
         cts.slot = this.AM
@@ -174,6 +174,20 @@ interface Appointment {
       State.setVar(this.ENTRIES_VAR, entries)
 
       return matchingItem
+    }
+
+    clearCurrentSlot = () => {
+      const entries: Appointment[] = State.getVar(this.ENTRIES_VAR) || []
+      const cts = this.getCurrentTimeslot()
+
+      if (cts) {
+        const matchingSlotIdx = entries.findIndex((e) => {
+          return e.month === cts.month && e.day === cts.day && e.slot === cts.slot
+        })
+        if (matchingSlotIdx > -1) {
+          entries.deleteAt(matchingSlotIdx)
+        }
+      }
     }
   }
 

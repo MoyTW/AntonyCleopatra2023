@@ -17,8 +17,6 @@ Antony sighs. "All right, all right, you point's taken."
 "As always," you say, "you are wonderfully helpful, Hortensia."
 
 "Just doing my job."
-
-<em><strong>[ TODO: You can access the How To Play window on the sidebar. ]</strong></em>
 <<InvestigationCalendar>>
 <div id='options'>\
   <<button "Enough planning. Time to call it a night.">>
@@ -33,7 +31,9 @@ Antony sighs. "All right, all right, you point's taken."
 After dinner you return to the Naval Observatory, where Hortensia busies herself with her files.
 <<InvestigationCalendar>>
 <div id='options'>\
-  <<button [[Go to sleep.|Ch2_Morning_CLEOPATRA]]>><</button>>
+  <<button "Go to sleep.">>
+    <<Ch2_SendEndPlanning>>
+  <</button>>
 </div>\
 
 

@@ -36,6 +36,8 @@
 
   <<if $Ch2_DecideVisitAntony === $Ch2_DecideVisitCleopatra>>
     <<if $Ch2_DecideVisitAntony is 'Nothing'>>
+      <<run setup.Calendar.clearCurrentSlot()>>
+
       <<unset $Ch2_DecideVisitAntony>>
       <<unset $Ch2_DecideVisitCleopatra>>
       <<unset $Ch2_DecideVisitWriter>>

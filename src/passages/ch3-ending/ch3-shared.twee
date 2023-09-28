@@ -293,7 +293,8 @@ Antony & Cleopatra
 
 :: Ch3_End
 <div class="locationheader">The End</div>
-Thank you for playing Antony & Cleopatra: Case IV: The Murder of Marlon Brando! I hope you enjoyed! If you'd like to give feedback or report a bug, you can visit TODO TK
+Thank you for playing Antony & Cleopatra: Case IV: The Murder of Marlon Brando! I hope you enjoyed it! If you'd like to give feedback or report a bug, leave a comment on the <a href="https://muffituffiwuffi.itch.io/antony-and-cleopatra-case-iv" target="_blank" rel="noopener noreferrer">itch.io</a> page or send me an email at moytravis@gmail.com.
+
 <div id='options'>\
   <<button "Return to Main Menu.">><<run Engine.restart()>><</button>>
 </div>\
