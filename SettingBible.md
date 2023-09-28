@@ -1,7 +1,6 @@
 # Timeline
 
 + Monday, March 15: Marlon Brando is murdered
-+ TODO: MOVE THE START DATE TO MARCH 29 (gives us 18 visits / 21 clue points)
 + Friday, March 26: Antony & Cleopatra are called in
 + Saturday, March 27: Planning Session
 + Monday, April 9: Conclusion

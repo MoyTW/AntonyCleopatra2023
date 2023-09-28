@@ -15,9 +15,9 @@
     <<unset $Ch2_EndPlanningAntony>>
     <<unset $Ch2_EndPlanningCleopatra>>
     <<if setup.Roles.isAntony()>>
-      <<goto 'Ch2_Bed_ANTONY'>>
+      <<goto 'Ch2_Morning_ANTONY'>>
     <<else>>
-      <<goto 'Ch2_Bed_CLEOPATRA'>>
+      <<goto 'Ch2_Morning_CLEOPATRA'>>
     <</if>>
   <</if>>
 <</receive>>
@@ -35,21 +35,29 @@
   <</if>>
 
   <<if $Ch2_DecideVisitAntony === $Ch2_DecideVisitCleopatra>>
-    <<set _cts to setup.Calendar.getCurrentTimeslot()>>\
-    <<set _month to _cts.month>>
-    <<set _day to _cts.day>>
-    <<set _slot to _cts.slot>>
-    <<set _role to $Ch2_DecideVisitWriter>>
-    <<set _id to $Ch2_DecideVisitAntony>>
-    <<set _passage to setup.CluePoints.getPassage(_id, setup.Roles.getRole())>>
-    <<run setup.Calendar.scheduleVisit(_month, _day, _slot, _role, _id)>>
-    <<run setup.CluePoints.markCluePointVisited(_id)>>
+    <<if $Ch2_DecideVisitAntony is 'Nothing'>>
+      <<unset $Ch2_DecideVisitAntony>>
+      <<unset $Ch2_DecideVisitCleopatra>>
+      <<unset $Ch2_DecideVisitWriter>>
 
-    <<unset $Ch2_DecideVisitAntony>>
-    <<unset $Ch2_DecideVisitCleopatra>>
-    <<unset $Ch2_DecideVisitWriter>>
+      <<goto "Ch2_SkipSlot">>
+    <<else>>
+      <<set _cts to setup.Calendar.getCurrentTimeslot()>>\
+      <<set _month to _cts.month>>
+      <<set _day to _cts.day>>
+      <<set _slot to _cts.slot>>
+      <<set _role to $Ch2_DecideVisitWriter>>
+      <<set _id to $Ch2_DecideVisitAntony>>
+      <<set _passage to setup.CluePoints.getPassage(_id, setup.Roles.getRole())>>
+      <<run setup.Calendar.scheduleVisit(_month, _day, _slot, _role, _id)>>
+      <<run setup.CluePoints.markCluePointVisited(_id)>>
 
-    <<goto _passage>>
+      <<unset $Ch2_DecideVisitAntony>>
+      <<unset $Ch2_DecideVisitCleopatra>>
+      <<unset $Ch2_DecideVisitWriter>>
+
+      <<goto _passage>>
+    <</if>>
   <</if>>
 <</receive>>
 
@@ -111,11 +119,22 @@
 <</nobr>><</widget>>
 
 
+:: Ch2_SkipSlot
+You spend a few hours relaxing and attending to affairs of state.
+
+<<if setup.Roles.isAntony()>>\
+  <<include "Ch2_EndInterview_ANTONY">>
+<<else>>\
+  <<include "Ch2_EndInterview_CLEOPATRA">>
+<</if>>\
+
+
 :: Ch2_DecideVisitSnippet
 <<set _cts to setup.Calendar.getCurrentTimeslot()>>\
 /* TODO: center this, probably, & disable all the buttons */\
 <<CalendarSquare _cts.month _cts.day>>
 <div id='options'><<nobr>>
+  /* ##### Scheduled Visit ##### */
   <<set _scheduled to setup.Calendar.getScheduledNow()>>
   <<if _scheduled>>
     <<set _scheduledId to _scheduled.cluePointId>>
@@ -125,21 +144,21 @@
         <<send 'CH2_DECIDE_VISIT' { scheduled: true, id: _scheduledId, role: setup.Roles.getRole() }>><</send>>
       <</button>>
     <</iddiv>>
-    <strong>Or, make an unscheduled visit:</strong>
+    <div style='text-align:center'><strong>Or, make an unscheduled visit:</strong></div>
   <<else>>
     <<disable>><<button "Nothing was scheduled.">><</button>><</disable>>
     <br>
-    <strong>Make an unscheduled visit:</strong>
+    <div style='text-align:center'><strong>Make an unscheduled visit:</strong></div>
   <</if>>
-  <br>
-  <<for _i, _id range setup.CluePoints.getKnownCluePointIds()>>
+  /* ##### Location Visits ##### */
+  <<for _i, _id range setup.CluePoints.getKnownCluePointIds('PLACE')>>
     <<if _id !== _scheduledId>>
       <<capture _id>>
         <<set _name to setup.CluePoints.getName(_id)>>
-        /* <<if setup.CluePoints.cluePointVisited(_id)>> TOOD: Uncomment
+        <<if setup.CluePoints.cluePointVisited(_id)>>
           <<set _text to _name + ' <em>[already visited]</em>'>>
           <<disable>><<button _text>><</button>><</disable>>
-        <<else>> */
+        <<else>>
           <<iddiv _id>>
             <<button _name>>
               <<send 'CH2_DECIDE_VISIT' { scheduled: false, id: _id, role: setup.Roles.getRole() }>><</send>>
@@ -147,8 +166,17 @@
             <<if $Ch2_DecideVisitAntony === _id>><<AntonySeal>><</if>>
             <<if $Ch2_DecideVisitCleopatra === _id>><<CleopatraSeal>><</if>>
           <</iddiv>>
-        /* <</if>> */
+        <</if>>
       <</capture>>
     <</if>>
   <</for>>
+  /* ##### Hardlock Protection ##### */
+  <div style='text-align:center'><strong>Or, you could take it easy:</strong></div>
+  <<iddiv 'Nothing'>>
+    <<button 'Go home early. [ This skips the current slot. ]'>>
+      <<send 'CH2_DECIDE_VISIT' { scheduled: false, id: 'Nothing', role: setup.Roles.getRole() }>><</send>>
+    <</button>>
+    <<if $Ch2_DecideVisitAntony === 'Nothing'>><<AntonySeal>><</if>>
+    <<if $Ch2_DecideVisitCleopatra === 'Nothing'>><<CleopatraSeal>><</if>>
+  <</iddiv>>
 <</nobr>></div>

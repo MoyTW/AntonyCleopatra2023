@@ -157,7 +157,6 @@ You can reach me at moytravis@gmail.com for questions, comments, bug reports, or
 
 
 :: SelectCharacter
-/* TODO: Rewrite the select character screen to be not ugly and also let you unready! */
 <span style='text-align: center'><h1 class="passage-h1">Select Your Character</h1></span>\
 <<nobr>>
   <div class='row' style='text-align:center; align-items: center;'>

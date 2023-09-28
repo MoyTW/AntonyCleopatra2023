@@ -229,7 +229,9 @@ interface CluePoints {
     },
     {
       id: CluePointKey.GaryDanko,
-      name: 'Gary Danko', type: CluePointType.Place, passage: 'CluePoint_GaryDanko',
+      name: 'Gary Danko',
+      type: CluePointType.Place,
+      passage: 'CluePoint_GaryDanko',
       defaultKnown: true,
       reveals: [
         CluePointKey.BloodDiamond

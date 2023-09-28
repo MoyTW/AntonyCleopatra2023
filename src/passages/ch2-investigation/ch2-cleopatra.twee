@@ -1,11 +1,24 @@
 :: Ch2_Start_CLEOPATRA
-TODO CH2 START
-
-[[Planning|Ch2_Planning_CLEOPATRA]]
-
-
-:: Ch2_Planning_CLEOPATRA
 <<locationheader 'The Planning Room'>>\
+By the time you and Antony return from dinner, Hortensia finished nesting in your living room. She's pushed the coffee table up against the wall, replacing it with a proper table, ringed with chairs. On it are various folders and reports, all neatly categorized, and in its center is an annotated calendar, printed on a single oversize sheet of paper. "I see you've been busy," you say.
+
+"Yes, I have. I can brief you whenever you're both ready."
+
+"Right," says Antony, trudging upstairs, "five minutes."
+
+"Take your time," she says. You take the chance to perform your evening ablutions, greet the children, and grab a notepad and pen. When you return, you see Antony bent over the table, studying the calendar.
+
+"As you can see from the calendar," says Hortensia, "I've taken the liberty of scheduling two appointments tomorrow. One is an interview, and one is a visit. Of course, you two are going to be setting the agenda from now on. I'll take care of actually setting the interviews up, but please be aware that <strong>all interviews must be planned at least one day in advance.</strong> We don't want a repeat of that incident with Bartholomew."
+
+Antony sighs. "All right, all right, you point's taken."
+
+"However, <strong>rescheduling an appointment is not a problem.</strong> Visiting a location, on the other hand, requires no advance planning, although I would recommend that you still budget appropriate time to do so. <strong>You don't have to plan everything out now,</strong> and in fact that's probably impossible. During your investigations you'll inevitably <strong>uncover new leads,</strong> so you should attempt to cast the widest net possible at the beginning. I'm assigned to you for the duration of the case, so you'll have a chance to plan <strong>every night,</strong> after the day's interviews and visits are done." She thinks for a moment. "That's all I have for now."
+
+"As always," you say, "you are wonderfully helpful, Hortensia."
+
+"Just doing my job."
+
+<strong>[ TODO: You can access the How To Play window on the sidebar. ]</strong>
 <<InvestigationCalendar>>
 <div id='options'>\
   <<button "Enough planning. Time to call it a night.">>
