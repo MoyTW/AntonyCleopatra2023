@@ -63,11 +63,6 @@ Are you sure you want to quit the session? You will not be able to rejoin, and y
   <</script>><</button>></div>\
 <</if>>\
 
-<<button "advancetime">>
-  <<run setup.Calendar.advanceTime()>>
-  <<replace "#timespan">>Time: _cts.month, _cts.day, _cts.slot<</replace>>
-<</button>>
-
 
 :: PeopleAndPlacesSnippet
 /* ##################################################################### */\

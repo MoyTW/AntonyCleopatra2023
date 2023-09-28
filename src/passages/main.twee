@@ -22,6 +22,7 @@ Antony & Cleopatra: Case IV: The Murder of Marlon Brando
   <<set $partnerClientId to undefined>>
   <<run setup.Websocket.assignRoleToClient('ALL', State.variables.clientId)>>
   /* Pic dimensions - main: 68px - case: xx-large - murder: xxx-large */
+  /* TODO: Let you, uh, like, what was it. uuuuh. see your transcripts. */
 <</nobr>>\
 <div class="granite">\
 <h1 class="game-title roman" style="margin-bottom: 0px; margin-top: 0px; font-size: xxx-large;">ANTONY & CLEOPATRA</h1>\
