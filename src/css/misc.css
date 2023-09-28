@@ -1,3 +1,10 @@
+/* Hide save/reload */
+#menu-core {
+  display:none;
+}
+
+/* main body stuff */
+
 body {
   color: #ebd5b3;
   background-color: #13011f;

@@ -82,6 +82,18 @@ interface Appointment {
       }
     }
 
+    getCurrentTimeslotSidebarText = (suffix: string | undefined) => {
+      const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
+      if (!cts) {
+        return undefined
+      } else {
+        const d = new Date(cts.year, cts.month, cts.day)
+        const withoutTime = `${dayNames[d.getDay()]}, ${monthNames[(d.getMonth())]} ${cts.day}, 2021`
+        return withoutTime
+      }
+    }
+
+
     isMorning = () => {
       const cts: Timeslot = State.getVar(this.TIMESLOT_VAR)
       return cts.slot === this.AM

@@ -53,9 +53,10 @@ She clicks her tongue. "What did Dave tell you about the timeframe?"
 
 
 :: Ch1_CaseIntro_3_ANTONY
+<<set $Ch1_IntroSeen to true>>\
 <<include IntroductionSnippet>>
 
-<em><strong>[ TODO You can review the introduction at any point via the right sidebar. ]</strong></em>
+<em><strong>[ You can review the introduction at any point via the right sidebar. ]</strong></em>
 
 <div id='options'>\
   <<button [[Start your investigation!|Ch2_Start_ANTONY]]>><</button>>

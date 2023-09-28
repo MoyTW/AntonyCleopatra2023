@@ -1,40 +1,64 @@
 :: StoryCaption
-<<button "ASDF">><<script>>
-  Dialog.setup('Checklist', 'CHECKLIST_DIALOG_CLASS');
-  Dialog.wiki(Story.get('Checklist').processText());
-  Dialog.open();
-<</script>><</button>>
+<<nobr>>
+  <<if !$sessionId>>
+    You are not yet in a game.
+  <<else>>
+    <<if setup.Roles.getRole()>>
+      <<include "StatusBar">>
+      <br><br>
+      <<include "StoryCaptionRestartButton">>
+    <<else>>
+      You have not yet selected a character.
+      <br><br>
+      <<include "StoryCaptionRestartButton">>
+    <</if>>
+  <</if>>
+<</nobr>>
 
-<<set _cts to setup.Calendar.getCurrentTimeslot()>>\
-<span id='timespan'>Time: _cts.month, _cts.day, _cts.slot</span>
+
+:: QuitSessionConfirmation
+Are you sure you want to quit the session? You will not be able to rejoin, and your partner won't be able to continue.
+
+<div class='options'>\
+  <<button "Yes, I want to end the session.">><<run Engine.restart()>><</button>>
+  <<button "No, I do not want to end the session.">><<run Dialog.close()>><</button>>
+</div>\
+
+
+:: StoryCaptionRestartButton
+<<nobr>><div class='options'>
+  <<button "Quit the session.">><<script>>
+    Dialog.setup('Are you sure?', 'QUIT_SESSION_CLASS');
+    Dialog.wiki(Story.get('QuitSessionConfirmation').processText());
+    Dialog.open();
+  <</script>><</button>>
+</div><</nobr>>\
+
+
+:: StoryCaptionIntro
+<<include IntroductionSnippet>>
+
+:: StatusBar
+<<if setup.Roles.isAntony()>>\
+  You are <strong>Marcus Antonius, Vice-President of Neo-America</strong>.
+
+<<else>>\
+  You are <strong>Cleopatra VII Thea Philopater, Queen of Egypt</strong>.
+
+<</if>>\
+<<if setup.Calendar.getCurrentTimeslot()>>\
+  The date is <strong><<print setup.Calendar.getCurrentTimeslotSidebarText()>></strong>.
+
+<</if>>\
+<<if $Ch1_IntroSeen>>\
+  <div class='options'><<button "View the intro.">><<script>>
+    Dialog.setup('Introduction', 'INTRO_CLASS');
+    Dialog.wiki(Story.get('StoryCaptionIntro').processText());
+    Dialog.open();
+  <</script>><</button>></div>\
+<</if>>\
+
 <<button "advancetime">>
   <<run setup.Calendar.advanceTime()>>
   <<replace "#timespan">>Time: _cts.month, _cts.day, _cts.slot<</replace>>
 <</button>>
-
-<strong>Debug:</strong>
-Role: <<print setup.Roles.getRole()>>
-ClientId: $clientId
-HostClientId: $hostClientId
-PartnerClientId: $partnerClientId
-SessionId: $sessionId
-Passage: <<print passage()>>
-
-Day: $currentDay
-<<button "Calc Word Count">><<script>>
-  const text = $("#passages")[0].innerText;
-  const wc = text.split(/\s+/).filter(n => n !== ' ').length;
-  $("#wc-span").text(wc)
-<</script>><</button>>
-Word Count: <span id="wc-span">?</span>
-
-
-<<button "How To Play">><<script>>
-  Dialog.setup('How To Play', 'HOW_TO_PLAY_CLASS');
-  Dialog.wiki(Story.get('HowToPlay').processText());
-  Dialog.open();
-<</script>><</button>>
-
-
-:: HowToPlay
-TODO WRITE THIS
