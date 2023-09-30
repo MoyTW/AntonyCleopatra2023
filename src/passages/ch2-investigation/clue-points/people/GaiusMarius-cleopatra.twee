@@ -1,5 +1,5 @@
 :: CluePoint_GaiusMarius_CLEOPATRA
-<<locationheader "Gaius Marius">>\
+<<locationheader "Gaius Marius">>
 The offices of Gaius Marius are adorned with hunting trophies, from antlers to a lion's head to the skin of a tiger laid out on the floor. A taxidermied beaver sniffs the air atop his bookshelf. You're forced to wonder how many of them he hunted himself, as the man looks barely capable of walking, much less any sort of stalking or shooting. He wears an eager grin on his baggy face as he waves at you. "Come in," he says, "come in. I hear you've been given another case by your honored leader. Well, well. How can I help?"
 
 <<include "CluePoint_GaiusMarius_CLEOPATRA:Questions">>

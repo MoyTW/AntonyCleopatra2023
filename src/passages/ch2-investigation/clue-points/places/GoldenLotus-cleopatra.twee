@@ -1,5 +1,5 @@
 :: CluePoint_GoldenLotus_CLEOPATRA
-<<locationheader "Golden Lotus">>\
+<<locationheader "Golden Lotus">>
 <<nobr>>
   <<run setup.CluePoints.markCluePointKnown('GaiusMarius')>>
   <<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>

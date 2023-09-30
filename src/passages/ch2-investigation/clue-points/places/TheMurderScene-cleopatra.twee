@@ -1,5 +1,5 @@
 :: CluePoint_TheMurderScene_CLEOPATRA
-<<locationheader "The Murder Scene">>\
+<<locationheader "The Murder Scene">>
 <<run setup.CluePoints.markCluePointKnown('GoldenLotus')>>\
 The alley where Marlon was killed is a small alley, just south of the Raytheon building and just north of the Marine Corps War Memorial. It's narrow and dirty. Its only interesting feature is an alcove halfway through, large enough to fit a person and hidden from either side.
 

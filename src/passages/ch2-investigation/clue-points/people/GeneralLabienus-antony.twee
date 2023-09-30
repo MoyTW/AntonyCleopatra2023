@@ -1,5 +1,5 @@
 :: CluePoint_GeneralLabienus_ANTONY
-<<locationheader "General Labienus">>\
+<<locationheader "General Labienus">>
 <<include "CluePoint_GeneralLabienus_SHARED:Snippet">>
 
 <div id='options'>\

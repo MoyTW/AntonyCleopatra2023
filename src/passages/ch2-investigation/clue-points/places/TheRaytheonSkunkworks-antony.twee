@@ -1,5 +1,5 @@
 :: CluePoint_TheRaytheonSkunkworks_ANTONY
-<<locationheader "The Raytheon Skunkworks">>\
+<<locationheader "The Raytheon Skunkworks">>
 <<nobr>>
   <<run setup.CluePoints.markCluePointKnown('VitruviusPollio')>>
 <</nobr>>\

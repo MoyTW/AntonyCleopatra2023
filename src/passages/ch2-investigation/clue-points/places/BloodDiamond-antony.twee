@@ -1,5 +1,5 @@
 :: CluePoint_BloodDiamond_ANTONY
-<<locationheader "Blood Diamond">>\
+<<locationheader "Blood Diamond">>
 <<nobr>>
   <<run setup.CluePoints.markCluePointKnown('MarieDeChampagne')>>
 <</nobr>>\

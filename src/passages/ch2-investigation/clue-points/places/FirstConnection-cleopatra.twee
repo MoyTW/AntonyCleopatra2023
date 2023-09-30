@@ -1,5 +1,5 @@
 :: CluePoint_FirstConnection_CLEOPATRA
-<<locationheader "First Connection">>\
+<<locationheader "First Connection">>
 <<nobr>>
   <<run setup.CluePoints.markCluePointKnown('GrigoriRasputin')>>
   <<run setup.CluePoints.markCluePointKnown('GeorgeRandolphHearst')>>

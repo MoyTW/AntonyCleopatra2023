@@ -1,5 +1,5 @@
 :: CluePoint_GaryDanko_CLEOPATRA
-<<locationheader "Gary Danko">>\
+<<locationheader "Gary Danko">>
 <<nobr>>
   <<run setup.CluePoints.markCluePointKnown('BloodDiamond')>>
 <</nobr>>\

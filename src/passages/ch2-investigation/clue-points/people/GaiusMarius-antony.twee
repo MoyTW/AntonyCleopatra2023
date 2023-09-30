@@ -1,5 +1,5 @@
 :: CluePoint_GaiusMarius_ANTONY
-<<locationheader "Gaius Marius">>\
+<<locationheader "Gaius Marius">>
 You meet Gaius Marius, Senator from Nebraska, at his office. On the walls are mounted a plethora of hunting trophies trophies, from antlers to heads to a taxidermied beaver on his bookshelf. The man himself is seated in a comfortable chair behind a desk straining to size up to his bulk. He has a eager grin on his face as he waves you in. "Come in," he says, "come in. I hear you've been given another case by your honored leader. Well, well. How can I help?"
 
 <<include "CluePoint_GaiusMarius_ANTONY:Questions">>
