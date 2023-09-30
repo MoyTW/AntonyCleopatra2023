@@ -8,7 +8,7 @@
   color: white;
   background-color: #3c007a;
 }
-
+e5
 /* main body stuff */
 
 body {
@@ -29,6 +29,14 @@ body {
   border-radius: 10px;
 }
 
+#options button:hover {
+  background-color: #024fae;
+}
+
+#options button:hover:disabled {
+  background-color: #0A3161;
+}
+
 #options button:disabled {
   filter: grayscale(.8)
 }
@@ -38,6 +46,14 @@ body {
   color: #FFFFFF;
   border-color: #B31942;
   border-radius: 10px;
+}
+
+.hostcopy button:hover {
+  background-color: #024fae;
+}
+
+.hostcopy button:hover:disabled {
+  background-color: #0A3161;
 }
 
 .options {
@@ -51,6 +67,14 @@ body {
   color: #FFFFFF;
   border-color: #B31942;
   border-radius: 10px;
+}
+
+.options button:hover {
+  background-color: #024fae;
+}
+
+.options button:hover:disabled {
+  background-color: #0A3161;
 }
 
 .granite {
@@ -79,6 +103,14 @@ body {
   color: #FFFFFF;
   border-color: #B31942;
   border-radius: 10px;
+}
+
+.column button:hover {
+  background-color: #024fae;
+}
+
+.column button:hover:disabled {
+  background-color: #0A3161;
 }
 
 .column button:disabled {

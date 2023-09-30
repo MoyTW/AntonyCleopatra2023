@@ -30,3 +30,11 @@
   border-width: 1.5px;
   min-height: 30px;
 }
+
+.planning-calendar button:hover {
+  background-color: rgb(40 40 40);
+}
+
+.planning-calendar button:hover:disabled {
+  background-color: transparent;
+}
