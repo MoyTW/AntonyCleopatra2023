@@ -6,14 +6,13 @@
 
 #ui-bar {
   color: white;
-  background-color: #3c007a;
+  background-color: #13011f;
 }
-e5
+
 /* main body stuff */
 
 body {
-  color: #ebd5b3;
-  background-color: #13011f;
+  color: white;
 }
 
 #options {
@@ -248,6 +247,6 @@ body {
 
 .ch3-survey-header {
   color: white;
-  background: #4b0095;
+  background: purple;
   text-align: center;
 }
