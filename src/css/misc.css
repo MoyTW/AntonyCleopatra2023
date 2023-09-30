@@ -47,29 +47,6 @@ body {
   border-radius: 10px;
 }
 
-.div-container {
-  position: relative;
-  width: 100%;
-}
-
-.div-container button {
-  width: 100%;
-}
-
-.remnant-selected {
-  color: purple;
-}
-
-.irp-rec-div {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.irp-rec-div button {
-  width: 100%;
-}
-
 .granite {
   color: #000000b5;
   border-style: inset;
@@ -105,15 +82,6 @@ body {
 /* ########## Main Screen ########## */
 .game-title {
   text-align: center;
-}
-
-/* ########## Footer ########## */
-.room-footer {
-  width: 100%;
-  max-width: 54em;
-  margin: 0 auto;
-  position: fixed;
-  bottom: 0px;
 }
 
 /* ########## Seals ########## */
