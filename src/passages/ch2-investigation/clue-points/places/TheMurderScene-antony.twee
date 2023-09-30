@@ -1,7 +1,7 @@
 :: CluePoint_TheMurderScene_ANTONY
 <<locationheader "The Murder Scene">>\
 <<run setup.CluePoints.markCluePointKnown('GoldenLotus')>>\
-The alley where Marlon was killed is a small alley, just south of the Raytheon building and just north of the Marine Corps War Memorial. It's narrow and mostly unremarkable except for a alcove halfway through the alley large enough to fit a person but entirely hidden from either entrance.
+The alley where Marlon was killed is a small alley, just south of the Raytheon building and just north of the Marine Corps War Memorial. It's narrow and mostly unremarkable except for an alcove halfway through the alley large enough to fit a person but entirely hidden from either entrance.
 
 Hortensia pulls out a tablet and walks to a spot in the middle of the alley, some eight feet away from the alcove. "This is where the victim was found," she says, "face down, his briefcase near his right hand, and the contents of his pockets left on top of the body." She pulls up a picture on her tablet and shows you. "The police believe that whoever shot him hid in the alcove, shot him, searched his body, and left."
 
@@ -19,7 +19,7 @@ You nod. "I assume they searched the alcove?"
 
 "Great job!" you say. "You want to take that back to the lab, Hortensia?"
 
-"On it," she says, gloves already on bag out.
+"On it," she says, gloves already on and plastic bag out.
 
 You search the area further, but find nothing else of interest.
 

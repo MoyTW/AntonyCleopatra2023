@@ -63,7 +63,7 @@
 :: CluePoint_JamesDean_SHARED:ADean
 <span class='antony-response'>"What were you doing on the day Marlon was murdered?"</span>
 
-"I appreciate that you're trying to cover you bases," he says, "but I gave a statement to the police the day after. That's likely to be more accurate than anything I say now, more than a week after."
+"I appreciate that you're trying to cover your bases," he says, "but I gave a statement to the police the day after. That's likely to be more accurate than anything I say now, more than a week after."
 
 "I have read it," <<if setup.Roles.isAntony()>>you reply,<<else>>replies Antony,<</if>> "but I'd like to hear it from you, personally."
 
@@ -72,7 +72,7 @@
 :: CluePoint_JamesDean_SHARED:CDean
 <span class='cleopatra-response'>"Could you tell us what you were doing on the day Brando was murdered?"</span>
 
-"I appreciate that you're trying to cover you bases," he says, "but I gave a statement to the police the day after. That's likely to be more accurate than anything I say now, more than a week after."
+"I appreciate that you're trying to cover your bases," he says, "but I gave a statement to the police the day after. That's likely to be more accurate than anything I say now, more than a week after."
 
 "Of course," <<if setup.Roles.isCleopatra()>>you reply,<<else>>replies your wife,<</if>> "but I'd like to hear it from you, personally."
 
@@ -110,7 +110,7 @@ James sighs. "Antony," he says, "are you trying to imply that I might have motiv
 
 "I think it well deserved," answers <<if setup.Roles.isAntony()>>James.<<else>>Dean.<</if>>
 
-"I do find the prominence of women in positions of leadership in American defense firms fascinating. Boeing Defense has Leanne Caret, General Motors Mary Barra, General Dynamics Phebe Novakovic, and Northrup Grumman has Kathy Warden. Now Raytheon has Hepburn. If not for Hewson stepping down at Lockheed Martin, all five of the top United States defense contractors would be led by woman."
+"I do find the prominence of women in positions of leadership in American defense firms fascinating. Boeing Defense has Leanne Caret, General Motors Mary Barra, General Dynamics Phebe Novakovic, and Northrup Grumman has Kathy Warden. Now Raytheon has Hepburn. If not for Hewson stepping down at Lockheed Martin, all five of the top United States defense contractors would be led by women."
 
 "You, uh, well - that's a good memory you've got." <<if setup.Roles.isAntony()>>James<<else>>Dean<</if>> blinks. "Do you - is that the kind of things Your Majesty - well, I - I suppose keeping track of that thing is part of your job, isn't it?"
 

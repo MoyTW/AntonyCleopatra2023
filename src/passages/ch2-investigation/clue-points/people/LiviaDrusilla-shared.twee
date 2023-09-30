@@ -19,13 +19,13 @@
 /* --------------------------------------------------------------------- */\
 /* - Cigarettes                                                     - */\
 /* --------------------------------------------------------------------- */\
-"Oh, this <em>is</em> interesting, isn't it? They're the second-most expensive cigarettes in the world, made to order only, and they vet their buyers. Octavian and I buy them to put in gift packages. So why are you asking <em>me</em> about this particular brand? Well, neither of you smoke, and neither I nor Octavian smokes, and I know we've never gifted any of them to you. So, why would you know to ask me? One way could be that somebody we've given them to offered them to you, or you saw them lying around and asked, and you just happened to remember that they sourced them to us. Or, alternatively, you've seen our financial records. Another possibility is you've seen the company's financial records." She pauses. "But that doesn't explain why you asked. My immediate thought is that you asked because you've found something that cases suspicion on buyers of that brand, which honestly seems like the most obvious and straightforward explanation. If I had to bet, I'd bet on that, and that you know to ask me because you subpeona'd the company for their sales records."
+"Oh, this <em>is</em> interesting, isn't it? They're the second-most expensive cigarettes in the world, made to order only, and they vet their buyers. Octavian and I buy them to put in gift packages. So why are you asking <em>me</em> about this particular brand? Well, neither of you smoke, and neither I nor Octavian smokes, and I know we've never gifted any of them to you. So, why would you know to ask me? One way could be that somebody we've given them to offered them to you, or you saw them lying around and asked, and you just happened to remember that they sourced them to us. Or, alternatively, you've seen our financial records. Another possibility is you've seen the company's financial records." She pauses. "But that doesn't explain why you asked. My immediate thought is that you asked because you've found something that cases suspicion on buyers of that brand, which honestly seems like the most obvious and straightforward explanation. If I had to bet, I'd bet on that, and that you know to ask me because you subpoenaed the company for their sales records."
 
 "Close," <<if setup.Roles.isAntony()>>you say.<<else>>says Antony.<</if>>
 
 "Pity," she sighs. "Where'd I go wrong?"
 
-"We didn't subpeona the records."
+"We didn't subpoena the records."
 
 Livia bursts out in laughter. "Can you think of how annoying this would all be if you were just a regular old detective?"
 

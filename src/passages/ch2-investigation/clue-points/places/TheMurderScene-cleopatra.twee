@@ -1,7 +1,7 @@
 :: CluePoint_TheMurderScene_CLEOPATRA
 <<locationheader "The Murder Scene">>\
 <<run setup.CluePoints.markCluePointKnown('GoldenLotus')>>\
-The alley where Marlon was killed is a small alley, just south of the Raytheon building and just north of the Marine Corps War Memorial. It's narrow and dirty. Its only interesting feature a alcove halfway through, large enough to fit a person and hidden from either side.
+The alley where Marlon was killed is a small alley, just south of the Raytheon building and just north of the Marine Corps War Memorial. It's narrow and dirty. Its only interesting feature is an alcove halfway through, large enough to fit a person and hidden from either side.
 
 Hortensia pulls out a tablet and walks to a spot in the middle of the alley, eight feet away from the alcove. "This is where the victim was found," she says, "face down, his briefcase near his right hand, and the contents of his pockets left on top of the body." She pulls up a picture on her tablet and shows you. "The police believe that whoever shot him hid in the alcove, shot him, searched his body, and left."
 
@@ -9,7 +9,7 @@ Hortensia pulls out a tablet and walks to a spot in the middle of the alley, eig
 
 "They reported that they did, but found nothing."
 
-You peer into the alcove. It's grimy and dark, but you can clearly see a half-bent, unsmoken cigarette decaying in its corner. "Did they?" you ask.
+You peer into the alcove. It's grimy and dark, but you can clearly see a half-bent, unsmoked cigarette decaying in its corner. "Did they?" you ask.
 
 "That's what their report says."
 
@@ -19,7 +19,7 @@ You peer into the alcove. It's grimy and dark, but you can clearly see a half-be
 
 "Great job!" exclaims Antony. "You want to take that back to the lab, Hortensia?"
 
-"On it," she says, gloves already on bag out.
+"On it," she says, gloves already on and plastic bag out.
 
 You search the area further, but find nothing else of interest.
 
