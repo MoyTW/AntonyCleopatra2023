@@ -87,7 +87,7 @@
 /* # END SURVEY                                                            # */\
 /* ##################################################################### */\
 <<nobr>>
-  <div style="color:white; background:purple; text-align:center"><strong>Who killed Marlon Brando? [ Choose 1 ]</strong></div>
+  <div class="ch3-survey-header"><strong>Who killed Marlon Brando? [ Choose 1 ]</strong></div>
   <<set _peopleKnown to setup.CluePoints.getKnownCluePointIds('PERSON')>>
   <<set _left to _peopleKnown.slice(0, Math.ceil(_peopleKnown.length / 2))>>
   <<set _right to _peopleKnown.slice(Math.ceil(_peopleKnown.length / 2))>>
@@ -123,7 +123,7 @@
 <</nobr>>\
 
 <<nobr>>
-  <div style="color:white; background:purple; text-align:center"><strong>What was their primary motive? [ Choose 1 ]</strong></div>
+  <div class="ch3-survey-header"><strong>What was their primary motive? [ Choose 1 ]</strong></div>
   <<set _motives to setup.Motives.getMotives()>>
   <<set _left to _motives.slice(0, Math.ceil(_motives.length / 2))>>
   <<set _right to _motives.slice(Math.ceil(_motives.length / 2))>>
@@ -159,7 +159,7 @@
 <</nobr>>\
 
 <<nobr>>
-  <div style="color:white; background:purple; text-align:center"><strong>Was there a security breach in Project STORM? [ Yes / No ]</strong></div>
+  <div class="ch3-survey-header"><strong>Was there a security breach in Project STORM? [ Yes / No ]</strong></div>
   <div class='row'>
     <div class='column'>
       <<iddiv 'breach-yes-button' 'ch3-seal-div'>>
@@ -179,7 +179,7 @@
 <</nobr>>\
 
 <<nobr>>
-  <div style="color:white; background:purple; text-align:center"><strong>If there was a breach, who was responsible? [ Choose 1, ignored if above is 'No'. ]</strong></div>
+  <div class="ch3-survey-header"><strong>If there was a breach, who was responsible? [ Choose 1, ignored if above is 'No'. ]</strong></div>
   <<set _peopleKnown to setup.CluePoints.getKnownCluePointIds('PERSON')>>
   <<set _left to _peopleKnown.slice(0, Math.ceil(_peopleKnown.length / 2))>>
   <<set _right to _peopleKnown.slice(Math.ceil(_peopleKnown.length / 2))>>
@@ -224,7 +224,7 @@
 <</nobr>>\
 
 <<nobr>>
-  <div style="color:white; background:purple; text-align:center"><strong>Submit your report?</strong></div>
+  <div class="ch3-survey-header"><strong>Submit your report?</strong></div>
   <div class='options'>
     <<iddiv 'finish-report' 'ch3-submit'>>
       <<disable>><<button "Submit the report!">>

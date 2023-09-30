@@ -1,6 +1,12 @@
-/* Hide save/reload */
+/* Sidebar */
+
 #menu-item-saves, #menu-item-restart {
   display:none;
+}
+
+#ui-bar {
+  color: white;
+  background-color: #3c007a;
 }
 
 /* main body stuff */
@@ -206,4 +212,10 @@ body {
 
 .ch3-submit button:disabled {
   filter: grayscale(.8)
+}
+
+.ch3-survey-header {
+  color: white;
+  background: #4b0095;
+  text-align: center;
 }

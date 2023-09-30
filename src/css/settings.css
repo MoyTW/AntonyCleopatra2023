@@ -29,13 +29,6 @@
      font-weight: 700;
 }
 
-.passage caption, .passage td, .passage th, .passage tr {
-    border: 1px solid #212121;
-}
-.rev .passage caption, .rev .passage td, .rev .passage th, .rev .passage tr {
-    border: 1px solid #fafafa;
-}
-
 #menu ul {
 	border-color: #ccc;
   border-width: 2px;

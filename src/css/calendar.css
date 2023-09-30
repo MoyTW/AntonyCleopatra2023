@@ -2,11 +2,18 @@
   table-layout: fixed;
   width: 100%;
   text-align: center;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid
+}
+
+.planning-calendar thead {
+  border: white solid 1px;
 }
 
 .planning-calendar th {
   color: white;
-  background: purple;
+  background: #4b0095;
 }
 
 .planning-calendar td {

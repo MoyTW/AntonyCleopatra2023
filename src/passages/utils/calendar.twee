@@ -61,7 +61,7 @@
 
   <br><br>
   
-  <div style="color:white; background:purple; text-align:center"><strong>People</strong></div>
+  <div class="ch3-survey-header"><strong>People</strong></div>
   <<set _peopleKnown to setup.CluePoints.getKnownCluePointIds('PERSON')>>
   <<set _left to _peopleKnown.slice(0, Math.ceil(_peopleKnown.length / 2))>>
   <<set _right to _peopleKnown.slice(Math.ceil(_peopleKnown.length / 2))>>
@@ -73,7 +73,7 @@
   
   <br><br>
 
-  <div style="color:white; background:purple; text-align:center"><strong>Places</strong></div>
+  <div class="ch3-survey-header"><strong>Places</strong></div>
   <<set _placesKnown to setup.CluePoints.getKnownCluePointIds('PLACE')>>
   <<set _left to _placesKnown.slice(0, Math.ceil(_placesKnown.length / 2))>>
   <<set _right to _placesKnown.slice(Math.ceil(_placesKnown.length / 2))>>
