@@ -14,5 +14,34 @@
 
 :: CluePoint_GeneralLabienus_CLEOPATRA:1
 <<include "CluePoint_GeneralLabienus_SHARED:1_ReactionSnippet">>
-/* need to add a questions section so it properly wraps this up wtih CH2_END_INTERVIEW message */
+<<include "CluePoint_GeneralLabienus_CLEOPATRA:Questions">>
+
+
+:: CluePoint_GeneralLabienus_CLEOPATRA:Questions
+/* ##################################################################### */\
+/* # QUESTIONS                                                         # */\
+/* ##################################################################### */\
+<div id='options'><<nobr>>
+  <<EndInterview "That's all we needed for today.">>
+<</nobr>></div>\
+
+
+:: CluePoint_GeneralLabienus_CLEOPATRA:EndInterview
+/* --------------------------------------------------------------------- */\
+/* - EndInterview                                                      - */\
+/* --------------------------------------------------------------------- */\
+As you follow your guide through the Pentagon hallways, Antony frowns. "Going to the army instead of law enforcement is certainly a novel choice."
+
+"Oh?" you ask. "It seems very logical, considering his position."
+
+"Well, yes, the police would be useless for this, but I think the FBI would probably hear him out. Also, he was the CEO. Couldn't he just have his own security people do whatevr he needs to do?"
+
+"Do they have the power to arrest?"
+
+"I have no idea."
+
+"Titus both believed him, and was willing to bring armed escorts. If Brando he had not been murdered, I think his choice would have proven correct."
+
+"Hmm. Well, that's the big if, isn't it?"
+
 <<include "Ch2_EndInterview_CLEOPATRA">>

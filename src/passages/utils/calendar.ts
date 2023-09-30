@@ -151,7 +151,6 @@ interface Appointment {
     }
 
     scheduleVisit = (month: number, day: number, slot: string, role: string, cluePointId: string) => {
-      // TODO: also check for the same cluePointId
       const entries: Appointment[] = State.getVar(this.ENTRIES_VAR) || []
       
       const matchingSlotIdx = entries.findIndex((e) => {
