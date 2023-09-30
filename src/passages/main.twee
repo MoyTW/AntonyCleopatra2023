@@ -141,6 +141,8 @@ Thanks to:
   <li>Milo van Mesdag</li>
 </ul>\
 
+Special thanks to manonamora for helping with the settings menu, which was adpted from the <a href="https://manonamora.itch.io/twine-sugarcube-templates" target="_blank" rel="noopener noreferrer">100% GOOD TWINE SUGARCUBE TEMPLATES</a>.
+
 <div id='options'>\
   <<button [[Main Menu|Start]]>><</button>>
 </div>\

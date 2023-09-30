@@ -1,0 +1,70 @@
+/***************************
+    IMPORTS
+***************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: "Dyslexic";
+    src: url(fonts/OpenDyslexic/OpenDyslexic-Regular.otf) format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Dyslexic";
+    src: url(fonts/OpenDyslexic/OpenDyslexic-Italic.otf) format("opentype");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Dyslexic";
+    src: url(fonts/OpenDyslexic/OpenDyslexic-BoldItalic.otf) format("opentype");
+    font-style: italic;
+    font-weight: 700;
+}
+@font-face {
+     font-family: "Dyslexic";
+     src: url(fonts/OpenDyslexic/OpenDyslexic-Bold.otf) format("opentype");
+     font-style: normal;
+     font-weight: 700;
+}
+
+.passage caption, .passage td, .passage th, .passage tr {
+    border: 1px solid #212121;
+}
+.rev .passage caption, .rev .passage td, .rev .passage th, .rev .passage tr {
+    border: 1px solid #fafafa;
+}
+
+#menu ul {
+	border-color: #ccc;
+  border-width: 2px;
+}
+#menu li:not(:first-child) {
+	border-top-color: #ccc;
+}
+#menu li a {
+	color: #ffffff;
+}
+.rev #menu li a {
+	color: #8ca0ff;
+}
+#menu li a:hover {
+  color: #212121;
+	background-color: #aaaaaa;
+	border-color: #212121;
+}
+
+/***************************
+    FONT SETTINGS
+***************************/
+/*Font Change*/
+.sansserif .passage, .sansserif #ui-dialog-body {font-family: 'Montserrat', sans-serif;}
+.opendyslexic .passage, .opendyslexic #ui-dialog-body {font-family: "Dyslexic", serif;}
+.serif .passage, .serif #ui-dialog-body {font-family: 'Tinos', serif;}
+
+/*Line Height*/
+.lh-small .passage {line-height: 1.2;}
+.lh-medium .passage {line-height: 1.6;}
+.lh-large .passage {line-height: 2.0;}
+.lh-biggest .passage {line-height: 2.4;}

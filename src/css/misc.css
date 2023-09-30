@@ -1,5 +1,5 @@
 /* Hide save/reload */
-#menu-core {
+#menu-item-saves, #menu-item-restart {
   display:none;
 }
 
