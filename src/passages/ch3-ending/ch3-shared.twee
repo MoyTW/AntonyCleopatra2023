@@ -275,8 +275,11 @@ Oh, and by the way, we found that <<nobr>>
   <<if $Ch3BD is false>>
     <strong>Project STORM hasn't been breached,</strong> so you don't need to worry about that.
   <<else>>
-    /* TODO: uuuh it's possible to pick Yes and also that it wasn't breached and that's a bug */
-    <strong>_breacherName</strong> went and <strong>got into the Project STORM data,</strong> so you should get on that.
+    <<if _breacherName is undefined>>
+      <strong>we're not sure if there was a breach or not</strong> - our notes are somewhat contradictory on that point, so you should probably get on that.
+    <<else>>
+      <strong>_breacherName</strong> went and <strong>got into the Project STORM data,</strong> so you should get on that.
+    <</if>>
   <</if>>
 <</nobr>>
 
